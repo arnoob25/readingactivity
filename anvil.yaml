@@ -26,7 +26,7 @@ db_schema:
       admin_ui: {width: 200}
       type: link_single
       target: user_data
-    - name: ra-name
+    - name: filename
       admin_ui: {order: 0, width: 200}
       type: string
     - name: ID
