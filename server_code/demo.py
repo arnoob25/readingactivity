@@ -17,6 +17,6 @@ import uuid
 #   return 42
 
 @anvil.server.callable
-def outline(ilo):
-  file = str(uuid.uuid4())
-  app_tables.files.add_row(title-ra=)
+def outline(ilo, file_title):
+  u_id = str(uuid.uuid4())
+  app_tables.files.add_row(ilo=ilo, ID = u_id)
