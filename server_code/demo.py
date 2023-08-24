@@ -2,6 +2,7 @@ import anvil.tables as tables
 import anvil.tables.query as q
 from anvil.tables import app_tables
 import anvil.server
+import uuid
 
 # This is a server module. It runs on the Anvil server,
 # rather than in the user's browser.
@@ -16,5 +17,6 @@ import anvil.server
 #   return 42
 
 @anvil.server.callable
-def outline(ilo, file):
-  app_tables.ilo.add_row(file= file, title_ilo = ilo)
+def outline(ilo):
+  file = str(uuid.uuid4())
+  app_tables.files.add_row(title-ra=)

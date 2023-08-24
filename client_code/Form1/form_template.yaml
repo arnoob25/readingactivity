@@ -292,3 +292,11 @@ components:
   properties: {}
   name: navbar_links
   layout_properties: {slot: nav-right}
+- type: TextBox
+  properties: {role: outlined, align: left, hide_text: false, tooltip: '', placeholder: Title,
+    border: '', enabled: true, foreground: '', visible: true, text: '', font_size: null,
+    font: '', spacing_above: small, type: text, spacing_below: small, italic: false,
+    background: '', bold: false, underline: false}
+  name: title
+  layout_properties: {slot: title}
+  event_bindings: {pressed_enter: text_box_2_pressed_enter}

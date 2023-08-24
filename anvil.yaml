@@ -13,7 +13,10 @@ db_schema:
   user_data:
     client: none
     server: full
-    columns: []
+    columns:
+    - name: name
+      type: string
+      admin_ui: {width: 200, order: 0}
     title: user_data
   files:
     client: none
@@ -26,6 +29,13 @@ db_schema:
     - name: title-ra
       admin_ui: {order: 0, width: 200}
       type: string
+    - name: ID
+      type: string
+      admin_ui: {width: 200, order: 2}
+    - name: ilo
+      admin_ui: {width: 199}
+      type: link_multiple
+      target: ilo
     title: files
   ra_steps:
     client: none
@@ -83,10 +93,6 @@ db_schema:
     - name: title_ilo
       admin_ui: {width: 200}
       type: string
-    - name: file
-      admin_ui: {width: 200}
-      type: link_single
-      target: files
   question:
     client: none
     server: full
