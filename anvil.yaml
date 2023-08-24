@@ -18,16 +18,105 @@ db_schema:
   files:
     client: none
     server: full
-    columns: []
+    columns:
+    - name: author
+      admin_ui: {width: 200}
+      type: link_single
+      target: user_data
+    - name: title-ra
+      admin_ui: {order: 0, width: 200}
+      type: string
     title: files
   ra_steps:
     client: none
     server: full
-    columns: []
+    columns:
+    - name: file
+      admin_ui: {order: 2.25, width: 103}
+      type: link_single
+      target: files
+    - name: ilo
+      admin_ui: {order: 0.25, width: 200}
+      type: link_single
+      target: ilo
+    - name: serial
+      admin_ui: {order: -1, width: 108}
+      type: number
+    - name: title-ra_step
+      admin_ui: {order: 0, width: 200}
+      type: string
+    - name: objective
+      admin_ui: {width: 200, order: 0.5}
+      type: string
+    - name: instructions
+      admin_ui: {order: 1.25, width: 200}
+      type: string
     title: ra_steps
   gi_steps:
     client: none
     server: full
-    columns: []
+    columns:
+    - name: title-gi_step
+      admin_ui: {order: 0, width: 200}
+      type: string
+    - name: serial
+      admin_ui: {order: -1, width: 105}
+      type: number
+    - name: file
+      admin_ui: {order: 3, width: 96}
+      type: link_single
+      target: files
+    - name: ilo
+      admin_ui: {width: 200}
+      type: link_single
+      target: ilo
     title: gi_steps
+  ilo:
+    title: ilo
+    client: none
+    server: full
+    columns:
+    - name: title_ilo
+      admin_ui: {width: 200}
+      type: string
+    - name: file
+      admin_ui: {width: 200}
+      type: link_single
+      target: files
+  question:
+    client: none
+    server: full
+    columns:
+    - name: title-question
+      type: string
+      admin_ui: {width: 200, order: 0}
+    - name: gi_step
+      admin_ui: {order: 1, width: 159}
+      type: link_single
+      target: gi_steps
+    - name: goal
+      admin_ui: {order: 2, width: 135}
+      type: string
+    - name: context
+      admin_ui: {order: 3, width: 126}
+      type: string
+    - name: prompt
+      admin_ui: {order: 4, width: 125}
+      type: string
+    - name: explanation
+      admin_ui: {order: 5, width: 147}
+      type: string
+    - name: options
+      admin_ui: {width: 200}
+      type: link_single
+      target: options
+    title: question
+  options:
+    client: none
+    server: full
+    columns:
+    - name: title-option
+      type: string
+      admin_ui: {width: 200, order: 0}
+    title: options
 renamed: true
