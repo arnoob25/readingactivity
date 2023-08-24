@@ -70,6 +70,10 @@ db_schema:
       admin_ui: {width: 200}
       type: link_single
       target: ilo
+    - name: ra_step
+      admin_ui: {width: 200}
+      type: link_multiple
+      target: ra_steps
     title: gi_steps
   ilo:
     title: ilo
@@ -87,9 +91,6 @@ db_schema:
     client: none
     server: full
     columns:
-    - name: title-question
-      type: string
-      admin_ui: {width: 200, order: 0}
     - name: gi_step
       admin_ui: {order: 1, width: 159}
       type: link_single
@@ -101,14 +102,14 @@ db_schema:
       admin_ui: {order: 3, width: 126}
       type: string
     - name: prompt
-      admin_ui: {order: 4, width: 125}
+      admin_ui: {order: 0, width: 125}
       type: string
     - name: explanation
       admin_ui: {order: 5, width: 147}
       type: string
     - name: options
       admin_ui: {width: 200}
-      type: link_single
+      type: link_multiple
       target: options
     title: question
   options:
