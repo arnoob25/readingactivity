@@ -14,6 +14,9 @@ class Form1(Form1Template):
 
   def btn_outline(self, **event_args):
     """This method is called when the button is clicked"""
+
+  def btn_outline_click(self, **event_args):
+    """This method is called when the button is clicked"""
     anvil.server.call(
       "outline", 
       self.textbox_ilo.text,
@@ -22,6 +25,9 @@ class Form1(Form1Template):
 
     query_ra_step = app_tables.ra_steps.search()
     self.rpanel_ra_step.items = query_ra_step
+    pass
+
+    
 
     
 
