@@ -19,4 +19,8 @@ import uuid
 @anvil.server.callable
 def outline(ilo, filename):
   u_id = str(uuid.uuid4())
-  app_tables.files.add_row(ilo=ilo, ID = u_id, filename = filename)
+  app_tables.ilo.add_row(title_ilo=ilo)
+  list = []
+  for i in app_tables.ilo.search(title_ilo = ilo):
+    list.append(i)
+  app_tables.files.add_row(ilo = list, ID = u_id, filename = filename)

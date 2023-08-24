@@ -3,30 +3,23 @@ container:
   properties: {col_widths: '{}'}
 components:
 - type: ColumnPanel
-  properties: {col_widths: '{"MXQOQI":6,"FDJOUO":47,"HESWVI":7}'}
+  properties: {col_widths: '{"FDJOUO":49,"HESWVI":7}'}
   name: column_panel_1
   layout_properties: {grid_position: 'ZHARVS,ETVLNC'}
   components:
   - type: Label
     properties: {role: null, align: left, tooltip: '', border: '', foreground: '',
-      visible: true, text: 'Step 10: ', font_size: null, font: '', spacing_above: small,
-      icon_align: left, spacing_below: small, italic: false, background: '', bold: false,
-      underline: false, icon: ''}
-    name: label_1
-    layout_properties:
-      col_widths: {}
-      grid_position: OFRJIN,MXQOQI
-      full_width_row: false
-  - type: Label
-    properties: {role: null, align: left, tooltip: '', border: '', foreground: '',
-      visible: true, text: Define blah blab, font_size: null, font: '', spacing_above: small,
-      icon_align: left, spacing_below: small, italic: false, background: '', bold: false,
-      underline: false, icon: ''}
+      visible: true, text: '', font_size: null, font: '', spacing_above: small, icon_align: left,
+      spacing_below: small, italic: false, background: '', bold: false, underline: false,
+      icon: ''}
     name: label_2
     layout_properties:
       col_widths: {}
       grid_position: OFRJIN,FDJOUO
       full_width_row: false
+    data_bindings:
+    - {property: text, code: 'f"Step {self.item[''serial'']} ({self.item[''title-ra_step'']}):
+        {self.item[''objective'']}"'}
   - type: Button
     properties: {role: null, align: right, tooltip: '', border: '', enabled: true,
       foreground: '', visible: true, text: '', font_size: null, font: '', spacing_above: small,
@@ -59,7 +52,7 @@ components:
         layout_properties: {grid_position: 'WLHKAP,AHVCYQ'}
       - type: RepeatingPanel
         properties: {item_template: Form1.ItemTemplate2.ItemTemplate3}
-        name: repeating_panel_1
+        name: rpanel_gi_steps
         layout_properties: {grid_position: 'HOBHJB,YZXJCU'}
   - type: Spacer
     properties: {height: 8}

@@ -1,26 +1,29 @@
 container:
   type: ColumnPanel
-  properties: {col_widths: '{"QMIXHP":8,"YWRYRR":63,"IHLDGA":9}'}
+  properties: {col_widths: '{}'}
 components:
-- type: Label
-  properties: {role: null, align: left, tooltip: '', border: '', foreground: '', visible: true,
-    text: 'Step 10: ', font_size: null, font: '', spacing_above: small, icon_align: left,
-    spacing_below: small, italic: false, background: '', bold: false, underline: false,
-    icon: ''}
-  name: label_1
-  layout_properties: {grid_position: 'PVPNGT,QMIXHP', full_width_row: false}
-- type: Label
-  properties: {role: null, align: left, tooltip: '', border: '', foreground: '', visible: true,
-    text: Define blah blab, font_size: null, font: '', spacing_above: small, icon_align: left,
-    spacing_below: small, italic: false, background: '', bold: false, underline: false,
-    icon: ''}
-  name: label_2
-  layout_properties: {grid_position: 'PVPNGT,YWRYRR', full_width_row: false}
-- type: Button
-  properties: {role: null, align: right, tooltip: '', border: '', enabled: true, foreground: '',
-    visible: true, text: '', font_size: null, font: '', spacing_above: small, icon_align: right,
-    spacing_below: small, italic: false, background: '', bold: false, underline: false,
-    icon: 'fa:angle-down'}
-  name: button_1
-  layout_properties: {grid_position: 'PVPNGT,IHLDGA'}
+- type: ColumnPanel
+  properties: {role: tonal-card, tooltip: '', border: '', foreground: '', visible: true,
+    wrap_on: mobile, col_spacing: medium, spacing_above: small, col_widths: '{"JFGMSA":53,"TKANJO":7}',
+    spacing_below: small, background: ''}
+  name: outlined_card_1
+  layout_properties: {grid_position: 'PVPNGT,BAJPFF', full_width_row: true}
+  components:
+  - type: Label
+    properties: {role: null, align: left, tooltip: '', border: '', foreground: '',
+      visible: true, text: 'Step 10:', font_size: null, font: '', spacing_above: small,
+      icon_align: left, spacing_below: small, italic: false, background: '', bold: false,
+      underline: false, icon: ''}
+    name: label_1
+    layout_properties: {grid_position: 'LZELFJ,JFGMSA', full_width_row: true}
+    data_bindings:
+    - {property: text, code: 'f"Step {self.item[''serial'']} ({self.item[''title-ra_step'']}):
+        {self.item[''objective'']}"'}
+  - type: Button
+    properties: {role: null, align: right, tooltip: '', border: '', enabled: true,
+      foreground: '', visible: true, text: '', font_size: null, font: '', spacing_above: small,
+      icon_align: right, spacing_below: small, italic: false, background: '', bold: false,
+      underline: false, icon: 'fa:angle-down'}
+    name: button_1
+    layout_properties: {grid_position: 'LZELFJ,TKANJO', full_width_row: true}
 is_package: true
