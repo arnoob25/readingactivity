@@ -15,7 +15,7 @@ components:
       icon_align: left, spacing_below: small, italic: false, background: '', bold: false,
       underline: false, icon: ''}
     name: label_1
-    layout_properties: {grid_position: 'LZELFJ,JFGMSA', full_width_row: true}
+    layout_properties: {grid_position: 'LZELFJ,JFGMSA', full_width_row: false}
     data_bindings:
     - {property: text, code: 'f"Step {self.item[''serial'']} ({self.item[''title-ra_step'']}):
         {self.item[''objective'']}"'}
@@ -25,5 +25,5 @@ components:
       icon_align: right, spacing_below: small, italic: false, background: '', bold: false,
       underline: false, icon: 'fa:angle-down'}
     name: button_1
-    layout_properties: {grid_position: 'LZELFJ,TKANJO', full_width_row: true}
+    layout_properties: {grid_position: 'LZELFJ,TKANJO', full_width_row: false}
 is_package: true

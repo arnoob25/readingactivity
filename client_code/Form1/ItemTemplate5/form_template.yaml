@@ -1,0 +1,129 @@
+container: {type: ColumnPanel}
+components:
+- type: ColumnPanel
+  properties: {role: elevated-card, tooltip: '', border: '', foreground: '', visible: true,
+    wrap_on: mobile, col_spacing: medium, spacing_above: small, col_widths: '{}',
+    spacing_below: small, background: ''}
+  name: outlined_card_3
+  layout_properties:
+    col_widths: {}
+    grid_position: VZHLKJ,VRXAFF
+  components:
+  - type: ColumnPanel
+    properties: {col_widths: '{"ZKTUZH":8,"YXHHYS":52}'}
+    name: column_panel_1
+    layout_properties: {grid_position: 'MGHXIA,LBJUEE'}
+    components:
+    - type: Label
+      properties: {role: title, align: left, tooltip: '', border: '', foreground: '',
+        visible: true, text: Step 30, font_size: null, font: '', spacing_above: small,
+        icon_align: left, spacing_below: small, italic: false, background: '', bold: false,
+        underline: false, icon: ''}
+      name: label_2
+      layout_properties: {grid_position: 'PCFKFM,ZKTUZH'}
+    - type: Label
+      properties: {role: title, align: left, tooltip: '', border: '', foreground: '',
+        visible: true, text: '(Question 2/4): ', font_size: null, font: '', spacing_above: small,
+        icon_align: left, spacing_below: small, italic: false, background: '', bold: false,
+        underline: false, icon: ''}
+      name: label_3
+      layout_properties: {grid_position: 'PCFKFM,YXHHYS'}
+  - type: Label
+    properties: {role: null, align: left, tooltip: '', border: '', foreground: '',
+      visible: true, text: 'Context:', font_size: null, font: '', spacing_above: small,
+      icon_align: left, spacing_below: small, italic: false, background: '', bold: false,
+      underline: false, icon: ''}
+    name: label_4
+    layout_properties: {grid_position: 'ZQMOTI,HOPURL'}
+  - type: ColumnPanel
+    properties: {role: tonal-card, tooltip: '', border: '', foreground: 'theme:Primary
+        Container', visible: true, wrap_on: mobile, col_spacing: medium, spacing_above: small,
+      col_widths: '{}', spacing_below: small, background: 'theme:Primary Container'}
+    name: outlined_card_4
+    layout_properties: {grid_position: 'OSTHTW,YVVACW'}
+    components:
+    - type: RichText
+      properties: {role: null, align: left, tooltip: '', enable_slots: true, border: '',
+        foreground: 'theme:On Primary Container', visible: true, font_size: null,
+        content: '', font: '', spacing_above: small, spacing_below: small, data: null,
+        background: '', format: markdown}
+      name: rtext_context
+      layout_properties: {grid_position: 'DBIUMP,PZJZDI'}
+      data_bindings: []
+    data_bindings: []
+  - type: Spacer
+    properties: {height: 18}
+    name: spacer_1
+    layout_properties: {grid_position: 'TLAVOA,SZJJKG'}
+  - type: Label
+    properties: {role: null, align: left, tooltip: '', border: '', foreground: '',
+      visible: true, text: 'Prompt: ', font_size: null, font: '', spacing_above: small,
+      icon_align: left, spacing_below: small, italic: false, background: '', bold: false,
+      underline: false, icon: ''}
+    name: label_4_copy
+    layout_properties:
+      col_widths: {}
+      grid_position: RDAXOZ,NBOYON
+  - type: ColumnPanel
+    properties: {role: tonal-card, tooltip: '', border: '', foreground: 'theme:On
+        Primary Container', visible: true, wrap_on: mobile, col_spacing: medium, spacing_above: small,
+      col_widths: '{}', spacing_below: small, background: 'theme:Primary Container'}
+    name: outlined_card_4_copy
+    layout_properties:
+      col_widths: {}
+      grid_position: DOWFIW,CYKHNJ
+    components:
+    - type: RichText
+      properties: {role: null, align: left, tooltip: '', enable_slots: true, border: '',
+        foreground: 'theme:On Primary Container', visible: true, font_size: null,
+        content: '', font: '', spacing_above: small, spacing_below: small, data: null,
+        background: '', format: markdown}
+      name: rtext_prompt
+      layout_properties:
+        col_widths: {}
+        grid_position: VETBKV,IKTUSV
+      data_bindings:
+      - {property: content, code: 'self.item[''prompt'']'}
+  - type: Spacer
+    properties: {height: 18}
+    name: spacer_1_copy_2
+    layout_properties:
+      col_widths: {}
+      grid_position: TOZNQF,VZAPSS
+  - type: Label
+    properties: {role: null, align: left, tooltip: '', border: '', foreground: '',
+      visible: true, text: 'Options:', font_size: null, font: '', spacing_above: small,
+      icon_align: left, spacing_below: small, italic: false, background: '', bold: false,
+      underline: false, icon: ''}
+    name: label_4_copy_2
+    layout_properties:
+      col_widths: {}
+      grid_position: SDNVET,WHSXDS
+  - type: ColumnPanel
+    properties: {role: tonal-card, tooltip: '', border: '', foreground: '', visible: true,
+      wrap_on: mobile, col_spacing: medium, spacing_above: small, col_widths: '{}',
+      spacing_below: small, background: ''}
+    name: outlined_card_4_copy_2
+    layout_properties:
+      col_widths: {}
+      grid_position: XKLJFL,IUNIZC
+    components:
+    - type: RepeatingPanel
+      properties: {item_template: Form1.ItemTemplate4}
+      name: rpanel_options
+      layout_properties: {grid_position: 'ZHVVRO,DNAIOR'}
+      event_bindings: {}
+  - type: Spacer
+    properties: {height: 18}
+    name: spacer_1_copy_4
+    layout_properties:
+      col_widths: {}
+      grid_position: ZSYDTR,WJDHSR
+  - type: Spacer
+    properties: {height: 18}
+    name: spacer_1_copy_15
+    layout_properties:
+      col_widths: {}
+      grid_position: FUPFGM,WNEOMP
+  data_bindings: []
+is_package: true

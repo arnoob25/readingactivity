@@ -3,17 +3,10 @@ container:
   properties: {col_widths: '{}'}
 components:
 - type: ColumnPanel
-  properties: {col_widths: '{"VKWOYF":7,"NWZKWB":53}'}
+  properties: {col_widths: '{"NWZKWB":53}'}
   name: column_panel_1
   layout_properties: {grid_position: 'BNGMQQ,MIOPPT'}
   components:
-  - type: Label
-    properties: {role: null, align: left, tooltip: '', border: '', foreground: '',
-      visible: true, text: 'Option 10:', font_size: null, font: '', spacing_above: small,
-      icon_align: left, spacing_below: small, italic: false, background: '', bold: false,
-      underline: false, icon: ''}
-    name: label_1
-    layout_properties: {grid_position: 'RBKUPY,VKWOYF'}
   - type: Label
     properties: {role: null, align: left, tooltip: '', border: '', foreground: '',
       visible: true, text: 'Lorem ispum dolor sit amet ', font_size: null, font: '',
@@ -21,4 +14,6 @@ components:
       background: '', bold: false, underline: false, icon: ''}
     name: label_2
     layout_properties: {grid_position: 'RBKUPY,NWZKWB'}
+    data_bindings:
+    - {property: text, code: 'self.item[''title-option'']'}
 is_package: true

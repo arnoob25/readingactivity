@@ -94,7 +94,7 @@ db_schema:
       admin_ui: {width: 200}
       type: string
   question:
-    client: none
+    client: full
     server: full
     columns:
     - name: gi_step
@@ -119,7 +119,7 @@ db_schema:
       target: options
     title: question
   options:
-    client: none
+    client: full
     server: full
     columns:
     - name: title-option
