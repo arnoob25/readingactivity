@@ -84,12 +84,12 @@ db_schema:
       admin_ui: {width: 200}
       type: link_single
       target: ilo
-    - name: ra_step_(test)
-      admin_ui: {width: 200}
+    - name: ra_step_test
+      admin_ui: {order: 4, width: 200}
       type: link_single
       target: ra_steps
-    - name: ra_steps
-      admin_ui: {width: 200}
+    - name: ra_step
+      admin_ui: {order: 1, width: 200}
       type: link_multiple
       target: ra_steps
     title: gi_steps
@@ -125,6 +125,10 @@ db_schema:
       admin_ui: {width: 200}
       type: link_multiple
       target: options
+    - name: gi_step_test
+      admin_ui: {width: 200}
+      type: link_single
+      target: gi_steps
     title: question
   options:
     client: full

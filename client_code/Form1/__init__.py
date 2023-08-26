@@ -15,10 +15,13 @@ class Form1(Form1Template):
     self.author_page2.visible = False
     self.author_page3.visible = False
     self.author_page4.visible = True
-    ra = app_tables.ra_steps.search(serial = 3)
-    gi = app_tables.gi_steps.search(ra_step=)
-    self.rpanel_questions.items = app_tables.question.search(
-      gi_step = gi
+    ra = app_tables.ra_steps.get(serial = 3)
+    gi = app_tables.gi_steps.get(
+      q.
+      ra_step_test = ra
+    )
+    self.rpanel_questions.items = app_tables.question.get(
+      gi_step_test = gi
     )
 
   query_ra_step = []
