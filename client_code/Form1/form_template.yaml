@@ -43,7 +43,7 @@ components:
           background: '', bold: false, underline: false}
         name: textbox_ilo
         layout_properties: {grid_position: 'DKFHOT,DNMDBP'}
-        event_bindings: {pressed_enter: textbox_ilo_pressed_enter}
+        event_bindings: {}
       - type: Button
         properties: {role: filled-button, align: right, tooltip: '', border: '', enabled: true,
           foreground: '', visible: true, text: Generate Outline, font_size: null,
@@ -51,7 +51,7 @@ components:
           italic: false, background: '', bold: false, underline: false, icon: ''}
         name: btn_outline
         layout_properties: {grid_position: 'TKMOVS,GLNEZH'}
-        event_bindings: {click: btn_outline_click}
+        event_bindings: {}
   - type: ColumnPanel
     properties: {col_widths: '{}'}
     name: author_page2
@@ -238,11 +238,3 @@ components:
   properties: {}
   name: navbar_links
   layout_properties: {slot: nav-right}
-- type: TextBox
-  properties: {role: outlined, align: left, hide_text: false, tooltip: '', placeholder: '',
-    border: '', enabled: true, foreground: '', visible: true, text: '', font_size: null,
-    font: '', spacing_above: small, type: text, spacing_below: small, italic: false,
-    background: '', bold: false, underline: false}
-  name: textbox_title
-  layout_properties: {slot: title}
-  event_bindings: {pressed_enter: text_box_1_pressed_enter}

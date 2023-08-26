@@ -22,5 +22,5 @@ def outline(ilo, filename):
   app_tables.ilo.add_row(title_ilo=ilo)
   list = []
   for i in app_tables.ilo.search(title_ilo = ilo):
-    list.append(i)
+    list.append(i) 
   app_tables.files.add_row(ilo = list, ID = u_id, filename = filename)

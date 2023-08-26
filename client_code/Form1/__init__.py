@@ -12,21 +12,13 @@ class Form1(Form1Template):
 
     # Any code you write here will run before the form opens.
 
-  def btn_outline(self, **event_args):
-    """This method is called when the button is clicked"""
-
-  def btn_outline_click(self, **event_args):
-    """This method is called when the button is clicked"""
-    anvil.server.call(
-      "outline", 
-      self.textbox_ilo.text,
-      self.textbox_title.text
-    )
+    # After the author clicks "generate outline"
 
     query_ra_step = app_tables.ra_steps.search()
     self.rpanel_ra_step.items = query_ra_step
-    pass
+    self.rpanel_ra_step2.items = query_ra_step
 
+    # After the author clicks "generate gi"
     
 
     
