@@ -11,7 +11,3 @@ class ItemTemplate5(ItemTemplate5Template):
     self.init_components(**properties)
 
     # Any code you write here will run before the form opens.
-
-    # After the author runs "generate questions"
-    query_options = app_tables.options.search()
-    self.rpanel_options.items = query_options

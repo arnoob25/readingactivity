@@ -18,9 +18,12 @@ class Form1(Form1Template):
     self.rpanel_ra_step.items = query_ra_step
     self.rpanel_ra_step2.items = query_ra_step
 
-
     # After the author clicks "generate question"
-    query_question = app_tables.question.get()
+    self.rpanel_questions.items = app_tables.question.search()
+
+
+
+    
     
     
     
