@@ -13,16 +13,12 @@ class Form1(Form1Template):
     # Any code you write here will run before the form opens.
     self.author_page1.visible = False
     self.author_page2.visible = False
-    self.author_page3.visible = False
-    self.author_page4.visible = True
-    ra = app_tables.ra_steps.get(serial = 3)
-    gi = app_tables.gi_steps.get(
-      q.
-      ra_step_test = ra
-    )
-    self.rpanel_questions.items = app_tables.question.get(
-      gi_step_test = gi
-    )
+    self.author_page3.visible = True
+    self.author_page4.visible = False
+    ra = app_tables.ra_steps.search(serial = 3)
+    self.rpanel_ra_step2.items = ra
+    
+    self.rpanel_questions.items = app_tables.question.search()
 
   query_ra_step = []
 
