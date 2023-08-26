@@ -21,13 +21,6 @@ class Form1(Form1Template):
     
     
 
-    query_ra_step = app_tables.ra_steps.search()
-    gi_steps = {}
-  
-    for s in query_ra_step:
-      temp = s.get_id()
-      alert()app_tables.gi_steps.get_by_id(s.get_id())
-
   def btn_outline_click(self, **event_args):
     """This method is called when the button is clicked"""
 
@@ -51,6 +44,10 @@ class Form1(Form1Template):
     self.author_page3.visible = False
     self.author_page4.visible = True
 
+    curr_step = {}
+    for s in query_ra_step:
+      gi_step = app_tables.gi_steps.get(ra_step_test=s)
+    alert(curr_step)
     self.item = app_tables.question.get()
     
 
