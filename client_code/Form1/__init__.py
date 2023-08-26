@@ -11,16 +11,13 @@ class Form1(Form1Template):
     self.init_components(**properties)
 
     # Any code you write here will run before the form opens.
+    data = [] # data on empty page
 
     # After the author clicks "generate outline"
-
     query_ra_step = app_tables.ra_steps.search()
     self.rpanel_ra_step.items = query_ra_step
     self.rpanel_ra_step2.items = query_ra_step
 
-    # After the author clicks "generate gi"
-    
-
-    
-
-
+    # After the author clicks "generate question"
+    question = query_question = app_tables.question.get()
+    self.author_page4.

@@ -1,6 +1,7 @@
 container:
   type: ColumnPanel
   properties: {col_widths: '{}'}
+  data_bindings: []
 components:
 - type: ColumnPanel
   properties: {col_widths: '{"LKQAUY":51}'}
@@ -15,5 +16,5 @@ components:
     name: label_2
     layout_properties: {grid_position: 'EMEVKP,LKQAUY'}
     data_bindings:
-    - {property: text, code: 'self.item[''title-gi_step'']'}
+    - {property: text, code: 'f"Question {self.item[''serial'']}: {self.item[''title-gi_step'']}"'}
 is_package: true
