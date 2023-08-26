@@ -92,6 +92,10 @@ db_schema:
       admin_ui: {order: 1, width: 200}
       type: link_multiple
       target: ra_steps
+    - name: questions
+      admin_ui: {width: 200}
+      type: link_multiple
+      target: question
     title: gi_steps
   ilo:
     title: ilo
