@@ -113,12 +113,6 @@ components:
       - {property: items, code: 'self.item[''options'']'}
   - type: Spacer
     properties: {height: 18}
-    name: spacer_1_copy_4
-    layout_properties:
-      col_widths: {}
-      grid_position: ZSYDTR,WJDHSR
-  - type: Spacer
-    properties: {height: 18}
     name: spacer_1_copy_15
     layout_properties:
       col_widths: {}

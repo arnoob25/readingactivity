@@ -11,15 +11,50 @@ class Form1(Form1Template):
     self.init_components(**properties)
 
     # Any code you write here will run before the form opens.
-    data = [] # data on empty page
+    self.author_page1.visible = False
+    self.author_page2.visible = False
+    self.author_page3.visible = False
+    self.author_page4.visible = True
+    ra = app_tables.ra_steps.search(serial = 3)
+    gi = app_tables.gi_steps.search(ra_step=)
+    self.rpanel_questions.items = app_tables.question.search(
+      gi_step = gi
+    )
 
-    # After the author clicks "generate outline"
+  query_ra_step = []
+
+  def btn_outline_click(self, **event_args):
+    """This method is called when the button is clicked"""
+
+    self.author_page1.visible = False
+    self.author_page2.visible = True
+
+    global query_ra_step
     query_ra_step = app_tables.ra_steps.search()
     self.rpanel_ra_step.items = query_ra_step
     self.rpanel_ra_step2.items = query_ra_step
 
-    # After the author clicks "generate question"
-    self.rpanel_questions.items = app_tables.question.search()
+  def btn_gi_click(self, **event_args):
+    """This method is called when the button is clicked"""
+
+    self.author_page2.visible = False
+    self.author_page3.visible = True
+
+  def btn_question_click(self, **event_args):
+    """This method is called when the button is clicked"""
+
+    self.author_page3.visible = False
+    self.author_page4.visible = True
+
+    
+    
+    
+
+
+    
+    
+
+
 
 
 

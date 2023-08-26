@@ -11,7 +11,3 @@ class ItemTemplate2(ItemTemplate2Template):
     self.init_components(**properties)
 
     # Any code you write here will run before the form opens.
-
-    # After the author clicks "generate gi"
-    query_gi_step = app_tables.gi_steps.search()
-    self.rpanel_gi_steps.items = query_gi_step

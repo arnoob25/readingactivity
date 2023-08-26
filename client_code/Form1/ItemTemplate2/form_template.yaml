@@ -60,6 +60,8 @@ components:
           properties: {item_template: Form1.ItemTemplate2.ItemTemplate3}
           name: rpanel_gi_steps
           layout_properties: {grid_position: 'HOBHJB,YZXJCU'}
+          data_bindings:
+          - {property: items, code: 'self.item[''gi_steps'']'}
   - type: Spacer
     properties: {height: 8}
     name: spacer_1
