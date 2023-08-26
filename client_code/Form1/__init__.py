@@ -1,5 +1,8 @@
 from ._anvil_designer import Form1Template
 from anvil import *
+import anvil.google.auth, anvil.google.drive
+from anvil.google.drive import app_files
+import anvil.users
 import anvil.server
 import anvil.tables as tables
 import anvil.tables.query as q
@@ -13,12 +16,11 @@ class Form1(Form1Template):
     # Any code you write here will run before the form opens.
     self.author_page1.visible = False
     self.author_page2.visible = False
-    self.author_page3.visible = True
-    self.author_page4.visible = False
+    self.author_page3.visible = False
+    self.author_page4.visible = True
     ra = app_tables.ra_steps.search(serial = 3)
     self.rpanel_ra_step2.items = ra
-    
-    self.rpanel_questions.items = app_tables.question.search()
+    self.item = app_tables.question.get()
 
   query_ra_step = []
 
@@ -44,6 +46,8 @@ class Form1(Form1Template):
 
     self.author_page3.visible = False
     self.author_page4.visible = True
+
+
 
     
     
