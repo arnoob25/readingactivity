@@ -11,11 +11,12 @@ services:
 - source: /runtime/services/google.yml
   client_config: {}
   server_config: {}
-package_name: M3_App_1
+package_name: ReadingActivity
 allow_embedding: false
-name: M3 App 1
+name: ReadingActivity
 runtime_options: {version: 2, client_version: '3', server_version: python3-sandbox,
   server_spec: null}
+metadata: {logo_img: 'asset:screenshot.png'}
 startup_form: Form1
 db_schema:
   files:
@@ -92,6 +93,10 @@ db_schema:
       admin_ui: {width: 200}
       type: link_multiple
       target: question
+    - name: ra_step_test
+      admin_ui: {width: 200}
+      type: link_single
+      target: ra_steps
     title: gi_steps
   ilo:
     title: ilo
@@ -125,6 +130,10 @@ db_schema:
       admin_ui: {width: 200}
       type: link_multiple
       target: options
+    - name: gi_step_test
+      admin_ui: {width: 200}
+      type: link_single
+      target: gi_steps
     title: question
   options:
     client: full

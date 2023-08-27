@@ -288,6 +288,7 @@ components:
           layout_properties:
             col_widths: {}
             grid_position: FWERQN,WGFGPJ
+          event_bindings: {click: btn_next_question_click}
         data_bindings: []
     event_bindings: {}
     data_bindings: []

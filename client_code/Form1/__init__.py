@@ -18,7 +18,29 @@ class Form1(Form1Template):
     self.author_page2.visible = False
     self.author_page3.visible = False
     self.author_page4.visible = False
+
+    # After steps are generated
+    global query_ra_step
+    query_ra_step = app_tables.ra_steps.search()
+
+    global l_ra_step
+    l_ra_step = [s.get_id() for s in query_ra_step]
+
+    # After GIs are generated
+    global l_gi_step
+    l_gi_step = {}
+    step_count = 0
     
+    for i in l_ra_step:
+      step_count = 0
+      query_gi_step = app_tables.gi_steps.search(
+        ra_step_test = app_tables.ra_steps.get_by_id(i)
+      )
+      temp_list = [gi for gi in query_gi_step]
+
+      l_gi_step[f"Step {step_count}"] = temp_list
+    alert(l_ra_step)
+    alert(l_gi_step)
     
 
   def btn_outline_click(self, **event_args):
@@ -27,8 +49,8 @@ class Form1(Form1Template):
     self.author_page1.visible = False
     self.author_page2.visible = True
 
-    global query_ra_step
-    query_ra_step = app_tables.ra_steps.search()
+    
+
     self.rpanel_ra_step.items = query_ra_step
     self.rpanel_ra_step2.items = query_ra_step
 
@@ -44,28 +66,12 @@ class Form1(Form1Template):
     self.author_page3.visible = False
     self.author_page4.visible = True
 
-    
-    
 
+  def btn_next_question_click(self, **event_args):
+    """This method is called when the button is clicked"""
 
-
     
-    
-    
+    pass
 
 
     
-    
-
-
-
-
-
-    
-    
-    
-    
-
-
-    
-
