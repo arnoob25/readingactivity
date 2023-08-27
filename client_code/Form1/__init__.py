@@ -16,6 +16,7 @@ class Form1(Form1Template):
     # Declate instance variables
     self.curr_ra_step = 1
     self.curr_gi_step = 1
+    self.query_ra_step = None
     
     # Any code you write here will run before the form opens.
     self.author_page1.visible = False
@@ -25,24 +26,14 @@ class Form1(Form1Template):
 
 
     # After steps are generated
-    global query_ra_step
-    query_ra_step = app_tables.ra_steps.search()
-    l_ra_step = [s.get_id() for s in query_ra_step]
+    self.query_ra_step = app_tables.ra_steps.search()
 
-    # After GIs are generated
-    global l_gi_step
-    l_gi_step = {}
-    step_count = 0
+    serial = [r['serial'] for r in app_tables.ra_steps.search()
     
-    for i in l_ra_step:
-      step_count = 0
-      query_gi_step = app_tables.gi_steps.search(
-        ra_step = app_tables.ra_steps.get_by_id(i)
-      )
-      temp_list = [gi for gi in query_gi_step]
+    #l_ra_step = [s.get_id() for s in query_ra_step]
 
-      l_gi_step[f"Step {step_count}"] = temp_list
 
+              
   def itr(self, dic):
       end = False
 
@@ -79,14 +70,10 @@ class Form1(Form1Template):
     self.author_page3.visible = False
     self.author_page4.visible = True
 
-    # Creating the dictionary
-    test_dict = {1 : ['one', 'two']} # step : [gi steps]
+    # Create the dictionary
+    test_dict = {1 : ['0001', '0002']} # step : [gi steps]
     
-    # Functionality for getting question data
-
-    question = app_tables.question.get(
-      gi_step = app_tables.gi_steps.get_by_id(curr_gi)
-    )
+    
 
   def btn_next_question_click(self, **event_args):
     """This method is called when the button is clicked"""
@@ -97,7 +84,9 @@ class Form1(Form1Template):
     iterate = self.itr(data)
     
     if iterate == False:
-      alert(f"Current step: {ra}, Current gi: {gi}")
+      question = app_tables.question.get(
+      gi_step = app_tables.gi_steps.get_by_id(curr_gi)
+    )
     else:
       pass
 
