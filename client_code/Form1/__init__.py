@@ -13,11 +13,16 @@ class Form1(Form1Template):
     # Set Form properties and Data Bindings.
     self.init_components(**properties)
 
+    # Declate instance variables
+    self.curr_ra_step = 1
+    self.curr_gi_step = 1
+    
     # Any code you write here will run before the form opens.
-    self.author_page1.visible = True
+    self.author_page1.visible = False
     self.author_page2.visible = False
     self.author_page3.visible = False
-    self.author_page4.visible = False
+    self.author_page4.visible = True
+
 
     # After steps are generated
     global query_ra_step
@@ -37,11 +42,21 @@ class Form1(Form1Template):
       temp_list = [gi for gi in query_gi_step]
 
       l_gi_step[f"Step {step_count}"] = temp_list
-    alert(l_ra_step)
-    alert(l_gi_step)
-    
 
-  def btn_outline_click(self, **event_args):
+  def itr(self, dic):
+      end = False
+
+      if self.curr_gi_step+1 <= dic[self.curr_ra_step]:
+        self.curr_gi_step = self.curr_gi_step + 1
+      elif self.curr_ra_step+1 in dic:
+        self.curr_ra_step = self.curr_ra_step + 1
+        self.curr_gi_step = 1
+      else: 
+        end = True
+
+      return end
+
+  def btn_gen_outline_click(self, **event_args):
     """This method is called when the button is clicked"""
 
     self.author_page1.visible = False
@@ -52,25 +67,20 @@ class Form1(Form1Template):
     self.rpanel_ra_step.items = query_ra_step
     self.rpanel_ra_step2.items = query_ra_step
 
-  def btn_gi_click(self, **event_args):
+  def btn_gen_gi_click(self, **event_args):
     """This method is called when the button is clicked"""
 
     self.author_page2.visible = False
     self.author_page3.visible = True
 
-  def btn_question_click(self, **event_args):
+  def btn_gen_question_click(self, **event_args):
     """This method is called when the button is clicked"""
 
     self.author_page3.visible = False
     self.author_page4.visible = True
 
-
-    # Test the iteration
-    test_dict = {'step 1' : ['gi1','gi2','gi3','gi4'], 'step 2' : ['gi1','gi2','gi3']}
-    for i in test_dict:
-      for i in test_dict[i]:
-        global curr_gi
-
+    # Creating the dictionary
+    test_dict = {1 : ['one', 'two']} # step : [gi steps]
     
     # Functionality for getting question data
 
@@ -78,15 +88,18 @@ class Form1(Form1Template):
       gi_step = app_tables.gi_steps.get_by_id(curr_gi)
     )
 
-    
-        
-
-
   def btn_next_question_click(self, **event_args):
     """This method is called when the button is clicked"""
 
+    ra = self.curr_ra_step
+    gi = self.curr_gi_step
+    data = {1 : 2, 2 : 3} 
+    iterate = self.itr(data)
     
-    pass
+    if iterate == False:
+      alert(f"Current step: {ra}, Current gi: {gi}")
+    else:
+      pass
 
 
     
