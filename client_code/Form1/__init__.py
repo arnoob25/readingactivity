@@ -14,9 +14,11 @@ class Form1(Form1Template):
     self.init_components(**properties)
 
     # Declate instance variables
+    self.curr_file = None
     self.curr_ra_step = 1
     self.curr_gi_step = 1
-    self.query_ra_step = None
+    self.query_ra_steps = None
+    self.data = {}
     
     # Any code you write here will run before the form opens.
     self.author_page1.visible = False
@@ -24,15 +26,26 @@ class Form1(Form1Template):
     self.author_page3.visible = False
     self.author_page4.visible = True
 
-
-    # After steps are generated
-    self.query_ra_step = app_tables.ra_steps.search()
-
-    serial = [r['serial'] for r in app_tables.ra_steps.search()
+    # Building the Data
+    self.curr_file = app_tables.files.get(ID="f50ec0b7-f960-400d-91f0-c42a6d44e3d0")
     
-    #l_ra_step = [s.get_id() for s in query_ra_step]
+    self.query_ra_steps = app_tables.ra_steps.search(file = self.curr_file)
+    ra_step_id = [s.get_id() for s in self.query_ra_steps]
 
-
+    # building the dictionary
+    count = 0
+    
+    for s in ra_step_id:
+      count = count+1
+      gi_steps = app_tables.gi_steps.search(
+        ra_step = app_tables.ra_steps.get_by_id(s)
+      )
+      gi_ids = [r.get_id() for r in gi_steps]
+      self.data[count] = gi_ids
+      
+    
+    alert(self.data)
+    
               
   def itr(self, dic):
       end = False
@@ -85,7 +98,7 @@ class Form1(Form1Template):
     
     if iterate == False:
       question = app_tables.question.get(
-      gi_step = app_tables.gi_steps.get_by_id(curr_gi)
+      gi_step = app_tables.gi_steps.get_by_id(499134,763054673)
     )
     else:
       pass
