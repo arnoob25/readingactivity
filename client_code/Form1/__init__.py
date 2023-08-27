@@ -22,8 +22,6 @@ class Form1(Form1Template):
     # After steps are generated
     global query_ra_step
     query_ra_step = app_tables.ra_steps.search()
-
-    global l_ra_step
     l_ra_step = [s.get_id() for s in query_ra_step]
 
     # After GIs are generated
@@ -34,7 +32,7 @@ class Form1(Form1Template):
     for i in l_ra_step:
       step_count = 0
       query_gi_step = app_tables.gi_steps.search(
-        ra_step_test = app_tables.ra_steps.get_by_id(i)
+        ra_step = app_tables.ra_steps.get_by_id(i)
       )
       temp_list = [gi for gi in query_gi_step]
 
@@ -65,6 +63,23 @@ class Form1(Form1Template):
 
     self.author_page3.visible = False
     self.author_page4.visible = True
+
+
+    # Test the iteration
+    test_dict = {'step 1' : ['gi1','gi2','gi3','gi4'], 'step 2' : ['gi1','gi2','gi3']}
+    for i in test_dict:
+      for i in test_dict[i]:
+        global curr_gi
+
+    
+    # Functionality for getting question data
+
+    question = app_tables.question.get(
+      gi_step = app_tables.gi_steps.get_by_id(curr_gi)
+    )
+
+    
+        
 
 
   def btn_next_question_click(self, **event_args):
