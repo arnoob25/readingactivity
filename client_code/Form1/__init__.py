@@ -1,7 +1,5 @@
 from ._anvil_designer import Form1Template
 from anvil import *
-import anvil.google.auth, anvil.google.drive
-from anvil.google.drive import app_files
 import anvil.users
 import anvil.server
 import anvil.tables as tables
@@ -16,25 +14,78 @@ class Form1(Form1Template):
     # Declate instance variables
     self.curr_file = None
     self.curr_ra_step = 1
-    self.curr_gi_step = 1
+    self.curr_gi_step = 3
     self.query_ra_steps = None
     self.data = {}
     
     # Any code you write here will run before the form opens.
-    self.author_page1.visible = False
+    self.author_page1.visible = True
     self.author_page2.visible = False
+    self.author_page3.visible = False
+    self.author_page4.visible = False
+    self.author_page5.visible = False
+
+    # review
+    self.curr_file = app_tables.files.get(ID="f50ec0b7-f960-400d-91f0-c42a6d44e3d0")
+
+  def reset(self):
+    self.curr_file = None
+    self.curr_ra_step = 1
+    self.curr_gi_step = 1
+    self.query_ra_steps = None
+    self.data = {}
+    
+    self.author_page1.visible = True
+    self.author_page2.visible = False
+    self.author_page3.visible = False
+    self.author_page4.visible = False
+    self.author_page5.visible = False
+           
+  def itr(self, dic):
+      end = False
+
+      if self.curr_gi_step+1 <= len(dic[self.curr_ra_step]):
+        self.curr_gi_step = self.curr_gi_step + 1
+      elif self.curr_ra_step+1 in dic:
+        self.curr_ra_step = self.curr_ra_step + 1
+        self.curr_gi_step = 1
+      else: 
+        end = True
+        self.btn_next_question.text = "Proceed"
+
+      return end
+
+  def btn_gen_outline_click(self, **event_args):
+    """This method is called when the button is clicked"""
+
+    self.title.text = "Steps of the Rading Activity:"
+    self.author_page1.visible = False
+    self.author_page2.visible = True
+
+    self.query_ra_steps = app_tables.ra_steps.search(file = self.curr_file)
+    
+    self.rpanel_ra_step.items = self.query_ra_steps
+    self.rpanel_ra_step2.items = self.query_ra_steps
+
+  def btn_gen_gi_click(self, **event_args):
+    """This method is called when the button is clicked"""
+
+    self.title.text = "Steps with Guided Inquiries:"
+    self.author_page2.visible = False
+    self.author_page3.visible = True
+
+  def btn_gen_question_click(self, **event_args):
+    """This method is called when the button is clicked"""
+
+    self.title.text = "Step 30 (question 1/3):"
     self.author_page3.visible = False
     self.author_page4.visible = True
 
     # Building the Data
-    self.curr_file = app_tables.files.get(ID="f50ec0b7-f960-400d-91f0-c42a6d44e3d0")
-    
-    self.query_ra_steps = app_tables.ra_steps.search(file = self.curr_file)
     ra_step_id = [s.get_id() for s in self.query_ra_steps]
 
     # building the dictionary
     count = 0
-    
     for s in ra_step_id:
       count = count+1
       gi_steps = app_tables.gi_steps.search(
@@ -42,66 +93,55 @@ class Form1(Form1Template):
       )
       gi_ids = [r.get_id() for r in gi_steps]
       self.data[count] = gi_ids
-      
+
+    # Testing the question fetching [Remove it afterwards]
+    curr_gi = app_tables.gi_steps.get(
+      ra_step = app_tables.ra_steps.get(
+        file = self.curr_file,
+        serial = self.curr_ra_step 
+      ),
+      serial = self.curr_gi_step
+    )
+    curr_gi_step_id = curr_gi.get_id()
     
-    alert(self.data)
+    question = app_tables.question.get(
+      gi_step= app_tables.gi_steps.get_by_id(curr_gi_step_id)
+    )
+
+    # displaying data
+    self.rtext_context.content = question['context']
+    self.rtext_prompt.content = question['prompt']
+    self.rpanel_options.items = question['options']
     
-              
-  def itr(self, dic):
-      end = False
-
-      if self.curr_gi_step+1 <= dic[self.curr_ra_step]:
-        self.curr_gi_step = self.curr_gi_step + 1
-      elif self.curr_ra_step+1 in dic:
-        self.curr_ra_step = self.curr_ra_step + 1
-        self.curr_gi_step = 1
-      else: 
-        end = True
-
-      return end
-
-  def btn_gen_outline_click(self, **event_args):
-    """This method is called when the button is clicked"""
-
-    self.author_page1.visible = False
-    self.author_page2.visible = True
-
-    
-
-    self.rpanel_ra_step.items = query_ra_step
-    self.rpanel_ra_step2.items = query_ra_step
-
-  def btn_gen_gi_click(self, **event_args):
-    """This method is called when the button is clicked"""
-
-    self.author_page2.visible = False
-    self.author_page3.visible = True
-
-  def btn_gen_question_click(self, **event_args):
-    """This method is called when the button is clicked"""
-
-    self.author_page3.visible = False
-    self.author_page4.visible = True
-
-    # Create the dictionary
-    test_dict = {1 : ['0001', '0002']} # step : [gi steps]
-    
-    
-
   def btn_next_question_click(self, **event_args):
     """This method is called when the button is clicked"""
-
-    ra = self.curr_ra_step
-    gi = self.curr_gi_step
-    data = {1 : 2, 2 : 3} 
-    iterate = self.itr(data)
+    self.author_page5.visible = True
+    
+    iterate = self.itr(self.data)
+    curr_gi = app_tables.gi_steps.get(
+      ra_step = app_tables.ra_steps.get(
+        file = self.curr_file,
+        serial = self.curr_ra_step 
+      ),
+      serial = self.curr_gi_step
+    ) # have to get the current gi_step (this is a query)
+    curr_gi_step_id = curr_gi.get_id()
+    
     
     if iterate == False:
       question = app_tables.question.get(
-      gi_step = app_tables.gi_steps.get_by_id(499134,763054673)
-    )
+      gi_step = app_tables.gi_steps.get_by_id(curr_gi_step_id)
+      )
     else:
-      pass
+      self.btn_next_question.text = "Proceed"
+      self.author_page4.visible = False
+      self.author_page5.visible = True
+      self.title.text = self.curr_file['title']
+
+  def btn_go_home_click(self, **event_args):
+    """This method is called when the button is clicked"""
+
+    self.reset()
+    pass
 
 
-    
