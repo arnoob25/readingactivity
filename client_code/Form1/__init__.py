@@ -17,6 +17,7 @@ class Form1(Form1Template):
     self.curr_gi_step = 3
     self.query_ra_steps = None
     self.data = {}
+    self.question = None
     
     # Any code you write here will run before the form opens.
     self.author_page1.visible = True
@@ -34,6 +35,7 @@ class Form1(Form1Template):
     self.curr_gi_step = 1
     self.query_ra_steps = None
     self.data = {}
+    self.question = None
     
     self.author_page1.visible = True
     self.author_page2.visible = False
@@ -55,12 +57,24 @@ class Form1(Form1Template):
 
       return end
 
+  def get_gi_id(self):
+    curr_gi = app_tables.gi_steps.get(
+      ra_step = app_tables.ra_steps.get(
+        file = self.curr_file,
+        serial = self.curr_ra_step 
+      ),
+      serial = self.curr_gi_step
+    )
+    curr_gi_step_id = curr_gi.get_id()
+    return curr_gi_step_id
+
   def btn_gen_outline_click(self, **event_args):
     """This method is called when the button is clicked"""
 
     self.title.text = "Steps of the Rading Activity:"
     self.author_page1.visible = False
     self.author_page2.visible = True
+    self.author_page2.scroll_into_view(smooth = False)
 
     self.query_ra_steps = app_tables.ra_steps.search(file = self.curr_file)
     
@@ -77,14 +91,14 @@ class Form1(Form1Template):
   def btn_gen_question_click(self, **event_args):
     """This method is called when the button is clicked"""
 
+    alert(f"Step: {self.curr_ra_step}, Question: {self.curr_gi_step}")
     self.title.text = "Step 30 (question 1/3):"
+    self.author_page2.scroll_into_view(smooth = False)
     self.author_page3.visible = False
     self.author_page4.visible = True
 
     # Building the Data
     ra_step_id = [s.get_id() for s in self.query_ra_steps]
-
-    # building the dictionary
     count = 0
     for s in ra_step_id:
       count = count+1
@@ -94,49 +108,40 @@ class Form1(Form1Template):
       gi_ids = [r.get_id() for r in gi_steps]
       self.data[count] = gi_ids
 
-    # Testing the question fetching [Remove it afterwards]
-    curr_gi = app_tables.gi_steps.get(
-      ra_step = app_tables.ra_steps.get(
-        file = self.curr_file,
-        serial = self.curr_ra_step 
-      ),
-      serial = self.curr_gi_step
-    )
-    curr_gi_step_id = curr_gi.get_id()
+    # Displaying the data
+    id = self.get_gi_id()
     
-    question = app_tables.question.get(
-      gi_step= app_tables.gi_steps.get_by_id(curr_gi_step_id)
+    self.question = app_tables.question.get(
+      gi_step= app_tables.gi_steps.get_by_id(id)
     )
 
     # displaying data
-    self.rtext_context.content = question['context']
-    self.rtext_prompt.content = question['prompt']
-    self.rpanel_options.items = question['options']
+    self.tarea_context.text = self.question['context']
+    self.tarea_prompt.text = self.question['prompt']
+    self.rpanel_options.items = self.question['options']
     
   def btn_next_question_click(self, **event_args):
     """This method is called when the button is clicked"""
+
+    alert(self.data)
+    alert(f"Step: {self.curr_ra_step}, Question: {self.curr_gi_step}")
     self.author_page5.visible = True
     
     iterate = self.itr(self.data)
-    curr_gi = app_tables.gi_steps.get(
-      ra_step = app_tables.ra_steps.get(
-        file = self.curr_file,
-        serial = self.curr_ra_step 
-      ),
-      serial = self.curr_gi_step
-    ) # have to get the current gi_step (this is a query)
-    curr_gi_step_id = curr_gi.get_id()
+  
+    if self.question != None: 
+      id = self.get_gi_id()
     
-    
-    if iterate == False:
-      question = app_tables.question.get(
-      gi_step = app_tables.gi_steps.get_by_id(curr_gi_step_id)
+    if iterate == False and self.question != None:
+      
+      self.question = app_tables.question.get(
+      gi_step = app_tables.gi_steps.get_by_id(id)
       )
-    else:
-      self.btn_next_question.text = "Proceed"
+    elif self.question == None:
       self.author_page4.visible = False
       self.author_page5.visible = True
       self.title.text = self.curr_file['title']
+      
 
   def btn_go_home_click(self, **event_args):
     """This method is called when the button is clicked"""

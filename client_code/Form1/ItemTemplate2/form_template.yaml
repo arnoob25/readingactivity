@@ -8,23 +8,23 @@ components:
   layout_properties: {grid_position: 'ZHARVS,VYOFRR'}
   components:
   - type: ColumnPanel
-    properties: {col_widths: '{"FZDUCH":53,"SUUFWJ":7}'}
+    properties: {role: null, tooltip: '', border: '', foreground: '', visible: true,
+      wrap_on: never, col_spacing: medium, spacing_above: small, col_widths: '{"TBJJXT":53,"EYNLXM":7}',
+      spacing_below: small, background: ''}
     name: column_panel_2
     layout_properties: {grid_position: 'HGCRPV,DSJNHU'}
     components:
-    - type: Label
-      properties: {role: null, align: left, tooltip: '', border: '', foreground: '',
-        visible: true, text: 'Step 10: ', font_size: null, font: '', spacing_above: small,
-        icon_align: left, spacing_below: small, italic: false, background: '', bold: false,
-        underline: false, icon: ''}
-      name: label_2
-      layout_properties:
-        col_widths: {}
-        grid_position: HUSRBH,FZDUCH
-        full_width_row: false
+    - type: TextBox
+      properties: {role: outlined, align: left, hide_text: false, tooltip: '', placeholder: '',
+        border: '0', enabled: true, foreground: '', visible: true, text: '', font_size: null,
+        font: '', spacing_above: small, type: text, spacing_below: small, italic: false,
+        background: '', bold: false, underline: false}
+      name: text_box_2
+      layout_properties: {grid_position: 'HUSRBH,TBJJXT'}
       data_bindings:
       - {property: text, code: 'f"Step {self.item[''serial'']} ({self.item[''title-ra_step'']}):
-          {self.item[''objective'']}"'}
+          {self.item[''objective'']}"', writeback: true}
+      event_bindings: {}
     - type: Button
       properties: {role: null, align: right, tooltip: '', border: '', enabled: true,
         foreground: '', visible: true, text: '', font_size: null, font: '', spacing_above: small,
@@ -33,33 +33,34 @@ components:
       name: button_1
       layout_properties:
         col_widths: {}
-        grid_position: HUSRBH,SUUFWJ
+        grid_position: HUSRBH,EYNLXM
         full_width_row: false
-      event_bindings: {}
+      event_bindings: {click: button_1_click}
     - type: ColumnPanel
       properties: {col_widths: '{}'}
-      name: column_panel_3
-      layout_properties: {grid_position: 'JBXEMH,ODWLXS'}
+      name: cpanel_2
+      layout_properties: {grid_position: 'JRMDZS,YMQTGB'}
       components:
+      - type: TextBox
+        properties: {role: outlined, align: left, hide_text: false, tooltip: '', placeholder: '',
+          border: '0', enabled: true, foreground: '', visible: true, text: 'Guided
+            inquiry: ', font_size: null, font: '', spacing_above: medium, type: text,
+          spacing_below: none, italic: false, background: '', bold: false, underline: false}
+        name: text_box_1
+        layout_properties: {grid_position: 'WEDCFL,LPBOYQ'}
+        event_bindings: {}
       - type: ColumnPanel
         properties: {role: tonal-card, tooltip: '', border: '', foreground: 'theme:On
             Primary Container', visible: true, wrap_on: mobile, col_spacing: medium,
-          spacing_above: small, col_widths: '{}', spacing_below: small, background: 'theme:Primary
+          spacing_above: small, col_widths: '{}', spacing_below: none, background: 'theme:Primary
             Container'}
         name: outlined_card_1
-        layout_properties: {grid_position: 'JDLQNJ,UYNLPS'}
+        layout_properties: {grid_position: 'CENQCT,AZUOSZ'}
         components:
-        - type: Label
-          properties: {role: null, align: left, tooltip: '', border: '', foreground: '',
-            visible: true, text: 'Guided Inquiry:', font_size: null, font: '', spacing_above: small,
-            icon_align: left, spacing_below: small, italic: false, background: '',
-            bold: false, underline: false, icon: ''}
-          name: label_3
-          layout_properties: {grid_position: 'WLHKAP,AHVCYQ'}
         - type: RepeatingPanel
           properties: {item_template: Form1.ItemTemplate2.ItemTemplate3}
           name: rpanel_gi_steps
-          layout_properties: {grid_position: 'HOBHJB,YZXJCU'}
+          layout_properties: {grid_position: 'STYUMY,RLIDBY'}
           data_bindings:
           - {property: items, code: 'self.item[''gi_steps'']'}
   - type: Spacer

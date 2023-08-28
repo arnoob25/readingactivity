@@ -4,37 +4,43 @@ container:
 components:
 - type: ColumnPanel
   properties: {role: tonal-card, tooltip: '', border: '', foreground: '', visible: true,
-    wrap_on: mobile, col_spacing: medium, spacing_above: small, col_widths: '{"JFGMSA":53,"TKANJO":7}',
+    wrap_on: never, col_spacing: medium, spacing_above: small, col_widths: '{"XRJYUF":53,"TGTPQG":7}',
     spacing_below: small, background: ''}
   name: outlined_card_1
-  layout_properties: {grid_position: 'PVPNGT,BAJPFF', full_width_row: true}
+  layout_properties: {grid_position: 'ACURAD,OQTDEI', full_width_row: true}
   components:
-  - type: Label
-    properties: {role: null, align: left, tooltip: '', border: '', foreground: '',
-      visible: true, text: 'Step 10:', font_size: null, font: '', spacing_above: small,
-      icon_align: left, spacing_below: small, italic: false, background: '', bold: false,
-      underline: false, icon: ''}
-    name: label_1
-    layout_properties: {grid_position: 'LZELFJ,JFGMSA', full_width_row: false}
-    data_bindings:
-    - {property: text, code: 'f"Step {self.item[''serial'']} ({self.item[''title-ra_step'']}):
-        {self.item[''objective'']}"'}
+  - type: LinearPanel
+    properties: {spacing_above: small, spacing_below: small, background: '', foreground: '',
+      border: '', visible: true, role: null, tooltip: ''}
+    name: linear_panel_1
+    layout_properties: {grid_position: 'DOAULI,XRJYUF', full_width_row: true}
+    components:
+    - type: TextArea
+      properties: {role: null, align: left, height: 34.8, tooltip: '', placeholder: '',
+        border: '0', enabled: true, foreground: '', visible: true, text: '', font_size: null,
+        auto_expand: true, font: '', spacing_above: small, spacing_below: small, italic: false,
+        background: '', bold: false, underline: false}
+      name: text_area_1
+      layout_properties: {}
+      data_bindings:
+      - {property: text, code: 'f"Step {self.item[''serial'']} ({self.item[''title-ra_step'']}):
+          {self.item[''objective'']}"', writeback: true}
   - type: Button
     properties: {role: null, align: right, tooltip: '', border: '', enabled: true,
       foreground: '', visible: true, text: '', font_size: null, font: '', spacing_above: small,
       icon_align: right, spacing_below: small, italic: false, background: '', bold: false,
       underline: false, icon: 'fa:angle-down'}
     name: button_1
-    layout_properties: {grid_position: 'LZELFJ,TKANJO', full_width_row: false}
+    layout_properties: {grid_position: 'DOAULI,TGTPQG', full_width_row: true}
     event_bindings: {click: button_1_click}
-  - type: TextBox
-    properties: {role: null, align: left, hide_text: false, tooltip: '', placeholder: '',
+  - type: TextArea
+    properties: {role: null, align: left, height: 46.8, tooltip: '', placeholder: '',
       border: '0', enabled: true, foreground: '', visible: false, text: '', font_size: null,
-      font: '', spacing_above: small, type: text, spacing_below: small, italic: false,
+      auto_expand: true, font: '', spacing_above: small, spacing_below: small, italic: false,
       background: '', bold: false, underline: false}
     name: instruction
-    layout_properties: {grid_position: 'IXKMTN,GRRXSO'}
+    layout_properties: {grid_position: 'ZRWGYA,EVAZHP'}
     data_bindings:
-    - {property: text, code: 'self.item[''instructions'']', writeback: true}
-    event_bindings: {pressed_enter: instruction_pressed_enter}
+    - {property: text, code: 'f"Instruction: {self.item[''instructions'']}"', writeback: true}
+    event_bindings: {}
 is_package: true

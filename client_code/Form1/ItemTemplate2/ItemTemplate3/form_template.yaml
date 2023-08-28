@@ -4,17 +4,19 @@ container:
   data_bindings: []
 components:
 - type: ColumnPanel
-  properties: {col_widths: '{"LKQAUY":51}'}
+  properties: {col_widths: '{}'}
   name: column_panel_1
   layout_properties: {grid_position: 'IUQVQY,DQOLUH'}
   components:
-  - type: Label
-    properties: {role: null, align: left, tooltip: '', border: '', foreground: '',
-      visible: true, text: 'App blah blah bladh lorrem ipusm dolor ', font_size: null,
-      font: '', spacing_above: small, icon_align: left, spacing_below: small, italic: false,
-      background: '', bold: false, underline: false, icon: ''}
-    name: label_2
-    layout_properties: {grid_position: 'EMEVKP,LKQAUY'}
+  - type: TextArea
+    properties: {role: outlined, align: left, height: 36.8, tooltip: '', placeholder: '',
+      border: '0', enabled: true, foreground: '', visible: true, text: '', font_size: null,
+      auto_expand: true, font: '', spacing_above: small, spacing_below: small, italic: false,
+      background: '', bold: false, underline: false}
+    name: text_area_1
+    layout_properties: {grid_position: 'INFEII,BMBMAA'}
     data_bindings:
-    - {property: text, code: 'f"Question {self.item[''serial'']}: {self.item[''title-gi_step'']}"'}
+    - {property: text, code: 'f"Question {self.item[''serial'']}: {self.item[''title-gi_step'']}"',
+      writeback: true}
+    event_bindings: {}
 is_package: true
