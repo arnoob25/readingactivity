@@ -16,7 +16,7 @@ components:
     components:
     - type: TextBox
       properties: {role: outlined, align: left, hide_text: false, tooltip: '', placeholder: '',
-        border: '0', enabled: true, foreground: '', visible: true, text: '', font_size: null,
+        border: '0', enabled: false, foreground: '', visible: true, text: '', font_size: null,
         font: '', spacing_above: small, type: text, spacing_below: small, italic: false,
         background: '', bold: false, underline: false}
       name: text_box_2
@@ -29,13 +29,13 @@ components:
       properties: {role: null, align: right, tooltip: '', border: '', enabled: true,
         foreground: '', visible: true, text: '', font_size: null, font: '', spacing_above: small,
         icon_align: right, spacing_below: small, italic: false, background: '', bold: false,
-        underline: false, icon: 'fa:angle-down'}
-      name: button_1
+        underline: false, icon: 'fa:angle-up'}
+      name: btn_gi
       layout_properties:
         col_widths: {}
         grid_position: HUSRBH,EYNLXM
         full_width_row: false
-      event_bindings: {click: button_1_click}
+      event_bindings: {click: btn_gi_click}
     - type: ColumnPanel
       properties: {col_widths: '{}'}
       name: cpanel_2

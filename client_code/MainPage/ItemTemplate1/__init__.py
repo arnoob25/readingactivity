@@ -15,13 +15,15 @@ class ItemTemplate1(ItemTemplate1Template):
 
     # Any code you write here will run before the form opens.
 
-  def button_1_click(self, **event_args):
+  def btn_instruction_click(self, **event_args):
     """This method is called when the button is clicked"""
-    
+
     if self.instruction.visible == False:
       self.instruction.visible = True
+      self.btn_instruction.icon = "fa:angle-up"
     else:
       self.instruction.visible = False
+      self.btn_instruction.icon = "fa:angle-down"
 
 
 

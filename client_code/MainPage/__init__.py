@@ -25,7 +25,7 @@ class MainPage(MainPageTemplate):
     self.author_page2.visible = False
     self.author_page3.visible = False
     self.author_page4.visible = False
-    self.author_page5.visible = True
+    self.author_page5.visible = False
 
     # review
     self.curr_file = app_tables.files.get(title="Cardiac Cycle")
@@ -55,7 +55,6 @@ class MainPage(MainPageTemplate):
         self.curr_gi_step = 1
       else: 
         end = True
-        self.btn_next_question.text = "Proceed"
 
       return end
 
@@ -132,17 +131,14 @@ class MainPage(MainPageTemplate):
     self.title.scroll_into_view()
     iterate = self.itr(self.data)
   
-    if self.question != None: 
-      id = self.get_gi_id()
     if iterate == False and self.question != None:
-      
+      id = self.get_gi_id()
       self.question = app_tables.question.get(
-      gi_step = app_tables.gi_steps.get_by_id(id)
+        gi_step = app_tables.gi_steps.get_by_id(id)
       )
-      #display data
-      self.disp_question_data()
+      self.disp_question_data() # update ui content
       
-    elif self.question == None:
+    else:
       self.author_page4.visible = False
       self.author_page5.visible = True
       self.title.text = self.curr_file['title']
