@@ -1,12 +1,13 @@
-from ._anvil_designer import Form1Template
+from ._anvil_designer import MainPageTemplate
 from anvil import *
-import anvil.users
 import anvil.server
+import anvil.users
 import anvil.tables as tables
 import anvil.tables.query as q
 from anvil.tables import app_tables
 
-class Form1(Form1Template):
+class MainPage(MainPageTemplate):
+  
   def __init__(self, **properties):
     # Set Form properties and Data Bindings.
     self.init_components(**properties)
@@ -24,7 +25,7 @@ class Form1(Form1Template):
     self.author_page2.visible = False
     self.author_page3.visible = False
     self.author_page4.visible = False
-    self.author_page5.visible = False
+    self.author_page5.visible = True
 
     # review
     self.curr_file = app_tables.files.get(title="Cardiac Cycle")
@@ -37,6 +38,7 @@ class Form1(Form1Template):
     self.data = {}
     self.question = None
     
+    self.title.text = "Author a Reading Activity"
     self.author_page1.visible = True
     self.author_page2.visible = False
     self.author_page3.visible = False
@@ -68,10 +70,17 @@ class Form1(Form1Template):
     curr_gi_step_id = curr_gi.get_id()
     return curr_gi_step_id
 
+  def disp_question_data(self):
+        self.tarea_context.text = self.question['context']
+        self.tarea_prompt.text = self.question['prompt']
+        self.rpanel_options.items = self.question['options']
+        self.title.text = f"Step {self.curr_ra_step} (question {self.curr_gi_step}/{len(self.data[self.curr_ra_step])}):"
+
   def btn_gen_outline_click(self, **event_args):
     """This method is called when the button is clicked"""
 
     self.title.text = "Steps of the Rading Activity:"
+    self.title.scroll_into_view()
     self.author_page1.visible = False
     self.author_page2.visible = True
     self.author_page2.scroll_into_view(smooth = False)
@@ -85,14 +94,14 @@ class Form1(Form1Template):
     """This method is called when the button is clicked"""
 
     self.title.text = "Steps with Guided Inquiries:"
+    self.title.scroll_into_view()
     self.author_page2.visible = False
     self.author_page3.visible = True
-    
 
   def btn_gen_question_click(self, **event_args):
     """This method is called when the button is clicked"""
 
-    self.author_page2.scroll_into_view(smooth = False)
+    self.title.scroll_into_view()
     self.author_page3.visible = False
     self.author_page4.visible = True
 
@@ -115,37 +124,33 @@ class Form1(Form1Template):
     )
 
     # displaying data
-    self.tarea_context.text = self.question['context']
-    self.tarea_prompt.text = self.question['prompt']
-    self.rpanel_options.items = self.question['options']
-    self.title.text = f"Step {self.curr_ra_step} (question {self.curr_gi_step}/{len(self.data[self.curr_ra_step])}):"
+    self.disp_question_data()
     
   def btn_next_question_click(self, **event_args):
     """This method is called when the button is clicked"""
 
-    self.title.text = f"Step {self.curr_ra_step} (question {self.curr_gi_step}/{len(self.data[self.curr_ra_step])}):"
-    self.author_page5.visible = True
-    
+    self.title.scroll_into_view()
     iterate = self.itr(self.data)
   
     if self.question != None: 
       id = self.get_gi_id()
-    alert(self.question)
     if iterate == False and self.question != None:
       
       self.question = app_tables.question.get(
       gi_step = app_tables.gi_steps.get_by_id(id)
       )
+      #display data
+      self.disp_question_data()
+      
     elif self.question == None:
       self.author_page4.visible = False
       self.author_page5.visible = True
       self.title.text = self.curr_file['title']
       
-
   def btn_go_home_click(self, **event_args):
     """This method is called when the button is clicked"""
-
+    
+    self.title.scroll_into_view()
     self.reset()
     pass
-
 

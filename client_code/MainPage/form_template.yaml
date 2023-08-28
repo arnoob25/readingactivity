@@ -1,0 +1,248 @@
+container:
+  type: ColumnPanel
+  properties: {col_widths: '{}'}
+components:
+- type: Label
+  properties: {role: title, align: left, tooltip: '', border: '', foreground: '',
+    visible: true, text: Author a Reading Activity, font_size: null, font: '', spacing_above: small,
+    icon_align: left, spacing_below: small, italic: false, background: '', bold: false,
+    underline: false, icon: ''}
+  name: title
+  layout_properties: {grid_position: 'DXOEOB,YXUGGX'}
+- type: ColumnPanel
+  properties: {role: null, tooltip: '', border: '', foreground: '', visible: true,
+    wrap_on: never, col_spacing: medium, spacing_above: small, col_widths: '{}', spacing_below: small,
+    background: ''}
+  name: author_end
+  layout_properties:
+    col_widths: {}
+    grid_position: YPYVAV,ESKSNG
+  components:
+  - type: ColumnPanel
+    properties: {role: elevated-card, tooltip: '', border: '', foreground: '', visible: true,
+      wrap_on: never, col_spacing: medium, spacing_above: small, col_widths: '{}',
+      spacing_below: small, background: ''}
+    name: author_page1
+    layout_properties: {grid_position: 'UXVFHH,QGEVDE'}
+    components:
+    - type: Label
+      properties: {role: input-prompt, align: left, tooltip: '', border: '', foreground: '',
+        visible: true, text: 'Intended learning outcome:', font_size: null, font: '',
+        spacing_above: small, icon_align: left, spacing_below: small, italic: false,
+        background: '', bold: false, underline: false, icon: ''}
+      name: label_page1
+      layout_properties: {grid_position: 'EBVBBA,XDYAJA'}
+    - type: TextBox
+      properties: {role: outlined, align: left, hide_text: false, tooltip: '', placeholder: The student should be able to...,
+        border: '', enabled: true, foreground: '', visible: true, text: '', font_size: null,
+        font: '', spacing_above: small, type: text, spacing_below: small, italic: false,
+        background: '', bold: false, underline: false}
+      name: tbox_ilo
+      layout_properties: {grid_position: 'DKFHOT,DNMDBP'}
+      event_bindings: {}
+    - type: Button
+      properties: {role: filled-button, align: right, tooltip: '', border: '', enabled: true,
+        foreground: '', visible: true, text: Generate Outline, font_size: null, font: '',
+        spacing_above: small, icon_align: left, spacing_below: small, italic: false,
+        background: '', bold: false, underline: false, icon: ''}
+      name: btn_gen_outline
+      layout_properties: {grid_position: 'TKMOVS,GLNEZH'}
+      event_bindings: {click: btn_gen_outline_click}
+  - type: ColumnPanel
+    properties: {role: elevated-card, tooltip: '', border: '', foreground: '', visible: true,
+      wrap_on: never, col_spacing: medium, spacing_above: small, col_widths: '{}',
+      spacing_below: small, background: ''}
+    name: author_page2
+    layout_properties: {grid_position: 'FSXVKK,GSUTDM'}
+    components:
+    - type: RepeatingPanel
+      properties: {role: null, tooltip: '', border: '', foreground: '', items: null,
+        visible: true, spacing_above: small, spacing_below: small, item_template: MainPage.ItemTemplate1,
+        background: ''}
+      name: rpanel_ra_step
+      layout_properties: {grid_position: 'ECMAFB,KFTMEV'}
+      data_bindings: []
+    - type: Spacer
+      properties: {height: 18}
+      name: spacer_page2
+      layout_properties:
+        col_widths: {}
+        grid_position: LNHNBQ,WEXDUI
+    - type: Button
+      properties: {role: filled-button, align: right, tooltip: '', border: '', enabled: true,
+        foreground: '', visible: true, text: Generate Guided Inquiries, font_size: null,
+        font: '', spacing_above: small, icon_align: left, spacing_below: small, italic: false,
+        background: '', bold: false, underline: false, icon: ''}
+      name: btn_gen_gi
+      layout_properties:
+        col_widths: {}
+        grid_position: IZFKNQ,GWBCGO
+      event_bindings: {click: btn_gen_gi_click}
+  - type: ColumnPanel
+    properties: {role: elevated-card, tooltip: '', border: '', foreground: '', visible: true,
+      wrap_on: never, col_spacing: medium, spacing_above: small, col_widths: '{}',
+      spacing_below: small, background: ''}
+    name: author_page3
+    layout_properties:
+      col_widths: {}
+      grid_position: PXWCZW,MDANKU
+    components:
+    - type: RepeatingPanel
+      properties: {role: null, tooltip: '', border: '', foreground: 'theme:On Primary
+          Container', items: null, visible: true, spacing_above: small, spacing_below: small,
+        item_template: MainPage.ItemTemplate2, background: ''}
+      name: rpanel_ra_step2
+      layout_properties: {grid_position: 'DAUBHX,FKTCSZ'}
+      data_bindings:
+      - {property: items, code: 'self.item[''gi_steps'']'}
+    - type: Button
+      properties: {role: filled-button, align: right, tooltip: '', border: '', enabled: true,
+        foreground: '', visible: true, text: Generate Questions, font_size: null,
+        font: '', spacing_above: small, icon_align: left, spacing_below: small, italic: false,
+        background: '', bold: false, underline: false, icon: ''}
+      name: btn_gen_question
+      layout_properties:
+        col_widths: {}
+        grid_position: QHODSJ,IBMUXH
+      event_bindings: {click: btn_gen_question_click}
+  - type: ColumnPanel
+    properties: {role: elevated-card, tooltip: '', border: '', foreground: '', visible: true,
+      wrap_on: mobile, col_spacing: medium, spacing_above: small, col_widths: '{}',
+      spacing_below: small, background: ''}
+    name: author_page4
+    layout_properties:
+      col_widths: {}
+      grid_position: JOSSRK,CCBDOC
+    components:
+    - type: Label
+      properties: {role: null, align: left, tooltip: '', border: '', foreground: '',
+        visible: true, text: 'Context:', font_size: null, font: '', spacing_above: small,
+        icon_align: left, spacing_below: small, italic: false, background: '', bold: false,
+        underline: false, icon: ''}
+      name: label_context
+      layout_properties: {grid_position: 'ZQMOTI,HOPURL'}
+    - type: ColumnPanel
+      properties: {role: tonal-card, tooltip: '', border: '', foreground: 'theme:Primary
+          Container', visible: true, wrap_on: mobile, col_spacing: medium, spacing_above: small,
+        col_widths: '{}', spacing_below: small, background: 'theme:Primary Container'}
+      name: ocard_context
+      layout_properties: {grid_position: 'OSTHTW,YVVACW'}
+      components:
+      - type: TextArea
+        properties: {role: outlined, align: left, height: 44, tooltip: '', placeholder: '',
+          border: '0', enabled: true, foreground: '', visible: true, text: '', font_size: null,
+          auto_expand: true, font: '', spacing_above: small, spacing_below: small,
+          italic: false, background: '', bold: false, underline: false}
+        name: tarea_context
+        layout_properties: {grid_position: 'ARAJBL,HAFCFN'}
+        data_bindings:
+        - {property: text, code: 'self.item[''context'']', writeback: true}
+        event_bindings: {}
+      data_bindings: []
+    - type: Spacer
+      properties: {height: 18}
+      name: spacer_1
+      layout_properties: {grid_position: 'TLAVOA,SZJJKG'}
+    - type: Label
+      properties: {role: null, align: left, tooltip: '', border: '', foreground: '',
+        visible: true, text: 'Prompt: ', font_size: null, font: '', spacing_above: small,
+        icon_align: left, spacing_below: small, italic: false, background: '', bold: false,
+        underline: false, icon: ''}
+      name: label_prompt
+      layout_properties:
+        col_widths: {}
+        grid_position: RDAXOZ,NBOYON
+    - type: ColumnPanel
+      properties: {role: tonal-card, tooltip: '', border: '', foreground: 'theme:On
+          Primary Container', visible: true, wrap_on: mobile, col_spacing: medium,
+        spacing_above: small, col_widths: '{}', spacing_below: small, background: 'theme:Primary
+          Container'}
+      name: ocard_prompt
+      layout_properties:
+        col_widths: {}
+        grid_position: DOWFIW,CYKHNJ
+      components:
+      - type: TextArea
+        properties: {role: outlined, align: left, height: 44, tooltip: '', placeholder: '',
+          border: '0', enabled: true, foreground: '', visible: true, text: '', font_size: null,
+          auto_expand: true, font: '', spacing_above: small, spacing_below: small,
+          italic: false, background: '', bold: false, underline: false}
+        name: tarea_prompt
+        layout_properties:
+          col_widths: {}
+          grid_position: EWJLGW,IFWTFR
+        data_bindings:
+        - {property: text, code: 'self.item[''prompt'']', writeback: true}
+    - type: Spacer
+      properties: {height: 18}
+      name: spacer_2
+      layout_properties:
+        col_widths: {}
+        grid_position: TOZNQF,VZAPSS
+    - type: Label
+      properties: {role: null, align: left, tooltip: '', border: '', foreground: '',
+        visible: true, text: 'Options:', font_size: null, font: '', spacing_above: small,
+        icon_align: left, spacing_below: small, italic: false, background: '', bold: false,
+        underline: false, icon: ''}
+      name: label_options
+      layout_properties:
+        col_widths: {}
+        grid_position: SDNVET,WHSXDS
+    - type: ColumnPanel
+      properties: {role: tonal-card, tooltip: '', border: '', foreground: '', visible: true,
+        wrap_on: mobile, col_spacing: medium, spacing_above: small, col_widths: '{}',
+        spacing_below: small, background: ''}
+      name: ocard_options
+      layout_properties:
+        col_widths: {}
+        grid_position: XKLJFL,IUNIZC
+      components:
+      - type: RepeatingPanel
+        properties: {item_template: MainPage.ItemTemplate4}
+        name: rpanel_options
+        layout_properties: {grid_position: 'ZHVVRO,DNAIOR'}
+        event_bindings: {}
+        data_bindings:
+        - {property: items, code: 'self.item[''options'']'}
+    - type: Spacer
+      properties: {height: 18}
+      name: spacer_3
+      layout_properties:
+        col_widths: {}
+        grid_position: FUPFGM,WNEOMP
+    - type: Button
+      properties: {role: filled-button, align: right, tooltip: '', border: '', enabled: true,
+        foreground: '', visible: true, text: Generate Next Question, font_size: null,
+        font: '', spacing_above: small, icon_align: left, spacing_below: small, italic: false,
+        background: '', bold: false, underline: false, icon: ''}
+      name: btn_next_question
+      layout_properties:
+        col_widths: {}
+        grid_position: FWERQN,WGFGPJ
+      event_bindings: {click: btn_next_question_click}
+    data_bindings: []
+  - type: ColumnPanel
+    properties: {role: elevated-card, tooltip: '', border: '', foreground: '', visible: true,
+      wrap_on: mobile, col_spacing: medium, spacing_above: small, col_widths: '{}',
+      spacing_below: small, background: ''}
+    name: author_page5
+    layout_properties: {grid_position: 'ZRQOXP,QDHHJJ'}
+    components:
+    - type: Label
+      properties: {role: null, align: left, tooltip: '', border: '', foreground: '',
+        visible: true, text: Reading Activity Created, font_size: null, font: '',
+        spacing_above: small, icon_align: left, spacing_below: small, italic: false,
+        background: '', bold: false, underline: false, icon: ''}
+      name: label_filename
+      layout_properties: {grid_position: 'WIJBJJ,QXSHJH'}
+    - type: Button
+      properties: {role: filled-button, align: right, tooltip: '', border: '', enabled: true,
+        foreground: '', visible: true, text: Go to Home, font_size: null, font: '',
+        spacing_above: small, icon_align: left, spacing_below: small, italic: false,
+        background: '', bold: false, underline: false, icon: ''}
+      name: btn_go_home
+      layout_properties:
+        col_widths: {}
+        grid_position: EQOWAG,CFVQDY
+      event_bindings: {click: btn_go_home_click}
+is_package: true

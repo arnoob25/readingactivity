@@ -11,13 +11,14 @@ services:
 - source: /runtime/services/google.yml
   client_config: {}
   server_config: {}
+startup: {type: form, module: MainPage}
 package_name: ReadingActivity
 allow_embedding: false
 name: ReadingActivity
 runtime_options: {version: 2, client_version: '3', server_version: python3-sandbox,
   server_spec: null}
 metadata: {logo_img: 'asset:screenshot.png'}
-startup_form: Form1
+startup_form: null
 db_schema:
   files:
     client: full
