@@ -62,10 +62,6 @@ db_schema:
     - name: instructions
       admin_ui: {order: 1.25, width: 200}
       type: string
-    - name: gi_steps
-      admin_ui: {width: 200}
-      type: link_multiple
-      target: gi_steps
     title: ra_steps
   gi_steps:
     client: full
@@ -85,10 +81,6 @@ db_schema:
       admin_ui: {width: 200}
       type: link_single
       target: ilo
-    - name: questions
-      admin_ui: {width: 200}
-      type: link_multiple
-      target: question
     - name: ra_step
       admin_ui: {width: 200}
       type: link_single
