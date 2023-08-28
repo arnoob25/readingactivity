@@ -87,6 +87,7 @@ class Form1(Form1Template):
     self.title.text = "Steps with Guided Inquiries:"
     self.author_page2.visible = False
     self.author_page3.visible = True
+    
 
   def btn_gen_question_click(self, **event_args):
     """This method is called when the button is clicked"""
