@@ -27,7 +27,7 @@ class Form1(Form1Template):
     self.author_page5.visible = False
 
     # review
-    self.curr_file = app_tables.files.get(ID="f50ec0b7-f960-400d-91f0-c42a6d44e3d0")
+    self.curr_file = app_tables.files.get(title="Cardiac Cycle")
 
   def reset(self):
     self.curr_file = None

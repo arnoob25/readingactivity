@@ -107,7 +107,7 @@ db_schema:
     server: full
     columns:
     - name: gi_step
-      admin_ui: {order: 1, width: 159}
+      admin_ui: {order: -1, width: 200}
       type: link_single
       target: gi_steps
     - name: goal
@@ -123,6 +123,9 @@ db_schema:
       admin_ui: {width: 200}
       type: link_multiple
       target: options
+    - name: prompt
+      admin_ui: {order: 0, width: 200}
+      type: string
     title: question
   options:
     client: full
