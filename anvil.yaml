@@ -116,9 +116,6 @@ db_schema:
     - name: context
       admin_ui: {order: 3, width: 126}
       type: string
-    - name: prompt
-      admin_ui: {order: 0, width: 125}
-      type: string
     - name: explanation
       admin_ui: {order: 5, width: 147}
       type: string
