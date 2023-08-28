@@ -14,7 +14,7 @@ class Form1(Form1Template):
     # Declate instance variables
     self.curr_file = None
     self.curr_ra_step = 1
-    self.curr_gi_step = 3
+    self.curr_gi_step = 1
     self.query_ra_steps = None
     self.data = {}
     self.question = None
@@ -92,8 +92,6 @@ class Form1(Form1Template):
   def btn_gen_question_click(self, **event_args):
     """This method is called when the button is clicked"""
 
-    alert(f"Step: {self.curr_ra_step}, Question: {self.curr_gi_step}")
-    self.title.text = "Step 30 (question 1/3):"
     self.author_page2.scroll_into_view(smooth = False)
     self.author_page3.visible = False
     self.author_page4.visible = True
@@ -120,19 +118,19 @@ class Form1(Form1Template):
     self.tarea_context.text = self.question['context']
     self.tarea_prompt.text = self.question['prompt']
     self.rpanel_options.items = self.question['options']
+    self.title.text = f"Step {self.curr_ra_step} (question {self.curr_gi_step}/{len(self.data[self.curr_ra_step])}):"
     
   def btn_next_question_click(self, **event_args):
     """This method is called when the button is clicked"""
 
-    alert(self.data)
-    alert(f"Step: {self.curr_ra_step}, Question: {self.curr_gi_step}")
+    self.title.text = f"Step {self.curr_ra_step} (question {self.curr_gi_step}/{len(self.data[self.curr_ra_step])}):"
     self.author_page5.visible = True
     
     iterate = self.itr(self.data)
   
     if self.question != None: 
       id = self.get_gi_id()
-    
+    alert(self.question)
     if iterate == False and self.question != None:
       
       self.question = app_tables.question.get(
