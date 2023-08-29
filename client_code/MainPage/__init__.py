@@ -41,13 +41,42 @@ class MainPage(MainPageTemplate):
   # Task: Provide sample output
   
   def outline(self, ilo):
+    x = ilo # placeholder to avoid errors
+    lo = "Describe the sequence of events during the contraction and relaxation of the heart, and explain how this results in the pumping of blood in and out of the heart."
+    filename = "Functionality of the Heart"
+    milestones = {
+      "title of step 1" : 
+        ["1",
+        "step 1 objective",
+        "step 1 instruction"],
+      "title of step 2" : 
+        ["2", 
+        "step 2 objective", 
+        "step 2 instruction"]
+    }
+    
     return milestones, lo, filename 
 
   def gi(self, curr_step, lo, obj):
+    x = curr_step+lo+obj # placeholder to avoid errors
+    steps = [
+      "question 1",
+      "question 2",
+      "question 3",
+      "question 4"]
     return steps
 
   def inquiry(self, obj, gi_step):
-    return tool, prompt, options, assess
+    x = obj+gi_step # placeholder to avoid errors
+    tool = "this is the context"
+    prompt = "this is the prompt"
+    options = [
+      "opton 1",
+      "option 2",
+      "option 3",
+      "option 4"
+    ]
+    return tool, prompt, options
   
   # ------ helper functions ------ 
   
@@ -162,8 +191,9 @@ class MainPage(MainPageTemplate):
 
     for s in self.gi_steps:
       for q in self.gi_steps[s]:
-        
-    self.inquiries = self.inquiry(objective, gi_step)
+        objective = ""
+        gi_step = ""
+        self.inquiries[q] = self.inquiry(objective, gi_step)
     
 
     # Building the Data (Task: I might not need it)
