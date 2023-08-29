@@ -48,7 +48,7 @@ db_schema:
       type: link_single
       target: files
     - name: ilo
-      admin_ui: {order: 0.25, width: 148}
+      admin_ui: {order: 1.75, width: 148}
       type: link_single
       target: ilo
     - name: serial
