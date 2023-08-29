@@ -149,11 +149,24 @@ class MainPage(MainPageTemplate):
   def btn_gen_question_click(self, **event_args):
     """This method is called when the button is clicked"""
 
+    # ------ basic ui logic ------
+    
     self.title.scroll_into_view()
     self.author_page3.visible = False
     self.author_page4.visible = True
 
-    # Building the Data
+    # Task: have to save the self.gi_steps data into the DB
+    # Task: map gi_steps (DB row) to corresponding ra_steps in the ra_step table
+    
+    # ------ making inference ------
+
+    for s in self.gi_steps:
+      for q in self.gi_steps[s]:
+        
+    self.inquiries = self.inquiry(objective, gi_step)
+    
+
+    # Building the Data (Task: I might not need it)
     ra_step_id = [s.get_id() for s in self.query_ra_steps]
     count = 0
     for s in ra_step_id:
