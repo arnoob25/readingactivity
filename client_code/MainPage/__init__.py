@@ -81,7 +81,8 @@ class MainPage(MainPageTemplate):
         self.tarea_context.text = self.question['context']
         self.tarea_prompt.text = self.question['prompt']
         self.rpanel_options.items = self.question['options']
-        self.title.text = f"Step {self.curr_ra_step} (question {self.curr_gi_step}/{len(self.data[self.curr_ra_step])}):"
+        #self.title.text = f"Step {self.curr_ra_step} (question {self.curr_gi_step}/{len(self.data[self.curr_ra_step])}):"
+        # Task: Figure out how to handle the title
 
   # ------ event listeners ------
 
@@ -154,26 +155,26 @@ class MainPage(MainPageTemplate):
 
     for s in self.milestones:
       for q in s['gi_steps']:
+        choices = []
         objective = s['objective']
         gi_step = q
         context, prompt, options, assessment = server.call('inquiry', objective, gi_step)
 
         # turning the items into dict allows us to display them in the ui
         for i in options:
-          dic = {
+          d = {
             'title': i
           }
-          options.append(i)
-
+          choices.append(d)
+        
         # creating the list of inquiries
         dic = {
           'question': gi_step,
           'context': context,
           'prompt': prompt,
-          'options': options
+          'options': choices
         }
         self.inquiries.append(dic)
-        alert(dic)
         
     # ------ displaying data ------
     
@@ -212,10 +213,11 @@ class MainPage(MainPageTemplate):
     iterate = self.itr(self.data)
   
     if iterate == False and self.question != None:
-      id = self.get_gi_id()
-      self.question = app_tables.question.get(
+      #id = self.get_gi_id() - to be used when querying from the DB
+      '''self.question = app_tables.question.get(
         gi_step = app_tables.gi_steps.get_by_id(id)
-      )
+      )'''
+      self.question = self.inquiries[self.curr_ra_step, self.curr_gi_step]
       self.disp_question_data() # update ui content
       
     else:
