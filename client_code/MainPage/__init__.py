@@ -1,6 +1,6 @@
 from ._anvil_designer import MainPageTemplate
 from anvil import *
-import anvil.server
+import anvil.server as server
 import anvil.users
 import anvil.tables as tables
 import anvil.tables.query as q
@@ -22,9 +22,9 @@ class MainPage(MainPageTemplate):
 
     # temp data storage
     self.lo = ""
-    self.milestones = {}
-    self.gi_steps = {}
-    self.inquiries = {}
+    self.milestones = []
+    self.gi_steps = {} # might not need it
+    self.inquiries = []
     
     # Any code you write here will run before the form opens.
     self.author_page1.visible = True
@@ -35,48 +35,6 @@ class MainPage(MainPageTemplate):
 
     # review
     self.curr_file = app_tables.files.get(title="Cardiac Cycle")
-
-  # ------ Server functions ------ 
-
-  # Task: Provide sample output
-  
-  def outline(self, ilo):
-    x = ilo # placeholder to avoid errors
-    lo = "Describe the sequence of events during the contraction and relaxation of the heart, and explain how this results in the pumping of blood in and out of the heart."
-    filename = "Functionality of the Heart"
-    milestones = {
-      "title of step 1" : 
-        ["1",
-        "step 1 objective",
-        "step 1 instruction"],
-      "title of step 2" : 
-        ["2", 
-        "step 2 objective", 
-        "step 2 instruction"]
-    }
-    
-    return milestones, lo, filename 
-
-  def gi(self, curr_step, lo, obj):
-    x = curr_step+lo+obj # placeholder to avoid errors
-    steps = [
-      "question 1",
-      "question 2",
-      "question 3",
-      "question 4"]
-    return steps
-
-  def inquiry(self, obj, gi_step):
-    x = obj+gi_step # placeholder to avoid errors
-    tool = "this is the context"
-    prompt = "this is the prompt"
-    options = [
-      "opton 1",
-      "option 2",
-      "option 3",
-      "option 4"
-    ]
-    return tool, prompt, options
   
   # ------ helper functions ------ 
   
@@ -141,10 +99,15 @@ class MainPage(MainPageTemplate):
     # ------ making inference ------
     
     ilo = self.tbox_ilo.text
-    self.milestones, self.lo, filename = self.outline(ilo)
+    self.milestones, self.lo, filename = server.call('outline',ilo)
+
+    # ------ displaying the data ------
+    
+    self.rpanel_ra_step.items = self.milestones
 
     # Task: have to crate new DB item with the filename
-    
+
+    """
     # ------ DB query ------
 
     # Task: I haven't yet saved the data into the DB, so the data must be loaded from the dictionary
@@ -152,7 +115,8 @@ class MainPage(MainPageTemplate):
     self.query_ra_steps = app_tables.ra_steps.search(file = self.curr_file)
     self.rpanel_ra_step.items = self.query_ra_steps
     self.rpanel_ra_step2.items = self.query_ra_steps
-
+    """
+   
   def btn_gen_gi_click(self, **event_args):
     """This method is called when the button is clicked"""
 
@@ -163,17 +127,19 @@ class MainPage(MainPageTemplate):
     self.author_page2.visible = False
     self.author_page3.visible = True
 
-    # Task: Have to save the self.milestones data into the DB
-
     # ------ making inference ------
 
     for s in self.milestones:
-      serial = self.milestones[s][0]
-      objective = self.milestones[s][1]
-      list_gi_steps = gi(serial, self.lo, objective)
+      serial = s['serial']
+      objective = s['objective']
+      list_gi_steps = server.call('gi', serial, self.lo, objective)
       
       # adding the gi_steps list to the dictionary
-      self.gi_steps[s] = list_gi_steps
+      self.milestones[self.milestones.index(s)]['gi_steps'] = list_gi_steps
+
+    # ------ displaying the data ------
+    
+    self.rpanel_ra_step2.items = self.milestones
 
   def btn_gen_question_click(self, **event_args):
     """This method is called when the button is clicked"""
@@ -183,19 +149,43 @@ class MainPage(MainPageTemplate):
     self.title.scroll_into_view()
     self.author_page3.visible = False
     self.author_page4.visible = True
-
-    # Task: have to save the self.gi_steps data into the DB
-    # Task: map gi_steps (DB row) to corresponding ra_steps in the ra_step table
     
     # ------ making inference ------
 
-    for s in self.gi_steps:
-      for q in self.gi_steps[s]:
-        objective = ""
-        gi_step = ""
-        self.inquiries[q] = self.inquiry(objective, gi_step)
+    for s in self.milestones:
+      for q in s['gi_steps']:
+        objective = s['objective']
+        gi_step = q
+        context, prompt, options, assessment = server.call('inquiry', objective, gi_step)
+
+        # turning the items into dict allows us to display them in the ui
+        for i in options:
+          dic = {
+            'title': i
+          }
+          options.append(i)
+
+        # creating the list of inquiries
+        dic = {
+          'question': gi_step,
+          'context': context,
+          'prompt': prompt,
+          'options': options
+        }
+        self.inquiries.append(dic)
+        alert(dic)
+        
+    # ------ displaying data ------
+    
+    self.question = self.inquiries[0]
+    self.disp_question_data()
+    
     
 
+    
+    """
+    # ------ DB query ------
+  
     # Building the Data (Task: I might not need it)
     ra_step_id = [s.get_id() for s in self.query_ra_steps]
     count = 0
@@ -213,9 +203,7 @@ class MainPage(MainPageTemplate):
     self.question = app_tables.question.get(
       gi_step= app_tables.gi_steps.get_by_id(id)
     )
-
-    # displaying data
-    self.disp_question_data()
+    """
     
   def btn_next_question_click(self, **event_args):
     """This method is called when the button is clicked"""
@@ -237,6 +225,10 @@ class MainPage(MainPageTemplate):
       
   def btn_go_home_click(self, **event_args):
     """This method is called when the button is clicked"""
+    
+    # Task: Have to save the self.milestones data into the DB
+    # Task: have to save the self.gi_steps data into the DB
+    # Task: map gi_steps (DB row) to corresponding ra_steps in the ra_step table
     
     self.title.scroll_into_view()
     self.reset()

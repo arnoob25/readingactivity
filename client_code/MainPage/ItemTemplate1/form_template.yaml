@@ -23,8 +23,9 @@ components:
       name: text_area_1
       layout_properties: {}
       data_bindings:
-      - {property: text, code: 'f"Step {self.item[''serial'']} ({self.item[''title-ra_step'']}):
+      - {property: text, code: 'f"Step {self.item[''serial'']} ({self.item[''title'']}):
           {self.item[''objective'']}"', writeback: true}
+      event_bindings: {}
   - type: Button
     properties: {role: null, align: right, tooltip: '', border: '', enabled: true,
       foreground: '', visible: true, text: '', font_size: null, font: '', spacing_above: small,
@@ -41,6 +42,6 @@ components:
     name: instruction
     layout_properties: {grid_position: 'ZRWGYA,EVAZHP'}
     data_bindings:
-    - {property: text, code: 'f"Instruction: {self.item[''instructions'']}"', writeback: true}
+    - {property: text, code: 'f"Instruction: {self.item[''objective'']}"', writeback: true}
     event_bindings: {}
 is_package: true

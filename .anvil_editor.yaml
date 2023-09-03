@@ -6,8 +6,7 @@ unique_ids:
     MainPage.ItemTemplate2.ItemTemplate3: '1692848376059273060509654.7738'
     MainPage.ItemTemplate4: '1692849583473291043542367.1891'
   modules: {}
-  server_modules:
-    demo: '1692863862563822336404041.8972'
+  server_modules: {}
   assets:
     _4eacb917-57ac-4cdd-83b1-ae16f1494141.jfif: '1693099804348267656814760.98834'
     screenshot.png: '1693099808875895439313828.859'

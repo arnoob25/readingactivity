@@ -24,3 +24,5 @@ class ItemTemplate2(ItemTemplate2Template):
     else:
       self.cpanel_2.visible = True
       self.btn_gi.icon = "fa:angle-up"
+
+    

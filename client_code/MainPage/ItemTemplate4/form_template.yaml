@@ -12,5 +12,5 @@ components:
     col_widths: {}
     grid_position: SOMMDJ,SXDHTI
   data_bindings:
-  - {property: text, code: 'self.item[''title-option'']', writeback: true}
+  - {property: text, code: 'self.item[''title'']', writeback: true}
 is_package: true
