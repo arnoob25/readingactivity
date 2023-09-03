@@ -161,4 +161,5 @@ db_schema:
       type: datetime
       admin_ui: {order: 7, width: 200}
     title: Users
+uplink_visible: true
 renamed: true
