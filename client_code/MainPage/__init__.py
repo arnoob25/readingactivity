@@ -219,7 +219,7 @@ class MainPage(MainPageTemplate):
       '''self.question = app_tables.question.get(
         gi_step = app_tables.gi_steps.get_by_id(id)
       )'''
-      self.question = self.inquiries[self.curr_ra_step, self.curr_gi_step]
+      self.question = self.inquiries[self.curr_ra_step][self.curr_gi_step]
       self.disp_question_data() # update ui content
       
     else:
