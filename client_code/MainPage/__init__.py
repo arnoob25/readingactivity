@@ -154,6 +154,7 @@ class MainPage(MainPageTemplate):
     # ------ making inference ------
 
     for s in self.milestones:
+      d
       for q in s['gi_steps']:
         choices = []
         objective = s['objective']
