@@ -14,8 +14,8 @@ class MainPage(MainPageTemplate):
 
     # Declate instance variables
     self.curr_file = None
-    self.curr_ra_step = 1
-    self.curr_gi_step = 1
+    self.curr_ra_step = 0
+    self.curr_gi_step = 0
     self.query_ra_steps = None
     self.data = {}
     self.question = None
@@ -154,38 +154,35 @@ class MainPage(MainPageTemplate):
     # ------ making inference ------
 
     for s in self.milestones:
-      d
+      temp_q_list = []
       for q in s['gi_steps']:
-        choices = []
-        objective = s['objective']
         gi_step = q
+        objective = s['objective']
+        
         context, prompt, options, assessment = server.call('inquiry', objective, gi_step)
 
-        # turning the items into dict allows us to display them in the ui
+        # convert list of strings into list of dicts to display the options
+        choices = [] # list of options as dictionaries
         for i in options:
           d = {
             'title': i
           }
           choices.append(d)
         
-        # creating the list of inquiries
-        dic = {
-          'question': gi_step,
+        # create the list of questions in the gi
+        question = {
+          'question': gi_step['question'],
           'context': context,
           'prompt': prompt,
           'options': choices
         }
-        self.inquiries.append(dic)
+        temp_q_list.append(question)
+      self.inquiries.append(temp_q_list)
         
     # ------ displaying the data ------
 
-    alert(self.inquiries)
-    
-    self.question = self.inquiries[0]
+    self.question = self.inquiries[0][0]
     self.disp_question_data()
-    
-    
-
     
     """
     # ------ DB query ------
