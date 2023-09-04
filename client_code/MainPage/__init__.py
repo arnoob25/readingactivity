@@ -78,12 +78,12 @@ class MainPage(MainPageTemplate):
     return curr_gi_step_id
 
   def disp_question_data(self):
-        self.tarea_context.text = self.question['context']
-        self.tarea_prompt.text = self.question['prompt']
-        self.rpanel_options.items = self.question['options']
-        #self.title.text = f"Step {self.curr_ra_step} (question {self.curr_gi_step}/{len(self.data[self.curr_ra_step])}):"
-        # Task: Figure out how to handle the title
-
+    self.tarea_context.text = self.question['context']
+    self.tarea_prompt.text = self.question['prompt']
+    self.rpanel_options.items = self.question['options']
+    '''self.title.text = f"Step {self.curr_ra_step} (question {self.curr_gi_step}/{len(self.data[self.curr_ra_step])}):"
+    # Task: Figure out how to handle the title'''
+  
   # ------ event listeners ------
 
   def btn_gen_outline_click(self, **event_args):
@@ -176,7 +176,9 @@ class MainPage(MainPageTemplate):
         }
         self.inquiries.append(dic)
         
-    # ------ displaying data ------
+    # ------ displaying the data ------
+
+    alert(self.inquiries)
     
     self.question = self.inquiries[0]
     self.disp_question_data()
@@ -235,4 +237,3 @@ class MainPage(MainPageTemplate):
     self.title.scroll_into_view()
     self.reset()
     pass
-
