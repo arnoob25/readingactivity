@@ -17,14 +17,107 @@ class MainPage(MainPageTemplate):
     self.curr_ra_step = 0
     self.curr_gi_step = 0
     self.query_ra_steps = None
-    self.data = {}
+    self.data = {} # Task: might not need it
     self.question = None
 
     # temp data storage
     self.lo = ""
     self.milestones = []
-    self.gi_steps = {} # might not need it
-    self.inquiries = []
+    self.gi_steps = {} # Task: might not need it
+    self.inquiries = [
+    [
+        {
+            "question": "Can you tell me what are the four valves in the heart and their locations?",
+            "context": "An interactive simulation would be an effective tool to aid the student in achieving the goal of this question. The simulation could show a cross-section of the heart with the four valves and their locations. The student could interact with the simulation by clicking on each valve to see how it opens and closes, coordinating with the contraction and relaxation of the heart. The simulation could also show what happens when a valve does not function properly, such as blood flowing in the wrong direction or not flowing at all.",
+            "prompt": "1:1 What do you observe when you click on each valve in the simulation? Can you describe what happens when a valve does not function properly?",
+            "options": [
+                {"title": "Blood flows in the wrong direction"},
+                {"title": "Blood does not flow at all"},
+                {"title": "Blood flow is not affected"},
+                {"title": "The heart stops beating"},
+            ],
+        },
+        {
+            "question": "Can you explain how these valves regulate blood flow through the heart?",
+            "context": "An interactive simulation would be an effective tool to aid the student in achieving the goal of this question. The simulation could show a cross-section of the heart with the four valves and their locations. The student could interact with the simulation by clicking on each valve to see how it opens and closes, coordinating with the contraction and relaxation of the heart. The simulation could also show what happens when a valve does not function properly, such as blood flowing in the wrong direction or not flowing at all.",
+            "prompt": "1:2 What do you observe when you click on each valve in the simulation? Can you describe what happens when a valve does not function properly?",
+            "options": [
+                {"title": "Blood flows in the wrong direction"},
+                {"title": "Blood does not flow at all"},
+                {"title": "Blood flow is not affected"},
+                {"title": "The heart stops beating"},
+            ],
+        },
+        {
+            "question": "Can you describe how the opening and closing of these valves are coordinated with the contraction and relaxation of the heart?",
+            "context": "An interactive simulation would be an effective tool to aid the student in achieving the goal of this question. The simulation could show a cross-section of the heart with the four valves and their locations. The student could interact with the simulation by clicking on each valve to see how it opens and closes, coordinating with the contraction and relaxation of the heart. The simulation could also show what happens when a valve does not function properly, such as blood flowing in the wrong direction or not flowing at all.",
+            "prompt": "1:3 What do you observe when you click on each valve in the simulation? Can you describe what happens when a valve does not function properly?",
+            "options": [
+                {"title": "Blood flows in the wrong direction"},
+                {"title": "Blood does not flow at all"},
+                {"title": "Blood flow is not affected"},
+                {"title": "The heart stops beating"},
+            ],
+        },
+        {
+            "question": "Can you explain how this coordination ensures that blood flows in only one direction through the heart?",
+            "context": "An interactive simulation would be an effective tool to aid the student in achieving the goal of this question. The simulation could show a cross-section of the heart with the four valves and their locations. The student could interact with the simulation by clicking on each valve to see how it opens and closes, coordinating with the contraction and relaxation of the heart. The simulation could also show what happens when a valve does not function properly, such as blood flowing in the wrong direction or not flowing at all.",
+            "prompt": "1:4 What do you observe when you click on each valve in the simulation? Can you describe what happens when a valve does not function properly?",
+            "options": [
+                {"title": "Blood flows in the wrong direction"},
+                {"title": "Blood does not flow at all"},
+                {"title": "Blood flow is not affected"},
+                {"title": "The heart stops beating"},
+            ],
+        },
+    ],
+    [
+        {
+            "question": "Can you tell me what are the four valves in the heart and their locations?",
+            "context": "An interactive simulation would be an effective tool to aid the student in achieving the goal of this question. The simulation could show a cross-section of the heart with the four valves and their locations. The student could interact with the simulation by clicking on each valve to see how it opens and closes, coordinating with the contraction and relaxation of the heart. The simulation could also show what happens when a valve does not function properly, such as blood flowing in the wrong direction or not flowing at all.",
+            "prompt": "2:1 What do you observe when you click on each valve in the simulation? Can you describe what happens when a valve does not function properly?",
+            "options": [
+                {"title": "Blood flows in the wrong direction"},
+                {"title": "Blood does not flow at all"},
+                {"title": "Blood flow is not affected"},
+                {"title": "The heart stops beating"},
+            ],
+        },
+        {
+            "question": "Can you explain how these valves regulate blood flow through the heart?",
+            "context": "An interactive simulation would be an effective tool to aid the student in achieving the goal of this question. The simulation could show a cross-section of the heart with the four valves and their locations. The student could interact with the simulation by clicking on each valve to see how it opens and closes, coordinating with the contraction and relaxation of the heart. The simulation could also show what happens when a valve does not function properly, such as blood flowing in the wrong direction or not flowing at all.",
+            "prompt": "2:2 What do you observe when you click on each valve in the simulation? Can you describe what happens when a valve does not function properly?",
+            "options": [
+                {"title": "Blood flows in the wrong direction"},
+                {"title": "Blood does not flow at all"},
+                {"title": "Blood flow is not affected"},
+                {"title": "The heart stops beating"},
+            ],
+        },
+        {
+            "question": "Can you describe how the opening and closing of these valves are coordinated with the contraction and relaxation of the heart?",
+            "context": "An interactive simulation would be an effective tool to aid the student in achieving the goal of this question. The simulation could show a cross-section of the heart with the four valves and their locations. The student could interact with the simulation by clicking on each valve to see how it opens and closes, coordinating with the contraction and relaxation of the heart. The simulation could also show what happens when a valve does not function properly, such as blood flowing in the wrong direction or not flowing at all.",
+            "prompt": "2:3 What do you observe when you click on each valve in the simulation? Can you describe what happens when a valve does not function properly?",
+            "options": [
+                {"title": "Blood flows in the wrong direction"},
+                {"title": "Blood does not flow at all"},
+                {"title": "Blood flow is not affected"},
+                {"title": "The heart stops beating"},
+            ],
+        },
+        {
+            "question": "Can you explain how this coordination ensures that blood flows in only one direction through the heart?",
+            "context": "An interactive simulation would be an effective tool to aid the student in achieving the goal of this question. The simulation could show a cross-section of the heart with the four valves and their locations. The student could interact with the simulation by clicking on each valve to see how it opens and closes, coordinating with the contraction and relaxation of the heart. The simulation could also show what happens when a valve does not function properly, such as blood flowing in the wrong direction or not flowing at all.",
+            "prompt": "2:4 What do you observe when you click on each valve in the simulation? Can you describe what happens when a valve does not function properly?",
+            "options": [
+                {"title": "Blood flows in the wrong direction"},
+                {"title": "Blood does not flow at all"},
+                {"title": "Blood flow is not affected"},
+                {"title": "The heart stops beating"},
+            ],
+        },
+    ],
+]
     
     # Any code you write here will run before the form opens.
     self.author_page1.visible = True
@@ -40,8 +133,8 @@ class MainPage(MainPageTemplate):
   
   def reset(self):
     self.curr_file = None
-    self.curr_ra_step = 1
-    self.curr_gi_step = 1
+    self.curr_ra_step = 0
+    self.curr_gi_step = 0
     self.query_ra_steps = None
     self.data = {}
     self.question = None
@@ -53,15 +146,16 @@ class MainPage(MainPageTemplate):
     self.author_page4.visible = False
     self.author_page5.visible = False
            
-  def itr(self, dic):
+  def itr(self):
       end = False
-
-      if self.curr_gi_step+1 <= len(dic[self.curr_ra_step]):
+      if self.curr_gi_step+1 <= len(self.inquiries[self.curr_ra_step])-1:
         self.curr_gi_step = self.curr_gi_step + 1
-      elif self.curr_ra_step+1 in dic:
+        #alert(f"(Incr gi) ra: {self.curr_ra_step} of {len(self.inquiries)}, gi: {self.curr_gi_step} of {len(self.inquiries[self.curr_ra_step])}")
+      elif self.curr_ra_step+1 <= len(self.inquiries)-1:
         self.curr_ra_step = self.curr_ra_step + 1
-        self.curr_gi_step = 1
-      else: 
+        self.curr_gi_step = 0
+        #alert(f"(Incr ra) ra: {self.curr_ra_step}, gi: {self.curr_gi_step}")
+      else:
         end = True
 
       return end
@@ -146,14 +240,15 @@ class MainPage(MainPageTemplate):
     """This method is called when the button is clicked"""
 
     # ------ basic ui logic ------
-    
+
+    self.title.text = f"Step 1 question: 1 of {len(self.inquiries[0])}"
     self.title.scroll_into_view()
     self.author_page3.visible = False
     self.author_page4.visible = True
     
     # ------ making inference ------
 
-    for s in self.milestones:
+    '''for s in self.milestones:
       temp_q_list = []
       for q in s['gi_steps']:
         gi_step = q
@@ -177,7 +272,7 @@ class MainPage(MainPageTemplate):
           'options': choices
         }
         temp_q_list.append(question)
-      self.inquiries.append(temp_q_list)
+      self.inquiries.append(temp_q_list)'''
         
     # ------ displaying the data ------
 
@@ -209,8 +304,9 @@ class MainPage(MainPageTemplate):
   def btn_next_question_click(self, **event_args):
     """This method is called when the button is clicked"""
 
+    iterate = self.itr()
+    self.title.text = f"Step {self.curr_ra_step+1} question: {self.curr_gi_step+1} of {len(self.inquiries[self.curr_ra_step])}"
     self.title.scroll_into_view()
-    iterate = self.itr(self.data)
   
     if iterate == False and self.question != None:
       #id = self.get_gi_id() - to be used when querying from the DB
@@ -219,7 +315,6 @@ class MainPage(MainPageTemplate):
       )'''
       self.question = self.inquiries[self.curr_ra_step][self.curr_gi_step]
       self.disp_question_data() # update ui content
-      
     else:
       self.author_page4.visible = False
       self.author_page5.visible = True
