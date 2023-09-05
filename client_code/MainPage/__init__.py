@@ -201,8 +201,11 @@ class MainPage(MainPageTemplate):
     self.rpanel_ra_step.items = self.milestones
 
     # ----- saving the file in the DB ------
-    app_tables.ilo.add_row(title_ilo = ilo)
-    file = app_tables.files.add_row(
+    try:
+      query_ilo = app_tables.ilo.get(title_ilo = ilo)
+    except:
+      app_tables.ilo.add_row(title_ilo = ilo)
+    self.file = app_tables.files.add_row(
       title = filename,
       User = anvil.users.get_user(),
       ilo = app_tables.ilo.get(title_ilo = ilo)
