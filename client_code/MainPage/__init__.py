@@ -200,7 +200,13 @@ class MainPage(MainPageTemplate):
     
     self.rpanel_ra_step.items = self.milestones
 
-    # Task: have to crate new DB item with the filename
+    # ----- saving the file in the DB ------
+    app_tables.ilo.add_row(title_ilo = ilo)
+    file = app_tables.files.add_row(
+      title = filename,
+      User = anvil.users.get_user(),
+      ilo = app_tables.ilo.get(title_ilo = ilo)
+    )
 
     """
     # ------ DB query ------
@@ -362,20 +368,18 @@ class MainPage(MainPageTemplate):
       for q in self.inquiries[s]:
         for c in q['options']:
           app_tables.options.add_row(
-            title = c['title']
+            title = c['title'],
+            question = q
           )
+        options = app_tables.options.search()
         app_tables.question.add_row(
           prompt = q['prompt'],
-          context = q['context']
+          context = q['context'],
+          options = app_tables.options.search(
+            question = q
+          )
         )
         
-      
-      
-
-      
-    
-    
-    
     # Task: map gi_steps (DB row) to corresponding ra_steps in the ra_step table
     # Task: save the inquiries list into the DB
     

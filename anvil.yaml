@@ -27,9 +27,6 @@ db_schema:
     - name: title
       admin_ui: {order: 0, width: 200}
       type: string
-    - name: ID
-      type: string
-      admin_ui: {width: 200, order: 2}
     - name: ilo
       admin_ui: {width: 199}
       type: link_multiple
@@ -131,6 +128,10 @@ db_schema:
     - name: title
       admin_ui: {order: 0, width: 200}
       type: string
+    - name: question
+      admin_ui: {width: 200}
+      type: link_single
+      target: question
     title: options
   users:
     client: none
