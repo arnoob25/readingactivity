@@ -24,100 +24,7 @@ class MainPage(MainPageTemplate):
     self.lo = ""
     self.milestones = []
     self.gi_steps = {} # Task: might not need it
-    self.inquiries = [
-    [
-        {
-            "question": "Can you tell me what are the four valves in the heart and their locations?",
-            "context": "An interactive simulation would be an effective tool to aid the student in achieving the goal of this question. The simulation could show a cross-section of the heart with the four valves and their locations. The student could interact with the simulation by clicking on each valve to see how it opens and closes, coordinating with the contraction and relaxation of the heart. The simulation could also show what happens when a valve does not function properly, such as blood flowing in the wrong direction or not flowing at all.",
-            "prompt": "1:1 What do you observe when you click on each valve in the simulation? Can you describe what happens when a valve does not function properly?",
-            "options": [
-                {"title": "Blood flows in the wrong direction"},
-                {"title": "Blood does not flow at all"},
-                {"title": "Blood flow is not affected"},
-                {"title": "The heart stops beating"},
-            ],
-        },
-        {
-            "question": "Can you explain how these valves regulate blood flow through the heart?",
-            "context": "An interactive simulation would be an effective tool to aid the student in achieving the goal of this question. The simulation could show a cross-section of the heart with the four valves and their locations. The student could interact with the simulation by clicking on each valve to see how it opens and closes, coordinating with the contraction and relaxation of the heart. The simulation could also show what happens when a valve does not function properly, such as blood flowing in the wrong direction or not flowing at all.",
-            "prompt": "1:2 What do you observe when you click on each valve in the simulation? Can you describe what happens when a valve does not function properly?",
-            "options": [
-                {"title": "Blood flows in the wrong direction"},
-                {"title": "Blood does not flow at all"},
-                {"title": "Blood flow is not affected"},
-                {"title": "The heart stops beating"},
-            ],
-        },
-        {
-            "question": "Can you describe how the opening and closing of these valves are coordinated with the contraction and relaxation of the heart?",
-            "context": "An interactive simulation would be an effective tool to aid the student in achieving the goal of this question. The simulation could show a cross-section of the heart with the four valves and their locations. The student could interact with the simulation by clicking on each valve to see how it opens and closes, coordinating with the contraction and relaxation of the heart. The simulation could also show what happens when a valve does not function properly, such as blood flowing in the wrong direction or not flowing at all.",
-            "prompt": "1:3 What do you observe when you click on each valve in the simulation? Can you describe what happens when a valve does not function properly?",
-            "options": [
-                {"title": "Blood flows in the wrong direction"},
-                {"title": "Blood does not flow at all"},
-                {"title": "Blood flow is not affected"},
-                {"title": "The heart stops beating"},
-            ],
-        },
-        {
-            "question": "Can you explain how this coordination ensures that blood flows in only one direction through the heart?",
-            "context": "An interactive simulation would be an effective tool to aid the student in achieving the goal of this question. The simulation could show a cross-section of the heart with the four valves and their locations. The student could interact with the simulation by clicking on each valve to see how it opens and closes, coordinating with the contraction and relaxation of the heart. The simulation could also show what happens when a valve does not function properly, such as blood flowing in the wrong direction or not flowing at all.",
-            "prompt": "1:4 What do you observe when you click on each valve in the simulation? Can you describe what happens when a valve does not function properly?",
-            "options": [
-                {"title": "Blood flows in the wrong direction"},
-                {"title": "Blood does not flow at all"},
-                {"title": "Blood flow is not affected"},
-                {"title": "The heart stops beating"},
-            ],
-        },
-    ],
-    [
-        {
-            "question": "Can you tell me what are the four valves in the heart and their locations?",
-            "context": "An interactive simulation would be an effective tool to aid the student in achieving the goal of this question. The simulation could show a cross-section of the heart with the four valves and their locations. The student could interact with the simulation by clicking on each valve to see how it opens and closes, coordinating with the contraction and relaxation of the heart. The simulation could also show what happens when a valve does not function properly, such as blood flowing in the wrong direction or not flowing at all.",
-            "prompt": "2:1 What do you observe when you click on each valve in the simulation? Can you describe what happens when a valve does not function properly?",
-            "options": [
-                {"title": "Blood flows in the wrong direction"},
-                {"title": "Blood does not flow at all"},
-                {"title": "Blood flow is not affected"},
-                {"title": "The heart stops beating"},
-            ],
-        },
-        {
-            "question": "Can you explain how these valves regulate blood flow through the heart?",
-            "context": "An interactive simulation would be an effective tool to aid the student in achieving the goal of this question. The simulation could show a cross-section of the heart with the four valves and their locations. The student could interact with the simulation by clicking on each valve to see how it opens and closes, coordinating with the contraction and relaxation of the heart. The simulation could also show what happens when a valve does not function properly, such as blood flowing in the wrong direction or not flowing at all.",
-            "prompt": "2:2 What do you observe when you click on each valve in the simulation? Can you describe what happens when a valve does not function properly?",
-            "options": [
-                {"title": "Blood flows in the wrong direction"},
-                {"title": "Blood does not flow at all"},
-                {"title": "Blood flow is not affected"},
-                {"title": "The heart stops beating"},
-            ],
-        },
-        {
-            "question": "Can you describe how the opening and closing of these valves are coordinated with the contraction and relaxation of the heart?",
-            "context": "An interactive simulation would be an effective tool to aid the student in achieving the goal of this question. The simulation could show a cross-section of the heart with the four valves and their locations. The student could interact with the simulation by clicking on each valve to see how it opens and closes, coordinating with the contraction and relaxation of the heart. The simulation could also show what happens when a valve does not function properly, such as blood flowing in the wrong direction or not flowing at all.",
-            "prompt": "2:3 What do you observe when you click on each valve in the simulation? Can you describe what happens when a valve does not function properly?",
-            "options": [
-                {"title": "Blood flows in the wrong direction"},
-                {"title": "Blood does not flow at all"},
-                {"title": "Blood flow is not affected"},
-                {"title": "The heart stops beating"},
-            ],
-        },
-        {
-            "question": "Can you explain how this coordination ensures that blood flows in only one direction through the heart?",
-            "context": "An interactive simulation would be an effective tool to aid the student in achieving the goal of this question. The simulation could show a cross-section of the heart with the four valves and their locations. The student could interact with the simulation by clicking on each valve to see how it opens and closes, coordinating with the contraction and relaxation of the heart. The simulation could also show what happens when a valve does not function properly, such as blood flowing in the wrong direction or not flowing at all.",
-            "prompt": "2:4 What do you observe when you click on each valve in the simulation? Can you describe what happens when a valve does not function properly?",
-            "options": [
-                {"title": "Blood flows in the wrong direction"},
-                {"title": "Blood does not flow at all"},
-                {"title": "Blood flow is not affected"},
-                {"title": "The heart stops beating"},
-            ],
-        },
-    ],
-]
+    self.inquiries = []
     
     # Any code you write here will run before the form opens.
     self.author_page1.visible = True
@@ -126,12 +33,10 @@ class MainPage(MainPageTemplate):
     self.author_page4.visible = False
     self.author_page5.visible = False
 
-    # review
-    self.curr_file = app_tables.files.get(title="Cardiac Cycle")
-  
   # ------ helper functions ------ 
   
   def reset(self):
+    # Task: review if everything is being reset properly
     self.curr_file = None
     self.curr_ra_step = 0
     self.curr_gi_step = 0
@@ -205,7 +110,7 @@ class MainPage(MainPageTemplate):
       query_ilo = app_tables.ilo.get(title_ilo = ilo)
     except:
       app_tables.ilo.add_row(title_ilo = ilo)
-    self.file = app_tables.files.add_row(
+    self.curr_file = app_tables.files.add_row(
       title = filename,
       User = anvil.users.get_user(),
       ilo = app_tables.ilo.get(title_ilo = ilo)
@@ -234,7 +139,7 @@ class MainPage(MainPageTemplate):
     # ------ making inference ------
 
     for s in self.milestones:
-      serial = s['serial']
+      serial = int(s['serial'])
       objective = s['objective']
       list_gi_steps = server.call('gi', serial, self.lo, objective)
       
@@ -250,14 +155,13 @@ class MainPage(MainPageTemplate):
 
     # ------ basic ui logic ------
 
-    self.title.text = f"Step 1 question: 1 of {len(self.inquiries[0])}"
     self.title.scroll_into_view()
     self.author_page3.visible = False
     self.author_page4.visible = True
     
     # ------ making inference ------
 
-    '''for s in self.milestones:
+    for s in self.milestones:
       temp_q_list = []
       for q in s['gi_steps']:
         gi_step = q
@@ -272,6 +176,7 @@ class MainPage(MainPageTemplate):
             'title': i
           }
           choices.append(d)
+ 
         
         # create the list of questions in the gi
         question = {
@@ -281,10 +186,11 @@ class MainPage(MainPageTemplate):
           'options': choices
         }
         temp_q_list.append(question)
-      self.inquiries.append(temp_q_list)'''
+      self.inquiries.append(temp_q_list)
         
     # ------ displaying the data ------
 
+    self.title.text = f"Step 1 question: 1 of {len(self.inquiries[0])}"
     self.question = self.inquiries[0][0]
     self.disp_question_data()
     
@@ -333,26 +239,27 @@ class MainPage(MainPageTemplate):
     """This method is called when the button is clicked"""
 
     # ------ save data in the DB ------
-
+    
     for s in self.milestones:
       # save data in the ra_steps - table
       app_tables.ra_steps.add_row(
         title = s['title'],
-        serial = s['serial'],
+        serial = int(s['serial']),
         objective = s['objective'],
-        instructions = s['instruction'],
+        instruction = s['instruction'],
         # Task: map the steps with the current file 
       )
       
       # save data in the gi_steps - table 
       gis = s['gi_steps']
+      alert(gis)
       for i in gis:
         app_tables.gi_steps.add_row(
           title = i['title'],
           serial = gi_steps.index(i)+1,
           ra_step = app_tables.ra_steps.add_row(
             file = "", # current file
-            serial = s['serial']
+            serial = int(s['serial'])
           )
           # Task: map the steps with the current file
         )
@@ -360,7 +267,7 @@ class MainPage(MainPageTemplate):
       # map gi_steps with ra_steps - table
       ra_step = app_tables.ra_steps.get(
         file = "", # current file
-        serial = s['serial']
+        serial = int(s['serial'])
       )
       gi_steps = app_tables.gi_steps.search(
         ra_step = ra_step
@@ -382,9 +289,6 @@ class MainPage(MainPageTemplate):
             question = q
           )
         )
-        
-    # Task: map gi_steps (DB row) to corresponding ra_steps in the ra_step table
-    # Task: save the inquiries list into the DB
     
     self.title.scroll_into_view()
     self.reset()

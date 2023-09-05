@@ -90,7 +90,7 @@ db_schema:
     title: gi_steps
   ilo:
     title: ilo
-    client: none
+    client: full
     server: full
     columns:
     - name: title_ilo
