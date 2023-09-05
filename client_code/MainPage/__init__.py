@@ -322,6 +322,14 @@ class MainPage(MainPageTemplate):
       
   def btn_go_home_click(self, **event_args):
     """This method is called when the button is clicked"""
+
+    # ------ save data in the DB ------
+
+    # ra_step
+    for s in self.milestones:
+      app_tables.ra_steps.add_row(
+        title-ra_step=
+      )
     
     # Task: Have to save the self.milestones data into the DB
     # Task: have to save the self.gi_steps data into the DB
