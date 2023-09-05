@@ -245,4 +245,155 @@ components:
         col_widths: {}
         grid_position: EQOWAG,CFVQDY
       event_bindings: {click: btn_go_home_click}
+- type: ColumnPanel
+  properties: {}
+  name: student_end
+  layout_properties: {grid_position: 'FIURWQ,XBYOTS'}
+  components:
+  - type: ColumnPanel
+    properties: {role: elevated-card, tooltip: '', border: '', foreground: '', visible: true,
+      wrap_on: mobile, col_spacing: medium, spacing_above: small, col_widths: '{}',
+      spacing_below: small, background: ''}
+    name: student_page1
+    layout_properties:
+      col_widths: {}
+      grid_position: LHMPYX,ILRBEI
+    components:
+    - type: Label
+      properties: {role: null, align: left, tooltip: '', border: '', foreground: '',
+        visible: true, text: 'Context:', font_size: null, font: '', spacing_above: small,
+        icon_align: left, spacing_below: small, italic: false, background: '', bold: false,
+        underline: false, icon: ''}
+      name: label_context_copy
+      layout_properties: {grid_position: 'ZQMOTI,HOPURL'}
+    - type: ColumnPanel
+      properties: {role: tonal-card, tooltip: '', border: '', foreground: 'theme:Primary
+          Container', visible: true, wrap_on: mobile, col_spacing: medium, spacing_above: small,
+        col_widths: '{}', spacing_below: small, background: 'theme:Primary Container'}
+      name: ocard_context_copy
+      layout_properties: {grid_position: 'OSTHTW,YVVACW'}
+      components:
+      - type: RichText
+        properties: {role: null, align: left, tooltip: '', enable_slots: true, border: '',
+          foreground: 'theme:On Background', visible: true, font_size: null, content: 'An
+            interactive simulation would be an effective tool to aid the student in
+            achieving the goal of this question. The simulation could show a cross-section
+            of the heart with the four valves and their locations. The student could
+            interact with the simulation by clicking on each valve to see how it opens
+            and closes, coordinating with the contraction and relaxation of the heart.
+            The simulation could also show what happens when a valve does not function
+            properly, such as blood flowing in the wrong direction or not flowing
+            at all.', font: '', spacing_above: small, spacing_below: small, data: null,
+          background: '', format: markdown}
+        name: rtext_student_context
+        layout_properties: {grid_position: 'GIUWKJ,LUTZAB'}
+      data_bindings: []
+    - type: Spacer
+      properties: {height: 18}
+      name: spacer_1_copy
+      layout_properties: {grid_position: 'TLAVOA,SZJJKG'}
+    - type: Label
+      properties: {role: null, align: left, tooltip: '', border: '', foreground: '',
+        visible: true, text: 'Prompt: ', font_size: null, font: '', spacing_above: small,
+        icon_align: left, spacing_below: small, italic: false, background: '', bold: false,
+        underline: false, icon: ''}
+      name: label_prompt_copy
+      layout_properties:
+        col_widths: {}
+        grid_position: RDAXOZ,NBOYON
+    - type: ColumnPanel
+      properties: {role: tonal-card, tooltip: '', border: '', foreground: 'theme:On
+          Primary Container', visible: true, wrap_on: mobile, col_spacing: medium,
+        spacing_above: small, col_widths: '{}', spacing_below: small, background: 'theme:Primary
+          Container'}
+      name: ocard_prompt_copy
+      layout_properties:
+        col_widths: {}
+        grid_position: DOWFIW,CYKHNJ
+      components:
+      - type: RichText
+        properties: {role: null, align: left, tooltip: '', enable_slots: true, border: '',
+          foreground: 'theme:On Background', visible: true, font_size: null, content: 'What
+            do you observe when you click on each valve in the simulation? Can you
+            describe what happens when a valve does not function properly?', font: '',
+          spacing_above: small, spacing_below: small, data: null, background: '',
+          format: markdown}
+        name: rtext_student_prompt
+        layout_properties:
+          col_widths: {}
+          grid_position: FWHASY,AHKXMO
+    - type: Spacer
+      properties: {height: 18}
+      name: spacer_2_copy
+      layout_properties:
+        col_widths: {}
+        grid_position: TOZNQF,VZAPSS
+    - type: Label
+      properties: {role: null, align: left, tooltip: '', border: '', foreground: '',
+        visible: true, text: 'Options:', font_size: null, font: '', spacing_above: small,
+        icon_align: left, spacing_below: small, italic: false, background: '', bold: false,
+        underline: false, icon: ''}
+      name: label_options_copy
+      layout_properties:
+        col_widths: {}
+        grid_position: SDNVET,WHSXDS
+    - type: ColumnPanel
+      properties: {role: tonal-card, tooltip: '', border: '', foreground: '', visible: true,
+        wrap_on: mobile, col_spacing: medium, spacing_above: small, col_widths: '{}',
+        spacing_below: small, background: ''}
+      name: ocard_options_copy
+      layout_properties:
+        col_widths: {}
+        grid_position: XKLJFL,IUNIZC
+      components:
+      - type: RepeatingPanel
+        properties: {item_template: MainPage.ItemTemplate4}
+        name: rpanel_student_options
+        layout_properties: {grid_position: 'ZHVVRO,DNAIOR'}
+        event_bindings: {}
+        data_bindings:
+        - {property: items, code: 'self.item[''options'']'}
+    - type: Spacer
+      properties: {height: 18}
+      name: spacer_3_copy
+      layout_properties:
+        col_widths: {}
+        grid_position: FUPFGM,WNEOMP
+    - type: Button
+      properties: {role: filled-button, align: right, tooltip: '', border: '', enabled: true,
+        foreground: '', visible: true, text: Onward, font_size: null, font: '', spacing_above: small,
+        icon_align: left, spacing_below: small, italic: false, background: '', bold: false,
+        underline: false, icon: ''}
+      name: btn_student_next_question
+      layout_properties:
+        col_widths: {}
+        grid_position: FWERQN,WGFGPJ
+      event_bindings: {click: btn_student_next_question_click}
+    data_bindings: []
+  - type: ColumnPanel
+    properties: {role: elevated-card, tooltip: '', border: '', foreground: '', visible: true,
+      wrap_on: mobile, col_spacing: medium, spacing_above: small, col_widths: '{}',
+      spacing_below: small, background: ''}
+    name: student_page2
+    layout_properties:
+      col_widths: {}
+      grid_position: NRXTGQ,NZNKEZ
+    components:
+    - type: Label
+      properties: {role: null, align: left, tooltip: '', border: '', foreground: '',
+        visible: true, text: Reading Activity Completed, font_size: null, font: '',
+        spacing_above: small, icon_align: left, spacing_below: small, italic: false,
+        background: '', bold: false, underline: false, icon: ''}
+      name: label_student_filename
+      layout_properties: {grid_position: 'WIJBJJ,QXSHJH'}
+    - type: Button
+      properties: {role: filled-button, align: right, tooltip: '', border: '', enabled: true,
+        foreground: '', visible: true, text: Go to Home, font_size: null, font: '',
+        spacing_above: small, icon_align: left, spacing_below: small, italic: false,
+        background: '', bold: false, underline: false, icon: ''}
+      name: btn_student_go_home
+      layout_properties:
+        col_widths: {}
+        grid_position: EQOWAG,CFVQDY
+      event_bindings: {click: btn_student_go_home_click}
 is_package: true

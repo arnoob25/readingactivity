@@ -5,6 +5,7 @@ import anvil.users
 import anvil.tables as tables
 import anvil.tables.query as q
 from anvil.tables import app_tables
+import uuid
 
 class MainPage(MainPageTemplate):
   
@@ -12,7 +13,7 @@ class MainPage(MainPageTemplate):
     # Set Form properties and Data Bindings.
     self.init_components(**properties)
 
-    # Declate instance variables
+    # Declare instance variables
     self.curr_file = None
     self.curr_ra_step = 0
     self.curr_gi_step = 0
@@ -27,11 +28,25 @@ class MainPage(MainPageTemplate):
     self.inquiries = []
     
     # Any code you write here will run before the form opens.
-    self.author_page1.visible = True
+    self.author_page1.visible = False
     self.author_page2.visible = False
     self.author_page3.visible = False
     self.author_page4.visible = False
     self.author_page5.visible = False
+    self.student_page1.visible = True
+    self.student_page2.visible = False
+
+    self.curr_file = app_tables.files.get(
+      id = '72274cd6-2491-bc38-aa02-4cc2e53a986d'
+    )
+
+    # Testing the student end
+    self.title.text = self.curr_file['title']
+    self.inquiries = self.curr_file['inquiries']
+    self.question = self.inquiries[0][0]
+    self.rtext_student_context.content = self.question['context']
+    self.rtext_student_prompt.content = self.question['prompt']
+    self.rpanel_student_options.items = self.question['options']
 
   # ------ helper functions ------ 
   
@@ -43,6 +58,10 @@ class MainPage(MainPageTemplate):
     self.query_ra_steps = None
     self.data = {}
     self.question = None
+    self.lo = ""
+    self.milestones = []
+    self.gi_steps = {} # Task: might not need it
+    self.inquiries = []
     
     self.title.text = "Author a Reading Activity"
     self.author_page1.visible = True
@@ -50,6 +69,8 @@ class MainPage(MainPageTemplate):
     self.author_page3.visible = False
     self.author_page4.visible = False
     self.author_page5.visible = False
+    self.student_page1.visible = False
+    self.student_page1.visible = False
            
   def itr(self):
       end = False
@@ -74,7 +95,7 @@ class MainPage(MainPageTemplate):
       serial = self.curr_gi_step
     )
     curr_gi_step_id = curr_gi.get_id()
-    return curr_gi_step_id
+    return curr_gi_step_id # Task: we don't need it (remove)
 
   def disp_question_data(self):
     self.tarea_context.text = self.question['context']
@@ -83,7 +104,7 @@ class MainPage(MainPageTemplate):
     '''self.title.text = f"Step {self.curr_ra_step} (question {self.curr_gi_step}/{len(self.data[self.curr_ra_step])}):"
     # Task: Figure out how to handle the title'''
   
-  # ------ event listeners ------
+  # ------ event listeners (author end) ------
 
   def btn_gen_outline_click(self, **event_args):
     """This method is called when the button is clicked"""
@@ -105,17 +126,26 @@ class MainPage(MainPageTemplate):
     
     self.rpanel_ra_step.items = self.milestones
 
-    # ----- saving the file in the DB ------
+    # ------ saving data in the DB ------
+
     try:
       query_ilo = app_tables.ilo.get(title_ilo = ilo)
     except:
       app_tables.ilo.add_row(title_ilo = ilo)
-    self.curr_file = app_tables.files.add_row(
+      
+    self.id = str(uuid.uuid4())
+    app_tables.files.add_row(
       title = filename,
+      id = self.id,
       User = anvil.users.get_user(),
-      ilo = app_tables.ilo.get(title_ilo = ilo)
+      ilo = app_tables.ilo.get(title_ilo = ilo),
     )
-    # self.curr_file_id = self.curr_file.get_id() # Task: i don't need it - remove it
+
+    self.curr_file = app_tables.files.get(
+      id = self.id
+    )
+
+    # self.curr_file_id = self.curr_file.get_id() # Task: i don't need it (remove)
 
     """
     # ------ DB query ------
@@ -240,42 +270,50 @@ class MainPage(MainPageTemplate):
     """This method is called when the button is clicked"""
 
     # ------ save data in the DB ------
-    app_tables.files.add_row(title="hello")
-    for s in self.milestones:
+
+    self.curr_file.update(
+      milestones = self.milestones,
+      inquiries = self.inquiries
+    )
+    
+    '''for s in self.milestones:
       # save data in the ra_steps - table
-      alert(f"title: {s['title']}")
       app_tables.ra_steps.add_row(
         title = s['title'],
         serial = int(s['serial']),
         objective = s['objective'],
         instruction = s['instruction'],
+        file = self.curr_file
         # Task: map the steps with the current file 
       )
+
+      # querying data to refer to and update
+      ra_step = app_tables.ra_steps.get(
+          file = self.curr_file,
+          serial = int(s['serial'])
+        )
       
       # save data in the gi_steps - table 
       gis = s['gi_steps']
-      
       for i in gis:
         app_tables.gi_steps.add_row(
           title = i['question'],
           serial = int(i['serial']),
-          ra_step = app_tables.ra_steps.get(
-            file = self.curr_file,
-            serial = int(s['serial'])
-          )
+          ra_step = ra_step,
+          file = self.curr_file
           # Task: map the steps with the current file
         )
-      '''
+  
       # map gi_steps with ra_steps - table
-      ra_step = app_tables.ra_steps.get(
-        file = self.curr_file,
-        serial = int(s['serial'])
-      )
       gi_steps = app_tables.gi_steps.search(
         ra_step = ra_step
       )
-      ra_step.update(gi_steps = gi_steps)
-
+      ra_step.update(
+        gi_steps = app_tables.gi_steps.search(
+          ra_step = ra_step
+        )
+      )
+      
       # save the inquiries in the question - table
       for q in self.inquiries[s]:
         for c in q['options']:
@@ -295,3 +333,34 @@ class MainPage(MainPageTemplate):
     self.title.scroll_into_view()
     self.reset()
     pass
+
+  # ------ event listeners (student end) ------
+
+  def btn_student_next_question_click(self, **event_args):
+    """This method is called when the button is clicked"""
+    iterate = self.itr()
+    self.title.scroll_into_view()
+  
+    if iterate == False and self.question != None:
+      #id = self.get_gi_id() - to be used when querying from the DB
+      '''self.question = app_tables.question.get(
+        gi_step = app_tables.gi_steps.get_by_id(id)
+      )'''
+      self.question = self.inquiries[self.curr_ra_step][self.curr_gi_step]
+      self.disp_question_data() # update ui content
+    else:
+      self.student_page1.visible = False
+      self.student_page2.visible = True
+      self.title.text = self.curr_file['title'] # Task: review it
+    pass
+
+  def btn_student_go_home_click(self, **event_args):
+    """This method is called when the button is clicked"""
+    self.title.scroll_into_view()
+    self.reset()
+    self.author_page1.visible = False
+    self.student_page1.visible = True
+    pass
+
+
+
