@@ -115,6 +115,7 @@ class MainPage(MainPageTemplate):
       User = anvil.users.get_user(),
       ilo = app_tables.ilo.get(title_ilo = ilo)
     )
+    self.curr_file_id = self.curr_file.get_id()
 
     """
     # ------ DB query ------
@@ -233,7 +234,7 @@ class MainPage(MainPageTemplate):
     else:
       self.author_page4.visible = False
       self.author_page5.visible = True
-      self.title.text = self.curr_file['title']
+      self.title.text = self.curr_file['title'] # Task: review it
       
   def btn_go_home_click(self, **event_args):
     """This method is called when the button is clicked"""
@@ -252,13 +253,13 @@ class MainPage(MainPageTemplate):
       
       # save data in the gi_steps - table 
       gis = s['gi_steps']
-      alert(gis)
+      
       for i in gis:
         app_tables.gi_steps.add_row(
-          title = i['title'],
-          serial = gi_steps.index(i)+1,
+          title = i['question'],
+          serial = int(i['serial']),
           ra_step = app_tables.ra_steps.add_row(
-            file = "", # current file
+            file = self.curr_file,
             serial = int(s['serial'])
           )
           # Task: map the steps with the current file
@@ -266,7 +267,7 @@ class MainPage(MainPageTemplate):
         
       # map gi_steps with ra_steps - table
       ra_step = app_tables.ra_steps.get(
-        file = "", # current file
+        file = self.curr_file,
         serial = int(s['serial'])
       )
       gi_steps = app_tables.gi_steps.search(
