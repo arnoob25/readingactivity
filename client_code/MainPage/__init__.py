@@ -239,7 +239,7 @@ class MainPage(MainPageTemplate):
     """This method is called when the button is clicked"""
 
     # ------ save data in the DB ------
-    
+    app_tables.files.add_row(title="hello")
     for s in self.milestones:
       # save data in the ra_steps - table
       app_tables.ra_steps.add_row(
