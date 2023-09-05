@@ -115,7 +115,7 @@ class MainPage(MainPageTemplate):
       User = anvil.users.get_user(),
       ilo = app_tables.ilo.get(title_ilo = ilo)
     )
-    self.curr_file_id = self.curr_file.get_id()
+    # self.curr_file_id = self.curr_file.get_id() # Task: i don't need it - remove it
 
     """
     # ------ DB query ------
