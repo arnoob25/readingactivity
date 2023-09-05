@@ -325,15 +325,59 @@ class MainPage(MainPageTemplate):
 
     # ------ save data in the DB ------
 
-    # ra_step
     for s in self.milestones:
+      # save data in the ra_steps - table
       app_tables.ra_steps.add_row(
-        title-ra_step=
+        title = s['title'],
+        serial = s['serial'],
+        objective = s['objective'],
+        instructions = s['instruction'],
+        # Task: map the steps with the current file 
       )
+      
+      # save data in the gi_steps - table 
+      gis = s['gi_steps']
+      for i in gis:
+        app_tables.gi_steps.add_row(
+          title = i['title'],
+          serial = gi_steps.index(i)+1,
+          ra_step = app_tables.ra_steps.add_row(
+            file = "", # current file
+            serial = s['serial']
+          )
+          # Task: map the steps with the current file
+        )
+        
+      # map gi_steps with ra_steps - table
+      ra_step = app_tables.ra_steps.get(
+        file = "", # current file
+        serial = s['serial']
+      )
+      gi_steps = app_tables.gi_steps.search(
+        ra_step = ra_step
+      )
+      ra_step.update(gi_steps = gi_steps)
+
+      # save the inquiries in the question - table
+      for q in self.inquiries[s]:
+        for c in q['options']:
+          app_tables.options.add_row(
+            title = c['title']
+          )
+        app_tables.question.add_row(
+          prompt = q['prompt'],
+          context = q['context']
+        )
+        
+      
+      
+
+      
     
-    # Task: Have to save the self.milestones data into the DB
-    # Task: have to save the self.gi_steps data into the DB
+    
+    
     # Task: map gi_steps (DB row) to corresponding ra_steps in the ra_step table
+    # Task: save the inquiries list into the DB
     
     self.title.scroll_into_view()
     self.reset()

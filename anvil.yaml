@@ -54,7 +54,7 @@ db_schema:
     - name: serial
       admin_ui: {order: -1, width: 108}
       type: number
-    - name: title-ra_step
+    - name: title
       admin_ui: {order: 0, width: 200}
       type: string
     - name: objective
@@ -72,7 +72,7 @@ db_schema:
     client: full
     server: full
     columns:
-    - name: title-gi_step
+    - name: title
       admin_ui: {order: 0, width: 200}
       type: string
     - name: serial
@@ -128,9 +128,9 @@ db_schema:
     client: full
     server: full
     columns:
-    - name: title-option
+    - name: title
+      admin_ui: {order: 0, width: 200}
       type: string
-      admin_ui: {width: 200, order: 0}
     title: options
   users:
     client: none
