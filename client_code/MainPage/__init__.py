@@ -243,6 +243,7 @@ class MainPage(MainPageTemplate):
     app_tables.files.add_row(title="hello")
     for s in self.milestones:
       # save data in the ra_steps - table
+      alert(f"title: {s['title']}")
       app_tables.ra_steps.add_row(
         title = s['title'],
         serial = int(s['serial']),
@@ -251,7 +252,7 @@ class MainPage(MainPageTemplate):
         # Task: map the steps with the current file 
       )
       
-      # save data in the gi_steps - table 
+      '''# save data in the gi_steps - table 
       gis = s['gi_steps']
       
       for i in gis:
@@ -289,7 +290,7 @@ class MainPage(MainPageTemplate):
           options = app_tables.options.search(
             question = q
           )
-        )
+        )'''
     
     self.title.scroll_into_view()
     self.reset()
