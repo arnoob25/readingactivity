@@ -252,7 +252,7 @@ class MainPage(MainPageTemplate):
         # Task: map the steps with the current file 
       )
       
-      '''# save data in the gi_steps - table 
+      # save data in the gi_steps - table 
       gis = s['gi_steps']
       
       for i in gis:
@@ -265,7 +265,7 @@ class MainPage(MainPageTemplate):
           )
           # Task: map the steps with the current file
         )
-        
+      '''
       # map gi_steps with ra_steps - table
       ra_step = app_tables.ra_steps.get(
         file = self.curr_file,
