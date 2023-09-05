@@ -259,7 +259,7 @@ class MainPage(MainPageTemplate):
         app_tables.gi_steps.add_row(
           title = i['question'],
           serial = int(i['serial']),
-          ra_step = app_tables.ra_steps.add_row(
+          ra_step = app_tables.ra_steps.get(
             file = self.curr_file,
             serial = int(s['serial'])
           )
