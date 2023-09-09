@@ -172,7 +172,7 @@ class MainPage(MainPageTemplate):
     for s in self.milestones:
       serial = int(s['serial'])
       objective = s['objective']
-      list_gi_steps = server.call('gi', serial, self.lo, objective)
+      list_gi_steps = server.call('gi', serial, self.lo, objective) # Task: Add another parameter, the outline (list)
       
       # adding the gi_steps list to the dictionary
       self.milestones[self.milestones.index(s)]['gi_steps'] = list_gi_steps
