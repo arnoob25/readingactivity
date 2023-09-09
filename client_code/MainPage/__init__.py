@@ -198,7 +198,7 @@ class MainPage(MainPageTemplate):
         gi_step = q
         objective = s['objective']
         
-        context, prompt, options, assessment = server.call('inquiry', objective, gi_step)
+        context, prompt, options = server.call('inquiry', objective, gi_step)
 
         # convert list of strings into list of dicts to display the options
         choices = [] # list of options as dictionaries
