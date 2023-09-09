@@ -361,6 +361,3 @@ class MainPage(MainPageTemplate):
     self.author_page1.visible = False
     self.student_page1.visible = True
     pass
-
-
-
