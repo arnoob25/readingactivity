@@ -28,12 +28,12 @@ class MainPage(MainPageTemplate):
     self.inquiries = []
     
     # Any code you write here will run before the form opens.
-    self.author_page1.visible = False
+    self.author_page1.visible = True
     self.author_page2.visible = False
     self.author_page3.visible = False
     self.author_page4.visible = False
     self.author_page5.visible = False
-    self.student_page1.visible = True
+    self.student_page1.visible = False
     self.student_page2.visible = False
 
     self.curr_file = app_tables.files.get(
@@ -162,7 +162,7 @@ class MainPage(MainPageTemplate):
     for s in self.milestones:
       serial = int(s['serial'])
       objective = s['objective']
-      list_gi_steps = server.call('gi', serial, self.milestones, self.lo, objective) # Task: Add another parameter, the outline (list)
+      list_gi_steps = server.call('gi', serial, self.milestones, self.lo, objective)
       
       # adding the gi_steps list to the dictionary
       self.milestones[self.milestones.index(s)]['gi_steps'] = list_gi_steps
@@ -185,8 +185,7 @@ class MainPage(MainPageTemplate):
     for s in self.milestones:
       temp_q_list = []
       for q in s['gi_steps']:
-        gi_step = q
-        objective = s['objective']
+        '''objective = s['objective']
         
         context, prompt, options = server.call('inquiry', objective, gi_step)
 
@@ -196,20 +195,37 @@ class MainPage(MainPageTemplate):
           d = {
             'title': i
           }
-          choices.append(d)
+          choices.append(d)'''
  
         
         # create the list of questions in the gi
         question = {
-          'question': gi_step['question'],
-          'context': context,
-          'prompt': prompt,
-          'options': choices
+          'question': q['question']
         }
+        """'context': context, they make up the dictionary
+          'prompt': prompt,
+          'options': choices"""
         temp_q_list.append(question)
       self.inquiries.append(temp_q_list)
         
     # ------ displaying the data ------
+
+    step = self.milestones[self.curr_ra_step]
+    objective = step['objective']
+    gi_step = step['gi_steps'][self.curr_gi_step]['question']
+    context, inquiry, options = server.call('inquiry', objective, gi_step)
+
+    # convert list of strings into list of dicts to display the options
+    choices = [] # list of options as dictionaries
+    for i in options:
+      d = {
+         'title': i
+      }
+      choices.append(d)
+
+    dic = {context, inquiry, choices}
+    update_data = self.inquiries[self.curr_ra_step][self.curr_gi_step] 
+    update_data.update(dic)
 
     self.title.text = f"Step 1 question: 1 of {len(self.inquiries[0])}"
     self.question = self.inquiries[0][0]
