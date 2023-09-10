@@ -135,17 +135,14 @@ class MainPage(MainPageTemplate):
       id = self.id
     )
 
+    # saving the milestones to prevent data loss due to unexpected issues
+
+    self.curr_file.update(
+      milestones = self.milestones
+    )
+
     # self.curr_file_id = self.curr_file.get_id() # Task: i don't need it (remove)
 
-    """
-    # ------ DB query ------
-
-    # Task: I haven't yet saved the data into the DB, so the data must be loaded from the dictionary
-    
-    self.query_ra_steps = app_tables.ra_steps.search(file = self.curr_file)
-    self.rpanel_ra_step.items = self.query_ra_steps
-    self.rpanel_ra_step2.items = self.query_ra_steps
-    """
    
   def btn_gen_gi_click(self, **event_args):
     """This method is called when the button is clicked"""
