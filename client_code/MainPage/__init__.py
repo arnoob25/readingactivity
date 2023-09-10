@@ -172,7 +172,7 @@ class MainPage(MainPageTemplate):
     for s in self.milestones:
       serial = int(s['serial'])
       objective = s['objective']
-      list_gi_steps = server.call('gi', serial, self.lo, objective)
+      list_gi_steps = server.call('gi', serial, self.milestones, self.lo, objective) # Task: Add another parameter, the outline (list)
       
       # adding the gi_steps list to the dictionary
       self.milestones[self.milestones.index(s)]['gi_steps'] = list_gi_steps
@@ -198,7 +198,7 @@ class MainPage(MainPageTemplate):
         gi_step = q
         objective = s['objective']
         
-        context, prompt, options, assessment = server.call('inquiry', objective, gi_step)
+        context, prompt, options = server.call('inquiry', objective, gi_step)
 
         # convert list of strings into list of dicts to display the options
         choices = [] # list of options as dictionaries
@@ -361,6 +361,3 @@ class MainPage(MainPageTemplate):
     self.author_page1.visible = False
     self.student_page1.visible = True
     pass
-
-
-
