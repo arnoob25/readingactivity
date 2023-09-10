@@ -86,16 +86,6 @@ class MainPage(MainPageTemplate):
 
       return end
 
-  def get_gi_id(self):
-    curr_gi = app_tables.gi_steps.get(
-      ra_step = app_tables.ra_steps.get(
-        file = self.curr_file,
-        serial = self.curr_ra_step 
-      ),
-      serial = self.curr_gi_step
-    )
-    curr_gi_step_id = curr_gi.get_id()
-    return curr_gi_step_id # Task: we don't need it (remove)
 
   def disp_question_data(self):
     self.tarea_context.text = self.question['context']
@@ -233,10 +223,6 @@ class MainPage(MainPageTemplate):
     self.title.scroll_into_view()
   
     if iterate == False and self.question != None:
-      #id = self.get_gi_id() - to be used when querying from the DB
-      '''self.question = app_tables.question.get(
-        gi_step = app_tables.gi_steps.get_by_id(id)
-      )'''
       self.question = self.inquiries[self.curr_ra_step][self.curr_gi_step]
       self.disp_question_data() # update ui content
     else:
@@ -266,10 +252,6 @@ class MainPage(MainPageTemplate):
     self.title.scroll_into_view()
   
     if iterate == False and self.question != None:
-      #id = self.get_gi_id() - to be used when querying from the DB
-      '''self.question = app_tables.question.get(
-        gi_step = app_tables.gi_steps.get_by_id(id)
-      )'''
       self.question = self.inquiries[self.curr_ra_step][self.curr_gi_step]
       self.disp_question_data() # update ui content
     else:
