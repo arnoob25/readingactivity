@@ -254,60 +254,6 @@ class MainPage(MainPageTemplate):
       inquiries = self.inquiries
     )
     
-    '''for s in self.milestones:
-      # save data in the ra_steps - table
-      app_tables.ra_steps.add_row(
-        title = s['title'],
-        serial = int(s['serial']),
-        objective = s['objective'],
-        instruction = s['instruction'],
-        file = self.curr_file
-        # Task: map the steps with the current file 
-      )
-
-      # querying data to refer to and update
-      ra_step = app_tables.ra_steps.get(
-          file = self.curr_file,
-          serial = int(s['serial'])
-        )
-      
-      # save data in the gi_steps - table 
-      gis = s['gi_steps']
-      for i in gis:
-        app_tables.gi_steps.add_row(
-          title = i['question'],
-          serial = int(i['serial']),
-          ra_step = ra_step,
-          file = self.curr_file
-          # Task: map the steps with the current file
-        )
-  
-      # map gi_steps with ra_steps - table
-      gi_steps = app_tables.gi_steps.search(
-        ra_step = ra_step
-      )
-      ra_step.update(
-        gi_steps = app_tables.gi_steps.search(
-          ra_step = ra_step
-        )
-      )
-      
-      # save the inquiries in the question - table
-      for q in self.inquiries[s]:
-        for c in q['options']:
-          app_tables.options.add_row(
-            title = c['title'],
-            question = q
-          )
-        options = app_tables.options.search()
-        app_tables.question.add_row(
-          prompt = q['prompt'],
-          context = q['context'],
-          options = app_tables.options.search(
-            question = q
-          )
-        )'''
-    
     self.title.scroll_into_view()
     self.reset()
     pass
