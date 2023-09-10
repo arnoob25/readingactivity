@@ -225,28 +225,6 @@ class MainPage(MainPageTemplate):
     self.question = self.inquiries[0][0]
     self.disp_question_data()
     
-    """
-    # ------ DB query ------
-  
-    # Building the Data (Task: I might not need it)
-    ra_step_id = [s.get_id() for s in self.query_ra_steps]
-    count = 0
-    for s in ra_step_id:
-      count = count+1
-      gi_steps = app_tables.gi_steps.search(
-        ra_step = app_tables.ra_steps.get_by_id(s)
-      )
-      gi_ids = [r.get_id() for r in gi_steps]
-      self.data[count] = gi_ids
-
-    # Displaying the data
-    id = self.get_gi_id()
-    
-    self.question = app_tables.question.get(
-      gi_step= app_tables.gi_steps.get_by_id(id)
-    )
-    """
-    
   def btn_next_question_click(self, **event_args):
     """This method is called when the button is clicked"""
 
