@@ -17,9 +17,9 @@ class MainPage(MainPageTemplate):
     self.curr_file = None
     self.curr_ra_step = 0
     self.curr_gi_step = 0
-    self.query_ra_steps = None
+    self.query_ra_steps = None # Task: might not need it
     self.data = {} # Task: might not need it
-    self.question = None
+    self.question = None # Task: might not need it
 
     # temp data storage
     self.lo = ""
@@ -28,12 +28,12 @@ class MainPage(MainPageTemplate):
     self.inquiries = []
     
     # Any code you write here will run before the form opens.
-    self.author_page1.visible = False
+    self.author_page1.visible = True
     self.author_page2.visible = False
     self.author_page3.visible = False
     self.author_page4.visible = False
     self.author_page5.visible = False
-    self.student_page1.visible = True
+    self.student_page1.visible = False
     self.student_page2.visible = False
 
     self.curr_file = app_tables.files.get(
@@ -41,12 +41,12 @@ class MainPage(MainPageTemplate):
     )
 
     # Testing the student end
-    self.title.text = self.curr_file['title']
+    '''self.title.text = self.curr_file['title']
     self.inquiries = self.curr_file['inquiries']
     self.question = self.inquiries[0][0]
     self.rtext_student_context.content = self.question['context']
     self.rtext_student_prompt.content = self.question['prompt']
-    self.rpanel_student_options.items = self.question['options']
+    self.rpanel_student_options.items = self.question['options']'''
 
   # ------ helper functions ------ 
   
@@ -85,24 +85,30 @@ class MainPage(MainPageTemplate):
         end = True
 
       return end
+    
+  def update_inquiry(self):
 
-  def get_gi_id(self):
-    curr_gi = app_tables.gi_steps.get(
-      ra_step = app_tables.ra_steps.get(
-        file = self.curr_file,
-        serial = self.curr_ra_step 
-      ),
-      serial = self.curr_gi_step
-    )
-    curr_gi_step_id = curr_gi.get_id()
-    return curr_gi_step_id # Task: we don't need it (remove)
+      # ------ making inference ------
+      alert(f"ra: {self.curr_ra_step}, gi: {self.curr_gi_step}")
+      step = self.milestones[self.curr_ra_step]
+      objective = step['objective']
+      gi_step = step['gi_steps'][self.curr_gi_step]['question']
+      context, inquiry, options = server.call('inquiry', objective, gi_step)
 
-  def disp_question_data(self):
-    self.tarea_context.text = self.question['context']
-    self.tarea_prompt.text = self.question['prompt']
-    self.rpanel_options.items = self.question['options']
-    '''self.title.text = f"Step {self.curr_ra_step} (question {self.curr_gi_step}/{len(self.data[self.curr_ra_step])}):"
-    # Task: Figure out how to handle the title'''
+      # ------ updating inference data into the inquiry - list ------
+
+      dic = {'context': context, 'inquiry': inquiry, 'options': options}
+      update_data = self.inquiries[self.curr_ra_step][self.curr_gi_step]
+      update_data.update(dic)
+    
+      # ------ displaying the data ------
+      alert(self.inquiries)
+      self.title.text = f"Step {self.curr_ra_step+1} question: {self.curr_gi_step+1} of {len(self.inquiries[self.curr_ra_step])}"
+      self.question = self.inquiries[self.curr_ra_step][self.curr_gi_step]
+      
+      self.tarea_context.text = self.question['context']
+      self.tarea_prompt.text = self.question['inquiry']
+      self.rpanel_options.items = self.question['options']
   
   # ------ event listeners (author end) ------
 
@@ -145,18 +151,6 @@ class MainPage(MainPageTemplate):
       id = self.id
     )
 
-    # self.curr_file_id = self.curr_file.get_id() # Task: i don't need it (remove)
-
-    """
-    # ------ DB query ------
-
-    # Task: I haven't yet saved the data into the DB, so the data must be loaded from the dictionary
-    
-    self.query_ra_steps = app_tables.ra_steps.search(file = self.curr_file)
-    self.rpanel_ra_step.items = self.query_ra_steps
-    self.rpanel_ra_step2.items = self.query_ra_steps
-    """
-   
   def btn_gen_gi_click(self, **event_args):
     """This method is called when the button is clicked"""
 
@@ -172,10 +166,17 @@ class MainPage(MainPageTemplate):
     for s in self.milestones:
       serial = int(s['serial'])
       objective = s['objective']
-      list_gi_steps = server.call('gi', serial, self.milestones, self.lo, objective) # Task: Add another parameter, the outline (list)
+      list_gi_steps = server.call('gi', serial, self.milestones, self.lo, objective)
       
       # adding the gi_steps list to the dictionary
       self.milestones[self.milestones.index(s)]['gi_steps'] = list_gi_steps
+
+    # ------ saving data in the DB ------
+    # saving the milestones to prevent data loss due to unexpected issues
+
+    self.curr_file.update(
+      milestones = self.milestones
+    )
 
     # ------ displaying the data ------
     
@@ -195,76 +196,31 @@ class MainPage(MainPageTemplate):
     for s in self.milestones:
       temp_q_list = []
       for q in s['gi_steps']:
-        gi_step = q
-        objective = s['objective']
-        
-        context, prompt, options = server.call('inquiry', objective, gi_step)
-
-        # convert list of strings into list of dicts to display the options
-        choices = [] # list of options as dictionaries
-        for i in options:
-          d = {
-            'title': i
-          }
-          choices.append(d)
- 
         
         # create the list of questions in the gi
         question = {
-          'question': gi_step['question'],
-          'context': context,
-          'prompt': prompt,
-          'options': choices
+          'question': q['question']
         }
+
         temp_q_list.append(question)
       self.inquiries.append(temp_q_list)
         
     # ------ displaying the data ------
 
-    self.title.text = f"Step 1 question: 1 of {len(self.inquiries[0])}"
-    self.question = self.inquiries[0][0]
-    self.disp_question_data()
-    
-    """
-    # ------ DB query ------
-  
-    # Building the Data (Task: I might not need it)
-    ra_step_id = [s.get_id() for s in self.query_ra_steps]
-    count = 0
-    for s in ra_step_id:
-      count = count+1
-      gi_steps = app_tables.gi_steps.search(
-        ra_step = app_tables.ra_steps.get_by_id(s)
-      )
-      gi_ids = [r.get_id() for r in gi_steps]
-      self.data[count] = gi_ids
-
-    # Displaying the data
-    id = self.get_gi_id()
-    
-    self.question = app_tables.question.get(
-      gi_step= app_tables.gi_steps.get_by_id(id)
-    )
-    """
+    self.update_inquiry()
     
   def btn_next_question_click(self, **event_args):
     """This method is called when the button is clicked"""
 
-    iterate = self.itr()
-    self.title.text = f"Step {self.curr_ra_step+1} question: {self.curr_gi_step+1} of {len(self.inquiries[self.curr_ra_step])}"
+    iterate = self.itr() # updates curr_ra_step and curr_gi_step, and returns True when reached the end
     self.title.scroll_into_view()
   
-    if iterate == False and self.question != None:
-      #id = self.get_gi_id() - to be used when querying from the DB
-      '''self.question = app_tables.question.get(
-        gi_step = app_tables.gi_steps.get_by_id(id)
-      )'''
-      self.question = self.inquiries[self.curr_ra_step][self.curr_gi_step]
-      self.disp_question_data() # update ui content
+    if iterate == False and self.question != None: # didn't reach the end and the question was updated with a valid inquiry
+      self.update_inquiry()
     else:
       self.author_page4.visible = False
       self.author_page5.visible = True
-      self.title.text = self.curr_file['title'] # Task: review it
+      self.title.text = self.curr_file['title']
       
   def btn_go_home_click(self, **event_args):
     """This method is called when the button is clicked"""
@@ -275,60 +231,6 @@ class MainPage(MainPageTemplate):
       milestones = self.milestones,
       inquiries = self.inquiries
     )
-    
-    '''for s in self.milestones:
-      # save data in the ra_steps - table
-      app_tables.ra_steps.add_row(
-        title = s['title'],
-        serial = int(s['serial']),
-        objective = s['objective'],
-        instruction = s['instruction'],
-        file = self.curr_file
-        # Task: map the steps with the current file 
-      )
-
-      # querying data to refer to and update
-      ra_step = app_tables.ra_steps.get(
-          file = self.curr_file,
-          serial = int(s['serial'])
-        )
-      
-      # save data in the gi_steps - table 
-      gis = s['gi_steps']
-      for i in gis:
-        app_tables.gi_steps.add_row(
-          title = i['question'],
-          serial = int(i['serial']),
-          ra_step = ra_step,
-          file = self.curr_file
-          # Task: map the steps with the current file
-        )
-  
-      # map gi_steps with ra_steps - table
-      gi_steps = app_tables.gi_steps.search(
-        ra_step = ra_step
-      )
-      ra_step.update(
-        gi_steps = app_tables.gi_steps.search(
-          ra_step = ra_step
-        )
-      )
-      
-      # save the inquiries in the question - table
-      for q in self.inquiries[s]:
-        for c in q['options']:
-          app_tables.options.add_row(
-            title = c['title'],
-            question = q
-          )
-        options = app_tables.options.search()
-        app_tables.question.add_row(
-          prompt = q['prompt'],
-          context = q['context'],
-          options = app_tables.options.search(
-            question = q
-          )
-        )'''
     
     self.title.scroll_into_view()
     self.reset()
@@ -342,10 +244,6 @@ class MainPage(MainPageTemplate):
     self.title.scroll_into_view()
   
     if iterate == False and self.question != None:
-      #id = self.get_gi_id() - to be used when querying from the DB
-      '''self.question = app_tables.question.get(
-        gi_step = app_tables.gi_steps.get_by_id(id)
-      )'''
       self.question = self.inquiries[self.curr_ra_step][self.curr_gi_step]
       self.disp_question_data() # update ui content
     else:
