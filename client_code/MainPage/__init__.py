@@ -89,22 +89,26 @@ class MainPage(MainPageTemplate):
   def update_inquiry(self):
 
       # ------ making inference ------
-      alert(f"ra: {self.curr_ra_step}, gi: {self.curr_gi_step}")
-      step = self.milestones[self.curr_ra_step]
+
+      ra = self.curr_ra_step
+      gi = self.curr_gi_step
+      curr_inquiry = self.inquiries[ra][gi]
+    
+      step = self.milestones[ra]
       objective = step['objective']
-      gi_step = step['gi_steps'][self.curr_gi_step]['question']
+      gi_step = step['gi_steps'][gi]['question']
       context, inquiry, options = server.call('inquiry', objective, gi_step)
 
       # ------ updating inference data into the inquiry - list ------
 
       dic = {'context': context, 'inquiry': inquiry, 'options': options}
-      update_data = self.inquiries[self.curr_ra_step][self.curr_gi_step]
+      update_data = curr_inquiry
       update_data.update(dic)
     
       # ------ displaying the data ------
-      alert(self.inquiries)
-      self.title.text = f"Step {self.curr_ra_step+1} question: {self.curr_gi_step+1} of {len(self.inquiries[self.curr_ra_step])}"
-      self.question = self.inquiries[self.curr_ra_step][self.curr_gi_step]
+
+      self.title.text = f"Step {ra+1} question: {gi+1} of {len(self.inquiries[ra])}"
+      self.question = curr_inquiry
       
       self.tarea_context.text = self.question['context']
       self.tarea_prompt.text = self.question['inquiry']
@@ -215,7 +219,7 @@ class MainPage(MainPageTemplate):
     iterate = self.itr() # updates curr_ra_step and curr_gi_step, and returns True when reached the end
     self.title.scroll_into_view()
   
-    if iterate == False and self.question != None: # didn't reach the end and the question was updated with a valid inquiry
+    if iterate == False and self.question is not None: # didn't reach the end and the question was updated with a valid inquiry
       self.update_inquiry()
     else:
       self.author_page4.visible = False
