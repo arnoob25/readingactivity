@@ -17,9 +17,9 @@ class MainPage(MainPageTemplate):
     self.curr_file = None
     self.curr_ra_step = 0
     self.curr_gi_step = 0
-    self.query_ra_steps = None
+    self.query_ra_steps = None # Task: might not need it
     self.data = {} # Task: might not need it
-    self.question = None
+    self.question = None # Task: might not need it
 
     # temp data storage
     self.lo = ""
@@ -41,12 +41,12 @@ class MainPage(MainPageTemplate):
     )
 
     # Testing the student end
-    self.title.text = self.curr_file['title']
+    '''self.title.text = self.curr_file['title']
     self.inquiries = self.curr_file['inquiries']
     self.question = self.inquiries[0][0]
     self.rtext_student_context.content = self.question['context']
     self.rtext_student_prompt.content = self.question['prompt']
-    self.rpanel_student_options.items = self.question['options']
+    self.rpanel_student_options.items = self.question['options']'''
 
   # ------ helper functions ------ 
   
@@ -85,14 +85,30 @@ class MainPage(MainPageTemplate):
         end = True
 
       return end
+    
+  def update_inquiry(self):
 
+      # ------ making inference ------
+      alert(f"ra: {self.curr_ra_step}, gi: {self.curr_gi_step}")
+      step = self.milestones[self.curr_ra_step]
+      objective = step['objective']
+      gi_step = step['gi_steps'][self.curr_gi_step]['question']
+      context, inquiry, options = server.call('inquiry', objective, gi_step)
 
-  def disp_question_data(self):
-    self.tarea_context.text = self.question['context']
-    self.tarea_prompt.text = self.question['prompt']
-    self.rpanel_options.items = self.question['options']
-    '''self.title.text = f"Step {self.curr_ra_step} (question {self.curr_gi_step}/{len(self.data[self.curr_ra_step])}):"
-    # Task: Figure out how to handle the title'''
+      # ------ updating inference data into the inquiry - list ------
+
+      dic = {'context': context, 'inquiry': inquiry, 'options': options}
+      update_data = self.inquiries[self.curr_ra_step][self.curr_gi_step]
+      update_data.update(dic)
+    
+      # ------ displaying the data ------
+      alert(self.inquiries)
+      self.title.text = f"Step {self.curr_ra_step+1} question: {self.curr_gi_step+1} of {len(self.inquiries[self.curr_ra_step])}"
+      self.question = self.inquiries[self.curr_ra_step][self.curr_gi_step]
+      
+      self.tarea_context.text = self.question['context']
+      self.tarea_prompt.text = self.question['inquiry']
+      self.rpanel_options.items = self.question['options']
   
   # ------ event listeners (author end) ------
 
@@ -135,15 +151,6 @@ class MainPage(MainPageTemplate):
       id = self.id
     )
 
-    # saving the milestones to prevent data loss due to unexpected issues
-
-    self.curr_file.update(
-      milestones = self.milestones
-    )
-
-    # self.curr_file_id = self.curr_file.get_id() # Task: i don't need it (remove)
-
-   
   def btn_gen_gi_click(self, **event_args):
     """This method is called when the button is clicked"""
 
@@ -164,6 +171,13 @@ class MainPage(MainPageTemplate):
       # adding the gi_steps list to the dictionary
       self.milestones[self.milestones.index(s)]['gi_steps'] = list_gi_steps
 
+    # ------ saving data in the DB ------
+    # saving the milestones to prevent data loss due to unexpected issues
+
+    self.curr_file.update(
+      milestones = self.milestones
+    )
+
     # ------ displaying the data ------
     
     self.rpanel_ra_step2.items = self.milestones
@@ -182,66 +196,31 @@ class MainPage(MainPageTemplate):
     for s in self.milestones:
       temp_q_list = []
       for q in s['gi_steps']:
-        '''objective = s['objective']
-        
-        context, prompt, options = server.call('inquiry', objective, gi_step)
-
-        # convert list of strings into list of dicts to display the options
-        choices = [] # list of options as dictionaries
-        for i in options:
-          d = {
-            'title': i
-          }
-          choices.append(d)'''
- 
         
         # create the list of questions in the gi
         question = {
           'question': q['question']
         }
-        """'context': context, they make up the dictionary
-          'prompt': prompt,
-          'options': choices"""
+
         temp_q_list.append(question)
       self.inquiries.append(temp_q_list)
         
     # ------ displaying the data ------
 
-    step = self.milestones[self.curr_ra_step]
-    objective = step['objective']
-    gi_step = step['gi_steps'][self.curr_gi_step]['question']
-    context, inquiry, options = server.call('inquiry', objective, gi_step)
-
-    # convert list of strings into list of dicts to display the options
-    choices = [] # list of options as dictionaries
-    for i in options:
-      d = {
-         'title': i
-      }
-      choices.append(d)
-
-    dic = {context, inquiry, choices}
-    update_data = self.inquiries[self.curr_ra_step][self.curr_gi_step] 
-    update_data.update(dic)
-
-    self.title.text = f"Step 1 question: 1 of {len(self.inquiries[0])}"
-    self.question = self.inquiries[0][0]
-    self.disp_question_data()
+    self.update_inquiry()
     
   def btn_next_question_click(self, **event_args):
     """This method is called when the button is clicked"""
 
-    iterate = self.itr()
-    self.title.text = f"Step {self.curr_ra_step+1} question: {self.curr_gi_step+1} of {len(self.inquiries[self.curr_ra_step])}"
+    iterate = self.itr() # updates curr_ra_step and curr_gi_step, and returns True when reached the end
     self.title.scroll_into_view()
   
-    if iterate == False and self.question != None:
-      self.question = self.inquiries[self.curr_ra_step][self.curr_gi_step]
-      self.disp_question_data() # update ui content
+    if iterate == False and self.question != None: # didn't reach the end and the question was updated with a valid inquiry
+      self.update_inquiry()
     else:
       self.author_page4.visible = False
       self.author_page5.visible = True
-      self.title.text = self.curr_file['title'] # Task: review it
+      self.title.text = self.curr_file['title']
       
   def btn_go_home_click(self, **event_args):
     """This method is called when the button is clicked"""
