@@ -246,7 +246,7 @@ components:
         grid_position: EQOWAG,CFVQDY
       event_bindings: {click: btn_go_home_click}
 - type: ColumnPanel
-  properties: {}
+  properties: {col_widths: '{}'}
   name: student_end
   layout_properties: {grid_position: 'FIURWQ,XBYOTS'}
   components:
@@ -296,11 +296,10 @@ components:
       name: outlined_card_1
       layout_properties: {grid_position: 'HABJOH,ATGVSF'}
       components:
-      - type: Canvas
-        properties: {height: 100}
-        name: canvas_1
-        layout_properties: {grid_position: 'CZNQOI,RLVAFX'}
-        data_bindings: []
+      - type: form:Form1
+        properties: {}
+        name: form1_1
+        layout_properties: {grid_position: 'HPGLGJ,CVXPMX'}
     - type: Spacer
       properties: {height: 18}
       name: spacer_1_copy_2
@@ -337,6 +336,7 @@ components:
         layout_properties:
           col_widths: {}
           grid_position: FWHASY,AHKXMO
+        components: []
     - type: Spacer
       properties: {height: 18}
       name: spacer_2_copy
@@ -413,23 +413,23 @@ components:
         layout_properties: {grid_position: 'ZHVVRO,DNAIOR'}
         event_bindings: {}
         data_bindings: []
-    - type: Spacer
-      properties: {height: 18}
-      name: spacer_3_copy
-      layout_properties:
-        col_widths: {}
-        grid_position: FUPFGM,WNEOMP
-    - type: Button
-      properties: {role: filled-button, align: right, tooltip: '', border: '', enabled: true,
-        foreground: '', visible: true, text: Onward, font_size: null, font: '', spacing_above: small,
-        icon_align: left, spacing_below: small, italic: false, background: '', bold: false,
-        underline: false, icon: ''}
-      name: btn_student_next_question
-      layout_properties:
-        col_widths: {}
-        grid_position: FWERQN,WGFGPJ
-      event_bindings: {click: btn_student_next_question_click}
     data_bindings: []
+  - type: Spacer
+    properties: {height: 18}
+    name: spacer_3_copy
+    layout_properties:
+      col_widths: {}
+      grid_position: NQRBSQ,INHDBU
+  - type: Button
+    properties: {role: filled-button, align: right, tooltip: '', border: '', enabled: true,
+      foreground: '', visible: true, text: Onward, font_size: null, font: '', spacing_above: small,
+      icon_align: left, spacing_below: small, italic: false, background: '', bold: false,
+      underline: false, icon: ''}
+    name: btn_student_next_question
+    layout_properties:
+      col_widths: {}
+      grid_position: NKDGZN,TUVPZV
+    event_bindings: {click: btn_student_next_question_click}
   - type: ColumnPanel
     properties: {role: elevated-card, tooltip: '', border: '', foreground: '', visible: true,
       wrap_on: mobile, col_spacing: medium, spacing_above: small, col_widths: '{}',
