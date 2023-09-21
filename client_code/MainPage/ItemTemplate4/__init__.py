@@ -16,4 +16,3 @@ class ItemTemplate4(ItemTemplate4Template):
     # Any code you write here will run before the form opens.
 
     # This will run after the user taps "Generate questions"
-    

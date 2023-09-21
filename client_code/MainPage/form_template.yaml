@@ -275,16 +275,13 @@ components:
       components:
       - type: RichText
         properties: {role: null, align: left, tooltip: '', enable_slots: true, border: '',
-          foreground: 'theme:On Background', visible: true, font_size: null, content: 'An
-            interactive simulation would be an effective tool to aid the student in
-            achieving the goal of this question. The simulation could show a cross-section
-            of the heart with the four valves and their locations. The student could
-            interact with the simulation by clicking on each valve to see how it opens
-            and closes, coordinating with the contraction and relaxation of the heart.
-            The simulation could also show what happens when a valve does not function
-            properly, such as blood flowing in the wrong direction or not flowing
-            at all.', font: '', spacing_above: small, spacing_below: small, data: null,
-          background: '', format: markdown}
+          foreground: 'theme:On Background', visible: true, font_size: null, content: 'Imagine
+            you''re the president of a small island nation. You''ve decided to print
+            more money in an attempt to stimulate economic growth. However, your citizens
+            have started to complain that they can''t buy as much with their money
+            as they used to. To understand the issue, you decide to simulate the impacts
+            of money supply using a computer program.', font: '', spacing_above: small,
+          spacing_below: small, data: null, background: '', format: markdown}
         name: rtext_student_context
         layout_properties: {grid_position: 'GIUWKJ,LUTZAB'}
       data_bindings: []
@@ -292,6 +289,24 @@ components:
       properties: {height: 18}
       name: spacer_1_copy
       layout_properties: {grid_position: 'TLAVOA,SZJJKG'}
+    - type: ColumnPanel
+      properties: {role: tonal-card, tooltip: '', border: '', foreground: '', visible: true,
+        wrap_on: mobile, col_spacing: medium, spacing_above: small, col_widths: '{}',
+        spacing_below: small, background: ''}
+      name: outlined_card_1
+      layout_properties: {grid_position: 'HABJOH,ATGVSF'}
+      components:
+      - type: Canvas
+        properties: {height: 100}
+        name: canvas_1
+        layout_properties: {grid_position: 'CZNQOI,RLVAFX'}
+        data_bindings: []
+    - type: Spacer
+      properties: {height: 18}
+      name: spacer_1_copy_2
+      layout_properties:
+        col_widths: {}
+        grid_position: PBVEGO,VASLDQ
     - type: Label
       properties: {role: null, align: left, tooltip: '', border: '', foreground: '',
         visible: true, text: 'Prompt: ', font_size: null, font: '', spacing_above: small,
@@ -313,10 +328,10 @@ components:
       components:
       - type: RichText
         properties: {role: null, align: left, tooltip: '', enable_slots: true, border: '',
-          foreground: 'theme:On Background', visible: true, font_size: null, content: 'What
-            do you observe when you click on each valve in the simulation? Can you
-            describe what happens when a valve does not function properly?', font: '',
-          spacing_above: small, spacing_below: small, data: null, background: '',
+          foreground: 'theme:On Background', visible: true, font_size: null, content: 'After
+            observing the simulation, why do you think your citizens are complaining
+            about not being able to buy as much as before? What could be happening?',
+          font: '', spacing_above: small, spacing_below: small, data: null, background: '',
           format: markdown}
         name: rtext_student_prompt
         layout_properties:
@@ -341,18 +356,63 @@ components:
       properties: {role: tonal-card, tooltip: '', border: '', foreground: '', visible: true,
         wrap_on: mobile, col_spacing: medium, spacing_above: small, col_widths: '{}',
         spacing_below: small, background: ''}
+      name: outlined_card_2
+      layout_properties: {grid_position: 'CDCTSU,YSRMGB'}
+      components:
+      - type: CheckBox
+        properties: {role: null, align: left, tooltip: '', border: '', enabled: true,
+          foreground: '', allow_indeterminate: false, visible: true, text: Businesses are charging more to cover their increasing costs.,
+          font_size: null, font: '', spacing_above: small, spacing_below: small, italic: false,
+          background: '', bold: false, checked: false, underline: false}
+        name: check_box_1
+        layout_properties: {grid_position: 'ACYYUG,FMIZNR'}
+      - type: CheckBox
+        properties: {role: null, align: left, tooltip: '', border: '', enabled: true,
+          foreground: '', allow_indeterminate: false, visible: true, text: 'People
+            are spending more, which is driving up prices.', font_size: null, font: '',
+          spacing_above: small, spacing_below: small, italic: false, background: '',
+          bold: false, checked: false, underline: false}
+        name: check_box_1_copy
+        layout_properties:
+          col_widths: {}
+          grid_position: VCUGRQ,FTQZMO
+      - type: CheckBox
+        properties: {role: null, align: left, tooltip: '', border: '', enabled: true,
+          foreground: '', allow_indeterminate: false, visible: true, text: 'The island
+            is importing more goods, which is causing prices to rise.', font_size: null,
+          font: '', spacing_above: small, spacing_below: small, italic: false, background: '',
+          bold: false, checked: false, underline: false}
+        name: check_box_1_copy_2
+        layout_properties:
+          col_widths: {}
+          grid_position: RVPYVU,ADJZGH
+      - type: CheckBox
+        properties: {role: null, align: left, tooltip: '', border: '', enabled: true,
+          foreground: '', allow_indeterminate: false, visible: true, text: 'Banks
+            are lending more money, which is causing prices to rise.', font_size: null,
+          font: '', spacing_above: small, spacing_below: small, italic: false, background: '',
+          bold: false, checked: false, underline: false}
+        name: check_box_1_copy_3
+        layout_properties:
+          col_widths: {}
+          grid_position: GTZBJV,WQWPGW
+    - type: ColumnPanel
+      properties: {role: tonal-card, tooltip: '', border: '', foreground: '', visible: false,
+        wrap_on: mobile, col_spacing: medium, spacing_above: small, col_widths: '{}',
+        spacing_below: small, background: ''}
       name: ocard_options_copy
       layout_properties:
         col_widths: {}
         grid_position: XKLJFL,IUNIZC
       components:
       - type: RepeatingPanel
-        properties: {item_template: MainPage.ItemTemplate4}
+        properties: {role: null, tooltip: '', border: '', foreground: '', items: null,
+          visible: false, spacing_above: small, spacing_below: small, item_template: MainPage.ItemTemplate4,
+          background: ''}
         name: rpanel_student_options
         layout_properties: {grid_position: 'ZHVVRO,DNAIOR'}
         event_bindings: {}
-        data_bindings:
-        - {property: items, code: 'self.item[''options'']'}
+        data_bindings: []
     - type: Spacer
       properties: {height: 18}
       name: spacer_3_copy
