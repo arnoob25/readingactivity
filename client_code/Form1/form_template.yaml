@@ -14,28 +14,29 @@ container:
       \        <div id=\"consumers\" class=\"text-area\"></div>\n    </div>\n\n  \
       \  <label for=\"moneySupply\">Money supply:</label><br>\n    <input type=\"\
       range\" id=\"moneySupply\" name=\"moneySupply\" min=\"0\" max=\"2\" value=\"\
-      1\"><br>\n    <span id=\"decreaseLabel\">Decrease money supply</span><span style=\"\
-      float:right\" id=\"increaseLabel\">Increase money\n        supply</span>\n\n\
-      \    <script>\n        var moneySupplySlider = document.getElementById(\"moneySupply\"\
-      );\n        var banksText = document.getElementById(\"banks\");\n        var\
-      \ businessesText = document.getElementById(\"businesses\");\n        var consumersText\
-      \ = document.getElementById(\"consumers\");\n\n        moneySupplySlider.oninput\
-      \ = function () {\n            if (this.value == 0) {\n                banksText.innerHTML\
-      \ = \"They become more selective about who they lend to.\";\n              \
-      \  businessesText.innerHTML = \"They see a decrease in demand as people have\
-      \ less money to spend. However, they also notice their costs are going down.\"\
-      ;\n                consumersText.innerHTML = \"They find it harder to make big\
-      \ purchases, but the prices at the market are going down.\";\n            }\
-      \ else if (this.value == 2) {\n                banksText.innerHTML = \"They\
-      \ have more money to lend out.\";\n                businessesText.innerHTML\
-      \ = \"They see an increase in demand as people have more money to spend. However,\
-      \ they also notice that the cost of their supplies is going up.\";\n       \
-      \         consumersText.innerHTML = \"They initially enjoy being able to buy\
-      \ more things, but over time they start to notice that prices at the market\
-      \ are going up.\";\n            } else {\n                banksText.innerHTML\
-      \ = \"\";\n                businessesText.innerHTML = \"\";\n              \
-      \  consumersText.innerHTML = \"\";\n            }\n        }\n    </script>\n\
-      \n</body>\n\n</html>\n</center>\n<div anvil-slot=\"default\"></div>"}
+      1\"><br>\n    <span style=\"float:left\" id=\"decreaseLabel\">Decrease money\
+      \ supply</span>\n    <span style=\"float:right\" id=\"increaseLabel\">Increase\
+      \ money supply</span>\n\n    <script>\n        var moneySupplySlider = document.getElementById(\"\
+      moneySupply\");\n        var banksText = document.getElementById(\"banks\");\n\
+      \        var businessesText = document.getElementById(\"businesses\");\n   \
+      \     var consumersText = document.getElementById(\"consumers\");\n\n      \
+      \  moneySupplySlider.oninput = function () {\n            if (this.value ==\
+      \ 0) {\n                banksText.innerHTML = \"They become more selective about\
+      \ who they lend to.\";\n                businessesText.innerHTML = \"They see\
+      \ a decrease in demand as people have less money to spend. However, they also\
+      \ notice their costs are going down.\";\n                consumersText.innerHTML\
+      \ = \"They find it harder to make big purchases, but the prices at the market\
+      \ are going down.\";\n            } else if (this.value == 2) {\n          \
+      \      banksText.innerHTML = \"They have more money to lend out.\";\n      \
+      \          businessesText.innerHTML = \"They see an increase in demand as people\
+      \ have more money to spend. However, they also notice that the cost of their\
+      \ supplies is going up.\";\n                consumersText.innerHTML = \"They\
+      \ initially enjoy being able to buy more things, but over time they start to\
+      \ notice that prices at the market are going up.\";\n            } else {\n\
+      \                banksText.innerHTML = \"\";\n                businessesText.innerHTML\
+      \ = \"\";\n                consumersText.innerHTML = \"\";\n            }\n\
+      \        }\n    </script>\n\n</body>\n\n</html>\n</center>\n<div anvil-slot=\"\
+      default\"></div>"}
 components: []
 is_package: true
 custom_component: true
