@@ -1,6 +1,8 @@
 container:
   type: ColumnPanel
   properties: {col_widths: '{}'}
+  data_bindings:
+  - {property: tag, code: 'self.item[''title'']'}
 components:
 - type: RadioButton
   properties: {role: null, selected: false, align: left, tooltip: '', border: '',
