@@ -2,30 +2,33 @@ container:
   type: HtmlTemplate
   properties: {tooltip: '', background: '', foreground: '', border: '', visible: true,
     role: null, html: "<center style=\"font-style:italic; color:#888; margin: 3em;\"\
-      >\n  <!DOCTYPE html>\n<html>\n<head>\n    <style>\n        #myVideo {\n    \
-      \        width: 500px;\n            height: auto;\n        }\n        .controls\
-      \ {\n            text-align: left;\n        }\n        .button {\n         \
-      \   padding: 10px 20px;\n            font-size: 16px;\n            cursor: pointer;\n\
-      \            display: inline-block;\n        }\n        #speedSlider {\n   \
-      \         width: 200px;\n            display: inline-block;\n            margin-left:\
-      \ 10px;\n        }\n    </style>\n</head>\n<body>\n\n<video id=\"myVideo\" preload=\"\
-      auto\" loop>\n    <source src=\"https://drive.google.com/uc?export=download&id=1NqArEwdBT9RzodrFHUR67vnjD4JwiYtn\"\
-      \ type=\"video/mp4\">\n    Your browser does not support HTML5 video.\n</video>\n\
-      \n<div class=\"controls\">\n    <button id=\"playButton\" class=\"button\">Play</button>\n\
-      \    <button id=\"restartButton\" class=\"button\">Restart</button>\n    <label\
-      \ for=\"speedSlider\">Speed:</label>\n    <input id=\"speedSlider\" type=\"\
-      range\" min=\"0.1\" max=\"1\" step=\"0.1\" value=\"1\">\n</div>\n\n<script>\n\
-      \    var myVideo = document.getElementById(\"myVideo\");\n    var playButton\
-      \ = document.getElementById(\"playButton\");\n    var restartButton = document.getElementById(\"\
-      restartButton\");\n    var speedSlider = document.getElementById(\"speedSlider\"\
-      );\n\n    playButton.addEventListener(\"click\", function() {\n        if (myVideo.paused)\
-      \ {\n            myVideo.play();\n            playButton.innerHTML = \"Pause\"\
-      ;\n        } else {\n            myVideo.pause();\n            playButton.innerHTML\
-      \ = \"Play\";\n        }\n    });\n\n    restartButton.addEventListener(\"click\"\
-      , function() {\n        myVideo.currentTime = 0;\n        if (myVideo.paused)\
-      \ {\n            playButton.innerHTML = \"Play\";\n        }\n    });\n\n  \
-      \  speedSlider.addEventListener(\"input\", function() {\n        myVideo.playbackRate\
-      \ = speedSlider.value;\n    });\n</script>\n\n</body>\n</html>\n\n</center>\n\
+      >\n  <!DOCTYPE html>\n<html>\n\n<head>\n    <style>\n        #myVideo {\n  \
+      \          width: 100%;\n            height: auto;\n        }\n\n        .controls\
+      \ {\n            text-align: left;\n        }\n\n        .button {\n       \
+      \     padding: 10px 20px;\n            font-size: 16px;\n            cursor:\
+      \ pointer;\n            display: inline-block;\n        }\n\n        #speedSlider\
+      \ {\n            width: 200px;\n            display: inline-block;\n       \
+      \     margin-left: 10px;\n        }\n    </style>\n</head>\n\n<body>\n\n   \
+      \ <video id=\"myVideo\" preload=\"auto\" loop>\n        <source src=\"https://drive.google.com/uc?export=download&id=1NqArEwdBT9RzodrFHUR67vnjD4JwiYtn\"\
+      \ type=\"video/mp4\">\n        Your browser does not support HTML5 video.\n\
+      \    </video>\n\n    <div class=\"controls\">\n        <button id=\"playButton\"\
+      \ class=\"button\">Play</button>\n        <button id=\"restartButton\" class=\"\
+      button\">Restart</button>\n      <span>\n        <label for=\"speedSlider\"\
+      \ style=\"margin-left: 10px;\">Speed:</label>\n        <input id=\"speedSlider\"\
+      \ type=\"range\" min=\"0.1\" max=\"1\" step=\"0.1\" value=\"1\">\n      </span>\n\
+      \    </div>\n\n    <script>\n        var myVideo = document.getElementById(\"\
+      myVideo\");\n        var playButton = document.getElementById(\"playButton\"\
+      );\n        var restartButton = document.getElementById(\"restartButton\");\n\
+      \        var speedSlider = document.getElementById(\"speedSlider\");\n\n   \
+      \     playButton.addEventListener(\"click\", function () {\n            if (myVideo.paused)\
+      \ {\n                myVideo.play();\n                playButton.innerHTML =\
+      \ \"Pause\";\n            } else {\n                myVideo.pause();\n     \
+      \           playButton.innerHTML = \"Play\";\n            }\n        });\n\n\
+      \        restartButton.addEventListener(\"click\", function () {\n         \
+      \   myVideo.currentTime = 0;\n            if (myVideo.paused) {\n          \
+      \      playButton.innerHTML = \"Play\";\n            }\n        });\n\n    \
+      \    speedSlider.addEventListener(\"input\", function () {\n            myVideo.playbackRate\
+      \ = speedSlider.value;\n        });\n    </script>\n\n</body>\n\n</html>\n</center>\n\
       <div anvil-slot=\"default\"></div>"}
 components: []
 is_package: true
