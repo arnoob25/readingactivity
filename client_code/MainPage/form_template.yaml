@@ -269,7 +269,7 @@ components:
           Container', visible: true, wrap_on: mobile, col_spacing: medium, spacing_above: small,
         col_widths: '{}', spacing_below: small, background: 'theme:Primary Container'}
       layout_properties: {grid_position: 'OSTHTW,YVVACW'}
-      name: ocard_context_copy
+      name: ocard_student_context
       components:
       - type: RichText
         properties: {role: null, align: left, tooltip: '', enable_slots: true, border: '',
@@ -277,13 +277,30 @@ components:
           font: '', spacing_above: small, spacing_below: small, data: null, background: '',
           format: markdown}
         layout_properties: {grid_position: 'GIUWKJ,LUTZAB'}
-        data_bindings:
-        - {code: 'self.item[''context'']', property: data}
         name: rtext_student_context
+        data_bindings:
+        - {property: data, code: 'self.item[''context'']'}
     - type: Spacer
       properties: {height: 18}
       layout_properties: {grid_position: 'TLAVOA,SZJJKG'}
       name: spacer_1_copy
+    - type: ColumnPanel
+      properties: {role: outlined-card, tooltip: '', border: '', foreground: '', visible: true,
+        wrap_on: never, col_spacing: none, spacing_above: small, col_widths: '{}',
+        spacing_below: small, background: ''}
+      name: ocard_student_interact
+      layout_properties: {grid_position: 'QBNPYQ,EUXOOH', full_width_row: true}
+      components:
+      - type: form:MainPage.InteractiveComponent
+        properties: {}
+        name: interactive_component_1
+        layout_properties: {grid_position: 'SHDZEW,CGDBDL'}
+    - type: Spacer
+      properties: {height: 18}
+      layout_properties:
+        col_widths: {}
+        grid_position: TBQOZA,FXXMEQ
+      name: spacer_1_copy_2
     - type: Label
       properties: {role: null, align: left, tooltip: '', border: '', foreground: '',
         visible: true, text: 'Prompt: ', font_size: null, font: '', spacing_above: small,
@@ -311,9 +328,9 @@ components:
         layout_properties:
           col_widths: {}
           grid_position: FWHASY,AHKXMO
-        data_bindings:
-        - {code: 'self.item[''prompt'']', property: data}
         name: rtext_student_prompt
+        data_bindings:
+        - {property: data, code: 'self.item[''prompt'']'}
     - type: Spacer
       properties: {height: 18}
       layout_properties:
@@ -344,9 +361,9 @@ components:
           background: ''}
         layout_properties: {grid_position: 'ZHVVRO,DNAIOR'}
         event_bindings: {}
-        data_bindings:
-        - {code: 'self.item[''options'']', property: items}
         name: rpanel_student_options
+        data_bindings:
+        - {property: items, code: 'self.item[''options'']'}
     - type: Spacer
       properties: {height: 18}
       layout_properties:

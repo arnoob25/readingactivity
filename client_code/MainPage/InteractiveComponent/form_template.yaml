@@ -1,0 +1,12 @@
+properties: []
+is_package: true
+events: []
+custom_component: true
+components: []
+container:
+  type: HtmlTemplate
+  properties: {html: "<center style=\"font-style:italic; color:#888; margin: 3em;\"\
+      >\n  (Insert your custom HTML here)\n</center>\n<div anvil-slot=\"default\"\
+      ></div>"}
+  data_bindings:
+  - {property: tag, code: 'self.item[''code'']'}

@@ -28,12 +28,12 @@ class MainPage(MainPageTemplate):
     self.inquiries = []
     
     # Any code you write here will run before the form opens.
-    self.author_page1.visible = False
+    self.author_page1.visible = True
     self.author_page2.visible = False
     self.author_page3.visible = False
     self.author_page4.visible = False
     self.author_page5.visible = False
-    self.student_page1.visible = True
+    self.student_page1.visible = False
     self.student_page2.visible = False
 
     # Testing the student end // Task: remove this
