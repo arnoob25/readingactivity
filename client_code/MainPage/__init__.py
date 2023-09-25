@@ -72,7 +72,7 @@ class MainPage(MainPageTemplate):
     self.student_page1.visible = False
            
   def itr(self):
-      end = False
+      isEndOfList = False
       if self.curr_gi_step+1 <= len(self.inquiries[self.curr_ra_step])-1:
         self.curr_gi_step = self.curr_gi_step + 1
         #alert(f"(Incr gi) ra: {self.curr_ra_step} of {len(self.inquiries)}, gi: {self.curr_gi_step} of {len(self.inquiries[self.curr_ra_step])}")
@@ -81,9 +81,9 @@ class MainPage(MainPageTemplate):
         self.curr_gi_step = 0
         #alert(f"(Incr ra) ra: {self.curr_ra_step}, gi: {self.curr_gi_step}")
       else:
-        end = True
+        isEndOfList = True # Task: its not being set to True when at the end of the list
 
-      return end
+      return isEndOfList
     
   def update_inquiry(self):
 
@@ -220,6 +220,7 @@ class MainPage(MainPageTemplate):
   
     if iterate == False and self.question is not None: # didn't reach the end and the question was updated with a valid inquiry
       self.update_inquiry()
+      alert(iterate)
     else:
       self.author_page4.visible = False
       self.author_page5.visible = True
