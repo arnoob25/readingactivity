@@ -6,6 +6,7 @@ import anvil.tables as tables
 import anvil.tables.query as q
 from anvil.tables import app_tables
 import uuid
+import anvil.js
 
 class MainPage(MainPageTemplate):
   
@@ -26,6 +27,19 @@ class MainPage(MainPageTemplate):
     self.milestones = []
     self.gi_steps = {} # Task: might not need it
     self.inquiries = []
+
+    # prevent horizontal scrolling on mobile
+    is_mobile = anvil.js.call_js(
+      '''
+        function() {
+          return /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+        }
+      '''
+    )
+
+    if is_mobile:
+      self.col_spacing = 'none'
+    
     
     # Any code you write here will run before the form opens.
     self.author_page1.visible = False
@@ -36,7 +50,7 @@ class MainPage(MainPageTemplate):
     self.student_page1.visible = True
     self.student_page2.visible = False
 
-    # Testing the student end // Task: remove this
+    '''# Testing the student end // Task: remove this
     self.curr_file = app_tables.files.get(
       id = '72274cd6-2491-bc38-aa02-4cc2e53a986d'
     )
@@ -45,7 +59,7 @@ class MainPage(MainPageTemplate):
     self.question = self.inquiries[0][0]
     self.rtext_student_context.content = self.question['context']
     self.rtext_student_prompt.content = self.question['prompt']
-    self.rpanel_student_options.items = self.question['options']
+    self.rpanel_student_options.items = self.question['options']'''
 
   # ------ helper functions ------ 
   
