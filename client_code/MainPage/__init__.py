@@ -1,12 +1,13 @@
-from ._anvil_designer import MainPageTemplate
+import uuid
+import anvil.js
+import anvil.users
 from anvil import *
 import anvil.server as server
-import anvil.users
 import anvil.tables as tables
 import anvil.tables.query as q
 from anvil.tables import app_tables
-import uuid
-import anvil.js
+from ._anvil_designer import MainPageTemplate
+
 
 class MainPage(MainPageTemplate):
   
@@ -51,7 +52,7 @@ class MainPage(MainPageTemplate):
 
     # Testing the student end // Task: remove this
     self.curr_file = app_tables.files.get(
-      id = 'demo'
+      id = 'bed97779-9cd3-b7ee-7f95-8a7ba111fab3'
     )
     
     self.inquiries = self.curr_file['inquiries']
@@ -90,11 +91,9 @@ class MainPage(MainPageTemplate):
       isEndOfList = False
       if self.curr_gi_step+1 <= len(self.inquiries[self.curr_ra_step])-1:
         self.curr_gi_step = self.curr_gi_step + 1
-        #alert(f"(Incr gi) ra: {self.curr_ra_step} of {len(self.inquiries)}, gi: {self.curr_gi_step} of {len(self.inquiries[self.curr_ra_step])}")
       elif self.curr_ra_step+1 <= len(self.inquiries)-1:
         self.curr_ra_step = self.curr_ra_step + 1
         self.curr_gi_step = 0
-        #alert(f"(Incr ra) ra: {self.curr_ra_step}, gi: {self.curr_gi_step}")
       else:
         isEndOfList = True # Task: its not being set to True when at the end of the list
 
