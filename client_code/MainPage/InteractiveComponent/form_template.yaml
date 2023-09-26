@@ -9,4 +9,4 @@ container:
       >\n  (Insert your custom HTML here)\n</center>\n<div anvil-slot=\"default\"\
       ></div>"}
   data_bindings:
-  - {property: tag, code: 'self.item[''code'']'}
+  - {property: html, code: 'self.item[]'}

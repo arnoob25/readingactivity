@@ -28,23 +28,24 @@ class MainPage(MainPageTemplate):
     self.inquiries = []
     
     # Any code you write here will run before the form opens.
-    self.author_page1.visible = True
+    self.author_page1.visible = False
     self.author_page2.visible = False
     self.author_page3.visible = False
     self.author_page4.visible = False
     self.author_page5.visible = False
-    self.student_page1.visible = False
+    self.student_page1.visible = True
     self.student_page2.visible = False
 
     # Testing the student end // Task: remove this
     self.curr_file = app_tables.files.get(
-      id = '72274cd6-2491-bc38-aa02-4cc2e53a986d'
+      id = 'bed97779-9cd3-b7ee-7f95-8a7ba111fab3'
     )
-    self.title.text = self.curr_file['title']
+    
     self.inquiries = self.curr_file['inquiries']
     self.question = self.inquiries[0][0]
+    self.title.text = f"Step {1} question: {1} of {len(self.inquiries[0])}"
     self.rtext_student_context.content = self.question['context']
-    self.rtext_student_prompt.content = self.question['prompt']
+    self.rtext_student_prompt.content = self.question['inquiry']
     self.rpanel_student_options.items = self.question['options']
 
   # ------ helper functions ------ 
@@ -105,6 +106,19 @@ class MainPage(MainPageTemplate):
       update_data.update(dic)
     
       # ------ displaying the data ------
+
+      self.title.text = f"Step {ra+1} question: {gi+1} of {len(self.inquiries[ra])}"
+      self.question = curr_inquiry
+      
+      self.tarea_context.text = self.question['context']
+      self.tarea_prompt.text = self.question['inquiry']
+      self.rpanel_options.items = self.question['options']
+
+  def traverse_inquiry(self):
+
+      ra = self.curr_ra_step
+      gi = self.curr_gi_step
+      curr_inquiry = self.inquiries[ra][gi]
 
       self.title.text = f"Step {ra+1} question: {gi+1} of {len(self.inquiries[ra])}"
       self.question = curr_inquiry
@@ -220,7 +234,6 @@ class MainPage(MainPageTemplate):
   
     if iterate == False and self.question is not None: # didn't reach the end and the question was updated with a valid inquiry
       self.update_inquiry()
-      alert(iterate)
     else:
       self.author_page4.visible = False
       self.author_page5.visible = True
@@ -248,17 +261,30 @@ class MainPage(MainPageTemplate):
     self.title.scroll_into_view()
   
     if iterate == False and self.question is not None:
-      self.update_inquiry()
+      self.traverse_inquiry()
     else:
       self.student_page1.visible = False
       self.student_page2.visible = True
       self.title.text = self.curr_file['title'] # Task: review it
-    pass
+    
 
   def btn_student_go_home_click(self, **event_args):
     """This method is called when the button is clicked"""
     self.title.scroll_into_view()
     self.reset()
+
+    # Task: remove the following. It's only for demo purposes
+    # ----------------------------------------------------
+    
+    self.curr_file = app_tables.files.get(
+      id = 'bed97779-9cd3-b7ee-7f95-8a7ba111fab3'
+    )
+    
+    self.inquiries = self.curr_file['inquiries']
+
+    # ----------------------------------------------------
+    self.title.text = f"Step {1} question: {1} of {len(self.inquiries[0])}"
     self.author_page1.visible = False
     self.student_page1.visible = True
+    self.student_page2.visible = False
     pass
