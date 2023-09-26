@@ -6,6 +6,7 @@ import anvil.tables as tables
 import anvil.tables.query as q
 from anvil.tables import app_tables
 import uuid
+import anvil.js
 
 class MainPage(MainPageTemplate):
   
@@ -26,6 +27,8 @@ class MainPage(MainPageTemplate):
     self.milestones = []
     self.gi_steps = {} # Task: might not need it
     self.inquiries = []
+
+    # preventing unusual horizontal scrolling on mobile
     
     # Any code you write here will run before the form opens.
     self.author_page1.visible = False
@@ -38,12 +41,13 @@ class MainPage(MainPageTemplate):
 
     # Testing the student end // Task: remove this
     self.curr_file = app_tables.files.get(
-      id = 'bed97779-9cd3-b7ee-7f95-8a7ba111fab3'
+      id = 'demo'
     )
     
     self.inquiries = self.curr_file['inquiries']
     self.question = self.inquiries[0][0]
     self.title.text = f"Step {1} question: {1} of {len(self.inquiries[0])}"
+    self.interactive_component.html = server.call('format_html', self.question['code'])
     self.rtext_student_context.content = self.question['context']
     self.rtext_student_prompt.content = self.question['inquiry']
     self.rpanel_student_options.items = self.question['options']
@@ -109,7 +113,8 @@ class MainPage(MainPageTemplate):
 
       self.title.text = f"Step {ra+1} question: {gi+1} of {len(self.inquiries[ra])}"
       self.question = curr_inquiry
-      
+
+      # Task: assign html code
       self.tarea_context.text = self.question['context']
       self.tarea_prompt.text = self.question['inquiry']
       self.rpanel_options.items = self.question['options']
@@ -122,7 +127,8 @@ class MainPage(MainPageTemplate):
 
       self.title.text = f"Step {ra+1} question: {gi+1} of {len(self.inquiries[ra])}"
       self.question = curr_inquiry
-      
+
+      self.interactive_component.html = server.call('unescape_html', self.question['code'])
       self.tarea_context.text = self.question['context']
       self.tarea_prompt.text = self.question['inquiry']
       self.rpanel_options.items = self.question['options']
@@ -143,7 +149,7 @@ class MainPage(MainPageTemplate):
     # ------ making inference ------
     
     ilo = self.tbox_ilo.text
-    self.milestones, self.lo, filename = server.call('outline',ilo)
+    self.milestones, self.lo, filename = server.call('outline', ilo)
 
     # ------ displaying the data ------
     
@@ -266,8 +272,7 @@ class MainPage(MainPageTemplate):
       self.student_page1.visible = False
       self.student_page2.visible = True
       self.title.text = self.curr_file['title'] # Task: review it
-    
-
+  
   def btn_student_go_home_click(self, **event_args):
     """This method is called when the button is clicked"""
     self.title.scroll_into_view()

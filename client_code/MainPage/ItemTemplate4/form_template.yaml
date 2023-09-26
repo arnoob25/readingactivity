@@ -6,7 +6,7 @@ container:
 components:
 - type: RadioButton
   properties: {role: null, selected: false, align: left, tooltip: '', border: '',
-    enabled: true, foreground: '', value: '', visible: true, text: option 1, font_size: null,
+    enabled: true, foreground: '', value: '', visible: true, text: option 1, font_size: 16,
     font: '', spacing_above: small, spacing_below: small, italic: false, background: '',
     bold: false, group_name: radioGroup1, underline: false}
   name: btn_radio
