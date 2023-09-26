@@ -57,7 +57,6 @@ class MainPage(MainPageTemplate):
     self.inquiries = self.curr_file['inquiries']
     self.question = self.inquiries[0][0]
     self.title.text = f"Step {1} question: {1} of {len(self.inquiries[0])}"
-    alert(self.question['code'])
     self.interactive_component.html = server.call('recover_html', self.question['code'])
     self.rtext_student_context.content = self.question['context']
     self.rtext_student_prompt.content = self.question['inquiry']
