@@ -29,6 +29,16 @@ class MainPage(MainPageTemplate):
     self.inquiries = []
 
     # preventing unusual horizontal scrolling on mobile
+    is_mobile = anvil.js.call_js(
+      '''
+        function() {
+          return /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+        }
+      '''
+    )
+
+    if is_mobile:
+      self.col_spacing = 'none'
     
     # Any code you write here will run before the form opens.
     self.author_page1.visible = False
