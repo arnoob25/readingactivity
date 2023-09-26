@@ -42,26 +42,26 @@ class MainPage(MainPageTemplate):
       self.col_spacing = 'none'
     
     # Any code you write here will run before the form opens.
-    self.author_page1.visible = True
+    self.author_page1.visible = False
     self.author_page2.visible = False
     self.author_page3.visible = False
     self.author_page4.visible = False
     self.author_page5.visible = False
-    self.student_page1.visible = False
+    self.student_page1.visible = True
     self.student_page2.visible = False
 
-    '''# Testing the student end // Task: remove this
+    # Testing the student end // Task: remove this
     self.curr_file = app_tables.files.get(
-      id = 'bed97779-9cd3-b7ee-7f95-8a7ba111fab3'
+      id = 'demo'
     )
     
     self.inquiries = self.curr_file['inquiries']
     self.question = self.inquiries[0][0]
     self.title.text = f"Step {1} question: {1} of {len(self.inquiries[0])}"
-    #self.interactive_component.html = server.call('restore_html', self.question['code'])
+    self.interactive_component.html = server.call('restore_html', self.question['code'])
     self.rtext_student_context.content = self.question['context']
     self.rtext_student_prompt.content = self.question['inquiry']
-    self.rpanel_student_options.items = self.question['options']'''
+    self.rpanel_student_options.items = self.question['options']
 
   # ------ helper functions ------ 
   
@@ -136,13 +136,11 @@ class MainPage(MainPageTemplate):
 
       self.title.text = f"Step {ra+1} question: {gi+1} of {len(self.inquiries[ra])}"
       self.question = curr_inquiry
-      alert(self.question)
 
-      #self.interactive_component.html = server.call('restore_html', self.question['code'])
-      self.tarea_context.text = self.question['context']
-      alert(self.tarea_context.text)
-      self.tarea_prompt.text = self.question['inquiry']
-      self.rpanel_options.items = self.question['options']
+      self.interactive_component.html = server.call('restore_html', self.question['code'])
+      self.rtext_student_context.content = self.question['context']
+      self.rtext_student_prompt.content = self.question['inquiry']
+      self.rpanel_student_options.items = self.question['options']
   
   # ------ event listeners (author end) ------
 
