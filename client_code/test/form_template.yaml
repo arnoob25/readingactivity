@@ -4,23 +4,25 @@ container:
     role: null, html: "<!DOCTYPE html>\n<html>\n\n<head>\n    <style>\n        #box\
       \ {\n            position: relative;\n            overflow: hidden;\n      \
       \      height: 100px;\n            padding: 10px;\n        }\n\n        #car\
-      \ {\n            width: 50px;\n            height: 30px;\n            background-color:\
-      \ red;\n            position: relative;\n            top: 35%;\n           \
-      \ left: 0;\n        }\n\n        .container {\n            background-color:\
-      \ rgb(237, 237, 237);\n            border-radius: 15px;\n            padding:\
-      \ 20px 20px 20px 20px;\n            margin-bottom: 20px;\n        }\n\n    \
-      \    .slide {\n            width: 100%;\n            margin: 0 0 10px 0;\n \
-      \       }\n    </style>\n</head>\n\n<body>\n\n    <div style=\"padding: 10px;\"\
-      >\n        <div class=\"container\">\n            <h3>Force: <span id=\"forceOutput\"\
-      >0</span></h3>\n            <h3>Time to finish line: <span id=\"timeOutput\"\
-      >0</span>s</h3>\n        </div>\n\n        <div class=\"container\">\n     \
-      \       <span style=\"margin-bottom: o; padding: 0px;\"><p>Move the slider to\
-      \ apply force</p></span><br>\n            <input type=\"range\" min=\"0\" max=\"\
-      50\" value=\"0\" step=\"1\" class=\"slider slide\" style=\"margin-top: 0; padding-top:\
-      \ 0px;\" id=\"forceInput\"><br>\n            <span>\n                <button\
-      \ id=\"simulateButton\">Simulate</button>\n                <button id=\"resetButton\"\
-      >Reset</button>\n            </span>\n        </div>\n\n        <div id=\"box\"\
-      \ class=\"container\">\n            <div id=\"car\"></div>\n        </div>\n\
+      \ {\n            width:100px;\n            height: 50px;\n            position:\
+      \ relative;\n            top: 35%;\n            left: 0;\n        }\n\n    \
+      \    .container {\n            background-color: rgb(237, 237, 237);\n     \
+      \       border-radius: 15px;\n            padding: 20px 20px 20px 20px;\n  \
+      \          margin-bottom: 20px;\n        }\n\n        .slide {\n           \
+      \ width: 100%;\n            margin: 0 0 10px 0;\n        }\n    </style>\n</head>\n\
+      \n<body>\n\n    <div style=\"padding: 10px;\">\n        <div class=\"container\"\
+      >\n            <h3>Force: <span id=\"forceOutput\">0</span></h3>\n         \
+      \   <h3>Time to finish line: <span id=\"timeOutput\">0</span>s</h3>\n      \
+      \  </div>\n\n        <div class=\"container\">\n            <span style=\"margin-bottom:\
+      \ o; padding: 0px;\"><p>Move the slider to apply force</p></span><br>\n    \
+      \        <input type=\"range\" min=\"0\" max=\"50\" value=\"0\" step=\"1\" class=\"\
+      slider slide\" style=\"margin-top: 0; padding-top: 0px;\" id=\"forceInput\"\
+      ><br>\n            <span>\n                <button id=\"simulateButton\">Simulate</button>\n\
+      \                <button id=\"resetButton\">Reset</button>\n            </span>\n\
+      \        </div>\n\n        <div id=\"box\" class=\"container\" style=\"height:\
+      \ auto; padding: 50px 50px 50px 30px;\">\n            <div id=\"car\">\n   \
+      \             <img src=\"https://drive.google.com/uc?export=view&id=1rpamvNmu29c9LUhsUvi_nj10iwmq9C4z\"\
+      \ alt=\"Car image\" style=\"width:100%;\">\n            </div>\n        </div>\n\
       \    </div>\n\n    <script>\n        var forceInput = document.getElementById(\"\
       forceInput\");\n        var forceOutput = document.getElementById(\"forceOutput\"\
       );\n        var timeOutput = document.getElementById(\"timeOutput\");\n    \
