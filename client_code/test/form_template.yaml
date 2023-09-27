@@ -45,16 +45,16 @@ container:
       \                lastFrameTime = time;\n\n                velocity += acceleration\
       \ * timeStep; // v = u + at\n                position += velocity * timeStep;\
       \ // s = ut + 1/2at^2\n\n                var boxWidth = document.getElementById('box').offsetWidth\
-      \ - car.offsetWidth;\n\n                if (position >= boxWidth) {\n      \
-      \              position = boxWidth; // stop at the border of the box\n     \
-      \               cancelAnimationFrame(lastFrameTime);\n                    lastFrameTime\
-      \ = null;\n                    startTime = null;\n                    timeOutput.innerHTML\
-      \ = ((time - startTime) / 1000).toFixed(2); // Display time to finish line in\
-      \ seconds\n                    return;\n                }\n\n              \
-      \  car.style.left = position + 'px'; // update car position\n\n            \
-      \    requestAnimationFrame(frame);\n\n                // Update time to finish\
-      \ line in real-time\n                timeOutput.innerHTML = ((time - startTime)\
-      \ / 1000).toFixed(2);\n            }\n\n            requestAnimationFrame(frame);\n\
+      \ - car.offsetWidth -50;\n\n                if (position >= boxWidth) {\n  \
+      \                  position = boxWidth; // stop at the border of the box\n \
+      \                   cancelAnimationFrame(lastFrameTime);\n                 \
+      \   lastFrameTime = null;\n                    startTime = null;\n         \
+      \           timeOutput.innerHTML = ((time - startTime) / 1000).toFixed(2); //\
+      \ Display time to finish line in seconds\n                    return;\n    \
+      \            }\n\n                car.style.left = position + 'px'; // update\
+      \ car position\n\n                requestAnimationFrame(frame);\n\n        \
+      \        // Update time to finish line in real-time\n                timeOutput.innerHTML\
+      \ = ((time - startTime) / 1000).toFixed(2);\n            }\n\n            requestAnimationFrame(frame);\n\
       \        }\n\n        function reset() {\n            if (lastFrameTime) {\n\
       \                cancelAnimationFrame(lastFrameTime);\n                lastFrameTime\
       \ = null;\n                startTime = null;\n            }\n\n            car.style.left\
