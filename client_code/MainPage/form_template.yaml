@@ -290,10 +290,10 @@ components:
       name: ocard_student_interact
       layout_properties: {grid_position: 'QBNPYQ,EUXOOH', full_width_row: true}
       components:
-      - type: form:MainPage.InteractiveComponent
+      - type: form:test
         properties: {}
-        name: interactive_component
-        layout_properties: {grid_position: 'LILMZO,QVAJMG'}
+        name: test_1
+        layout_properties: {grid_position: 'WCUPLT,BPCCXJ'}
     - type: Spacer
       properties: {height: 18}
       layout_properties:

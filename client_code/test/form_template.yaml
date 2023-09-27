@@ -1,49 +1,50 @@
 container:
   type: HtmlTemplate
   properties: {tooltip: '', background: '', foreground: '', border: '', visible: true,
-    role: null, html: "<!DOCTYPE html>\n<html>\n\n<head>\n    <title>Money Supply\
-      \ Simulation</title>\n    <style>\n        .card {\n            background-color:\
-      \ rgb(237, 237, 237);\n            border-radius: 15px;\n            padding:\
-      \ 20px 20px 20px 20px;\n            margin-bottom: 20px;\n        }\n\n    \
-      \    .text-area {\n            border-radius: 15px;\n            padding: 10px;\n\
-      \        }\n        .title {\n            font-size: large;\n            font-weight:\
-      \ 500;\n        }\n    </style>\n</head>\n\n<body>\n    <div style=\"padding:\
-      \ 10px;\">\n        <div class=\"card\">\n            <div class=\"title\">\n\
-      \                <p>Banks</p>\n            </div>\n            <div id=\"banks\"\
-      \ class=\"text-area\"></div>\n        </div>\n        <div class=\"card\">\n\
-      \            <div class=\"title\">\n                <p>Businesses</p>\n    \
-      \        </div>\n            <div id=\"businesses\" class=\"text-area\"></div>\n\
-      \        </div>\n        <div class=\"card\">\n            <div class=\"title\"\
-      >\n                <p>Consumers</p>\n            </div>\n            <div id=\"\
-      consumers\" class=\"text-area\"></div>\n        </div>\n        \n        <div>\n\
-      \            <label for=\"moneySupply\" style=\"margin-top: 15px;\">Money supply:</label><br>\n\
-      \            <span>\n                <input type=\"range\" id=\"moneySupply\"\
-      \ name=\"moneySupply\" min=\"0\" max=\"2\" value=\"1\"\n                   \
-      \ style=\"width: 100%; margin: 10px 0 10px 0;\"><br>\n                <span\
-      \ style=\"width: 100%;\">\n                    <span style=\"float:left\" id=\"\
-      decreaseLabel\">Decrease money supply</span>\n                    <span style=\"\
-      float:right\" id=\"increaseLabel\">Increase money supply</span>\n          \
-      \      </span>\n            </span>\n        </div>\n    </div>\n    \n\n  \
-      \  <script>\n        var moneySupplySlider = document.getElementById(\"moneySupply\"\
-      );\n        var banksText = document.getElementById(\"banks\");\n        var\
-      \ businessesText = document.getElementById(\"businesses\");\n        var consumersText\
-      \ = document.getElementById(\"consumers\");\n\n        banksText.innerHTML =\
-      \ \"Adjust money supply to cause changes\";\n        businessesText.innerHTML\
-      \ = \"Adjust money supply to cause changes\";\n        consumersText.innerHTML\
-      \ = \"Adjust money supply to cause changes\";\n\n        moneySupplySlider.oninput\
-      \ = function () {\n            if (this.value == 0) {\n                banksText.innerHTML\
-      \ = \"Notice a rise in loan defaults\";\n                businessesText.innerHTML\
-      \ = \"Experiene a decrease in demand and production costs.\";\n            \
-      \    consumersText.innerHTML = \"Struggle to make big purchases\";\n       \
-      \     } else if (this.value == 2) {\n                banksText.innerHTML = \"\
-      Consider encouraging people to take loans\";\n                businessesText.innerHTML\
-      \ = \"Notice demand and production cost going up\";\n                consumersText.innerHTML\
-      \ = \"Enjoy being able to buy more things, but over time reduce spending due\
-      \ to high prices\";\n            } else {\n                banksText.innerHTML\
-      \ = \"Adjust money supply to cause changes\";\n                businessesText.innerHTML\
-      \ = \"Adjust money supply to cause changes\";\n                consumersText.innerHTML\
-      \ = \"Adjust money supply to cause changes\";\n            }\n        }\n  \
-      \  </script>\n\n</body>\n\n</html>"}
+    role: null, html: "<!DOCTYPE html>\n<html>\n\n<head>\n    <style>\n        #box\
+      \ {\n            width: 100%;\n            height: 100px;\n            border:\
+      \ 1px solid #000;\n            border-radius: 16px;\n            position: relative;\n\
+      \            overflow: hidden;\n        }\n\n        #car {\n            width:\
+      \ 50px;\n            height: 30px;\n            background-color: red;\n   \
+      \         position: absolute;\n            top: 35%;\n            left: 0;\n\
+      \        }\n    </style>\n</head>\n\n<body>\n\n    <p>Force: <span id=\"forceOutput\"\
+      >0</span></p>\n    <p>Time to finish line: <span id=\"timeOutput\">0</span>s</p>\n\
+      \n    <input type=\"range\" min=\"0\" max=\"50\" value=\"0\" step=\"1\" class=\"\
+      slider\" id=\"forceInput\">\n\n    <button onclick=\"simulate()\">Simulate</button>\n\
+      \    <button onclick=\"reset()\">Reset</button>\n\n    <div id=\"box\">\n  \
+      \      <div id=\"car\"></div>\n    </div>\n\n    <script>\n        var forceInput\
+      \ = document.getElementById(\"forceInput\");\n        var forceOutput = document.getElementById(\"\
+      forceOutput\");\n        var timeOutput = document.getElementById(\"timeOutput\"\
+      );\n        var car = document.getElementById(\"car\");\n        var mass =\
+      \ 5; // mass of the car\n        var lastFrameTime;\n\n        forceInput.oninput\
+      \ = function () {\n            forceOutput.innerHTML = this.value * 100; //\
+      \ Display force in Newtons\n        }\n\n        function simulate() {\n   \
+      \         var force = forceInput.value * 100; // convert K to actual force\n\
+      \            var acceleration = force / mass; // F=ma\n            var velocity\
+      \ = 0; // initial velocity\n            var position = 0; // initial position\n\
+      \            var startTime;\n\n            // Cancel any existing animation\
+      \ frame request\n            if (lastFrameTime) {\n                cancelAnimationFrame(lastFrameTime);\n\
+      \            }\n\n            function frame(time) {\n                if (!lastFrameTime)\
+      \ {\n                    lastFrameTime = time;\n                    startTime\
+      \ = time;\n                }\n\n                var timeStep = (time - lastFrameTime)\
+      \ / 1000; // time step in seconds\n                lastFrameTime = time;\n\n\
+      \                velocity += acceleration * timeStep; // v = u + at\n      \
+      \          position += velocity * timeStep; // s = ut + 1/2at^2\n\n        \
+      \        if (position >= document.getElementById('box').offsetWidth - car.offsetWidth)\
+      \ {\n                    position = document.getElementById('box').offsetWidth\
+      \ - car.offsetWidth; // stop at the border of the box\n                    cancelAnimationFrame(lastFrameTime);\n\
+      \                    lastFrameTime = null;\n                    timeOutput.innerHTML\
+      \ = ((time - startTime) / 1000).toFixed(2); // Display time to finish line in\
+      \ seconds\n                    return;\n                }\n\n              \
+      \  car.style.left = position + 'px'; // update car position\n\n            \
+      \    requestAnimationFrame(frame);\n\n                // Update time to finish\
+      \ line in real-time\n                timeOutput.innerHTML = ((time - startTime)\
+      \ / 1000).toFixed(2);\n            }\n\n            requestAnimationFrame(frame);\n\
+      \        }\n\n        function reset() {\n            if (lastFrameTime) {\n\
+      \                cancelAnimationFrame(lastFrameTime);\n                lastFrameTime\
+      \ = null;\n            }\n            car.style.left = '0px';\n            forceOutput.innerHTML\
+      \ = '0';\n            timeOutput.innerHTML = '0';\n            forceInput.value\
+      \ = '0';\n        }\n    </script>\n\n</body>\n\n</html>"}
 components: []
 is_package: true
 custom_component: true
