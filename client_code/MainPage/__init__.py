@@ -294,7 +294,7 @@ class MainPage(MainPageTemplate):
       id = 'bed97779-9cd3-b7ee-7f95-8a7ba111fab3'
     )
     
-    self.inquiries = self.curr_file['inquiries']
+    self.inquiries = self.curr_file['inquiries'] # Task: might have an issue
 
     # ----------------------------------------------------
     self.title.text = f"Step {1} question: {1} of {len(self.inquiries[0])}"
