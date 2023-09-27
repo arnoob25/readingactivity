@@ -2,28 +2,37 @@ container:
   type: HtmlTemplate
   properties: {tooltip: '', background: '', foreground: '', border: '', visible: true,
     role: null, html: "<!DOCTYPE html>\n<html>\n\n<head>\n    <style>\n        #box\
-      \ {\n            width: 100%;\n            height: 100px;\n            border:\
-      \ 1px solid #000;\n            border-radius: 16px;\n            position: relative;\n\
-      \            overflow: hidden;\n        }\n\n        #car {\n            width:\
-      \ 50px;\n            height: 30px;\n            background-color: red;\n   \
-      \         position: absolute;\n            top: 35%;\n            left: 0;\n\
-      \        }\n    </style>\n</head>\n\n<body>\n\n    <p>Force: <span id=\"forceOutput\"\
-      >0</span></p>\n    <p>Time to finish line: <span id=\"timeOutput\">0</span>s</p>\n\
-      \n    <input type=\"range\" min=\"0\" max=\"50\" value=\"0\" step=\"1\" class=\"\
-      slider\" id=\"forceInput\">\n\n    <button onclick=\"simulate()\">Simulate</button>\n\
-      \    <button onclick=\"reset()\">Reset</button>\n\n    <div id=\"box\">\n  \
-      \      <div id=\"car\"></div>\n    </div>\n\n    <script>\n        var forceInput\
-      \ = document.getElementById(\"forceInput\");\n        var forceOutput = document.getElementById(\"\
-      forceOutput\");\n        var timeOutput = document.getElementById(\"timeOutput\"\
-      );\n        var car = document.getElementById(\"car\");\n        var mass =\
-      \ 5; // mass of the car\n        var lastFrameTime;\n\n        forceInput.oninput\
-      \ = function () {\n            forceOutput.innerHTML = this.value * 100; //\
-      \ Display force in Newtons\n        }\n\n        function simulate() {\n   \
-      \         var force = forceInput.value * 100; // convert K to actual force\n\
-      \            var acceleration = force / mass; // F=ma\n            var velocity\
-      \ = 0; // initial velocity\n            var position = 0; // initial position\n\
-      \            var startTime;\n\n            // Cancel any existing animation\
-      \ frame request\n            if (lastFrameTime) {\n                cancelAnimationFrame(lastFrameTime);\n\
+      \ {\n            position: relative;\n            overflow: hidden;\n      \
+      \      height: 100px;\n            padding: 10px;\n        }\n\n        #car\
+      \ {\n            width: 50px;\n            height: 30px;\n            background-color:\
+      \ red;\n            position: relative;\n            top: 35%;\n           \
+      \ left: 0;\n        }\n\n        .container {\n            background-color:\
+      \ rgb(237, 237, 237);\n            border-radius: 15px;\n            padding:\
+      \ 20px 20px 20px 20px;\n            margin-bottom: 20px;\n        }\n\n    \
+      \    .slide {\n            width: 100%;\n            margin: 10px 0 10px 0;\n\
+      \        }\n    </style>\n</head>\n\n<body>\n\n    <div style=\"padding: 10px;\"\
+      >\n        <div class=\"container\">\n            <h3>Force: <span id=\"forceOutput\"\
+      >0</span></h3>\n            <h3>Time to finish line: <span id=\"timeOutput\"\
+      >0</span>s</h3>\n        </div>\n\n        <div class=\"container\">\n     \
+      \       <input type=\"range\" min=\"0\" max=\"50\" value=\"0\" step=\"1\" class=\"\
+      slider slide\" id=\"forceInput\"><br>\n            <span>\n                <button\
+      \ id=\"simulateButton\">Simulate</button>\n                <button id=\"resetButton\"\
+      >Reset</button>\n            </span>\n        </div>\n\n        <div id=\"box\"\
+      \ class=\"container\">\n            <div id=\"car\"></div>\n        </div>\n\
+      \    </div>\n\n    <script>\n        var forceInput = document.getElementById(\"\
+      forceInput\");\n        var forceOutput = document.getElementById(\"forceOutput\"\
+      );\n        var timeOutput = document.getElementById(\"timeOutput\");\n    \
+      \    var car = document.getElementById(\"car\");\n        var mass = 5; // mass\
+      \ of the car\n        var lastFrameTime;\n\n        forceInput.addEventListener('input',\
+      \ function () {\n            forceOutput.innerHTML = this.value * 100; // Display\
+      \ force in Newtons\n        });\n\n        document.getElementById('simulateButton').addEventListener('click',\
+      \ simulate);\n        document.getElementById('resetButton').addEventListener('click',\
+      \ reset);\n\n        function simulate() {\n            var force = forceInput.value\
+      \ * 100; // convert K to actual force\n            var acceleration = force\
+      \ / mass; // F=ma\n            var velocity = 0; // initial velocity\n     \
+      \       var position = 0; // initial position\n            var startTime;\n\n\
+      \            // Cancel any existing animation frame request\n            if\
+      \ (lastFrameTime) {\n                cancelAnimationFrame(lastFrameTime);\n\
       \            }\n\n            function frame(time) {\n                if (!lastFrameTime)\
       \ {\n                    lastFrameTime = time;\n                    startTime\
       \ = time;\n                }\n\n                var timeStep = (time - lastFrameTime)\

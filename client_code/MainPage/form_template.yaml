@@ -284,16 +284,14 @@ components:
       layout_properties: {grid_position: 'TLAVOA,SZJJKG'}
       name: spacer_1_copy
     - type: ColumnPanel
-      properties: {role: outlined-card, tooltip: '', border: '', foreground: '', visible: true,
-        wrap_on: never, col_spacing: none, spacing_above: small, col_widths: '{}',
-        spacing_below: small, background: ''}
+      properties: {role: outlined-card, col_widths: '{}'}
       name: ocard_student_interact
-      layout_properties: {grid_position: 'QBNPYQ,EUXOOH', full_width_row: true}
+      layout_properties: {grid_position: 'BWMGVE,GYEYPU'}
       components:
-      - type: form:test
+      - type: form:MainPage.InteractiveComponent
         properties: {}
-        name: test_1
-        layout_properties: {grid_position: 'WCUPLT,BPCCXJ'}
+        name: interactive_component
+        layout_properties: {grid_position: 'DYONMI,SIOCVL'}
     - type: Spacer
       properties: {height: 18}
       layout_properties:
