@@ -1,11 +1,11 @@
 unique_ids:
   forms:
     MainPage: '1693201515199881629716388.1874'
-    MainPage.InteractiveComponent: '1695634355434262504794776.84308'
     MainPage.ItemTemplate1: '1692847052032367595507777.64136'
     MainPage.ItemTemplate2: '1692848239285629191206199.5981'
     MainPage.ItemTemplate2.ItemTemplate3: '1692848376059273060509654.7738'
     MainPage.ItemTemplate4: '1692849583473291043542367.1891'
+    MainPage.interactiveComponent: '1695808921294405210164581.4652'
     test: '1695786604935879849524067.6582'
   modules: {}
   server_modules: {}
