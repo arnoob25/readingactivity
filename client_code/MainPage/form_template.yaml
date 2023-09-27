@@ -293,8 +293,7 @@ components:
       - type: form:MainPage.InteractiveComponent
         properties: {}
         name: interactive_component
-        layout_properties: {grid_position: 'SHDZEW,CGDBDL', full_width_row: true}
-        data_bindings: []
+        layout_properties: {grid_position: 'LILMZO,QVAJMG'}
     - type: Spacer
       properties: {height: 18}
       layout_properties:
