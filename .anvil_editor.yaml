@@ -6,7 +6,6 @@ unique_ids:
     MainPage.ItemTemplate2.ItemTemplate3: '1692848376059273060509654.7738'
     MainPage.ItemTemplate4: '1692849583473291043542367.1891'
     MainPage.interactiveComponent: '1695808921294405210164581.4652'
-    test: '1695786604935879849524067.6582'
   modules: {}
   server_modules: {}
   assets:
