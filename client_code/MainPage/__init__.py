@@ -6,7 +6,6 @@ import anvil.server as server
 import anvil.tables as tables
 import anvil.tables.query as q
 from anvil.tables import app_tables
-from anvil.js.window import document
 from ._anvil_designer import MainPageTemplate
 
 
@@ -60,8 +59,6 @@ class MainPage(MainPageTemplate):
     self.question = self.inquiries[0][0]
     self.title.text = f"Step {1} question: {1} of {len(self.inquiries[0])}"
     self.interactive_component.html = server.call('restore_html', self.question['code'])
-    server.call('wait', 5)
-    anvil.js.call_js('run_simulation')
     self.rtext_student_context.content = self.question['context']
     self.rtext_student_prompt.content = self.question['inquiry']
     self.rpanel_student_options.items = self.question['options']
@@ -141,8 +138,6 @@ class MainPage(MainPageTemplate):
       self.question = curr_inquiry
 
       self.interactive_component.html = server.call('restore_html', self.question['code'])
-      anvil.time.sleep(0.1)
-      anvil.js.call_js('run_simulation')
       self.rtext_student_context.content = self.question['context']
       self.rtext_student_prompt.content = self.question['inquiry']
       self.rpanel_student_options.items = self.question['options']
