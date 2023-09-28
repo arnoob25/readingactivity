@@ -57,8 +57,8 @@ class MainPage(MainPageTemplate):
     
     self.inquiries = self.curr_file['inquiries']
     self.question = self.inquiries[0][0]
-    self.title.text = f"Step {1} question: {1} of {len(self.inquiries[0])}"
     self.interactive_component.html = server.call('restore_html', self.question['code'])
+    self.title.text = self.question['question'] # Task: restore actual code: f"Step {1} question: {1} of {len(self.inquiries[0])}"
     self.rtext_student_context.content = self.question['context']
     self.rtext_student_prompt.content = self.question['inquiry']
     self.rpanel_student_options.items = self.question['options']
@@ -134,10 +134,10 @@ class MainPage(MainPageTemplate):
       gi = self.curr_gi_step
       curr_inquiry = self.inquiries[ra][gi]
 
-      self.title.text = f"Step {ra+1} question: {gi+1} of {len(self.inquiries[ra])}"
       self.question = curr_inquiry
 
       self.interactive_component.html = server.call('restore_html', self.question['code'])
+      self.title.text = self.question['question'] # Task: restore actual code: f"Step {ra+1}} question: {gi+1} of {len(self.inquiries[ra])}"
       self.rtext_student_context.content = self.question['context']
       self.rtext_student_prompt.content = self.question['inquiry']
       self.rpanel_student_options.items = self.question['options']
@@ -299,10 +299,10 @@ class MainPage(MainPageTemplate):
       id = 'bed97779-9cd3-b7ee-7f95-8a7ba111fab3'
     )
     
-    self.inquiries = self.curr_file['inquiries'] # Task: might have an issue
+    # self.inquiries = self.curr_file['inquiries'] # Task: might have an issue
 
     # ----------------------------------------------------
-    self.title.text = f"Step {1} question: {1} of {len(self.inquiries[0])}"
+    self.title.text = ""
     self.author_page1.visible = False
     self.student_page1.visible = True
     self.student_page2.visible = False
