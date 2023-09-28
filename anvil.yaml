@@ -19,6 +19,42 @@ runtime_options: {version: 2, client_version: '3', server_version: python3-sandb
   server_spec: null}
 metadata: {logo_img: 'asset:screenshot.png', title: Guided Learning Experience}
 startup_form: null
+native_deps: {head_html: "<!DOCTYPE html>\n<html>\n\n<head>\n    <style>\n       \
+    \ #car {\n            position: relative;\n            height: 50px;\n       \
+    \     width: 100px;\n            background-color: red;\n        }\n\n       \
+    \ #track {\n            width: 100%;\n            height: 50px;\n            background-color:\
+    \ #ddd;\n        }\n    </style>\n</head>\n\n<body>\n    <div id=\"info\">\n \
+    \       Force: <span id=\"force\">0</span><br />\n        Time: <span id=\"time\"\
+    >0</span>\n    </div>\n    <div id=\"controls\">\n        <input type=\"range\"\
+    \ min=\"0\" max=\"1000\" value=\"0\" id=\"slider\"><br />\n        <button id=\"\
+    simulate\" disabled>Simulate</button>\n        <button id=\"reset\" disabled>Reset</button>\n\
+    \    </div>\n    <div id=\"track\">\n        <div id=\"car\"></div>\n    </div>\n\
+    \n    <script>\n        var slider = document.getElementById(\"slider\");\n  \
+    \      var forceDisplay = document.getElementById(\"force\");\n        var timeDisplay\
+    \ = document.getElementById(\"time\");\n        var simulateButton = document.getElementById(\"\
+    simulate\");\n        var resetButton = document.getElementById(\"reset\");\n\
+    \        var car = document.getElementById(\"car\");\n\n        var animationFrameId;\n\
+    \n        slider.oninput = function () {\n            forceDisplay.textContent\
+    \ = this.value;\n            if (this.value > 0) {\n                simulateButton.disabled\
+    \ = false;\n                resetButton.disabled = false;\n            }\n   \
+    \     }\n\n        simulateButton.onclick = function () {\n            var force\
+    \ = slider.value;\n            var mass = 0.5;\n            var acceleration =\
+    \ force / mass; // Newton's second law\n            var distance = car.parentElement.offsetWidth\
+    \ - car.offsetWidth;\n\n            var time = 0;\n            var velocity =\
+    \ 0;\n            var position = 0;\n\n            function step(timestamp) {\n\
+    \                time += 1 / 60; // assuming 60 frames per second\n          \
+    \      velocity += acceleration / 60; // v = u + at\n                position\
+    \ += velocity / 60; // s = ut + 1/2at^2\n\n                if (position < distance)\
+    \ {\n                    car.style.transform = 'translateX(' + position + 'px)';\n\
+    \                    animationFrameId = requestAnimationFrame(step);\n       \
+    \         } else {\n                    cancelAnimationFrame(animationFrameId);\n\
+    \                    timeDisplay.textContent = time.toFixed(2);\n            \
+    \    }\n            }\n\n            animationFrameId = requestAnimationFrame(step);\n\
+    \        }\n\n        resetButton.onclick = function () {\n            slider.value\
+    \ = 0;\n            forceDisplay.textContent = 0;\n            timeDisplay.textContent\
+    \ = 0;\n            simulateButton.disabled = true;\n            resetButton.disabled\
+    \ = true;\n\n            cancelAnimationFrame(animationFrameId);\n           \
+    \ car.style.transform = '';\n        }\n    </script>\n</body>\n\n</html>"}
 db_schema:
   files:
     client: full
