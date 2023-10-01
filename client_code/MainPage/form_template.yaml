@@ -5,384 +5,513 @@ container:
 components:
 - type: Label
   properties: {role: title, align: left, tooltip: '', border: '', foreground: '',
-    visible: true, text: Author a Reading Activity, font_size: null, font: '', spacing_above: small,
-    icon_align: left, spacing_below: small, italic: false, background: '', bold: false,
-    underline: false, icon: ''}
+    visible: true, text: 'GLEAT Demo
+
+      ', font_size: null, font: '', spacing_above: small, icon_align: left, spacing_below: small,
+    italic: false, background: '', bold: false, underline: false, icon: ''}
   layout_properties: {grid_position: 'RGWEOC,NLVIXQ'}
   name: title
 - type: ColumnPanel
   properties: {role: null, tooltip: '', border: '', foreground: '', visible: true,
-    wrap_on: never, col_spacing: medium, spacing_above: small, col_widths: '{}', spacing_below: small,
-    background: ''}
+    wrap_on: mobile, col_spacing: medium, spacing_above: small, col_widths: '{}',
+    spacing_below: small, background: ''}
   layout_properties:
     col_widths: {}
-    grid_position: YPYVAV,ESKSNG
-  name: author_end
+    grid_position: ZKSRYW,RZHFUM
+  name: student_page1
   components:
+  - type: Label
+    properties: {role: null, align: left, tooltip: '', border: '', foreground: '',
+      visible: true, text: 'Context:', font_size: null, font: '', spacing_above: small,
+      icon_align: left, spacing_below: small, italic: false, background: '', bold: false,
+      underline: false, icon: ''}
+    layout_properties: {grid_position: 'ZQMOTI,HOPURL'}
+    name: label_context_copy
   - type: ColumnPanel
-    properties: {role: elevated-card, tooltip: '', border: '', foreground: '', visible: true,
-      wrap_on: never, col_spacing: medium, spacing_above: small, col_widths: '{}',
-      spacing_below: small, background: ''}
-    layout_properties: {grid_position: 'UXVFHH,QGEVDE'}
-    name: author_page1
+    properties: {role: tonal-card, tooltip: '', border: '', foreground: 'theme:Primary
+        Container', visible: true, wrap_on: mobile, col_spacing: medium, spacing_above: small,
+      col_widths: '{}', spacing_below: small, background: 'theme:Primary Container'}
+    layout_properties: {grid_position: 'OSTHTW,YVVACW'}
+    name: ocard_student_context
     components:
-    - type: Label
-      properties: {role: input-prompt, align: left, tooltip: '', border: '', foreground: '',
-        visible: true, text: 'Intended learning outcome:', font_size: null, font: '',
-        spacing_above: small, icon_align: left, spacing_below: small, italic: false,
-        background: '', bold: false, underline: false, icon: ''}
-      layout_properties: {grid_position: 'EBVBBA,XDYAJA'}
-      name: label_page1
-    - type: TextBox
-      properties: {role: outlined, align: left, hide_text: false, tooltip: '', placeholder: The student should be able to...,
-        border: '', enabled: true, foreground: '', visible: true, text: '', font_size: null,
-        font: '', spacing_above: small, type: text, spacing_below: small, italic: false,
-        background: '', bold: false, underline: false}
-      layout_properties: {grid_position: 'DKFHOT,DNMDBP'}
-      event_bindings: {}
-      name: tbox_ilo
-    - type: Button
-      properties: {role: filled-button, align: right, tooltip: '', border: '', enabled: true,
-        foreground: '', visible: true, text: Generate Outline, font_size: null, font: '',
-        spacing_above: small, icon_align: left, spacing_below: small, italic: false,
-        background: '', bold: false, underline: false, icon: ''}
-      layout_properties: {grid_position: 'TKMOVS,GLNEZH'}
-      event_bindings: {click: btn_gen_outline_click}
-      name: btn_gen_outline
+    - type: RichText
+      properties: {role: null, align: left, tooltip: '', enable_slots: true, border: '',
+        foreground: 'theme:On Background', visible: true, font_size: 16, content: 'As
+          a medical researcher, your task is to study the heart''s pumping action.
+          With heart disease being a leading cause of death worldwide, an accurate
+          description of its mechanics is crucial for developing effective treatment
+          and preventive measures. To aid your research, an interactive simulation
+          of a beating heart, built on extensive research and data from ECGs and echocardiograms,
+          has been provided. Your analysis could enable life-saving breakthroughs.',
+        font: '', spacing_above: small, spacing_below: small, data: null, background: '',
+        format: markdown}
+      layout_properties: {grid_position: 'GIUWKJ,LUTZAB'}
+      name: rtext_student_context
+      data_bindings: []
+  - type: Spacer
+    properties: {height: 18}
+    layout_properties: {grid_position: 'TLAVOA,SZJJKG'}
+    name: spacer_1_copy
   - type: ColumnPanel
-    properties: {role: elevated-card, tooltip: '', border: '', foreground: '', visible: true,
-      wrap_on: never, col_spacing: medium, spacing_above: small, col_widths: '{}',
+    properties: {role: outlined-card, col_widths: '{}'}
+    name: ocard_student_interact
+    layout_properties: {grid_position: 'BWMGVE,GYEYPU'}
+    components:
+    - type: form:MainPage.IC1
+      properties: {}
+      name: i_c1_1
+      layout_properties: {grid_position: 'IKSOSE,MDFLER'}
+  - type: Spacer
+    properties: {height: 18}
+    layout_properties:
+      col_widths: {}
+      grid_position: TBQOZA,FXXMEQ
+    name: spacer_1_copy_2
+  - type: Label
+    properties: {role: null, align: left, tooltip: '', border: '', foreground: '',
+      visible: true, text: 'Prompt: ', font_size: null, font: '', spacing_above: small,
+      icon_align: left, spacing_below: small, italic: false, background: '', bold: false,
+      underline: false, icon: ''}
+    layout_properties:
+      col_widths: {}
+      grid_position: RDAXOZ,NBOYON
+    name: label_prompt_copy
+  - type: ColumnPanel
+    properties: {role: tonal-card, tooltip: '', border: '', foreground: 'theme:On
+        Primary Container', visible: true, wrap_on: mobile, col_spacing: medium, spacing_above: small,
+      col_widths: '{}', spacing_below: small, background: 'theme:Primary Container'}
+    layout_properties:
+      col_widths: {}
+      grid_position: DOWFIW,CYKHNJ
+    name: ocard_prompt_copy
+    components:
+    - type: RichText
+      properties: {role: null, align: left, tooltip: '', enable_slots: true, border: '',
+        foreground: 'theme:On Background', visible: true, font_size: 16, content: 'Using
+          the interactive simulation of the heart, can you determine which one of
+          the initial assumptions about the sequence of events in a single heartbeat
+          is accurate?', font: '', spacing_above: small, spacing_below: small, data: null,
+        background: '', format: markdown}
+      layout_properties:
+        col_widths: {}
+        grid_position: FWHASY,AHKXMO
+      name: rtext_student_prompt
+      data_bindings: []
+  - type: Spacer
+    properties: {height: 18}
+    layout_properties:
+      col_widths: {}
+      grid_position: TOZNQF,VZAPSS
+    name: spacer_2_copy
+  - type: Label
+    properties: {role: null, align: left, tooltip: '', border: '', foreground: '',
+      visible: true, text: 'Options:', font_size: null, font: '', spacing_above: small,
+      icon_align: left, spacing_below: small, italic: false, background: '', bold: false,
+      underline: false, icon: ''}
+    layout_properties:
+      col_widths: {}
+      grid_position: SDNVET,WHSXDS
+    name: label_options_copy
+  - type: ColumnPanel
+    properties: {role: tonal-card, tooltip: '', border: '', foreground: '', visible: true,
+      wrap_on: mobile, col_spacing: medium, spacing_above: small, col_widths: '{}',
       spacing_below: small, background: ''}
-    layout_properties: {grid_position: 'FSXVKK,GSUTDM'}
-    name: author_page2
+    layout_properties:
+      col_widths: {}
+      grid_position: XKLJFL,IUNIZC
+    name: ocard_options_copy
+    components:
+    - type: RadioButton
+      properties: {role: null, selected: false, align: left, tooltip: '', border: '',
+        enabled: true, foreground: '', value: '', visible: true, text: '1. The left
+          side of the heart contracts and then relaxes, followed by the right side
+          contracting and relaxing.', font_size: null, font: '', spacing_above: small,
+        spacing_below: medium, italic: false, background: '', bold: false, group_name: radioGroup1,
+        underline: false}
+      name: radio_button_1
+      layout_properties: {grid_position: 'TXYHZD,YMXUZT'}
+    - type: RadioButton
+      properties: {role: null, selected: false, align: left, tooltip: '', border: '',
+        enabled: true, foreground: '', value: '', visible: true, text: 2. Both sides of the heart contract and then relax at the same time.,
+        font_size: null, font: '', spacing_above: small, spacing_below: medium, italic: false,
+        background: '', bold: false, group_name: radioGroup1, underline: false}
+      name: radio_button_2
+      layout_properties: {grid_position: 'LDJCUU,FIDBGL'}
+    - type: RadioButton
+      properties: {role: null, selected: false, align: left, tooltip: '', border: '',
+        enabled: true, foreground: '', value: '', visible: true, text: '3. The top
+          chambers of the heart contract and then relax, followed by the bottom chambers
+          contracting and relaxing.', font_size: null, font: '', spacing_above: small,
+        spacing_below: medium, italic: false, background: '', bold: false, group_name: radioGroup1,
+        underline: false}
+      name: radio_button_3
+      layout_properties: {grid_position: 'CFRXDS,GUXXWY'}
+    - type: RadioButton
+      properties: {role: null, selected: false, align: left, tooltip: '', border: '',
+        enabled: true, foreground: '', value: '', visible: true, text: '4. The bottom
+          chambers of the heart contract and then relax, followed by the top chambers
+          contracting and relaxing.', font_size: null, font: '', spacing_above: small,
+        spacing_below: small, italic: false, background: '', bold: false, group_name: radioGroup1,
+        underline: false}
+      name: radio_button_4
+      layout_properties: {grid_position: 'DYYGFB,DPHPEX'}
+  - type: Spacer
+    properties: {height: 18}
+    layout_properties:
+      col_widths: {}
+      grid_position: ZPRGWR,JKVDPZ
+    name: spacer_3_copy_2
+  - type: Button
+    properties: {role: filled-button, align: right, tooltip: '', border: '', enabled: true,
+      foreground: '', visible: true, text: Onward, font_size: null, font: '', spacing_above: small,
+      icon_align: left, spacing_below: small, italic: false, background: '', bold: false,
+      underline: false, icon: ''}
+    layout_properties:
+      col_widths: {}
+      grid_position: ANEMCT,IZMIZX
+    event_bindings: {click: btn_student_next_question_click}
+    name: btn_student_next_question
+- type: ColumnPanel
+  properties: {role: null, tooltip: '', border: '', foreground: '', visible: true,
+    wrap_on: mobile, col_spacing: medium, spacing_above: small, col_widths: '{}',
+    spacing_below: small, background: ''}
+  layout_properties:
+    col_widths: {}
+    grid_position: GPBIKD,UMKRHF
+  name: student_page2
+  components:
+  - type: Label
+    properties: {role: null, align: left, tooltip: '', border: '', foreground: '',
+      visible: true, text: 'Context:', font_size: null, font: '', spacing_above: small,
+      icon_align: left, spacing_below: small, italic: false, background: '', bold: false,
+      underline: false, icon: ''}
+    layout_properties: {grid_position: 'ZQMOTI,HOPURL'}
+    name: label_context_copy_2
+  - type: ColumnPanel
+    properties: {role: tonal-card, tooltip: '', border: '', foreground: 'theme:Primary
+        Container', visible: true, wrap_on: mobile, col_spacing: medium, spacing_above: small,
+      col_widths: '{}', spacing_below: small, background: 'theme:Primary Container'}
+    layout_properties: {grid_position: 'OSTHTW,YVVACW'}
+    name: ocard_student_context_copy
+    components:
+    - type: RichText
+      properties: {role: null, align: left, tooltip: '', enable_slots: true, border: '',
+        foreground: 'theme:On Background', visible: true, font_size: 16, content: 'As
+          the governor of the central bank, you are thinking about increasing the
+          money supply to stimulate economic growth. However, you are concerned that
+          citizens might not be able to buy/ consume as much with their money as they’re
+          used to. So, you decide to simulate the potential impacts of changing money
+          supply to verify your concerns.', font: '', spacing_above: small, spacing_below: small,
+        data: null, background: '', format: markdown}
+      layout_properties: {grid_position: 'GIUWKJ,LUTZAB'}
+      name: rtext_student_context_copy
+      data_bindings: []
+  - type: Spacer
+    properties: {height: 18}
+    layout_properties: {grid_position: 'TLAVOA,SZJJKG'}
+    name: spacer_1_copy_3
+  - type: ColumnPanel
+    properties: {role: outlined-card, col_widths: '{}'}
+    name: ocard_student_interact_copy
+    layout_properties: {grid_position: 'BWMGVE,GYEYPU'}
+    components:
+    - type: form:MainPage.IC1_copy
+      properties: {}
+      name: i_c1_copy_1
+      layout_properties: {grid_position: 'SDEFGH,YHZUTM'}
+  - type: Spacer
+    properties: {height: 18}
+    layout_properties:
+      col_widths: {}
+      grid_position: TBQOZA,FXXMEQ
+    name: spacer_1_copy_4
+  - type: Label
+    properties: {role: null, align: left, tooltip: '', border: '', foreground: '',
+      visible: true, text: 'Prompt: ', font_size: null, font: '', spacing_above: small,
+      icon_align: left, spacing_below: small, italic: false, background: '', bold: false,
+      underline: false, icon: ''}
+    layout_properties:
+      col_widths: {}
+      grid_position: RDAXOZ,NBOYON
+    name: label_prompt_copy_2
+  - type: ColumnPanel
+    properties: {role: tonal-card, tooltip: '', border: '', foreground: 'theme:On
+        Primary Container', visible: true, wrap_on: mobile, col_spacing: medium, spacing_above: small,
+      col_widths: '{}', spacing_below: small, background: 'theme:Primary Container'}
+    layout_properties:
+      col_widths: {}
+      grid_position: DOWFIW,CYKHNJ
+    name: ocard_prompt_copy_2
+    components:
+    - type: RichText
+      properties: {role: null, align: left, tooltip: '', enable_slots: true, border: '',
+        foreground: 'theme:On Background', visible: true, font_size: 16, content: 'Based
+          on your observations, which of your initial assumptions seems most likely
+          to be true in the short term (6-12 months)?', font: '', spacing_above: small,
+        spacing_below: small, data: null, background: '', format: markdown}
+      layout_properties:
+        col_widths: {}
+        grid_position: FWHASY,AHKXMO
+      name: rtext_student_prompt_copy
+      data_bindings: []
+  - type: Spacer
+    properties: {height: 18}
+    layout_properties:
+      col_widths: {}
+      grid_position: TOZNQF,VZAPSS
+    name: spacer_2_copy_2
+  - type: Label
+    properties: {role: null, align: left, tooltip: '', border: '', foreground: '',
+      visible: true, text: 'Options:', font_size: null, font: '', spacing_above: small,
+      icon_align: left, spacing_below: small, italic: false, background: '', bold: false,
+      underline: false, icon: ''}
+    layout_properties:
+      col_widths: {}
+      grid_position: SDNVET,WHSXDS
+    name: label_options_copy_2
+  - type: ColumnPanel
+    properties: {role: tonal-card, tooltip: '', border: '', foreground: '', visible: true,
+      wrap_on: mobile, col_spacing: medium, spacing_above: small, col_widths: '{}',
+      spacing_below: small, background: ''}
+    layout_properties:
+      col_widths: {}
+      grid_position: JMVBMG,JJTRMF
+    name: ocard_options_copy_5
+    components:
+    - type: RadioButton
+      properties: {role: null, selected: false, align: left, tooltip: '', border: '',
+        enabled: true, foreground: '', value: '', visible: true, text: '1. As businesses
+          get access to more capital to invest and expand, their production cost falls
+          while efficiency rises. As a result, businesses can make profit while charging
+          lesser.', font_size: null, font: '', spacing_above: small, spacing_below: medium,
+        italic: false, background: '', bold: false, group_name: radioGroup1, underline: false}
+      name: radio_button_1_copy
+      layout_properties: {grid_position: 'TXYHZD,YMXUZT'}
+    - type: RadioButton
+      properties: {role: null, selected: false, align: left, tooltip: '', border: '',
+        enabled: true, foreground: '', value: '', visible: true, text: 2. Consumers having more money will cause increased demand so businesses will raise prices as demand quickly outpaces supply.,
+        font_size: null, font: '', spacing_above: small, spacing_below: medium, italic: false,
+        background: '', bold: false, group_name: radioGroup1, underline: false}
+      name: radio_button_2_copy
+      layout_properties: {grid_position: 'LDJCUU,FIDBGL'}
+    - type: RadioButton
+      properties: {role: null, selected: false, align: left, tooltip: '', border: '',
+        enabled: true, foreground: '', value: '', visible: true, text: '3. Entrepreneurs
+          will take loans to compete with established businesses, causing the prices
+          to decrease.', font_size: null, font: '', spacing_above: small, spacing_below: medium,
+        italic: false, background: '', bold: false, group_name: radioGroup1, underline: false}
+      name: radio_button_3_copy
+      layout_properties: {grid_position: 'CFRXDS,GUXXWY'}
+    - type: RadioButton
+      properties: {role: null, selected: false, align: left, tooltip: '', border: '',
+        enabled: true, foreground: '', value: '', visible: true, text: '4. Banks will
+          lower interest rates, and businesses will hire more employees. Lower unemployment
+          and access to loans will increase spending causing businesses to flourish,
+          lowering the prices of goods and services.', font_size: null, font: '',
+        spacing_above: small, spacing_below: small, italic: false, background: '',
+        bold: false, group_name: radioGroup1, underline: false}
+      name: radio_button_4_copy
+      layout_properties: {grid_position: 'DYYGFB,DPHPEX'}
+  - type: Spacer
+    properties: {height: 18}
+    layout_properties:
+      col_widths: {}
+      grid_position: ZPRGWR,JKVDPZ
+    name: spacer_3_copy_3
+  - type: Button
+    properties: {role: filled-button, align: right, tooltip: '', border: '', enabled: true,
+      foreground: '', visible: true, text: Onward, font_size: null, font: '', spacing_above: small,
+      icon_align: left, spacing_below: small, italic: false, background: '', bold: false,
+      underline: false, icon: ''}
+    layout_properties:
+      col_widths: {}
+      grid_position: ANEMCT,IZMIZX
+    event_bindings: {click: btn_student_next_question_click}
+    name: btn_student_next_question_copy
+- type: ColumnPanel
+  properties: {role: null, tooltip: '', border: '', foreground: '', visible: true,
+    wrap_on: mobile, col_spacing: medium, spacing_above: small, col_widths: '{}',
+    spacing_below: small, background: ''}
+  layout_properties:
+    col_widths: {}
+    grid_position: EUAQPX,DHPGVX
+  name: student_page3
+  components:
+  - type: Label
+    properties: {role: null, align: left, tooltip: '', border: '', foreground: '',
+      visible: true, text: 'Context:', font_size: null, font: '', spacing_above: small,
+      icon_align: left, spacing_below: small, italic: false, background: '', bold: false,
+      underline: false, icon: ''}
+    layout_properties: {grid_position: 'ZQMOTI,HOPURL'}
+    name: label_context_copy_3
+  - type: ColumnPanel
+    properties: {role: tonal-card, tooltip: '', border: '', foreground: 'theme:Primary
+        Container', visible: true, wrap_on: mobile, col_spacing: medium, spacing_above: small,
+      col_widths: '{}', spacing_below: small, background: 'theme:Primary Container'}
+    layout_properties: {grid_position: 'OSTHTW,YVVACW'}
+    name: ocard_student_context_copy_2
+    components:
+    - type: RichText
+      properties: {role: null, align: left, tooltip: '', enable_slots: true, border: '',
+        foreground: 'theme:On Background', visible: true, font_size: 16, content: '',
+        font: '', spacing_above: small, spacing_below: small, data: null, background: '',
+        format: markdown}
+      layout_properties: {grid_position: 'GIUWKJ,LUTZAB'}
+      name: rtext_student_context_copy_2
+      data_bindings: []
+  - type: Spacer
+    properties: {height: 18}
+    layout_properties: {grid_position: 'TLAVOA,SZJJKG'}
+    name: spacer_1_copy_5
+  - type: ColumnPanel
+    properties: {role: outlined-card, col_widths: '{}'}
+    name: ocard_student_interact_copy_2
+    layout_properties: {grid_position: 'BWMGVE,GYEYPU'}
+    components:
+    - type: form:MainPage.IC1_copy_copy
+      properties: {}
+      name: i_c1_copy_copy_1
+      layout_properties: {grid_position: 'SMYVLV,CZDUCO'}
+  - type: Spacer
+    properties: {height: 18}
+    layout_properties:
+      col_widths: {}
+      grid_position: TBQOZA,FXXMEQ
+    name: spacer_1_copy_6
+  - type: Label
+    properties: {role: null, align: left, tooltip: '', border: '', foreground: '',
+      visible: true, text: 'Prompt: ', font_size: null, font: '', spacing_above: small,
+      icon_align: left, spacing_below: small, italic: false, background: '', bold: false,
+      underline: false, icon: ''}
+    layout_properties:
+      col_widths: {}
+      grid_position: RDAXOZ,NBOYON
+    name: label_prompt_copy_3
+  - type: ColumnPanel
+    properties: {role: tonal-card, tooltip: '', border: '', foreground: 'theme:On
+        Primary Container', visible: true, wrap_on: mobile, col_spacing: medium, spacing_above: small,
+      col_widths: '{}', spacing_below: small, background: 'theme:Primary Container'}
+    layout_properties:
+      col_widths: {}
+      grid_position: DOWFIW,CYKHNJ
+    name: ocard_prompt_copy_3
+    components:
+    - type: RichText
+      properties: {role: null, align: left, tooltip: '', enable_slots: true, border: '',
+        foreground: 'theme:On Background', visible: true, font_size: 16, content: '',
+        font: '', spacing_above: small, spacing_below: small, data: null, background: '',
+        format: markdown}
+      layout_properties:
+        col_widths: {}
+        grid_position: FWHASY,AHKXMO
+      name: rtext_student_prompt_copy_2
+      data_bindings: []
+  - type: Spacer
+    properties: {height: 18}
+    layout_properties:
+      col_widths: {}
+      grid_position: TOZNQF,VZAPSS
+    name: spacer_2_copy_3
+  - type: Label
+    properties: {role: null, align: left, tooltip: '', border: '', foreground: '',
+      visible: true, text: 'Options:', font_size: null, font: '', spacing_above: small,
+      icon_align: left, spacing_below: small, italic: false, background: '', bold: false,
+      underline: false, icon: ''}
+    layout_properties:
+      col_widths: {}
+      grid_position: SDNVET,WHSXDS
+    name: label_options_copy_3
+  - type: ColumnPanel
+    properties: {role: tonal-card, tooltip: '', border: '', foreground: '', visible: true,
+      wrap_on: mobile, col_spacing: medium, spacing_above: small, col_widths: '{}',
+      spacing_below: small, background: ''}
+    layout_properties:
+      col_widths: {}
+      grid_position: XKLJFL,IUNIZC
+    name: ocard_options_copy_3
     components:
     - type: RepeatingPanel
       properties: {role: null, tooltip: '', border: '', foreground: '', items: null,
-        visible: true, spacing_above: small, spacing_below: small, item_template: MainPage.ItemTemplate1,
+        visible: true, spacing_above: small, spacing_below: small, item_template: MainPage.ItemTemplate4,
         background: ''}
-      layout_properties: {grid_position: 'ECMAFB,KFTMEV'}
-      name: rpanel_ra_step
-    - type: Spacer
-      properties: {height: 18}
-      layout_properties:
-        col_widths: {}
-        grid_position: LNHNBQ,WEXDUI
-      name: spacer_page2
-    - type: Button
-      properties: {role: filled-button, align: right, tooltip: '', border: '', enabled: true,
-        foreground: '', visible: true, text: Generate Guided Inquiries, font_size: null,
-        font: '', spacing_above: small, icon_align: left, spacing_below: small, italic: false,
-        background: '', bold: false, underline: false, icon: ''}
-      layout_properties:
-        col_widths: {}
-        grid_position: IZFKNQ,GWBCGO
-      event_bindings: {click: btn_gen_gi_click}
-      name: btn_gen_gi
-  - type: ColumnPanel
-    properties: {role: elevated-card, tooltip: '', border: '', foreground: '', visible: true,
-      wrap_on: never, col_spacing: medium, spacing_above: small, col_widths: '{}',
-      spacing_below: small, background: ''}
+      layout_properties: {grid_position: 'ZHVVRO,DNAIOR'}
+      event_bindings: {}
+      name: rpanel_student_options_copy_2
+      data_bindings: []
+  - type: Spacer
+    properties: {height: 18}
     layout_properties:
       col_widths: {}
-      grid_position: PXWCZW,MDANKU
-    name: author_page3
-    components:
-    - type: RepeatingPanel
-      properties: {role: null, tooltip: '', border: '', foreground: 'theme:On Primary
-          Container', items: null, visible: true, spacing_above: small, spacing_below: small,
-        item_template: MainPage.ItemTemplate2, background: ''}
-      layout_properties: {grid_position: 'DAUBHX,FKTCSZ'}
-      data_bindings:
-      - {code: 'self.item[''gi_steps'']', property: items}
-      name: rpanel_ra_step2
-    - type: Button
-      properties: {role: filled-button, align: right, tooltip: '', border: '', enabled: true,
-        foreground: '', visible: true, text: Generate Questions, font_size: null,
-        font: '', spacing_above: small, icon_align: left, spacing_below: small, italic: false,
-        background: '', bold: false, underline: false, icon: ''}
-      layout_properties:
-        col_widths: {}
-        grid_position: QHODSJ,IBMUXH
-      event_bindings: {click: btn_gen_question_click}
-      name: btn_gen_question
-  - type: ColumnPanel
-    properties: {role: elevated-card, tooltip: '', border: '', foreground: '', visible: true,
-      wrap_on: mobile, col_spacing: medium, spacing_above: small, col_widths: '{}',
-      spacing_below: small, background: ''}
+      grid_position: ZPRGWR,JKVDPZ
+    name: spacer_3_copy_4
+  - type: Button
+    properties: {role: filled-button, align: right, tooltip: '', border: '', enabled: true,
+      foreground: '', visible: true, text: Onward, font_size: null, font: '', spacing_above: small,
+      icon_align: left, spacing_below: small, italic: false, background: '', bold: false,
+      underline: false, icon: ''}
     layout_properties:
       col_widths: {}
-      grid_position: JOSSRK,CCBDOC
-    name: author_page4
-    components:
-    - type: Label
-      properties: {role: null, align: left, tooltip: '', border: '', foreground: '',
-        visible: true, text: 'Context:', font_size: null, font: '', spacing_above: small,
-        icon_align: left, spacing_below: small, italic: false, background: '', bold: false,
-        underline: false, icon: ''}
-      layout_properties: {grid_position: 'ZQMOTI,HOPURL'}
-      name: label_context
-    - type: ColumnPanel
-      properties: {role: tonal-card, tooltip: '', border: '', foreground: 'theme:Primary
-          Container', visible: true, wrap_on: mobile, col_spacing: medium, spacing_above: small,
-        col_widths: '{}', spacing_below: small, background: 'theme:Primary Container'}
-      layout_properties: {grid_position: 'OSTHTW,YVVACW'}
-      name: ocard_context
-      components:
-      - type: TextArea
-        properties: {role: outlined, align: left, height: 44, tooltip: '', placeholder: '',
-          border: '0', enabled: true, foreground: '', visible: true, text: '', font_size: null,
-          auto_expand: true, font: '', spacing_above: small, spacing_below: small,
-          italic: false, background: '', bold: false, underline: false}
-        layout_properties: {grid_position: 'ARAJBL,HAFCFN'}
-        data_bindings:
-        - {code: 'self.item[''context'']', writeback: true, property: text}
-        event_bindings: {}
-        name: tarea_context
-    - type: Spacer
-      properties: {height: 18}
-      layout_properties: {grid_position: 'TLAVOA,SZJJKG'}
-      name: spacer_1
-    - type: Label
-      properties: {role: null, align: left, tooltip: '', border: '', foreground: '',
-        visible: true, text: 'Prompt: ', font_size: null, font: '', spacing_above: small,
-        icon_align: left, spacing_below: small, italic: false, background: '', bold: false,
-        underline: false, icon: ''}
-      layout_properties:
-        col_widths: {}
-        grid_position: RDAXOZ,NBOYON
-      name: label_prompt
-    - type: ColumnPanel
-      properties: {role: tonal-card, tooltip: '', border: '', foreground: 'theme:On
-          Primary Container', visible: true, wrap_on: mobile, col_spacing: medium,
-        spacing_above: small, col_widths: '{}', spacing_below: small, background: 'theme:Primary
-          Container'}
-      layout_properties:
-        col_widths: {}
-        grid_position: DOWFIW,CYKHNJ
-      name: ocard_prompt
-      components:
-      - type: TextArea
-        properties: {role: outlined, align: left, height: 44, tooltip: '', placeholder: '',
-          border: '0', enabled: true, foreground: '', visible: true, text: '', font_size: null,
-          auto_expand: true, font: '', spacing_above: small, spacing_below: small,
-          italic: false, background: '', bold: false, underline: false}
-        layout_properties:
-          col_widths: {}
-          grid_position: EWJLGW,IFWTFR
-        data_bindings:
-        - {code: 'self.item[''prompt'']', writeback: true, property: text}
-        name: tarea_prompt
-    - type: Spacer
-      properties: {height: 18}
-      layout_properties:
-        col_widths: {}
-        grid_position: TOZNQF,VZAPSS
-      name: spacer_2
-    - type: Label
-      properties: {role: null, align: left, tooltip: '', border: '', foreground: '',
-        visible: true, text: 'Options:', font_size: null, font: '', spacing_above: small,
-        icon_align: left, spacing_below: small, italic: false, background: '', bold: false,
-        underline: false, icon: ''}
-      layout_properties:
-        col_widths: {}
-        grid_position: SDNVET,WHSXDS
-      name: label_options
-    - type: ColumnPanel
-      properties: {role: tonal-card, tooltip: '', border: '', foreground: '', visible: true,
-        wrap_on: mobile, col_spacing: medium, spacing_above: small, col_widths: '{}',
-        spacing_below: small, background: ''}
-      layout_properties:
-        col_widths: {}
-        grid_position: XKLJFL,IUNIZC
-      name: ocard_options
-      components:
-      - type: RepeatingPanel
-        properties: {item_template: MainPage.ItemTemplate4}
-        layout_properties: {grid_position: 'ZHVVRO,DNAIOR'}
-        event_bindings: {}
-        data_bindings:
-        - {code: 'self.item[''options'']', property: items}
-        name: rpanel_options
-    - type: Spacer
-      properties: {height: 18}
-      layout_properties:
-        col_widths: {}
-        grid_position: FUPFGM,WNEOMP
-      name: spacer_3
-    - type: Button
-      properties: {role: filled-button, align: right, tooltip: '', border: '', enabled: true,
-        foreground: '', visible: true, text: Generate Next Question, font_size: null,
-        font: '', spacing_above: small, icon_align: left, spacing_below: small, italic: false,
-        background: '', bold: false, underline: false, icon: ''}
-      layout_properties:
-        col_widths: {}
-        grid_position: FWERQN,WGFGPJ
-      event_bindings: {click: btn_next_question_click}
-      name: btn_next_question
-  - type: ColumnPanel
-    properties: {role: elevated-card, tooltip: '', border: '', foreground: '', visible: true,
-      wrap_on: mobile, col_spacing: medium, spacing_above: small, col_widths: '{}',
-      spacing_below: small, background: ''}
-    layout_properties: {grid_position: 'ZRQOXP,QDHHJJ'}
-    name: author_page5
-    components:
-    - type: Label
-      properties: {role: null, align: left, tooltip: '', border: '', foreground: '',
-        visible: true, text: Reading Activity Created, font_size: null, font: '',
-        spacing_above: small, icon_align: left, spacing_below: small, italic: false,
-        background: '', bold: false, underline: false, icon: ''}
-      layout_properties: {grid_position: 'WIJBJJ,QXSHJH'}
-      name: label_filename
-    - type: Button
-      properties: {role: filled-button, align: right, tooltip: '', border: '', enabled: true,
-        foreground: '', visible: true, text: Go to Home, font_size: null, font: '',
-        spacing_above: small, icon_align: left, spacing_below: small, italic: false,
-        background: '', bold: false, underline: false, icon: ''}
-      layout_properties:
-        col_widths: {}
-        grid_position: EQOWAG,CFVQDY
-      event_bindings: {click: btn_go_home_click}
-      name: btn_go_home
+      grid_position: ANEMCT,IZMIZX
+    event_bindings: {click: btn_student_next_question_click}
+    name: btn_student_next_question_copy_2
 - type: ColumnPanel
-  properties: {col_widths: '{}'}
-  layout_properties: {grid_position: 'FIURWQ,XBYOTS'}
-  name: student_end
+  properties: {role: null, tooltip: '', border: '', foreground: '', visible: true,
+    wrap_on: mobile, col_spacing: medium, spacing_above: small, col_widths: '{}',
+    spacing_below: small, background: ''}
+  layout_properties:
+    col_widths: {}
+    grid_position: JXFJSF,XIEBQP
+  name: student_page4
   components:
+  - type: Label
+    properties: {role: null, align: left, tooltip: '', border: '', foreground: '',
+      visible: true, text: 'Context:', font_size: null, font: '', spacing_above: small,
+      icon_align: left, spacing_below: small, italic: false, background: '', bold: false,
+      underline: false, icon: ''}
+    layout_properties: {grid_position: 'ZQMOTI,HOPURL'}
+    name: label_context_copy_4
   - type: ColumnPanel
-    properties: {role: elevated-card, tooltip: '', border: '', foreground: '', visible: true,
-      wrap_on: mobile, col_spacing: medium, spacing_above: small, col_widths: '{}',
-      spacing_below: small, background: ''}
-    layout_properties:
-      col_widths: {}
-      grid_position: LHMPYX,ILRBEI
-    name: student_page1
+    properties: {role: tonal-card, tooltip: '', border: '', foreground: 'theme:Primary
+        Container', visible: true, wrap_on: mobile, col_spacing: medium, spacing_above: small,
+      col_widths: '{}', spacing_below: small, background: 'theme:Primary Container'}
+    layout_properties: {grid_position: 'OSTHTW,YVVACW'}
+    name: ocard_student_context_copy_3
     components:
-    - type: Label
-      properties: {role: null, align: left, tooltip: '', border: '', foreground: '',
-        visible: true, text: 'Context:', font_size: null, font: '', spacing_above: small,
-        icon_align: left, spacing_below: small, italic: false, background: '', bold: false,
-        underline: false, icon: ''}
-      layout_properties: {grid_position: 'ZQMOTI,HOPURL'}
-      name: label_context_copy
-    - type: ColumnPanel
-      properties: {role: tonal-card, tooltip: '', border: '', foreground: 'theme:Primary
-          Container', visible: true, wrap_on: mobile, col_spacing: medium, spacing_above: small,
-        col_widths: '{}', spacing_below: small, background: 'theme:Primary Container'}
-      layout_properties: {grid_position: 'OSTHTW,YVVACW'}
-      name: ocard_student_context
-      components:
-      - type: RichText
-        properties: {role: null, align: left, tooltip: '', enable_slots: true, border: '',
-          foreground: 'theme:On Background', visible: true, font_size: 16, content: '',
-          font: '', spacing_above: small, spacing_below: small, data: null, background: '',
-          format: markdown}
-        layout_properties: {grid_position: 'GIUWKJ,LUTZAB'}
-        name: rtext_student_context
-        data_bindings: []
-    - type: Spacer
-      properties: {height: 18}
-      layout_properties: {grid_position: 'TLAVOA,SZJJKG'}
-      name: spacer_1_copy
-    - type: ColumnPanel
-      properties: {role: outlined-card, col_widths: '{}'}
-      name: ocard_student_interact
-      layout_properties: {grid_position: 'BWMGVE,GYEYPU'}
-      components:
-      - type: form:MainPage.interactiveComponent
-        properties: {}
-        name: interactive_component
-        layout_properties: {grid_position: 'DHLWHQ,EQYRNU'}
-    - type: Spacer
-      properties: {height: 18}
-      layout_properties:
-        col_widths: {}
-        grid_position: TBQOZA,FXXMEQ
-      name: spacer_1_copy_2
-    - type: Label
-      properties: {role: null, align: left, tooltip: '', border: '', foreground: '',
-        visible: true, text: 'Prompt: ', font_size: null, font: '', spacing_above: small,
-        icon_align: left, spacing_below: small, italic: false, background: '', bold: false,
-        underline: false, icon: ''}
-      layout_properties:
-        col_widths: {}
-        grid_position: RDAXOZ,NBOYON
-      name: label_prompt_copy
-    - type: ColumnPanel
-      properties: {role: tonal-card, tooltip: '', border: '', foreground: 'theme:On
-          Primary Container', visible: true, wrap_on: mobile, col_spacing: medium,
-        spacing_above: small, col_widths: '{}', spacing_below: small, background: 'theme:Primary
-          Container'}
-      layout_properties:
-        col_widths: {}
-        grid_position: DOWFIW,CYKHNJ
-      name: ocard_prompt_copy
-      components:
-      - type: RichText
-        properties: {role: null, align: left, tooltip: '', enable_slots: true, border: '',
-          foreground: 'theme:On Background', visible: true, font_size: 16, content: '',
-          font: '', spacing_above: small, spacing_below: small, data: null, background: '',
-          format: markdown}
-        layout_properties:
-          col_widths: {}
-          grid_position: FWHASY,AHKXMO
-        name: rtext_student_prompt
-        data_bindings: []
-    - type: Spacer
-      properties: {height: 18}
-      layout_properties:
-        col_widths: {}
-        grid_position: TOZNQF,VZAPSS
-      name: spacer_2_copy
-    - type: Label
-      properties: {role: null, align: left, tooltip: '', border: '', foreground: '',
-        visible: true, text: 'Options:', font_size: null, font: '', spacing_above: small,
-        icon_align: left, spacing_below: small, italic: false, background: '', bold: false,
-        underline: false, icon: ''}
-      layout_properties:
-        col_widths: {}
-        grid_position: SDNVET,WHSXDS
-      name: label_options_copy
-    - type: ColumnPanel
-      properties: {role: tonal-card, tooltip: '', border: '', foreground: '', visible: true,
-        wrap_on: mobile, col_spacing: medium, spacing_above: small, col_widths: '{}',
-        spacing_below: small, background: ''}
-      layout_properties:
-        col_widths: {}
-        grid_position: XKLJFL,IUNIZC
-      name: ocard_options_copy
-      components:
-      - type: RepeatingPanel
-        properties: {role: null, tooltip: '', border: '', foreground: '', items: null,
-          visible: true, spacing_above: small, spacing_below: small, item_template: MainPage.ItemTemplate4,
-          background: ''}
-        layout_properties: {grid_position: 'ZHVVRO,DNAIOR'}
-        event_bindings: {}
-        name: rpanel_student_options
-        data_bindings: []
-    - type: Spacer
-      properties: {height: 18}
-      layout_properties:
-        col_widths: {}
-        grid_position: ZPRGWR,JKVDPZ
-      name: spacer_3_copy_2
-    - type: Button
-      properties: {role: filled-button, align: right, tooltip: '', border: '', enabled: true,
-        foreground: '', visible: true, text: Onward, font_size: null, font: '', spacing_above: small,
-        icon_align: left, spacing_below: small, italic: false, background: '', bold: false,
-        underline: false, icon: ''}
-      layout_properties:
-        col_widths: {}
-        grid_position: ANEMCT,IZMIZX
-      event_bindings: {click: btn_student_next_question_click}
-      name: btn_student_next_question
+    - type: RichText
+      properties: {role: null, align: left, tooltip: '', enable_slots: true, border: '',
+        foreground: 'theme:On Background', visible: true, font_size: 16, content: '',
+        font: '', spacing_above: small, spacing_below: small, data: null, background: '',
+        format: markdown}
+      layout_properties: {grid_position: 'GIUWKJ,LUTZAB'}
+      name: rtext_student_context_copy_3
+      data_bindings: []
+  - type: Spacer
+    properties: {height: 18}
+    layout_properties: {grid_position: 'TLAVOA,SZJJKG'}
+    name: spacer_1_copy_7
+  - type: ColumnPanel
+    properties: {role: outlined-card, col_widths: '{}'}
+    name: ocard_student_interact_copy_3
+    layout_properties: {grid_position: 'BWMGVE,GYEYPU'}
+    components:
+    - type: form:MainPage.IC1_copy_copy_copy
+      properties: {}
+      name: i_c1_copy_copy_copy_1
+      layout_properties: {grid_position: 'ZKCFTH,FYLJXR'}
+  - type: Spacer
+    properties: {height: 18}
+    layout_properties:
+      col_widths: {}
+      grid_position: RYUCVN,OLBEJG
+    name: spacer_1_copy_8
   - type: ColumnPanel
     properties: {role: elevated-card, tooltip: '', border: '', foreground: '', visible: true,
       wrap_on: mobile, col_spacing: medium, spacing_above: small, col_widths: '{}',
       spacing_below: small, background: ''}
     layout_properties:
       col_widths: {}
-      grid_position: NRXTGQ,NZNKEZ
-    name: student_page2
+      grid_position: VYRTMD,BQPBWO
+    name: student_page_end
     components:
     - type: Label
       properties: {role: null, align: left, tooltip: '', border: '', foreground: '',
@@ -401,3 +530,79 @@ components:
         grid_position: EQOWAG,CFVQDY
       event_bindings: {click: btn_student_go_home_click}
       name: btn_student_go_home
+  - type: Label
+    properties: {role: null, align: left, tooltip: '', border: '', foreground: '',
+      visible: true, text: 'Prompt: ', font_size: null, font: '', spacing_above: small,
+      icon_align: left, spacing_below: small, italic: false, background: '', bold: false,
+      underline: false, icon: ''}
+    layout_properties:
+      col_widths: {}
+      grid_position: RDAXOZ,NBOYON
+    name: label_prompt_copy_4
+  - type: ColumnPanel
+    properties: {role: tonal-card, tooltip: '', border: '', foreground: 'theme:On
+        Primary Container', visible: true, wrap_on: mobile, col_spacing: medium, spacing_above: small,
+      col_widths: '{}', spacing_below: small, background: 'theme:Primary Container'}
+    layout_properties:
+      col_widths: {}
+      grid_position: DOWFIW,CYKHNJ
+    name: ocard_prompt_copy_4
+    components:
+    - type: RichText
+      properties: {role: null, align: left, tooltip: '', enable_slots: true, border: '',
+        foreground: 'theme:On Background', visible: true, font_size: 16, content: '',
+        font: '', spacing_above: small, spacing_below: small, data: null, background: '',
+        format: markdown}
+      layout_properties:
+        col_widths: {}
+        grid_position: FWHASY,AHKXMO
+      name: rtext_student_prompt_copy_3
+      data_bindings: []
+  - type: Spacer
+    properties: {height: 18}
+    layout_properties:
+      col_widths: {}
+      grid_position: TOZNQF,VZAPSS
+    name: spacer_2_copy_4
+  - type: Label
+    properties: {role: null, align: left, tooltip: '', border: '', foreground: '',
+      visible: true, text: 'Options:', font_size: null, font: '', spacing_above: small,
+      icon_align: left, spacing_below: small, italic: false, background: '', bold: false,
+      underline: false, icon: ''}
+    layout_properties:
+      col_widths: {}
+      grid_position: SDNVET,WHSXDS
+    name: label_options_copy_4
+  - type: ColumnPanel
+    properties: {role: tonal-card, tooltip: '', border: '', foreground: '', visible: true,
+      wrap_on: mobile, col_spacing: medium, spacing_above: small, col_widths: '{}',
+      spacing_below: small, background: ''}
+    layout_properties:
+      col_widths: {}
+      grid_position: XKLJFL,IUNIZC
+    name: ocard_options_copy_4
+    components:
+    - type: RepeatingPanel
+      properties: {role: null, tooltip: '', border: '', foreground: '', items: null,
+        visible: true, spacing_above: small, spacing_below: small, item_template: MainPage.ItemTemplate4,
+        background: ''}
+      layout_properties: {grid_position: 'ZHVVRO,DNAIOR'}
+      event_bindings: {}
+      name: rpanel_student_options_copy_3
+      data_bindings: []
+  - type: Spacer
+    properties: {height: 18}
+    layout_properties:
+      col_widths: {}
+      grid_position: ZPRGWR,JKVDPZ
+    name: spacer_3_copy_5
+  - type: Button
+    properties: {role: filled-button, align: right, tooltip: '', border: '', enabled: true,
+      foreground: '', visible: true, text: Onward, font_size: null, font: '', spacing_above: small,
+      icon_align: left, spacing_below: small, italic: false, background: '', bold: false,
+      underline: false, icon: ''}
+    layout_properties:
+      col_widths: {}
+      grid_position: ANEMCT,IZMIZX
+    event_bindings: {click: btn_student_next_question_click}
+    name: btn_student_next_question_copy_3

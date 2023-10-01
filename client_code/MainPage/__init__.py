@@ -42,26 +42,24 @@ class MainPage(MainPageTemplate):
       self.col_spacing = 'none'
     
     # Any code you write here will run before the form opens.
-    self.author_page1.visible = False
-    self.author_page2.visible = False
-    self.author_page3.visible = False
-    self.author_page4.visible = False
-    self.author_page5.visible = False
     self.student_page1.visible = True
     self.student_page2.visible = False
+    self.student_page3.visible = False
+    self.student_page4.visible = False
+    self.student_page_end.visible = False
 
-    # Testing the student end // Task: remove this
+    '''# Testing the student end // Task: remove this
     self.curr_file = app_tables.files.get(
       id = 'demo'
     )
     
     self.inquiries = self.curr_file['inquiries']
     self.question = self.inquiries[0][0]
-    self.interactive_component.html = server.call('restore_html', self.question['code'])
+    #self.interactive_component.html = server.call('restore_html', self.question['code'])
     self.title.text = self.question['question'] # Task: restore actual code: f"Step {1} question: {1} of {len(self.inquiries[0])}"
     self.rtext_student_context.content = self.question['context']
     self.rtext_student_prompt.content = self.question['inquiry']
-    self.rpanel_student_options.items = self.question['options']
+    self.rpanel_student_options.items = self.question['options']'''
 
   # ------ helper functions ------ 
   
@@ -136,16 +134,11 @@ class MainPage(MainPageTemplate):
 
       self.question = curr_inquiry
 
-      self.interactive_component.html = server.call('restore_html', self.question['code'])
+      #self.interactive_component.html = server.call('restore_html', self.question['code'])
       self.title.text = self.question['question'] # Task: restore actual code: f"Step {ra+1}} question: {gi+1} of {len(self.inquiries[ra])}"
       self.rtext_student_context.content = self.question['context']
       self.rtext_student_prompt.content = self.question['inquiry']
       self.rpanel_student_options.items = self.question['options']
-
-  def run_simulation(self, script):
-    js.call_js("""
-      script
-    """)
   
   # ------ event listeners (author end) ------
 
@@ -277,7 +270,7 @@ class MainPage(MainPageTemplate):
 
   def btn_student_next_question_click(self, **event_args):
     """This method is called when the button is clicked"""
-    iterate = self.itr()
+    '''iterate = self.itr()
     self.title.scroll_into_view()
   
     if iterate == False and self.question is not None:
@@ -285,7 +278,25 @@ class MainPage(MainPageTemplate):
     else:
       self.student_page1.visible = False
       self.student_page2.visible = True
-      self.title.text = self.curr_file['title'] # Task: review it
+      self.title.text = self.curr_file['title'] # Task: review it'''
+    self.title.scroll_into_view()
+    if self.student_page1.visible is True:
+      
+      self.student_page1.visible = False
+      self.student_page2.visible = True
+      pass
+    elif self.student_page2.visible is True:
+      self.student_page2.visible = False
+      self.student_page3.visible = True
+      pass
+    elif self.student_page3.visible is True:
+      self.student_page3.visible = False
+      self.student_page4.visible = True
+      pass
+    elif self.student_page4.visible is True:
+      self.student_page4.visible = False
+      self.student_page_end.visible = True
+      pass
   
   def btn_student_go_home_click(self, **event_args):
     """This method is called when the button is clicked"""
