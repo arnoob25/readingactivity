@@ -11,7 +11,7 @@ container:
       \       .pastpart {\n            color: rgb(244, 105, 105);\n        }\n\n \
       \       .object {\n            color: rgba(203, 100, 182, 0.844);\n        }\n\
       \    </style>\n</head>\n\n<body>\n\n\n    <div style=\"\n        background-color:\
-      \ #f0f0f0;\n        padding: 30px;\n        border-radius: 15px;\n        \"\
+      \ #FFFBFF;\n        padding: 30px;\n        border-radius: 15px;\n        \"\
       >\n\n        <div class=\"sentence\">\n            <p>\n                <span\
       \ class=\"word subject\">Christopher Columbus</span>\n                <span\
       \ class=\"word auxverb\">had</span>\n                <span class=\"word pastpart\"\
@@ -38,7 +38,7 @@ container:
       \ class=\"sentence\">\n            <p>\n                <span class=\"word notClickable\"\
       >Before the formalization of Edward VIII\u2019s abdication,</span>\n       \
       \         <span class=\"word subject\">King George VI</span>\n             \
-      \   <span class=\"word verb\">ascended</span>\n                <span class=\"\
+      \   <span class=\"word pastpart\">ascended</span>\n                <span class=\"\
       word object\">to the throne</span>\n\n            </p>\n        </div>\n\n \
       \   </div>\n\n\n</body>\n\n</html>\n"}
 components: []

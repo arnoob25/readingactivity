@@ -21,7 +21,7 @@ components:
       grid_position: QGMBXX,RBHQER
     name: title
   - type: ColumnPanel
-    properties: {role: outlined-card, tooltip: '', border: '', foreground: '', visible: true,
+    properties: {role: tonal-card, tooltip: '', border: '', foreground: '', visible: true,
       wrap_on: mobile, col_spacing: medium, spacing_above: small, col_widths: '{}',
       spacing_below: small, background: ''}
     layout_properties:
@@ -31,20 +31,20 @@ components:
     components:
     - type: Label
       properties: {role: null, align: left, tooltip: '', border: '', foreground: '',
-        visible: true, text: Reading Activity Completed, font_size: null, font: '',
-        spacing_above: small, icon_align: left, spacing_below: small, italic: false,
-        background: '', bold: false, underline: false, icon: ''}
+        visible: true, text: End of demo, font_size: null, font: '', spacing_above: small,
+        icon_align: left, spacing_below: small, italic: false, background: '', bold: false,
+        underline: false, icon: ''}
       layout_properties: {grid_position: 'WIJBJJ,QXSHJH'}
       name: label_student_filename
     - type: Button
-      properties: {role: filled-button, align: right, tooltip: '', border: '', enabled: false,
+      properties: {role: filled-button, align: right, tooltip: '', border: '', enabled: true,
         foreground: '', visible: true, text: Refresh page, font_size: null, font: '',
         spacing_above: small, icon_align: left, spacing_below: small, italic: false,
         background: '', bold: false, underline: false, icon: ''}
       layout_properties:
         col_widths: {}
         grid_position: EQOWAG,CFVQDY
-      event_bindings: {click: btn_student_go_home_click}
+      event_bindings: {}
       name: btn_student_go_home
   - type: ColumnPanel
     properties: {role: null, tooltip: '', border: '', foreground: '', visible: true,
@@ -225,9 +225,9 @@ components:
       layout_properties: {grid_position: 'ZQMOTI,HOPURL'}
       name: label_context_copy_2
     - type: ColumnPanel
-      properties: {role: tonal-card, tooltip: '', border: '', foreground: 'theme:Primary
-          Container', visible: true, wrap_on: mobile, col_spacing: medium, spacing_above: small,
-        col_widths: '{}', spacing_below: small, background: '#DCE5DD'}
+      properties: {role: tonal-card, tooltip: '', border: '', foreground: '', visible: true,
+        wrap_on: mobile, col_spacing: medium, spacing_above: small, col_widths: '{}',
+        spacing_below: small, background: ''}
       layout_properties: {grid_position: 'OSTHTW,YVVACW'}
       name: ocard_student_context_copy
       components:
@@ -248,7 +248,7 @@ components:
       layout_properties: {grid_position: 'TLAVOA,SZJJKG'}
       name: spacer_1_copy_3
     - type: ColumnPanel
-      properties: {role: outlined-card, tooltip: '', border: '', foreground: '', visible: true,
+      properties: {role: tonal-card, tooltip: '', border: '', foreground: '', visible: true,
         wrap_on: mobile, col_spacing: medium, spacing_above: small, col_widths: '{}',
         spacing_below: small, background: ''}
       name: ocard_student_interact_copy
@@ -276,7 +276,7 @@ components:
     - type: ColumnPanel
       properties: {role: tonal-card, tooltip: '', border: '', foreground: '', visible: true,
         wrap_on: mobile, col_spacing: medium, spacing_above: small, col_widths: '{}',
-        spacing_below: small, background: '#DCE5DD'}
+        spacing_below: small, background: ''}
       layout_properties:
         col_widths: {}
         grid_position: DOWFIW,CYKHNJ
@@ -311,7 +311,7 @@ components:
     - type: ColumnPanel
       properties: {role: tonal-card, tooltip: '', border: '', foreground: '', visible: true,
         wrap_on: mobile, col_spacing: medium, spacing_above: small, col_widths: '{}',
-        spacing_below: small, background: '#DCE5DD'}
+        spacing_below: small, background: ''}
       layout_properties:
         col_widths: {}
         grid_position: JMVBMG,JJTRMF
@@ -361,8 +361,8 @@ components:
     - type: Button
       properties: {role: filled-button, align: right, tooltip: '', border: '', enabled: true,
         foreground: '', visible: true, text: Onward, font_size: null, font: '', spacing_above: small,
-        icon_align: left, spacing_below: small, italic: false, background: '#006C48',
-        bold: false, underline: false, icon: ''}
+        icon_align: left, spacing_below: small, italic: false, background: '', bold: false,
+        underline: false, icon: ''}
       layout_properties:
         col_widths: {}
         grid_position: ANEMCT,IZMIZX
@@ -387,7 +387,7 @@ components:
     - type: ColumnPanel
       properties: {role: tonal-card, tooltip: '', border: '', foreground: '', visible: true,
         wrap_on: mobile, col_spacing: medium, spacing_above: small, col_widths: '{}',
-        spacing_below: small, background: '#DBE4E6'}
+        spacing_below: small, background: ''}
       layout_properties: {grid_position: 'OSTHTW,YVVACW'}
       name: ocard_student_context_copy_2
       components:
@@ -407,7 +407,7 @@ components:
       layout_properties: {grid_position: 'TLAVOA,SZJJKG'}
       name: spacer_1_copy_5
     - type: ColumnPanel
-      properties: {role: outlined-card, tooltip: '', border: '', foreground: '', visible: true,
+      properties: {role: tonal-card, tooltip: '', border: '', foreground: '', visible: true,
         wrap_on: mobile, col_spacing: medium, spacing_above: small, col_widths: '{}',
         spacing_below: small, background: ''}
       name: ocard_student_interact_copy_2
@@ -435,7 +435,7 @@ components:
     - type: ColumnPanel
       properties: {role: tonal-card, tooltip: '', border: '', foreground: '', visible: true,
         wrap_on: mobile, col_spacing: medium, spacing_above: small, col_widths: '{}',
-        spacing_below: small, background: '#DBE4E6'}
+        spacing_below: small, background: ''}
       layout_properties:
         col_widths: {}
         grid_position: DOWFIW,CYKHNJ
@@ -470,7 +470,7 @@ components:
     - type: ColumnPanel
       properties: {role: tonal-card, tooltip: '', border: '', foreground: '', visible: true,
         wrap_on: mobile, col_spacing: medium, spacing_above: small, col_widths: '{}',
-        spacing_below: small, background: '#DBE4E6'}
+        spacing_below: small, background: ''}
       layout_properties:
         col_widths: {}
         grid_position: HJXIBC,PEMUQE
@@ -516,8 +516,8 @@ components:
     - type: Button
       properties: {role: filled-button, align: right, tooltip: '', border: '', enabled: true,
         foreground: '', visible: true, text: Onward, font_size: null, font: '', spacing_above: small,
-        icon_align: left, spacing_below: small, italic: false, background: '#006874',
-        bold: false, underline: false, icon: ''}
+        icon_align: left, spacing_below: small, italic: false, background: '', bold: false,
+        underline: false, icon: ''}
       layout_properties:
         col_widths: {}
         grid_position: ANEMCT,IZMIZX
@@ -542,7 +542,7 @@ components:
     - type: ColumnPanel
       properties: {role: tonal-card, tooltip: '', border: '', foreground: 'theme:Primary
           Container', visible: true, wrap_on: mobile, col_spacing: medium, spacing_above: small,
-        col_widths: '{}', spacing_below: small, background: '#E7E0EC'}
+        col_widths: '{}', spacing_below: small, background: ''}
       layout_properties: {grid_position: 'OSTHTW,YVVACW'}
       name: ocard_student_context_copy_3
       components:
@@ -563,7 +563,7 @@ components:
       layout_properties: {grid_position: 'TLAVOA,SZJJKG'}
       name: spacer_1_copy_7
     - type: ColumnPanel
-      properties: {role: outlined-card, tooltip: '', border: '', foreground: '', visible: true,
+      properties: {role: tonal-card, tooltip: '', border: '', foreground: '', visible: true,
         wrap_on: mobile, col_spacing: medium, spacing_above: small, col_widths: '{}',
         spacing_below: small, background: ''}
       name: ocard_student_interact_copy_3
@@ -591,7 +591,7 @@ components:
     - type: ColumnPanel
       properties: {role: tonal-card, tooltip: '', border: '', foreground: '', visible: true,
         wrap_on: mobile, col_spacing: medium, spacing_above: small, col_widths: '{}',
-        spacing_below: small, background: '#E7E0EC'}
+        spacing_below: small, background: ''}
       layout_properties:
         col_widths: {}
         grid_position: DOWFIW,CYKHNJ
@@ -626,7 +626,7 @@ components:
     - type: ColumnPanel
       properties: {role: tonal-card, tooltip: '', border: '', foreground: '', visible: true,
         wrap_on: mobile, col_spacing: medium, spacing_above: small, col_widths: '{}',
-        spacing_below: small, background: '#E7E0EC'}
+        spacing_below: small, background: ''}
       layout_properties:
         col_widths: {}
         grid_position: WKXXAR,JTZEVQ
@@ -669,8 +669,8 @@ components:
     - type: Button
       properties: {role: filled-button, align: right, tooltip: '', border: '', enabled: true,
         foreground: '', visible: true, text: Onward, font_size: null, font: '', spacing_above: small,
-        icon_align: left, spacing_below: small, italic: false, background: '#4F378B',
-        bold: false, underline: false, icon: ''}
+        icon_align: left, spacing_below: small, italic: false, background: '', bold: false,
+        underline: false, icon: ''}
       layout_properties:
         col_widths: {}
         grid_position: ANEMCT,IZMIZX

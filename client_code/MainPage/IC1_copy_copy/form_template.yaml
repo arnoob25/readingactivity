@@ -6,10 +6,10 @@ container:
       \            height: 100px;\n            padding: 10px;\n        }\n\n     \
       \   #car {\n            width: 100px;\n            height: 50px;\n         \
       \   position: relative;\n            top: 35%;\n            left: 0;\n     \
-      \   }\n\n        .container {\n            background-color: rgb(237, 237, 237);\n\
-      \            border-radius: 15px;\n            padding: 20px 20px 20px 20px;\n\
-      \            margin-bottom: 20px;\n        }\n\n        .slide {\n         \
-      \   width: 100%;\n            margin: 0 0 10px 0;\n        }\n    </style>\n\
+      \   }\n\n        .container {\n            background-color: #FFFBFF;\n    \
+      \        border-radius: 15px;\n            padding: 20px 20px 20px 20px;\n \
+      \           margin-bottom: 20px;\n        }\n\n        .slide {\n          \
+      \  width: 100%;\n            margin: 0 0 10px 0;\n        }\n    </style>\n\
       </head>\n\n<body>\n\n    <div style=\"padding: 10px;\">\n        <div class=\"\
       container\">\n            <h3>Force: <span id=\"forceOutput\">0</span></h3>\n\
       \            <h3>Time to finish line: <span id=\"timeOutput\">0</span>s</h3>\n\

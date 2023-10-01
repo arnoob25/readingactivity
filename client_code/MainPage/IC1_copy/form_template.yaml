@@ -3,20 +3,20 @@ container:
   properties: {tooltip: '', background: '', foreground: '', border: '', visible: true,
     role: null, html: "\n  <!DOCTYPE html>\n<html>\n\n<head>\n    <title>Money Supply\
       \ Simulation</title>\n    <style>\n        .card {\n            background-color:\
-      \ rgb(237, 237, 237);\n            border-radius: 15px;\n            padding:\
-      \ 20px 20px 20px 20px;\n            margin-bottom: 20px;\n        }\n\n    \
-      \    .text-area {\n            border-radius: 15px;\n            padding: 10px;\n\
-      \        }\n        .title {\n            font-size: large;\n            font-weight:\
-      \ 500;\n        }\n    </style>\n</head>\n\n<body>\n    <div style=\"padding:\
-      \ 10px;\">\n        <div class=\"card\">\n            <div class=\"title\">\n\
-      \                <p>Banks</p>\n            </div>\n            <div id=\"banks\"\
-      \ class=\"text-area\"></div>\n        </div>\n        <div class=\"card\">\n\
-      \            <div class=\"title\">\n                <p>Businesses</p>\n    \
-      \        </div>\n            <div id=\"businesses\" class=\"text-area\"></div>\n\
-      \        </div>\n        <div class=\"card\">\n            <div class=\"title\"\
-      >\n                <p>Consumers</p>\n            </div>\n            <div id=\"\
-      consumers\" class=\"text-area\"></div>\n        </div>\n        \n        <div>\n\
-      \            <label for=\"moneySupply\" style=\"margin-top: 15px;\">Money supply:</label><br>\n\
+      \ #FFFBFF;\n            border-radius: 15px;\n            padding: 20px 20px\
+      \ 20px 20px;\n            margin-bottom: 20px;\n        }\n\n        .text-area\
+      \ {\n            border-radius: 15px;\n            padding: 10px;\n        }\n\
+      \        .title {\n            font-size: large;\n            font-weight: 500;\n\
+      \        }\n    </style>\n</head>\n\n<body>\n    <div style=\"padding: 10px;\"\
+      >\n        <div class=\"card\">\n            <div class=\"title\">\n       \
+      \         <p>Banks</p>\n            </div>\n            <div id=\"banks\" class=\"\
+      text-area\"></div>\n        </div>\n        <div class=\"card\">\n         \
+      \   <div class=\"title\">\n                <p>Businesses</p>\n            </div>\n\
+      \            <div id=\"businesses\" class=\"text-area\"></div>\n        </div>\n\
+      \        <div class=\"card\">\n            <div class=\"title\">\n         \
+      \       <p>Consumers</p>\n            </div>\n            <div id=\"consumers\"\
+      \ class=\"text-area\"></div>\n        </div>\n        \n        <div>\n    \
+      \        <label for=\"moneySupply\" style=\"margin-top: 15px;\">Money supply:</label><br>\n\
       \            <span>\n                <input type=\"range\" id=\"moneySupply\"\
       \ name=\"moneySupply\" min=\"0\" max=\"2\" value=\"1\"\n                   \
       \ style=\"width: 100%; margin: 10px 0 10px 0;\"><br>\n                <span\
