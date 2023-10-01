@@ -10,27 +10,27 @@ container:
       \  .auxverb {\n            color: rgba(1, 158, 103, 0.814);\n        }\n\n \
       \       .pastpart {\n            color: rgb(244, 105, 105);\n        }\n\n \
       \       .object {\n            color: rgba(203, 100, 182, 0.844);\n        }\n\
-      \    </style>\n</head>\n\n<body>\n\n\n    <div style=\"\n        background-color:\
-      \ #FFFBFF;\n        padding: 30px;\n        border-radius: 15px;\n        \"\
-      >\n\n        <div class=\"sentence\">\n            <p>\n                <span\
-      \ class=\"word subject\">Christopher Columbus</span>\n                <span\
-      \ class=\"word auxverb\">had</span>\n                <span class=\"word pastpart\"\
-      >discovered</span>\n                <span class=\"word object\">America</span>\n\
-      \                <span class=\"word notClickable\">before it was known to the\
-      \ Europeans.</span></span>\n            </p>\n        </div>\n\n        <div\
-      \ class=\"sentence\">\n            <p>\n                <span class=\"word subject\"\
-      >General Lee</span>\n                <span class=\"word auxverb\">was</span>\n\
-      \                <span class=\"word verb\">surrendering</span>\n           \
-      \     <span class=\"word object\">to General Grant</span>\n                <span\
-      \ class=\"word notClickable\">at Appomattox while the final battles of the American\
-      \ Civil War were\n                    still\n                    happening</span>\n\
-      \n            </p>\n        </div>\n\n        <div class=\"sentence\">\n   \
-      \         <p>\n                <span class=\"word subject\">Thomas Edison</span>\n\
-      \                <span class=\"word auxverb\">had</span>\n                <span\
-      \ class=\"word pastpart\">invented</span>\n                <span class=\"word\
-      \ object\">the light bulb</span>\n                <span class=\"word notClickable\"\
-      >before homes were electrified.</span>\n            </p>\n        </div>\n\n\
-      \        <div class=\"sentence\">\n            <p>\n                <span class=\"\
+      \    </style>\n</head>\n\n<body>\n\n\n    <div style=\"\n        background-color:#fffbff;\n\
+      \        padding: 30px;\n        border-radius: 15px;\n        \">\n\n     \
+      \   <div class=\"sentence\">\n            <p>\n                <span class=\"\
+      word subject\">Christopher Columbus</span>\n                <span class=\"word\
+      \ auxverb\">had</span>\n                <span class=\"word pastpart\">discovered</span>\n\
+      \                <span class=\"word object\">America</span>\n              \
+      \  <span class=\"word notClickable\">before it was known to the Europeans.</span></span>\n\
+      \            </p>\n        </div>\n\n        <div class=\"sentence\">\n    \
+      \        <p>\n                <span class=\"word subject\">General Lee</span>\n\
+      \                <span class=\"word auxverb\">was</span>\n                <span\
+      \ class=\"word verb\">surrendering</span>\n                <span class=\"word\
+      \ object\">to General Grant</span>\n                <span class=\"word notClickable\"\
+      >at Appomattox while the final battles of the American Civil War were\n    \
+      \                still\n                    happening</span>\n\n           \
+      \ </p>\n        </div>\n\n        <div class=\"sentence\">\n            <p>\n\
+      \                <span class=\"word subject\">Thomas Edison</span>\n       \
+      \         <span class=\"word auxverb\">had</span>\n                <span class=\"\
+      word pastpart\">invented</span>\n                <span class=\"word object\"\
+      >the light bulb</span>\n                <span class=\"word notClickable\">before\
+      \ homes were electrified.</span>\n            </p>\n        </div>\n\n     \
+      \   <div class=\"sentence\">\n            <p>\n                <span class=\"\
       word subject\">The treaty of Versailles</span>\n                <span class=\"\
       word auxverb\">had been</span>\n                <span class=\"word pastpart\"\
       >signed</span>\n                <span class=\"word notClickable\">before World\
