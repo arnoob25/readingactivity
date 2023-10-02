@@ -56,10 +56,10 @@ components:
     name: student_page1
     components:
     - type: Label
-      properties: {role: null, align: left, tooltip: '', border: '', foreground: '',
-        visible: true, text: 'Context:', font_size: 18, font: '', spacing_above: small,
-        icon_align: left, spacing_below: small, italic: false, background: '', bold: true,
-        underline: false, icon: ''}
+      properties: {role: null, align: left, tooltip: '', border: '', foreground: 'theme:On
+          Tertiary Container', visible: true, text: 'Context:', font_size: 18, font: '',
+        spacing_above: small, icon_align: left, spacing_below: small, italic: false,
+        background: '', bold: true, underline: false, icon: ''}
       layout_properties: {grid_position: 'ZQMOTI,HOPURL'}
       name: label_context_copy
     - type: ColumnPanel
@@ -71,15 +71,14 @@ components:
       components:
       - type: RichText
         properties: {role: null, align: left, tooltip: '', enable_slots: true, border: '',
-          foreground: 'theme:On Background', visible: true, font_size: 16, content: 'As
-            a medical researcher, your task is to study the heart''s pumping action.
-            With heart disease being a leading cause of death worldwide, an accurate
-            description of its mechanics is crucial for developing effective treatment
-            and preventive measures. To aid your research, an interactive simulation
-            of a beating heart, built on extensive research and data from ECGs and
-            echocardiograms, has been provided. Your analysis could enable life-saving
-            breakthroughs.', font: '', spacing_above: small, spacing_below: small,
-          data: null, background: '', format: markdown}
+          foreground: 'theme:On Background', visible: true, font_size: 16, content: 'You''re
+            a medical researcher studying how the heart works. Understanding this
+            is key to treating and preventing heart disease, a major cause of death
+            globally. You have an interactive simulation of a beating heart, created
+            from detailed research and data from ECGs and echocardiograms, to help
+            with your study. Your findings could lead to breakthroughs that save lives.',
+          font: '', spacing_above: small, spacing_below: small, data: null, background: '',
+          format: markdown}
         layout_properties: {grid_position: 'GIUWKJ,LUTZAB'}
         name: rtext_student_context
         data_bindings: []
@@ -99,16 +98,16 @@ components:
         name: i_c1_1
         layout_properties: {grid_position: 'IKSOSE,MDFLER'}
     - type: Spacer
-      properties: {height: 18}
+      properties: {height: 35}
       layout_properties:
         col_widths: {}
-        grid_position: TBQOZA,FXXMEQ
-      name: spacer_1_copy_2
+        grid_position: JZEETI,LUGKTZ
+      name: spacer_1_copy_11
     - type: Label
-      properties: {role: null, align: left, tooltip: '', border: '', foreground: '',
-        visible: true, text: 'Prompt: ', font_size: 18, font: '', spacing_above: small,
-        icon_align: left, spacing_below: small, italic: false, background: '', bold: true,
-        underline: false, icon: ''}
+      properties: {role: null, align: left, tooltip: '', border: '', foreground: 'theme:On
+          Tertiary Container', visible: true, text: 'Prompt: ', font_size: 18, font: '',
+        spacing_above: small, icon_align: left, spacing_below: small, italic: false,
+        background: '', bold: true, underline: false, icon: ''}
       layout_properties:
         col_widths: {}
         grid_position: RDAXOZ,NBOYON
@@ -124,11 +123,10 @@ components:
       components:
       - type: RichText
         properties: {role: null, align: left, tooltip: '', enable_slots: true, border: '',
-          foreground: 'theme:On Background', visible: true, font_size: 16, content: 'Using
-            the interactive simulation of the heart, can you determine which one of
-            the initial assumptions about the sequence of events in a single heartbeat
-            is accurate?', font: '', spacing_above: small, spacing_below: small, data: null,
-          background: '', format: markdown}
+          foreground: 'theme:On Background', visible: true, font_size: 16, content: 'Can
+            you use the heart simulation to find out which idea about the order of
+            events in a single heartbeat is correct?', font: '', spacing_above: small,
+          spacing_below: small, data: null, background: '', format: markdown}
         layout_properties:
           col_widths: {}
           grid_position: FWHASY,AHKXMO
@@ -141,10 +139,10 @@ components:
         grid_position: TOZNQF,VZAPSS
       name: spacer_2_copy
     - type: Label
-      properties: {role: null, align: left, tooltip: '', border: '', foreground: '',
-        visible: true, text: 'Options:', font_size: 18, font: '', spacing_above: small,
-        icon_align: left, spacing_below: small, italic: false, background: '', bold: true,
-        underline: false, icon: ''}
+      properties: {role: null, align: left, tooltip: '', border: '', foreground: 'theme:On
+          Tertiary Container', visible: true, text: 'Options:', font_size: 18, font: '',
+        spacing_above: small, icon_align: left, spacing_below: small, italic: false,
+        background: '', bold: true, underline: false, icon: ''}
       layout_properties:
         col_widths: {}
         grid_position: SDNVET,WHSXDS
@@ -218,10 +216,10 @@ components:
     name: student_page2
     components:
     - type: Label
-      properties: {role: null, align: left, tooltip: '', border: '', foreground: '',
-        visible: true, text: 'Context:', font_size: 18, font: '', spacing_above: small,
-        icon_align: left, spacing_below: small, italic: false, background: '', bold: true,
-        underline: false, icon: ''}
+      properties: {role: null, align: left, tooltip: '', border: '', foreground: 'theme:On
+          Tertiary Container', visible: true, text: 'Context:', font_size: 18, font: '',
+        spacing_above: small, icon_align: left, spacing_below: small, italic: false,
+        background: '', bold: true, underline: false, icon: ''}
       layout_properties: {grid_position: 'ZQMOTI,HOPURL'}
       name: label_context_copy_2
     - type: ColumnPanel
@@ -233,12 +231,11 @@ components:
       components:
       - type: RichText
         properties: {role: null, align: left, tooltip: '', enable_slots: true, border: '',
-          foreground: 'theme:On Background', visible: true, font_size: 16, content: 'As
-            the governor of the central bank, you are thinking about increasing the
-            money supply to stimulate economic growth. However, you are concerned
-            that citizens might not be able to buy/ consume as much with their money
-            as they’re used to. So, you decide to simulate the potential impacts of
-            changing money supply to verify your concerns.', font: '', spacing_above: small,
+          foreground: 'theme:On Background', visible: true, font_size: 16, content: 'You''re
+            the head of the central bank and considering increasing the money supply
+            to boost the economy. But, you''re worried that people might not be able
+            to buy as much with their money as before. So, you plan to run a simulation
+            to see what might happen if you change the money supply.', font: '', spacing_above: small,
           spacing_below: small, data: null, background: '', format: markdown}
         layout_properties: {grid_position: 'GIUWKJ,LUTZAB'}
         name: rtext_student_context_copy
@@ -259,16 +256,16 @@ components:
         name: i_c1_copy_1
         layout_properties: {grid_position: 'SDEFGH,YHZUTM'}
     - type: Spacer
-      properties: {height: 18}
+      properties: {height: 35}
       layout_properties:
         col_widths: {}
-        grid_position: TBQOZA,FXXMEQ
-      name: spacer_1_copy_4
+        grid_position: ZIFWFA,KIGSMT
+      name: spacer_1_copy_10
     - type: Label
-      properties: {role: null, align: left, tooltip: '', border: '', foreground: '',
-        visible: true, text: 'Prompt: ', font_size: 18, font: '', spacing_above: small,
-        icon_align: left, spacing_below: small, italic: false, background: '', bold: true,
-        underline: false, icon: ''}
+      properties: {role: null, align: left, tooltip: '', border: '', foreground: 'theme:On
+          Tertiary Container', visible: true, text: 'Prompt: ', font_size: 18, font: '',
+        spacing_above: small, icon_align: left, spacing_below: small, italic: false,
+        background: '', bold: true, underline: false, icon: ''}
       layout_properties:
         col_widths: {}
         grid_position: RDAXOZ,NBOYON
@@ -284,10 +281,10 @@ components:
       components:
       - type: RichText
         properties: {role: null, align: left, tooltip: '', enable_slots: true, border: '',
-          foreground: 'theme:On Background', visible: true, font_size: 16, content: 'Based
-            on your observations, which of your initial assumptions seems most likely
-            to be true in the short term (6-12 months)?', font: '', spacing_above: small,
-          spacing_below: small, data: null, background: '', format: markdown}
+          foreground: 'theme:On Background', visible: true, font_size: 16, content: 'From
+            what you''ve seen, what do you think is most likely to happen in the next
+            6 to 12 months?', font: '', spacing_above: small, spacing_below: small,
+          data: null, background: '', format: markdown}
         layout_properties:
           col_widths: {}
           grid_position: FWHASY,AHKXMO
@@ -300,10 +297,10 @@ components:
         grid_position: TOZNQF,VZAPSS
       name: spacer_2_copy_2
     - type: Label
-      properties: {role: null, align: left, tooltip: '', border: '', foreground: '',
-        visible: true, text: 'Options:', font_size: 18, font: '', spacing_above: small,
-        icon_align: left, spacing_below: small, italic: false, background: '', bold: true,
-        underline: false, icon: ''}
+      properties: {role: null, align: left, tooltip: '', border: '', foreground: 'theme:On
+          Tertiary Container', visible: true, text: 'Options:', font_size: 18, font: '',
+        spacing_above: small, icon_align: left, spacing_below: small, italic: false,
+        background: '', bold: true, underline: false, icon: ''}
       layout_properties:
         col_widths: {}
         grid_position: SDNVET,WHSXDS
@@ -319,35 +316,40 @@ components:
       components:
       - type: RadioButton
         properties: {role: null, selected: false, align: left, tooltip: '', border: '',
-          enabled: true, foreground: '', value: '', visible: true, text: '1. As businesses
-            get access to more capital to invest and expand, their production cost
-            falls while efficiency rises. As a result, businesses can make profit
-            while charging lesser.', font_size: null, font: '', spacing_above: small,
+          enabled: true, foreground: '', value: '', visible: true, text: '1. When
+            businesses get more money to grow and improve, they will operate more
+            efficiently, producing things at a lower cost. This will allow them to
+            make profit even while charging less.', font_size: null, font: '', spacing_above: small,
           spacing_below: medium, italic: false, background: '', bold: false, group_name: radioGroup1,
           underline: false}
         name: radio_button_1_copy
         layout_properties: {grid_position: 'TXYHZD,YMXUZT'}
+        event_bindings: {clicked: radio_button_1_copy_clicked}
       - type: RadioButton
         properties: {role: null, selected: false, align: left, tooltip: '', border: '',
-          enabled: true, foreground: '', value: '', visible: true, text: 2. Consumers having more money will cause increased demand so businesses will raise prices as demand quickly outpaces supply.,
-          font_size: null, font: '', spacing_above: small, spacing_below: medium,
-          italic: false, background: '', bold: false, group_name: radioGroup1, underline: false}
+          enabled: true, foreground: '', value: '', visible: true, text: '2. If people
+            have more money, they will buy more things. This can lead to businesses
+            increasing their prices because the demand for their products is greater
+            than what they can supply.', font_size: null, font: '', spacing_above: small,
+          spacing_below: medium, italic: false, background: '', bold: false, group_name: radioGroup1,
+          underline: false}
         name: radio_button_2_copy
         layout_properties: {grid_position: 'LDJCUU,FIDBGL'}
       - type: RadioButton
         properties: {role: null, selected: false, align: left, tooltip: '', border: '',
-          enabled: true, foreground: '', value: '', visible: true, text: '3. Entrepreneurs
-            will take loans to compete with established businesses, causing the prices
-            to decrease.', font_size: null, font: '', spacing_above: small, spacing_below: medium,
-          italic: false, background: '', bold: false, group_name: radioGroup1, underline: false}
+          enabled: true, foreground: '', value: '', visible: true, text: '3. New business
+            owners might borrow money to compete with existing companies, which could
+            lead to lower prices.', font_size: null, font: '', spacing_above: small,
+          spacing_below: medium, italic: false, background: '', bold: false, group_name: radioGroup1,
+          underline: false}
         name: radio_button_3_copy
         layout_properties: {grid_position: 'CFRXDS,GUXXWY'}
       - type: RadioButton
         properties: {role: null, selected: false, align: left, tooltip: '', border: '',
-          enabled: true, foreground: '', value: '', visible: true, text: '4. Banks
-            will lower interest rates, and businesses will hire more employees. Lower
-            unemployment and access to loans will increase spending causing businesses
-            to flourish, lowering the prices of goods and services.', font_size: null,
+          enabled: true, foreground: '', value: '', visible: true, text: '4. If banks
+            reduce interest rates, businesses can hire more workers. With fewer people
+            unemployed and more loans available, spending will go up. This can help
+            businesses do well and bring down the cost of goods and services.', font_size: null,
           font: '', spacing_above: small, spacing_below: small, italic: false, background: '',
           bold: false, group_name: radioGroup1, underline: false}
         name: radio_button_4_copy
@@ -378,10 +380,10 @@ components:
     name: student_page3
     components:
     - type: Label
-      properties: {role: null, align: left, tooltip: '', border: '', foreground: '',
-        visible: true, text: 'Context:', font_size: 18, font: '', spacing_above: small,
-        icon_align: left, spacing_below: small, italic: false, background: '', bold: true,
-        underline: false, icon: ''}
+      properties: {role: null, align: left, tooltip: '', border: '', foreground: 'theme:On
+          Tertiary Container', visible: true, text: 'Context:', font_size: 18, font: '',
+        spacing_above: small, icon_align: left, spacing_below: small, italic: false,
+        background: '', bold: true, underline: false, icon: ''}
       layout_properties: {grid_position: 'ZQMOTI,HOPURL'}
       name: label_context_copy_3
     - type: ColumnPanel
@@ -418,16 +420,16 @@ components:
         name: i_c1_copy_copy_1
         layout_properties: {grid_position: 'SMYVLV,CZDUCO'}
     - type: Spacer
-      properties: {height: 18}
+      properties: {height: 35}
       layout_properties:
         col_widths: {}
-        grid_position: TBQOZA,FXXMEQ
-      name: spacer_1_copy_6
+        grid_position: BEDAPI,BYUYIF
+      name: spacer_1_copy_9
     - type: Label
-      properties: {role: null, align: left, tooltip: '', border: '', foreground: '',
-        visible: true, text: 'Prompt: ', font_size: 18, font: '', spacing_above: small,
-        icon_align: left, spacing_below: small, italic: false, background: '', bold: true,
-        underline: false, icon: ''}
+      properties: {role: null, align: left, tooltip: '', border: '', foreground: 'theme:On
+          Tertiary Container', visible: true, text: 'Prompt: ', font_size: 18, font: '',
+        spacing_above: small, icon_align: left, spacing_below: small, italic: false,
+        background: '', bold: true, underline: false, icon: ''}
       layout_properties:
         col_widths: {}
         grid_position: RDAXOZ,NBOYON
@@ -459,10 +461,10 @@ components:
         grid_position: TOZNQF,VZAPSS
       name: spacer_2_copy_3
     - type: Label
-      properties: {role: null, align: left, tooltip: '', border: '', foreground: '',
-        visible: true, text: 'Options:', font_size: 18, font: '', spacing_above: small,
-        icon_align: left, spacing_below: small, italic: false, background: '', bold: true,
-        underline: false, icon: ''}
+      properties: {role: null, align: left, tooltip: '', border: '', foreground: 'theme:On
+          Tertiary Container', visible: true, text: 'Options:', font_size: 18, font: '',
+        spacing_above: small, icon_align: left, spacing_below: small, italic: false,
+        background: '', bold: true, underline: false, icon: ''}
       layout_properties:
         col_widths: {}
         grid_position: SDNVET,WHSXDS
@@ -533,10 +535,10 @@ components:
     name: student_page4
     components:
     - type: Label
-      properties: {role: null, align: left, tooltip: '', border: '', foreground: '',
-        visible: true, text: 'Context:', font_size: 18, font: '', spacing_above: small,
-        icon_align: left, spacing_below: small, italic: false, background: '', bold: true,
-        underline: false, icon: ''}
+      properties: {role: null, align: left, tooltip: '', border: '', foreground: 'theme:On
+          Tertiary Container', visible: true, text: 'Context:', font_size: 18, font: '',
+        spacing_above: small, icon_align: left, spacing_below: small, italic: false,
+        background: '', bold: true, underline: false, icon: ''}
       layout_properties: {grid_position: 'ZQMOTI,HOPURL'}
       name: label_context_copy_4
     - type: ColumnPanel
@@ -548,13 +550,13 @@ components:
       components:
       - type: RichText
         properties: {role: null, align: left, tooltip: '', enable_slots: true, border: '',
-          foreground: 'theme:On Background', visible: true, font_size: 16, content: 'You’re
-            a deciphering ancient manuscripts from Egypt. Your research could unearth
-            the mysteri behind the constructions of the Pyramids. It’s crucial that
-            you accurately sequence past events to avoid misinterpretation. To achieve
-            this, you’ve decided to study sentences that describe multiple past events
-            with a clear sense of their order in time.', font: '', spacing_above: small,
-          spacing_below: small, data: null, background: '', format: markdown}
+          foreground: 'theme:On Background', visible: true, font_size: 16, content: 'You''re
+            studying old texts from Egypt. Your work might reveal secrets about how
+            the Pyramids were built. It''s important to correctly understand the order
+            of past events to avoid mistakes. So, you''re learning about sentences
+            that clearly show the order of multiple things that happened in the past.',
+          font: '', spacing_above: small, spacing_below: small, data: null, background: '',
+          format: markdown}
         layout_properties: {grid_position: 'GIUWKJ,LUTZAB'}
         name: rtext_student_context_copy_3
         data_bindings: []
@@ -574,16 +576,16 @@ components:
         name: i_c1_copy_copy_copy_1
         layout_properties: {grid_position: 'ZKCFTH,FYLJXR'}
     - type: Spacer
-      properties: {height: 18}
+      properties: {height: 35}
       layout_properties:
         col_widths: {}
         grid_position: RYUCVN,OLBEJG
       name: spacer_1_copy_8
     - type: Label
-      properties: {role: null, align: left, tooltip: '', border: '', foreground: '',
-        visible: true, text: 'Prompt: ', font_size: 18, font: '', spacing_above: small,
-        icon_align: left, spacing_below: small, italic: false, background: '', bold: true,
-        underline: false, icon: ''}
+      properties: {role: null, align: left, tooltip: '', border: '', foreground: 'theme:On
+          Tertiary Container', visible: true, text: 'Prompt: ', font_size: 18, font: '',
+        spacing_above: small, icon_align: left, spacing_below: small, italic: false,
+        background: '', bold: true, underline: false, icon: ''}
       layout_properties:
         col_widths: {}
         grid_position: RDAXOZ,NBOYON
@@ -599,10 +601,10 @@ components:
       components:
       - type: RichText
         properties: {role: null, align: left, tooltip: '', enable_slots: true, border: '',
-          foreground: 'theme:On Background', visible: true, font_size: 16, content: 'Which
-            structure best describes a sentence that talks about an event that had
-            already occurred before another event in the past?', font: '', spacing_above: small,
-          spacing_below: small, data: null, background: '', format: markdown}
+          foreground: 'theme:On Background', visible: true, font_size: 16, content: 'What''s
+            the best way to describe a sentence that talks about something that happened
+            before another past event?', font: '', spacing_above: small, spacing_below: small,
+          data: null, background: '', format: markdown}
         layout_properties:
           col_widths: {}
           grid_position: FWHASY,AHKXMO
@@ -615,10 +617,10 @@ components:
         grid_position: TOZNQF,VZAPSS
       name: spacer_2_copy_4
     - type: Label
-      properties: {role: null, align: left, tooltip: '', border: '', foreground: '',
-        visible: true, text: 'Options:', font_size: 18, font: '', spacing_above: small,
-        icon_align: left, spacing_below: small, italic: false, background: '', bold: true,
-        underline: false, icon: ''}
+      properties: {role: null, align: left, tooltip: '', border: '', foreground: 'theme:On
+          Tertiary Container', visible: true, text: 'Options:', font_size: 18, font: '',
+        spacing_above: small, icon_align: left, spacing_below: small, italic: false,
+        background: '', bold: true, underline: false, icon: ''}
       layout_properties:
         col_widths: {}
         grid_position: SDNVET,WHSXDS
@@ -634,7 +636,7 @@ components:
       components:
       - type: RadioButton
         properties: {role: null, selected: false, align: left, tooltip: '', border: '',
-          enabled: true, foreground: '', value: '', visible: true, text: 1. Subject + had + base form of verb + object,
+          enabled: true, foreground: '', value: '', visible: true, text: 1. Subject + was/were + verb + object,
           font_size: null, font: '', spacing_above: small, spacing_below: medium,
           italic: false, background: '', bold: false, group_name: radioGroup1, underline: false}
         name: radio_button_1_copy_3
@@ -655,7 +657,7 @@ components:
         layout_properties: {grid_position: 'CFRXDS,GUXXWY'}
       - type: RadioButton
         properties: {role: null, selected: false, align: left, tooltip: '', border: '',
-          enabled: true, foreground: '', value: '', visible: true, text: 4. Subject + would + base form of verb + object,
+          enabled: true, foreground: '', value: '', visible: true, text: 4. Subject + past participle+ object,
           font_size: null, font: '', spacing_above: small, spacing_below: small, italic: false,
           background: '', bold: false, group_name: radioGroup1, underline: false}
         name: radio_button_4_copy_3

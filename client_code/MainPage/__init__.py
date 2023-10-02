@@ -318,3 +318,7 @@ class MainPage(MainPageTemplate):
     self.student_page1.visible = True
     self.student_page2.visible = False
     pass
+
+  def radio_button_1_copy_clicked(self, **event_args):
+    """This method is called when this radio button is selected"""
+    pass
