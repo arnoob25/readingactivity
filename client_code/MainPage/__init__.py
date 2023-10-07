@@ -42,15 +42,15 @@ class MainPage(MainPageTemplate):
       self.col_spacing = 'none'
     
     # Any code you write here will run before the form opens.
-    self.author_page1.visible = False
+    self.author_page1.visible = True
     self.author_page2.visible = False
     self.author_page3.visible = False
     self.author_page4.visible = False
     self.author_page5.visible = False
-    self.student_page1.visible = True
+    self.student_page1.visible = False
     self.student_page2.visible = False
 
-    # Testing the student end // Task: remove this
+    '''# Testing the student end // Task: remove this
     self.curr_file = app_tables.files.get(
       id = 'demo'
     )
@@ -61,7 +61,7 @@ class MainPage(MainPageTemplate):
     self.title.text = self.question['question'] # Task: restore actual code: f"Step {1} question: {1} of {len(self.inquiries[0])}"
     self.rtext_student_context.content = self.question['context']
     self.rtext_student_prompt.content = self.question['inquiry']
-    self.rpanel_student_options.items = self.question['options']
+    self.rpanel_student_options.items = self.question['options']'''
 
   # ------ helper functions ------ 
   
@@ -154,7 +154,7 @@ class MainPage(MainPageTemplate):
 
     # ------ basic ui logic ------
     
-    self.title.text = "Steps of the Rading Activity:"
+    self.title.text = "Steps of the Reading Activity:"
     self.title.scroll_into_view()
     self.author_page1.visible = False
     self.author_page2.visible = True

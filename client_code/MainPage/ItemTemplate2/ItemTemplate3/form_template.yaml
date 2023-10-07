@@ -10,7 +10,7 @@ components:
   components:
   - type: TextArea
     properties: {role: outlined, align: left, height: 36.8, tooltip: '', placeholder: '',
-      border: '0', enabled: true, foreground: '', visible: true, text: '', font_size: null,
+      border: '0', enabled: true, foreground: '', visible: true, text: '', font_size: 16,
       auto_expand: true, font: '', spacing_above: small, spacing_below: small, italic: false,
       background: '', bold: false, underline: false}
     name: text_area_1

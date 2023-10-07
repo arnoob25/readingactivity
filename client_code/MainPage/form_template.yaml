@@ -3,15 +3,8 @@ container:
   type: ColumnPanel
   properties: {col_widths: '{}'}
 components:
-- type: Label
-  properties: {role: title, align: left, tooltip: '', border: '', foreground: '',
-    visible: true, text: Author a Reading Activity, font_size: null, font: '', spacing_above: small,
-    icon_align: left, spacing_below: small, italic: false, background: '', bold: false,
-    underline: false, icon: ''}
-  layout_properties: {grid_position: 'RGWEOC,NLVIXQ'}
-  name: title
 - type: ColumnPanel
-  properties: {role: null, tooltip: '', border: '', foreground: '', visible: true,
+  properties: {role: outlined-card, tooltip: '', border: '0', foreground: '', visible: true,
     wrap_on: never, col_spacing: medium, spacing_above: small, col_widths: '{}', spacing_below: small,
     background: ''}
   layout_properties:
@@ -19,38 +12,54 @@ components:
     grid_position: YPYVAV,ESKSNG
   name: author_end
   components:
+  - type: Label
+    properties: {role: title, align: left, tooltip: '', border: '', foreground: '',
+      visible: true, text: Author a Reading Activity, font_size: null, font: '', spacing_above: small,
+      icon_align: left, spacing_below: small, italic: false, background: '', bold: false,
+      underline: false, icon: ''}
+    layout_properties: {grid_position: 'RCQFDM,IWIDSF'}
+    name: title
   - type: ColumnPanel
-    properties: {role: elevated-card, tooltip: '', border: '', foreground: '', visible: true,
-      wrap_on: never, col_spacing: medium, spacing_above: small, col_widths: '{}',
+    properties: {role: null, tooltip: '', border: '0', foreground: '', visible: true,
+      wrap_on: mobile, col_spacing: medium, spacing_above: small, col_widths: '{}',
       spacing_below: small, background: ''}
-    layout_properties: {grid_position: 'UXVFHH,QGEVDE'}
-    name: author_page1
+    name: outlined_card_2
+    layout_properties: {grid_position: 'HMQCUS,PCJTFU'}
     components:
-    - type: Label
-      properties: {role: input-prompt, align: left, tooltip: '', border: '', foreground: '',
-        visible: true, text: 'Intended learning outcome:', font_size: null, font: '',
-        spacing_above: small, icon_align: left, spacing_below: small, italic: false,
-        background: '', bold: false, underline: false, icon: ''}
-      layout_properties: {grid_position: 'EBVBBA,XDYAJA'}
-      name: label_page1
-    - type: TextBox
-      properties: {role: outlined, align: left, hide_text: false, tooltip: '', placeholder: The student should be able to...,
-        border: '', enabled: true, foreground: '', visible: true, text: '', font_size: null,
-        font: '', spacing_above: small, type: text, spacing_below: small, italic: false,
-        background: '', bold: false, underline: false}
-      layout_properties: {grid_position: 'DKFHOT,DNMDBP'}
-      event_bindings: {}
-      name: tbox_ilo
-    - type: Button
-      properties: {role: filled-button, align: right, tooltip: '', border: '', enabled: true,
-        foreground: '', visible: true, text: Generate Outline, font_size: null, font: '',
-        spacing_above: small, icon_align: left, spacing_below: small, italic: false,
-        background: '', bold: false, underline: false, icon: ''}
-      layout_properties: {grid_position: 'TKMOVS,GLNEZH'}
-      event_bindings: {click: btn_gen_outline_click}
-      name: btn_gen_outline
+    - type: ColumnPanel
+      properties: {role: tonal-card, tooltip: '', border: '', foreground: '', visible: true,
+        wrap_on: never, col_spacing: medium, spacing_above: small, col_widths: '{}',
+        spacing_below: small, background: ''}
+      layout_properties: {grid_position: 'IAIRFP,QWGRQF'}
+      name: author_page1
+      components:
+      - type: Label
+        properties: {role: input-prompt, align: left, tooltip: '', border: '', foreground: 'theme:On
+            Secondary Container', visible: true, text: 'Intended learning outcome:',
+          font_size: 16, font: '', spacing_above: small, icon_align: left, spacing_below: small,
+          italic: false, background: '', bold: true, underline: false, icon: ''}
+        layout_properties: {grid_position: 'EBVBBA,XDYAJA'}
+        name: label_page1
+      - type: TextBox
+        properties: {role: outlined, align: left, hide_text: false, tooltip: '', placeholder: 'Describe
+            the sequence of events during the contraction and relaxation of the heart,
+            and explain how this results in the pumping of blood in and out of the
+            heart.', border: '', enabled: true, foreground: '', visible: true, text: '',
+          font_size: null, font: '', spacing_above: small, type: text, spacing_below: small,
+          italic: false, background: '', bold: false, underline: false}
+        layout_properties: {grid_position: 'DKFHOT,DNMDBP'}
+        event_bindings: {}
+        name: tbox_ilo
+      - type: Button
+        properties: {role: filled-button, align: right, tooltip: '', border: '', enabled: true,
+          foreground: '', visible: true, text: Generate Outline, font_size: null,
+          font: '', spacing_above: small, icon_align: left, spacing_below: small,
+          italic: false, background: '', bold: false, underline: false, icon: ''}
+        layout_properties: {grid_position: 'TKMOVS,GLNEZH'}
+        event_bindings: {click: btn_gen_outline_click}
+        name: btn_gen_outline
   - type: ColumnPanel
-    properties: {role: elevated-card, tooltip: '', border: '', foreground: '', visible: true,
+    properties: {role: null, tooltip: '', border: '0', foreground: '', visible: true,
       wrap_on: never, col_spacing: medium, spacing_above: small, col_widths: '{}',
       spacing_below: small, background: ''}
     layout_properties: {grid_position: 'FSXVKK,GSUTDM'}
@@ -79,7 +88,7 @@ components:
       event_bindings: {click: btn_gen_gi_click}
       name: btn_gen_gi
   - type: ColumnPanel
-    properties: {role: elevated-card, tooltip: '', border: '', foreground: '', visible: true,
+    properties: {role: null, tooltip: '', border: '0', foreground: '', visible: true,
       wrap_on: never, col_spacing: medium, spacing_above: small, col_widths: '{}',
       spacing_below: small, background: ''}
     layout_properties:
@@ -106,7 +115,7 @@ components:
       event_bindings: {click: btn_gen_question_click}
       name: btn_gen_question
   - type: ColumnPanel
-    properties: {role: elevated-card, tooltip: '', border: '', foreground: '', visible: true,
+    properties: {role: null, tooltip: '', border: '0', foreground: '', visible: true,
       wrap_on: mobile, col_spacing: medium, spacing_above: small, col_widths: '{}',
       spacing_below: small, background: ''}
     layout_properties:
@@ -115,10 +124,10 @@ components:
     name: author_page4
     components:
     - type: Label
-      properties: {role: null, align: left, tooltip: '', border: '', foreground: '',
-        visible: true, text: 'Context:', font_size: null, font: '', spacing_above: small,
-        icon_align: left, spacing_below: small, italic: false, background: '', bold: false,
-        underline: false, icon: ''}
+      properties: {role: null, align: left, tooltip: '', border: '', foreground: 'theme:On
+          Secondary Container', visible: true, text: 'Context:', font_size: 16, font: '',
+        spacing_above: small, icon_align: left, spacing_below: small, italic: false,
+        background: '', bold: true, underline: false, icon: ''}
       layout_properties: {grid_position: 'ZQMOTI,HOPURL'}
       name: label_context
     - type: ColumnPanel
@@ -130,7 +139,7 @@ components:
       components:
       - type: TextArea
         properties: {role: outlined, align: left, height: 44, tooltip: '', placeholder: '',
-          border: '0', enabled: true, foreground: '', visible: true, text: '', font_size: null,
+          border: '0', enabled: true, foreground: '', visible: true, text: '', font_size: 16,
           auto_expand: true, font: '', spacing_above: small, spacing_below: small,
           italic: false, background: '', bold: false, underline: false}
         layout_properties: {grid_position: 'ARAJBL,HAFCFN'}
@@ -143,10 +152,10 @@ components:
       layout_properties: {grid_position: 'TLAVOA,SZJJKG'}
       name: spacer_1
     - type: Label
-      properties: {role: null, align: left, tooltip: '', border: '', foreground: '',
-        visible: true, text: 'Prompt: ', font_size: null, font: '', spacing_above: small,
-        icon_align: left, spacing_below: small, italic: false, background: '', bold: false,
-        underline: false, icon: ''}
+      properties: {role: null, align: left, tooltip: '', border: '', foreground: 'theme:On
+          Secondary Container', visible: true, text: 'Prompt: ', font_size: 16, font: '',
+        spacing_above: small, icon_align: left, spacing_below: small, italic: false,
+        background: '', bold: true, underline: false, icon: ''}
       layout_properties:
         col_widths: {}
         grid_position: RDAXOZ,NBOYON
@@ -163,7 +172,7 @@ components:
       components:
       - type: TextArea
         properties: {role: outlined, align: left, height: 44, tooltip: '', placeholder: '',
-          border: '0', enabled: true, foreground: '', visible: true, text: '', font_size: null,
+          border: '0', enabled: true, foreground: '', visible: true, text: '', font_size: 16,
           auto_expand: true, font: '', spacing_above: small, spacing_below: small,
           italic: false, background: '', bold: false, underline: false}
         layout_properties:
@@ -179,10 +188,10 @@ components:
         grid_position: TOZNQF,VZAPSS
       name: spacer_2
     - type: Label
-      properties: {role: null, align: left, tooltip: '', border: '', foreground: '',
-        visible: true, text: 'Options:', font_size: null, font: '', spacing_above: small,
-        icon_align: left, spacing_below: small, italic: false, background: '', bold: false,
-        underline: false, icon: ''}
+      properties: {role: null, align: left, tooltip: '', border: '', foreground: 'theme:On
+          Secondary Container', visible: true, text: 'Options:', font_size: 16, font: '',
+        spacing_above: small, icon_align: left, spacing_below: small, italic: false,
+        background: '', bold: true, underline: false, icon: ''}
       layout_properties:
         col_widths: {}
         grid_position: SDNVET,WHSXDS
