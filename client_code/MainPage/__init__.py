@@ -120,7 +120,7 @@ class MainPage(MainPageTemplate):
     
       # ------ displaying the data ------
 
-      self.title.text = f"Step {ra+1} question: {gi+1} of {len(self.inquiries[ra])}"
+      self.title.text = f"Step {ra+1} inquiry: {gi+1} of {len(self.inquiries[ra])}"
       self.question = curr_inquiry
 
       # Task: assign html code
