@@ -2,26 +2,26 @@ container:
   type: HtmlTemplate
   properties: {tooltip: '', background: '', foreground: '', border: '', visible: true,
     role: null, html: "\n    <!DOCTYPE html>\n    <html>\n    \n    <head>\n     \
-      \   <style>\n            #myVideo {\n                width: 100%;\n        \
-      \        height: auto;\n            }\n    \n            .controls {\n     \
-      \           text-align: left;\n                display: flex;\n            \
-      \    flex-wrap: wrap;\n                align-items: center;\n            }\n\
-      \    \n            .button {\n                padding: 10px 20px;\n        \
-      \        font-size: 12px;\n                cursor: pointer;\n              \
-      \  display: inline-block;\n                border-radius: 50px;\n          \
-      \      border-width: 0;\n                margin-bottom: 10px;\n            \
-      \    /* Rounded buttons */\n                color: #FFFFFF;\n              \
-      \  /* Text color */\n            }\n    \n            #playButton {\n      \
-      \          background-color: #9A4523;\n                /* Background color for\
-      \ Play button */\n            }\n    \n            #restartButton {\n      \
-      \          background-color: #77574C;\n                /* Background color for\
-      \ Restart button */\n            }\n    \n            #speedSlider {\n     \
-      \           width: 200px;\n                margin-left: 10px;\n            \
-      \    background-color: #695E2F;\n                /* Background color for Slider\
-      \ */\n            }\n    \n            .controls span {\n                display:\
-      \ flex;\n                align-items: center;\n            }\n        </style>\n\
-      \    </head>\n    \n    <body>\n    \n        <video id='myVideo' preload='auto'\
-      \ loop>\n            <source src='https://drive.google.com/uc?export=download&id=1NqArEwdBT9RzodrFHUR67vnjD4JwiYtn'\
+      \   <style>\n            #myVideo {\n              width: 100%;\n          \
+      \    height: auto;\n            }\n    \n            .controls {\n         \
+      \     text-align: left;\n              display: flex;\n              flex-wrap:\
+      \ wrap;\n              align-items: center;\n            }\n    \n         \
+      \   .button {\n                padding: 10px 20px;\n                font-size:\
+      \ 12px;\n                cursor: pointer;\n                display: inline-block;\n\
+      \                border-radius: 50px;\n                border-width: 0;\n  \
+      \              margin-bottom: 10px;\n                /* Rounded buttons */\n\
+      \                color: #FFFFFF;\n                /* Text color */\n       \
+      \     }\n    \n            #playButton {\n                background-color:\
+      \ #9A4523;\n                /* Background color for Play button */\n       \
+      \     }\n    \n            #restartButton {\n                background-color:\
+      \ #77574C;\n                /* Background color for Restart button */\n    \
+      \        }\n    \n            #speedSlider {\n                width: 200px;\n\
+      \                margin-left: 10px;\n                background-color: #695E2F;\n\
+      \                /* Background color for Slider */\n            }\n    \n  \
+      \          .controls span {\n                display: flex;\n              \
+      \  align-items: center;\n            }\n        </style>\n    </head>\n    \n\
+      \    <body>\n    \n        <video id='myVideo' preload='auto' loop>\n      \
+      \      <source src='https://drive.google.com/uc?export=download&id=1NqArEwdBT9RzodrFHUR67vnjD4JwiYtn'\
       \ type='video/mp4'>\n            Your browser does not support HTML5 video.\n\
       \        </video>\n    \n        <div class='controls'>\n            <span>\n\
       \                <button id='playButton' class='button'>Play</button>\n    \
