@@ -12,9 +12,9 @@ services:
   client_config: {}
   server_config: {}
 startup: {type: form, module: MainPage}
-package_name: GLEAT_
+package_name: GLEAT_Demo
 allow_embedding: false
-name: 'GLEAT '
+name: GLEAT-Demo
 runtime_options: {version: 2, client_version: '3', server_version: python3-sandbox,
   server_spec: null}
 metadata: {logo_img: 'asset:screenshot.png', title: Guided Learning Experience}
