@@ -43,9 +43,6 @@ class MainPage(MainPageTemplate):
     
     # Any code you write here will run before the form opens.
     self.student_page1.visible = True
-    self.student_page2.visible = False
-    self.student_page3.visible = False
-    self.student_page4.visible = False
     self.student_page_end.visible = False
 
     '''# Testing the student end // Task: remove this
