@@ -3,8 +3,8 @@ container:
   properties: {tooltip: '', background: '', foreground: '', border: '', visible: true,
     role: null, html: "<!DOCTYPE html>\n<html>\n\n<head>\n    <style>\n        .container\
       \ {\n            width: 100%;\n            height: 200px;\n            border:\
-      \ 1px solid black;\n            position: relative;\n        }\n\n        .car\
-      \ {\n            width: 50px;\n            height: 50px;\n            background-color:\
+      \ 1px solid black;\n            position: flex;\n        }\n\n        .car {\n\
+      \            width: 50px;\n            height: 50px;\n            background-color:\
       \ red;\n            position: absolute;\n            left: 0;\n        }\n\n\
       \        .tabcontent {\n            display: none;\n        }\n\n        .tablink\
       \ {\n            background-color: #555;\n            color: white;\n      \
@@ -13,20 +13,21 @@ container:
       \ font-size: 17px;\n            width: 33.3%;\n        }\n\n        .tablink:hover\
       \ {\n            background-color: #777;\n        }\n\n        .tabcontent {\n\
       \            color: black;\n            display: none;\n            padding:\
-      \ 50px 20px;\n            height: 250px;\n        }\n    </style>\n</head>\n\
-      \n<body>\n    <button class=\"tablink\" onclick=\"openTab('Person1', this, 5)\"\
-      \ id=\"defaultOpen\">Person 1 (Mass = 5 units)</button>\n    <button class=\"\
-      tablink\" onclick=\"openTab('Person2', this, 20)\">Person 2 (Mass = 20 units)</button>\n\
-      \    <button class=\"tablink\" onclick=\"openTab('Person3', this, 50)\">Person\
-      \ 3 (Mass = 50 units)</button>\n\n    <div id=\"Person1\" class=\"tabcontent\"\
-      >\n        <div class=\"container\">\n            <div class=\"car\"></div>\n\
-      \        </div>\n        <p class=\"timer\">0.00</p>\n        <button class=\"\
-      simulateButton\">Simulate</button>\n        <button class=\"resetButton\" disabled>Reset</button>\n\
-      \    </div>\n\n    <div id=\"Person2\" class=\"tabcontent\">\n        <div class=\"\
-      container\">\n            <div class=\"car\"></div>\n        </div>\n      \
-      \  <p class=\"timer\">0.00</p>\n        <button class=\"simulateButton\">Simulate</button>\n\
-      \        <button class=\"resetButton\" disabled>Reset</button>\n    </div>\n\
-      \n    <div id=\"Person3\" class=\"tabcontent\">\n        <div class=\"container\"\
+      \ 50px 20px;\n            height: 250px;\n            position: flex;\n    \
+      \    }\n    </style>\n</head>\n\n<body>\n    <button class=\"tablink\" onclick=\"\
+      openTab('Person1', this, 5)\" id=\"defaultOpen\">Person 1 (Mass = 5 units)</button>\n\
+      \    <button class=\"tablink\" onclick=\"openTab('Person2', this, 20)\">Person\
+      \ 2 (Mass = 20 units)</button>\n    <button class=\"tablink\" onclick=\"openTab('Person3',\
+      \ this, 50)\">Person 3 (Mass = 50 units)</button>\n\n    <div id=\"Person1\"\
+      \ class=\"tabcontent\">\n        <div class=\"container\">\n            <div\
+      \ class=\"car\"></div>\n        </div>\n        <p class=\"timer\">0.00</p>\n\
+      \        <button class=\"simulateButton\">Simulate</button>\n        <button\
+      \ class=\"resetButton\" disabled>Reset</button>\n    </div>\n\n    <div id=\"\
+      Person2\" class=\"tabcontent\">\n        <div class=\"container\">\n       \
+      \     <div class=\"car\"></div>\n        </div>\n        <p class=\"timer\"\
+      >0.00</p>\n        <button class=\"simulateButton\">Simulate</button>\n    \
+      \    <button class=\"resetButton\" disabled>Reset</button>\n    </div>\n\n \
+      \   <div id=\"Person3\" class=\"tabcontent\">\n        <div class=\"container\"\
       >\n            <div class=\"car\"></div>\n        </div>\n        <p class=\"\
       timer\">0.00</p>\n        <button class=\"simulateButton\">Simulate</button>\n\
       \        <button class=\"resetButton\" disabled>Reset</button>\n    </div>\n\

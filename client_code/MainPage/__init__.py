@@ -319,3 +319,8 @@ class MainPage(MainPageTemplate):
   def radio_button_1_copy_clicked(self, **event_args):
     """This method is called when this radio button is selected"""
     pass
+
+  def text_box_1_copy_2_pressed_enter(self, **event_args):
+    """This method is called when the user presses Enter in this text box"""
+    pass
+
