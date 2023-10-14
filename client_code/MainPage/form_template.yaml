@@ -922,12 +922,6 @@ components:
                 col_widths: {}
                 grid_position: SDNVET,WHSXDS
               name: label_options_copy_5
-            - type: Spacer
-              properties: {height: 18}
-              layout_properties:
-                col_widths: {}
-                grid_position: ZPRGWR,JKVDPZ
-              name: spacer_3_copy_6
             - type: ColumnPanel
               properties: {role: tonal-card, tooltip: '', border: '', foreground: '',
                 visible: true, wrap_on: mobile, col_spacing: medium, spacing_above: small,
@@ -1030,6 +1024,12 @@ components:
                   layout_properties:
                     col_widths: {}
                     grid_position: HFMCNE,EMCMJF
+            - type: Spacer
+              properties: {height: 18}
+              layout_properties:
+                col_widths: {}
+                grid_position: EKUIYP,WAERKE
+              name: spacer_3_copy_6
             - type: Button
               properties: {role: filled-button, align: right, tooltip: '', border: '',
                 enabled: true, foreground: '', visible: true, text: Onward, font_size: null,
@@ -1337,12 +1337,6 @@ components:
                   col_widths: {}
                   grid_position: SDNVET,WHSXDS
                 name: label_options_copy_7
-              - type: Spacer
-                properties: {height: 18}
-                layout_properties:
-                  col_widths: {}
-                  grid_position: ZPRGWR,JKVDPZ
-                name: spacer_3_copy_8
               - type: ColumnPanel
                 properties: {role: tonal-card, tooltip: '', border: '', foreground: '',
                   visible: true, wrap_on: mobile, col_spacing: medium, spacing_above: small,
@@ -1465,6 +1459,12 @@ components:
                       grid_position: DSOUIP,PDYWNC
                     name: rtext_student_prompt_copy_52
                     data_bindings: []
+              - type: Spacer
+                properties: {height: 18}
+                layout_properties:
+                  col_widths: {}
+                  grid_position: WIWOGE,ZYXRTG
+                name: spacer_3_copy_8
               - type: Button
                 properties: {role: filled-button, align: right, tooltip: '', border: '',
                   enabled: true, foreground: '', visible: true, text: Onward, font_size: null,
@@ -1828,6 +1828,16 @@ components:
                       grid_position: ANEMCT,IZMIZX
                     event_bindings: {click: btn_student_next_question_click}
                     name: btn_student_next_question_copy_8
+                  - type: Label
+                    properties: {role: null, align: left, tooltip: '', border: '',
+                      foreground: 'theme:On Tertiary Container', visible: false, text: 'Inquiry
+                        6.2: ', font_size: 18, font: '', spacing_above: small, icon_align: left,
+                      spacing_below: small, italic: false, background: '', bold: true,
+                      underline: false, icon: ''}
+                    layout_properties:
+                      col_widths: {}
+                      grid_position: TZGCMO,TPOZTZ
+                    name: label_context_copy_22
                   - type: ColumnPanel
                     properties: {role: null, tooltip: '', border: '', foreground: '',
                       visible: true, wrap_on: mobile, col_spacing: medium, spacing_above: small,
@@ -1837,12 +1847,6 @@ components:
                       grid_position: QKRSFU,RVYJUN
                     name: student_page1_copy_9
                     components:
-                    - type: Label
-                      properties: {text: 'Inquiry 6.2: '}
-                      layout_properties:
-                        col_widths: {}
-                        grid_position: CYGQFC,KIUHNW
-                      name: label_context_copy_22
                     - type: Label
                       properties: {role: null, align: left, tooltip: '', border: '',
                         foreground: 'theme:On Tertiary Container', visible: true,
@@ -1875,10 +1879,14 @@ components:
                       layout_properties: {grid_position: 'TLAVOA,SZJJKG'}
                       name: spacer_1_copy_9
                     - type: Label
-                      properties: {text: Your}
+                      properties: {role: null, align: left, tooltip: '', border: '',
+                        foreground: 'theme:On Tertiary Container', visible: true,
+                        text: 'Your hypotheses:', font_size: 18, font: '', spacing_above: small,
+                        icon_align: left, spacing_below: small, italic: false, background: '',
+                        bold: true, underline: false, icon: ''}
                       layout_properties:
                         col_widths: {}
-                        grid_position: SDNVET,WHSXDS
+                        grid_position: EMGOQK,LQIDOB
                       name: label_options_copy_10
                     - type: ColumnPanel
                       properties: {role: tonal-card, tooltip: '', border: '', foreground: '',
@@ -1899,9 +1907,9 @@ components:
                         - type: RichText
                           properties: {role: null, align: left, tooltip: '', enable_slots: true,
                             border: '', foreground: 'theme:On Background', visible: true,
-                            font_size: 16, content: Regularly alternate between pushing harder and easing off.,
-                            font: '', spacing_above: small, spacing_below: small,
-                            data: null, background: '', format: markdown}
+                            font_size: 16, content: 'Why does pushing with more strength
+                              make things move faster?', font: '', spacing_above: small,
+                            spacing_below: small, data: null, background: '', format: markdown}
                           layout_properties:
                             col_widths: {}
                             grid_position: PHNJFN,JVBBZZ
@@ -1910,7 +1918,7 @@ components:
                           components:
                           - type: TextBox
                             properties: {role: null, align: left, hide_text: false,
-                              tooltip: '', placeholder: provide reasoning, border: '',
+                              tooltip: '', placeholder: your reasoning, border: '',
                               enabled: true, foreground: 'theme:On Surface Variant',
                               visible: true, text: '', font_size: null, font: '',
                               spacing_above: small, type: text, spacing_below: small,
@@ -1920,9 +1928,9 @@ components:
                       - type: RichText
                         properties: {role: null, align: left, tooltip: '', enable_slots: true,
                           border: '', foreground: 'theme:On Background', visible: true,
-                          font_size: 16, content: Keep pushing harder to speed up faster.,
-                          font: '', spacing_above: small, spacing_below: small, data: null,
-                          background: '', format: markdown}
+                          font_size: 16, content: 'Why do we need more force to move
+                            heavier objects?', font: '', spacing_above: small, spacing_below: small,
+                          data: null, background: '', format: markdown}
                         layout_properties:
                           col_widths: {}
                           grid_position: IDKZTB,BOJNCJ
@@ -1931,7 +1939,7 @@ components:
                         components:
                         - type: TextBox
                           properties: {role: null, align: left, hide_text: false,
-                            tooltip: '', placeholder: provide reasoning, border: '',
+                            tooltip: '', placeholder: your reasoning, border: '',
                             enabled: true, foreground: 'theme:On Surface Variant',
                             visible: true, text: '', font_size: null, font: '', spacing_above: small,
                             type: text, spacing_below: small, italic: true, background: '',
