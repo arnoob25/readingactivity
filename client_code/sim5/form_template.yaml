@@ -1,0 +1,81 @@
+container:
+  type: HtmlTemplate
+  properties: {tooltip: '', background: '', foreground: '', border: '', visible: true,
+    role: null, html: "<!DOCTYPE html>\n<html>\n\n<head>\n    <style>\n        #container\
+      \ {\n            width: 100%;\n            height: 200px;\n            border:\
+      \ 1px solid black;\n            position: relative;\n        }\n\n        #car\
+      \ {\n            width: 50px;\n            height: 50px;\n            position:\
+      \ absolute;\n            left: 0;\n            top: 75px;\n            background-color:\
+      \ red;\n        }\n\n        #threshold {\n            width: 20px;\n      \
+      \      height: 200px;\n            position: absolute;\n            right: 50px;\n\
+      \            top: 0;\n            background-color: green;\n        }\n\n  \
+      \       #tabs {\n            display: flex;\n        }\n\n        .tab {\n \
+      \           float: left;\n            padding: 10px;\n            cursor: pointer;\n\
+      \        }\n\n        .tab.active {\n            background-color: #ddd;\n \
+      \       }\n    </style>\n</head>\n\n<body>\n    <div id=\"tabs\">\n        <div\
+      \ class=\"tab active\" onclick=\"selectTab(1)\">Tab 1</div>\n        <div class=\"\
+      tab\" onclick=\"selectTab(2)\">Tab 2</div>\n        <div class=\"tab\" onclick=\"\
+      selectTab(3)\">Tab 3</div>\n    </div>\n\n    <div id=\"container\">\n     \
+      \   <div id=\"car\"></div>\n        <div id=\"threshold\"></div>\n    </div>\n\
+      \n    <button id=\"simulateButton\" onclick=\"simulate()\">Simulate</button>\n\
+      \    <button id=\"resetButton\" onclick=\"reset()\" disabled>Reset</button>\n\
+      \n    <select id=\"brake\" onchange=\"applyBrake(this.value)\">\n        <option\
+      \ value=\"0\">No Brake</option>\n        <option value=\"1\">Small Brake</option>\n\
+      \        <option value=\"2\">Large Brake</option>\n    </select>\n\n    <p id=\"\
+      message\"></p>\n    <p id=\"carSpecs\"></p>\n    <p id=\"benchmarkDeceleration\"\
+      ></p>\n\n    <script>\n        var car = document.getElementById('car');\n \
+      \       var container = document.getElementById('container');\n        var brake\
+      \ = document.getElementById('brake');\n        var threshold = document.getElementById('threshold');\n\
+      \        var message = document.getElementById('message');\n        var carSpecs\
+      \ = document.getElementById('carSpecs');\n        var benchmarkDeceleration\
+      \ = document.getElementById('benchmarkDeceleration');\n        var simulateButton\
+      \ = document.getElementById('simulateButton');\n        var resetButton = document.getElementById('resetButton');\n\
+      \n        var topSpeed = 17;\n        var speed = topSpeed;\n        var brakeForce\
+      \ = 0;\n        var mass = 1;\n        var requestId;\n\n        carSpecs.innerHTML\
+      \ = 'Car Mass: ' + mass + ', Top Speed: ' + topSpeed;\n\n        function calculateBenchmarkDeceleration()\
+      \ {\n            var d = container.offsetWidth - threshold.offsetWidth - car.offsetWidth\
+      \ - 2;\n            var a_benchmark = -(topSpeed * topSpeed) / (2 * d);\n  \
+      \          benchmarkDeceleration.innerHTML = 'Benchmark Deceleration: ' + a_benchmark.toFixed(2);\n\
+      \        }\n\n        calculateBenchmarkDeceleration();\n\n        function\
+      \ simulate() {\n            cancelAnimationFrame(requestId);\n            car.style.left\
+      \ = '0px';\n            speed = topSpeed;\n            message.innerHTML = '';\n\
+      \            simulateButton.disabled = true;\n            resetButton.disabled\
+      \ = true;\n\n\n            var d = container.offsetWidth - threshold.offsetWidth\
+      \ - car.offsetWidth - 2;\n            var a_benchmark = -(topSpeed * topSpeed)\
+      \ / (2 * d);\n            benchmarkDeceleration.innerHTML = 'Benchmark Deceleration:\
+      \ ' + a_benchmark.toFixed(2);\n\n            move();\n        }\n\n        function\
+      \ move() {\n            var maxPos = container.offsetWidth - car.offsetWidth\
+      \ - 2;\n            var pos = parseInt(car.style.left);\n            if (pos\
+      \ < maxPos) {\n                speed -= brakeForce / mass; \n              \
+      \  if (speed < 0) speed = 0;\n\n                var newPos = pos + speed;\n\
+      \                if (newPos > maxPos) newPos = maxPos;\n\n                car.style.left\
+      \ = newPos + 'px';\n\n                if (newPos >= threshold.offsetLeft) {\n\
+      \                    message.innerHTML = 'Failure';\n                    endSimulation();\n\
+      \                } else if (speed === 0 && newPos < threshold.offsetLeft) {\n\
+      \                    message.innerHTML = 'Success';\n                    endSimulation();\n\
+      \                }\n\n                requestId = requestAnimationFrame(move);\n\
+      \            }\n        }\n\n        function applyBrake(value) {\n        \
+      \    switch (value) {\n                case '1':\n                    brakeForce\
+      \ = 0.1;\n                    break;\n                case '2':\n          \
+      \          brakeForce = 0.2;\n                    break;\n                default:\n\
+      \                    brakeForce = 0;\n                    break;\n         \
+      \   }\n        }\n\n        function endSimulation() {\n            cancelAnimationFrame(requestId);\n\
+      \            resetButton.disabled = false;\n        }\n\n        function reset()\
+      \ {\n            cancelAnimationFrame(requestId);\n            car.style.left\
+      \ = '0px';\n            speed = topSpeed;\n            message.innerHTML = '';\n\
+      \            simulateButton.disabled = false;\n            resetButton.disabled\
+      \ = true;\n        }\n\n        function selectTab(tabNumber) {\n          \
+      \  var tabs = document.getElementsByClassName('tab');\n            for (var\
+      \ i = 0; i < tabs.length; i++) {\n                tabs[i].classList.remove('active');\n\
+      \            }\n            tabs[tabNumber - 1].classList.add('active');\n\n\
+      \            switch (tabNumber) {\n                case 1:\n               \
+      \     mass = 1;\n                    topSpeed = 17;\n                    break;\n\
+      \                case 2:\n                    mass = 2;\n                  \
+      \  topSpeed = 15;\n                    break;\n                case 3:\n   \
+      \                 mass = 3;\n                    topSpeed = 13;\n          \
+      \          break;\n            }\n\n            carSpecs.innerHTML = 'Car Mass:\
+      \ ' + mass + ', Top Speed: ' + topSpeed;\n            calculateBenchmarkDeceleration();\n\
+      \        }\n    </script>\n</body>\n\n</html>"}
+components: []
+is_package: true
+custom_component: true

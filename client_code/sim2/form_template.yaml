@@ -1,0 +1,76 @@
+container:
+  type: HtmlTemplate
+  properties: {tooltip: '', background: '', foreground: '', border: '', visible: true,
+    role: null, html: "<!DOCTYPE html>\n<html>\n\n<head>\n    <style>\n        .container\
+      \ {\n            width: 100%;\n            height: 200px;\n            border:\
+      \ 1px solid black;\n            position: relative;\n        }\n\n        .car\
+      \ {\n            width: 50px;\n            height: 50px;\n            background-color:\
+      \ red;\n            position: absolute;\n            left: 0;\n        }\n\n\
+      \        .tabcontent {\n            display: none;\n        }\n\n        .tablink\
+      \ {\n            background-color: #555;\n            color: white;\n      \
+      \      float: left;\n            border: none;\n            outline: none;\n\
+      \            cursor: pointer;\n            padding: 14px 16px;\n           \
+      \ font-size: 17px;\n            width: 33.3%;\n        }\n\n        .tablink:hover\
+      \ {\n            background-color: #777;\n        }\n\n        .tabcontent {\n\
+      \            color: black;\n            display: none;\n            padding:\
+      \ 50px 20px;\n            height: 250px;\n        }\n    </style>\n</head>\n\
+      \n<body>\n    <button class=\"tablink\" onclick=\"openTab('Person1', this, 5)\"\
+      \ id=\"defaultOpen\">Person 1 (Mass = 5 units)</button>\n    <button class=\"\
+      tablink\" onclick=\"openTab('Person2', this, 20)\">Person 2 (Mass = 20 units)</button>\n\
+      \    <button class=\"tablink\" onclick=\"openTab('Person3', this, 50)\">Person\
+      \ 3 (Mass = 50 units)</button>\n\n    <div id=\"Person1\" class=\"tabcontent\"\
+      >\n        <div class=\"container\">\n            <div class=\"car\"></div>\n\
+      \        </div>\n        <p class=\"timer\">0.00</p>\n        <button class=\"\
+      simulateButton\">Simulate</button>\n        <button class=\"resetButton\" disabled>Reset</button>\n\
+      \    </div>\n\n    <div id=\"Person2\" class=\"tabcontent\">\n        <div class=\"\
+      container\">\n            <div class=\"car\"></div>\n        </div>\n      \
+      \  <p class=\"timer\">0.00</p>\n        <button class=\"simulateButton\">Simulate</button>\n\
+      \        <button class=\"resetButton\" disabled>Reset</button>\n    </div>\n\
+      \n    <div id=\"Person3\" class=\"tabcontent\">\n        <div class=\"container\"\
+      >\n            <div class=\"car\"></div>\n        </div>\n        <p class=\"\
+      timer\">0.00</p>\n        <button class=\"simulateButton\">Simulate</button>\n\
+      \        <button class=\"resetButton\" disabled>Reset</button>\n    </div>\n\
+      \n    <script>\n        const force = 550; // constant force\n\n        function\
+      \ openTab(tabId, elmnt, mass) {\n            var i, tabcontent, tablinks;\n\n\
+      \            tablinks = document.getElementsByClassName(\"tablink\");\n    \
+      \        for (i = 0; i < tablinks.length; i++) {\n                tablinks[i].style.backgroundColor\
+      \ = \"#555\"; // not selected tabs\n            }\n            elmnt.style.backgroundColor\
+      \ = \"#777\"; // selected tab\n            elmnt.disabled = false;\n\n\n   \
+      \         tabcontent = document.getElementsByClassName(\"tabcontent\");\n\n\
+      \            for (i = 0; i < tabcontent.length; i++) {\n                tabcontent[i].style.display\
+      \ = \"none\";\n                tabcontent[i].querySelector('.car').style.left\
+      \ = '0px';\n                tabcontent[i].querySelector('.timer').textContent\
+      \ = '0.00';\n                tabcontent[i].querySelector('.simulateButton').disabled\
+      \ = false;\n                tabcontent[i].querySelector('.resetButton').disabled\
+      \ = true;\n\n                if (tabcontent[i].animationFrameId) {\n       \
+      \             cancelAnimationFrame(tabcontent[i].animationFrameId);\n      \
+      \              tabcontent[i].animationFrameId = null;\n                }\n\n\
+      \                if (tabId === tabcontent[i].id) {\n                    const\
+      \ car = tabcontent[i].querySelector('.car');\n                    const container\
+      \ = tabcontent[i].querySelector('.container');\n                    const timerElement\
+      \ = tabcontent[i].querySelector('.timer');\n                    const simulateButton\
+      \ = tabcontent[i].querySelector('.simulateButton');\n                    const\
+      \ resetButton = tabcontent[i].querySelector('.resetButton');\n\n           \
+      \         simulateButton.onclick = function () {\n                        this.disabled\
+      \ = true;\n\n                        const acceleration = force / mass;\n\n\
+      \                        let startTime = Date.now();\n                     \
+      \   let animationFrameId = requestAnimationFrame(function animate() {\n    \
+      \                        const timeElapsedInSeconds = (Date.now() - startTime)\
+      \ / 1000;\n                            timerElement.textContent = timeElapsedInSeconds.toFixed(2);\n\
+      \n                            const displacement = 0.5 * acceleration * Math.pow(timeElapsedInSeconds,\
+      \ 2);\n                            car.style.left = Math.min(displacement, container.offsetWidth\
+      \ - car.offsetWidth - 2) + 'px';\n\n                            if (displacement\
+      \ < container.offsetWidth - car.offsetWidth - 2) {\n                       \
+      \         animationFrameId = requestAnimationFrame(animate);\n             \
+      \               } else {\n                                resetButton.disabled\
+      \ = false;\n                            }\n                        });\n\n \
+      \                       resetButton.onclick = function () {\n              \
+      \              this.disabled = true;\n\n                            cancelAnimationFrame(animationFrameId);\n\
+      \                            car.style.left = '0px';\n                     \
+      \       timerElement.textContent = '0.00';\n                        };\n   \
+      \                 };\n                }\n\n                document.getElementById(tabId).style.display\
+      \ = \"block\";\n            }\n        }\n\n        document.getElementById(\"\
+      defaultOpen\").click();\n    </script>\n</body>\n\n</html>"}
+components: []
+is_package: true
+custom_component: true
