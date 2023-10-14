@@ -138,16 +138,23 @@ components:
         grid_position: XKLJFL,IUNIZC
       name: ocard_options_copy
       components:
-      - type: RichText
-        properties: {role: null, align: left, tooltip: '', enable_slots: true, border: '',
-          foreground: 'theme:On Background', visible: true, font_size: 16, content: Pushing harder seems to make the car pick up speed more quickly.,
-          font: '', spacing_above: small, spacing_below: small, data: null, background: '',
-          format: markdown}
-        layout_properties:
-          col_widths: {}
-          grid_position: JUIIFD,VQAZSW
-        name: rtext_student_prompt_copy
-        data_bindings: []
+      - type: ColumnPanel
+        properties: {role: null, tooltip: '', border: '', foreground: '', visible: true,
+          wrap_on: never, col_spacing: none, spacing_above: small, col_widths: '{}',
+          spacing_below: small, background: ''}
+        name: outlined_card_2
+        layout_properties: {grid_position: 'WKOQON,KETAAD'}
+        components:
+        - type: RichText
+          properties: {role: null, align: left, tooltip: '', enable_slots: true, border: '',
+            foreground: 'theme:On Background', visible: true, font_size: 16, content: Pushing harder seems to make the car pick up speed more quickly.,
+            font: '', spacing_above: small, spacing_below: small, data: null, background: '',
+            format: markdown}
+          layout_properties:
+            col_widths: {}
+            grid_position: PHNJFN,JVBBZZ
+          name: rtext_student_prompt_copy
+          data_bindings: []
       - type: RichText
         properties: {role: null, align: left, tooltip: '', enable_slots: true, border: '',
           foreground: 'theme:On Background', visible: true, font_size: 16, content: A harder push doesn’t always mean a faster car.,
