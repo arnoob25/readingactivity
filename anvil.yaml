@@ -11,7 +11,7 @@ services:
 - source: /runtime/services/google.yml
   client_config: {}
   server_config: {}
-startup: {type: form, module: sim3}
+startup: {type: form, module: MainPage}
 package_name: GLEAT_
 allow_embedding: false
 name: 'GLEAT '
