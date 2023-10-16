@@ -2,6 +2,9 @@ dependencies:
 - dep_id: dep_ix438i6q35m2i
   version: {dev: false}
   resolution_hints: {app_id: XVNLK4OHMQETTEUV, name: Sim, package_name: Sim}
+- dep_id: dep_qszxj4azom9hwd
+  version: {dev: false}
+  resolution_hints: {app_id: XVNLK4OHMQETTEUV, name: Sim, package_name: Sim}
 services:
 - source: /runtime/services/tables.yml
   client_config: {}
@@ -15,7 +18,7 @@ services:
   client_config: {}
   server_config: {}
 startup: {type: form, module: sim1}
-package_name: GLEAT_
+package_name: GLEAT_sims
 allow_embedding: false
 name: 'GLEAT '
 runtime_options: {version: 2, client_version: '3', server_version: python3-sandbox,
