@@ -1,8 +1,45 @@
 container:
   type: HtmlTemplate
   properties: {tooltip: '', background: '', foreground: '', border: '', visible: true,
-    role: null, html: '<iframe src="https://sensible-mosquito.static.domains/sim3"
-      width="640" height="480"></iframe>'}
+    role: null, html: "<!DOCTYPE html>\n<html>\n\n<head>\n    <style>\n        #a\
+      \ {\n            width: 100%;\n            height: 400px;\n            border:\
+      \ 1px solid black;\n            position: relative;\n            margin-top:\
+      \ 10px;\n        }\n\n        .b {\n            width: 50px;\n            height:\
+      \ 50px;\n            position: absolute;\n            left: 0;\n        }\n\n\
+      \        #b1 {\n            background-color: red;\n            top: 0;\n  \
+      \      }\n\n        #b2 {\n            background-color: blue;\n           \
+      \ top: 100px;\n        }\n\n        #b3 {\n            background-color: green;\n\
+      \            top: 200px;\n        }\n\n        #b4 {\n            background-color:\
+      \ yellow;\n            top: 300px;\n        }\n\n        #c {\n            width:\
+      \ 100%;\n            height: 100px;\n            border: 0;\n            display:\
+      \ flex;\n            justify-content: space-around;\n        }\n\n        .d\
+      \ {\n            width: 20%;\n            border: 1px solid black;\n       \
+      \     display: flex;\n            flex-direction: column;\n            align-items:\
+      \ center;\n            justify-content: center;\n        }\n    </style>\n</head>\n\
+      \n<body>\n    <div id=\"c\">\n        <div id=\"d1\" class=\"d\"></div>\n  \
+      \      <div id=\"d2\" class=\"d\"></div>\n        <div id=\"d3\" class=\"d\"\
+      ></div>\n        <div id=\"d4\" class=\"d\"></div>\n    </div>\n\n    <div id=\"\
+      a\">\n        <div id=\"b1\" class=\"b\"></div>\n        <div id=\"b2\" class=\"\
+      b\"></div>\n        <div id=\"b3\" class=\"b\"></div>\n        <div id=\"b4\"\
+      \ class=\"b\"></div>\n    </div>\n\n    <button id=\"e\">Simulate</button>\n\
+      \    <button id=\"f\" disabled>Reset</button>\n\n    <script>\n        function\
+      \ g() {\n            Array.from(document.getElementsByClassName('b')).forEach((h,\
+      \ i) => {\n                const j = Math.random() * (75 - 55) + 15;\n     \
+      \           const k = Math.random() * (350 - 200) + 50;\n                document.getElementsByClassName('d')[i].textContent\
+      \ = `Mass: ${j.toFixed(2)}\\nForce: ${k.toFixed(2)}`;\n                h.style.transform\
+      \ = 'translateX(0px)';\n                h.dataset.l = k / j;\n            });\n\
+      \            document.getElementById('f').disabled = true;\n            document.getElementById('e').disabled\
+      \ = false;\n        }\n\n        document.getElementById('e').onclick = function\
+      \ () {\n            this.disabled = true;\n            (function m() {\n   \
+      \             let n = false;\n                Array.from(document.getElementsByClassName('b')).forEach(o\
+      \ => {\n                    if (n) return;\n                    const p = parseFloat(o.style.transform.split('(')[1]);\n\
+      \                    const q = Math.min(p + parseFloat(o.dataset.l), document.getElementById('a').offsetWidth\
+      \ - o.offsetWidth - 2);\n                    o.style.transform = `translateX(${q}px)`;\n\
+      \                    if (q >= document.getElementById('a').offsetWidth - o.offsetWidth\
+      \ - 2) {\n                        n = true;\n                        document.getElementById('f').disabled\
+      \ = false;\n                    }\n                });\n                if (!n)\
+      \ requestAnimationFrame(m);\n            })();\n        };\n\n        document.getElementById('f').onclick\
+      \ = g;\n\n        window.onload = g;\n    </script>\n\n</body>\n\n</html>"}
 components: []
 is_package: true
 custom_component: true
