@@ -59,5 +59,48 @@ class MainPage(MainPageTemplate):
     self.rpanel_student_options.items = self.question['options']'''
 
   def btn_student_next_question_click(self, **event_args):
-    """This method is called when the button is clicked"""
-    pass
+    if self.inquiry10.visible is True:
+      self.title.scroll_into_view()
+      self.inquiry10.visible = False
+      self.inquiry21.visible = True
+      pass
+    elif self.inquiry21.visible is True:
+      self.title.scroll_into_view()
+      self.inquiry21.visible = False
+      self.inquiry22.visible = True
+      pass
+    elif self.inquiry22.visible is True:
+      self.title.scroll_into_view()
+      self.inquiry22.visible = False
+      self.inquiry31.visible = True
+      pass
+    elif self.inquiry31.visible is True:
+      self.title.scroll_into_view()
+      self.inquiry31.visible = False
+      self.inquiry32.visible = True
+      pass
+    elif self.inquiry32.visible is True:
+      self.title.scroll_into_view()
+      self.inquiry32.visible = False
+      self.inquiry40.visible = True
+      pass
+    elif self.inquiry40.visible is True:
+      self.title.scroll_into_view()
+      self.inquiry40.visible = False
+      self.inquiry51.visible = True
+      pass
+    elif self.inquiry51.visible is True:
+      self.title.scroll_into_view()
+      self.inquiry51.visible = False
+      self.inquiry52.visible = True
+      pass
+    elif self.inquiry52.visible is True:
+      self.title.scroll_into_view()
+      self.inquiry52.visible = False
+      self.inquiry61.visible = True
+      pass
+    elif self.inquiry61.visible is True:
+      self.title.scroll_into_view()
+      self.inquiry61.visible = False
+      self.inquiry62.visible = True
+      pass
