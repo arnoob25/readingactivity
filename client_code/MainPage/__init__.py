@@ -15,20 +15,6 @@ class MainPage(MainPageTemplate):
     # Set Form properties and Data Bindings.
     self.init_components(**properties)
 
-    '''# Declare instance variables
-    self.curr_file = None
-    self.curr_ra_step = 0
-    self.curr_gi_step = 0
-    self.query_ra_steps = None # Task: might not need it
-    self.data = {} # Task: might not need it
-    self.question = None # Task: might not need it
-
-    # temp data storage
-    self.lo = ""
-    self.milestones = []
-    self.gi_steps = {} # Task: might not need it
-    self.inquiries = []'''
-
     # preventing unusual horizontal scrolling on mobile
     is_mobile = anvil.js.call_js(
       '''
@@ -38,26 +24,23 @@ class MainPage(MainPageTemplate):
       '''
     )
 
+    self.inquiry10.visible = True
+    
     if is_mobile:
       self.col_spacing = 'none'
     
-    '''# Any code you write here will run before the form opens.
-    self.student_page1.visible = True
-    self.student_page_end.visible = False
-
-    # Testing the student end // Task: remove this
-    self.curr_file = app_tables.files.get(
-      id = 'demo'
-    )
-    
-    self.inquiries = self.curr_file['inquiries']
-    self.question = self.inquiries[0][0]
-    #self.interactive_component.html = server.call('restore_html', self.question['code'])
-    self.title.text = self.question['question'] # Task: restore actual code: f"Step {1} question: {1} of {len(self.inquiries[0])}"
-    self.rtext_student_context.content = self.question['context']
-    self.rtext_student_prompt.content = self.question['inquiry']
-    self.rpanel_student_options.items = self.question['options']'''
 
   def btn_student_next_question_click(self, **event_args):
-    """This method is called when the button is clicked"""
-    pass
+    if self.inquiry10.visible is True:
+      self.inquiry10.visible = False
+      self.inquiry21.visible = True
+      pass
+    elif self.inquiry21.visible is True:
+      self.title.scroll_into_view()
+      self.inquiry21.visible = False
+      self.inquiry22.visible = True
+      pass
+    elif self.inquiry22.visible is True:
+      self.inquiry22.visible = False
+      self.inquiry31.visible = True
+      pass

@@ -30,7 +30,7 @@ components:
     name: inquiry
     components:
     - type: ColumnPanel
-      properties: {role: null, tooltip: '', border: '', foreground: '', visible: true,
+      properties: {role: null, tooltip: '', border: '', foreground: '', visible: false,
         wrap_on: mobile, col_spacing: medium, spacing_above: small, col_widths: '{}',
         spacing_below: small, background: ''}
       name: inquiry10
@@ -85,12 +85,12 @@ components:
           properties: {}
           name: sim1_1
           layout_properties: {grid_position: 'IDDGGT,NCOULF'}
-        - type: Spacer
-          properties: {height: 35}
-          layout_properties:
-            col_widths: {}
-            grid_position: LSPELW,XHRMXY
-          name: spacer_1_copy_11
+      - type: Spacer
+        properties: {height: 35}
+        layout_properties:
+          col_widths: {}
+          grid_position: XJJDST,ILBLFA
+        name: spacer_1_copy_11
       - type: Label
         properties: {role: null, align: left, tooltip: '', border: '', foreground: 'theme:On
             Tertiary Container', visible: true, text: 'Prompt: ', font_size: 18, font: '',
@@ -683,10 +683,10 @@ components:
           col_widths: {}
           grid_position: OAVAWX,AEGOTA
         components:
-        - type: form:sim3
+        - type: form:sghi
           properties: {}
-          name: sim3_1
-          layout_properties: {grid_position: 'MEAWZW,TCARBW'}
+          name: sghi_1
+          layout_properties: {grid_position: 'APINKD,DUULCL'}
       - type: Spacer
         properties: {height: 35}
         layout_properties:
@@ -866,14 +866,8 @@ components:
         components:
         - type: form:sim3
           properties: {}
-          name: sim3_1_copy
-          layout_properties: {grid_position: 'MEAWZW,TCARBW'}
-        - type: Spacer
-          properties: {height: 35}
-          layout_properties:
-            col_widths: {}
-            grid_position: RHIDZY,NQWSGQ
-          name: spacer_1_copy_14
+          name: sim3_2
+          layout_properties: {grid_position: 'JCMTIE,XJSDXC'}
       - type: ColumnPanel
         properties: {role: null, tooltip: '', border: '', foreground: '', visible: true,
           wrap_on: mobile, col_spacing: medium, spacing_above: small, col_widths: '{}',

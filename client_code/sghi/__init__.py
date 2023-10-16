@@ -1,11 +1,11 @@
-from ._anvil_designer import sim3Template
+from ._anvil_designer import sghiTemplate
 from anvil import *
 import anvil.server
 import anvil.google.auth, anvil.google.drive
 from anvil.google.drive import app_files
 import anvil.users
 
-class sim3(sim3Template):
+class sghi(sghiTemplate):
   def __init__(self, **properties):
     # Set Form properties and Data Bindings.
     self.init_components(**properties)
