@@ -80,11 +80,7 @@ components:
           spacing_below: small, background: ''}
         name: ocard_student_interact
         layout_properties: {grid_position: 'ZUMSIC,BVVSVY'}
-        components:
-        - type: form:sim1
-          properties: {}
-          name: sim1_1
-          layout_properties: {grid_position: 'IDDGGT,NCOULF'}
+        components: []
       - type: Spacer
         properties: {height: 35}
         layout_properties:

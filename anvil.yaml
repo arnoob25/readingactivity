@@ -2,9 +2,6 @@ dependencies:
 - dep_id: dep_ix438i6q35m2i
   version: {dev: false}
   resolution_hints: {app_id: XVNLK4OHMQETTEUV, name: Sim, package_name: Sim}
-- dep_id: dep_qszxj4azom9hwd
-  version: {dev: false}
-  resolution_hints: {app_id: XVNLK4OHMQETTEUV, name: Sim, package_name: Sim}
 services:
 - source: /runtime/services/tables.yml
   client_config: {}
