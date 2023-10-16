@@ -23,32 +23,32 @@ container:
       \ value=\"0\">No Brake</option>\n        <option value=\"1\">Small Brake</option>\n\
       \        <option value=\"2\">Large Brake</option>\n    </select>\n\n    <p id=\"\
       message\"></p>\n    <p id=\"carSpecs\"></p>\n    <p id=\"benchmarkDeceleration\"\
-      ></p>\n\n    <script>\n        var car = document.getElementById('car');\n \
-      \       var container = document.getElementById('container');\n        var brake\
-      \ = document.getElementById('brake');\n        var threshold = document.getElementById('threshold');\n\
-      \        var message = document.getElementById('message');\n        var carSpecs\
+      ></p>\n\n    <script>\n        var cary = document.getElementById('car');\n\
+      \        var container5 = document.getElementById('container');\n        var\
+      \ brake = document.getElementById('brake');\n        var threshold = document.getElementById('threshold');\n\
+      \        var message = document.getElementById('message');\n        var carySpecs\
       \ = document.getElementById('carSpecs');\n        var benchmarkDeceleration\
-      \ = document.getElementById('benchmarkDeceleration');\n        var simulateButton\
-      \ = document.getElementById('simulateButton');\n        var resetButton = document.getElementById('resetButton');\n\
+      \ = document.getElementById('benchmarkDeceleration');\n        var simulateButton5\
+      \ = document.getElementById('simulateButton');\n        var resetButton5 = document.getElementById('resetButton');\n\
       \n        var topSpeed = 17;\n        var speed = topSpeed;\n        var brakeForce\
-      \ = 0;\n        var mass = 1;\n        var requestId;\n\n        carSpecs.innerHTML\
+      \ = 0;\n        var mass = 1;\n        var requestId;\n\n        carySpecs.innerHTML\
       \ = 'Car Mass: ' + mass + ', Top Speed: ' + topSpeed;\n\n        function calculateBenchmarkDeceleration()\
-      \ {\n            var d = container.offsetWidth - threshold.offsetWidth - car.offsetWidth\
+      \ {\n            var d = container5.offsetWidth - threshold.offsetWidth - cary.offsetWidth\
       \ - 2;\n            var a_benchmark = -(topSpeed * topSpeed) / (2 * d);\n  \
       \          benchmarkDeceleration.innerHTML = 'Benchmark Deceleration: ' + a_benchmark.toFixed(2);\n\
       \        }\n\n        calculateBenchmarkDeceleration();\n\n        function\
-      \ simulate() {\n            cancelAnimationFrame(requestId);\n            car.style.left\
+      \ simulate() {\n            cancelAnimationFrame(requestId);\n            cary.style.left\
       \ = '0px';\n            speed = topSpeed;\n            message.innerHTML = '';\n\
-      \            simulateButton.disabled = true;\n            resetButton.disabled\
-      \ = true;\n\n\n            var d = container.offsetWidth - threshold.offsetWidth\
-      \ - car.offsetWidth - 2;\n            var a_benchmark = -(topSpeed * topSpeed)\
+      \            simulateButton5.disabled = true;\n            resetButton5.disabled\
+      \ = true;\n\n\n            var d = container5.offsetWidth - threshold.offsetWidth\
+      \ - cary.offsetWidth - 2;\n            var a_benchmark = -(topSpeed * topSpeed)\
       \ / (2 * d);\n            benchmarkDeceleration.innerHTML = 'Benchmark Deceleration:\
       \ ' + a_benchmark.toFixed(2);\n\n            move();\n        }\n\n        function\
-      \ move() {\n            var maxPos = container.offsetWidth - car.offsetWidth\
-      \ - 2;\n            var pos = parseInt(car.style.left);\n            if (pos\
+      \ move() {\n            var maxPos = container5.offsetWidth - cary.offsetWidth\
+      \ - 2;\n            var pos = parseInt(cary.style.left);\n            if (pos\
       \ < maxPos) {\n                speed -= brakeForce / mass; \n              \
       \  if (speed < 0) speed = 0;\n\n                var newPos = pos + speed;\n\
-      \                if (newPos > maxPos) newPos = maxPos;\n\n                car.style.left\
+      \                if (newPos > maxPos) newPos = maxPos;\n\n                cary.style.left\
       \ = newPos + 'px';\n\n                if (newPos >= threshold.offsetLeft) {\n\
       \                    message.innerHTML = 'Failure';\n                    endSimulation();\n\
       \                } else if (speed === 0 && newPos < threshold.offsetLeft) {\n\
@@ -60,10 +60,10 @@ container:
       \          brakeForce = 0.2;\n                    break;\n                default:\n\
       \                    brakeForce = 0;\n                    break;\n         \
       \   }\n        }\n\n        function endSimulation() {\n            cancelAnimationFrame(requestId);\n\
-      \            resetButton.disabled = false;\n        }\n\n        function reset()\
-      \ {\n            cancelAnimationFrame(requestId);\n            car.style.left\
+      \            resetButton5.disabled = false;\n        }\n\n        function reset()\
+      \ {\n            cancelAnimationFrame(requestId);\n            cary.style.left\
       \ = '0px';\n            speed = topSpeed;\n            message.innerHTML = '';\n\
-      \            simulateButton.disabled = false;\n            resetButton.disabled\
+      \            simulateButton5.disabled = false;\n            resetButton5.disabled\
       \ = true;\n        }\n\n        function selectTab(tabNumber) {\n          \
       \  var tabs = document.getElementsByClassName('tab');\n            for (var\
       \ i = 0; i < tabs.length; i++) {\n                tabs[i].classList.remove('active');\n\
@@ -73,7 +73,7 @@ container:
       \                case 2:\n                    mass = 2;\n                  \
       \  topSpeed = 15;\n                    break;\n                case 3:\n   \
       \                 mass = 3;\n                    topSpeed = 13;\n          \
-      \          break;\n            }\n\n            carSpecs.innerHTML = 'Car Mass:\
+      \          break;\n            }\n\n            carySpecs.innerHTML = 'Car Mass:\
       \ ' + mass + ', Top Speed: ' + topSpeed;\n            calculateBenchmarkDeceleration();\n\
       \        }\n    </script>\n</body>\n\n</html>"}
 components: []

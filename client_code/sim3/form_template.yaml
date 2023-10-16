@@ -1,61 +1,62 @@
 container:
   type: HtmlTemplate
   properties: {tooltip: '', background: '', foreground: '', border: '', visible: true,
-    role: null, html: "<!DOCTYPE html>\n<html>\n\n<head>\n    <style>\n        #container3\
+    role: null, html: "<!DOCTYPE html>\n<html>\n\n<head>\n    <style>\n        #container\
       \ {\n            width: 100%;\n            height: 400px;\n            border:\
-      \ 1px solid black;\n            position: relative;\n        }\n\n        .carx\
-      \ {\n            width: 50px;\n            height: 50px;\n            position:\
-      \ absolute;\n            left: 0;\n        }\n\n        #car1 {\n          \
-      \  background-color: red;\n            top: 0;\n        }\n\n        #car2 {\n\
-      \            background-color: blue;\n            top: 100px;\n        }\n\n\
-      \        #car3 {\n            background-color: green;\n            top: 200px;\n\
-      \        }\n\n        #car4 {\n            background-color: yellow;\n     \
-      \       top: 300px;\n        }\n\n        #infoContainer3 {\n            width:\
-      \ 100%;\n            height: 100px;\n            border: 1px solid black;\n\
-      \            display: flex;\n            justify-content: space-around;\n  \
-      \      }\n\n        .infoBox {\n            width: 20%;\n            border:\
-      \ 1px solid black;\n            display: flex;\n            flex-direction:\
-      \ column;\n            align-items: center;\n            justify-content: center;\n\
-      \        }\n    </style>\n</head>\n\n<body>\n    <div id=\"infoContainer3\"\
-      >\n        <div id=\"infoBox1\" class=\"infoBox\"></div>\n        <div id=\"\
-      infoBox2\" class=\"infoBox\"></div>\n        <div id=\"infoBox3\" class=\"infoBox\"\
-      ></div>\n        <div id=\"infoBox4\" class=\"infoBox\"></div>\n    </div>\n\
-      \n    <div id=\"Container3\">\n        <div id=\"car1\" class=\"carx\"></div>\n\
-      \        <div id=\"car2\" class=\"carx\"></div>\n        <div id=\"car3\" class=\"\
-      carx\"></div>\n        <div id=\"car4\" class=\"carx\"></div>\n    </div>\n\n\
-      \    <button id=\"simulateButton\">Simulate</button>\n    <button id=\"resetButton\"\
-      \ disabled>Reset</button>\n\n\n\n    <script>\n        const cars = Array.from(document.getElementsByClassName('carx'));\n\
+      \ 1px solid black;\n            position: relative;\n            margin-top:\
+      \ 10px;\n        }\n\n        .carx {\n            width: 50px;\n          \
+      \  height: 50px;\n            position: absolute;\n            left: 0;\n  \
+      \      }\n\n        #car1 {\n            background-color: red;\n          \
+      \  top: 0;\n        }\n\n        #car2 {\n            background-color: blue;\n\
+      \            top: 100px;\n        }\n\n        #car3 {\n            background-color:\
+      \ green;\n            top: 200px;\n        }\n\n        #car4 {\n          \
+      \  background-color: yellow;\n            top: 300px;\n        }\n\n       \
+      \ #infoContainer {\n            width: 100%;\n            height: 100px;\n \
+      \           border: 0;\n            display: flex;\n            justify-content:\
+      \ space-around;\n        }\n\n        .infoBox {\n            width: 20%;\n\
+      \            border: 1px solid black;\n            display: flex;\n        \
+      \    flex-direction: column;\n            align-items: center;\n           \
+      \ justify-content: center;\n        }\n    </style>\n</head>\n\n<body>\n   \
+      \ <div id=\"infoContainer\">\n        <div id=\"infoBox1\" class=\"infoBox\"\
+      ></div>\n        <div id=\"infoBox2\" class=\"infoBox\"></div>\n        <div\
+      \ id=\"infoBox3\" class=\"infoBox\"></div>\n        <div id=\"infoBox4\" class=\"\
+      infoBox\"></div>\n    </div>\n\n    <div id=\"container\">\n        <div id=\"\
+      car1\" class=\"carx\"></div>\n        <div id=\"car2\" class=\"carx\"></div>\n\
+      \        <div id=\"car3\" class=\"carx\"></div>\n        <div id=\"car4\" class=\"\
+      carx\"></div>\n    </div>\n\n    <button id=\"simulateButton\">Simulate</button>\n\
+      \    <button id=\"resetButton\" disabled>Reset</button>\n\n\n\n    <script>\n\
+      \        const kappaUnique = Array.from(document.getElementsByClassName('carx'));\n\
       \        const infoBoxes = Array.from(document.getElementsByClassName('infoBox'));\n\
-      \        const Container3 = document.getElementById('Container3');\n       \
-      \ const simulateButton = document.getElementById('simulateButton');\n      \
-      \  const resetButton = document.getElementById('resetButton');\n\n        let\
-      \ animationFrameId = null;\n        let carData = [];\n\n        function initializeCarData()\
-      \ {\n            // Calculate force and mass for each car once\n           \
-      \ carData = cars.map((car, index) => {\n                const mass = Math.random()\
-      \ * (75 - 55) + 15; // random mass between 5 and 15\n                const force\
-      \ = Math.random() * (350 - 200) + 50; // random force between 550 and 700\n\n\
-      \                infoBoxes[index].textContent = `Mass: ${mass.toFixed(2)}\\\
-      nForce: ${force.toFixed(2)}`;\n\n                return {\n                \
-      \    element: car,\n                    force,\n                    mass,\n\
-      \                };\n            });\n        }\n\n        simulateButton.onclick\
-      \ = function () {\n            this.disabled = true;\n\n            animationFrameId\
-      \ = requestAnimationFrame(function animate() {\n                carData.forEach(({\
-      \ element, force, mass }) => {\n                    const acceleration = force\
-      \ / mass;\n\n                    const displacement = element.style.transform\
-      \ ? parseFloat(element.style.transform.split('(')[1]) : 0;\n\n             \
-      \       element.style.transform = `translateX(${Math.min(displacement + acceleration,\
-      \ Container3.offsetWidth - element.offsetWidth - 2)}px)`;\n\n              \
-      \      if (displacement >= Container3.offsetWidth - element.offsetWidth - 2)\
-      \ {\n                        resetButton.disabled = false;\n               \
-      \     }\n                });\n\n                if (resetButton.disabled) {\n\
-      \                    animationFrameId = requestAnimationFrame(animate);\n  \
-      \              }\n            });\n        };\n\n        resetButton.onclick\
-      \ = function () {\n            this.disabled = true;\n            simulateButton.disabled\
-      \ = false;\n\n            cancelAnimationFrame(animationFrameId);\n\n      \
-      \      cars.forEach(car => car.style.transform = 'translateX(0px)');\n\n   \
-      \         infoBoxes.forEach(infoBox => infoBox.textContent = '');\n\n      \
-      \      initializeCarData();\n        };\n\n        window.onload = initializeCarData;\n\
-      \    </script>\n\n\n\n</body>\n\n</html>"}
+      \        const Container3 = document.getElementById('container');\n        const\
+      \ simulateButton3 = document.getElementById('simulateButton');\n        const\
+      \ resetButton3 = document.getElementById('resetButton');\n\n        let animationFrameId3\
+      \ = null;\n        let carData = [];\n\n        function initializeCarData()\
+      \ {\n            carData = kappaUnique.map((car, index) => {\n             \
+      \   const mass = Math.random() * (75 - 55) + 15;\n                const force\
+      \ = Math.random() * (350 - 200) + 50;\n\n                infoBoxes[index].textContent\
+      \ = `Mass: ${mass.toFixed(2)}\\nForce: ${force.toFixed(2)}`;\n\n           \
+      \     return {\n                    element: car,\n                    force,\n\
+      \                    mass,\n                };\n            });\n        }\n\
+      \n        simulateButton3.onclick = function () {\n            this.disabled\
+      \ = true;\n\n            animationFrameId3 = requestAnimationFrame(function\
+      \ animate() {\n                let winnerFound = false;\n\n                carData.forEach(({\
+      \ element, force, mass }) => {\n                    if (winnerFound) return;\n\
+      \n                    const acceleration = force / mass;\n                 \
+      \   const displacement = element.style.transform ? parseFloat(element.style.transform.split('(')[1])\
+      \ : 0;\n                    const newDisplacement = Math.min(displacement +\
+      \ acceleration, Container3.offsetWidth - element.offsetWidth - 2);\n\n     \
+      \               element.style.transform = `translateX(${newDisplacement}px)`;\n\
+      \n                    if (newDisplacement >= Container3.offsetWidth - element.offsetWidth\
+      \ - 2) {\n                        winnerFound = true;\n                    \
+      \    resetButton3.disabled = false;\n                    }\n               \
+      \ });\n\n                if (!winnerFound) {\n                    animationFrameId3\
+      \ = requestAnimationFrame(animate);\n                }\n            });\n  \
+      \      };\n\n        resetButton3.onclick = function () {\n            this.disabled\
+      \ = true;\n            simulateButton3.disabled = false;\n\n            cancelAnimationFrame(animationFrameId3);\n\
+      \n            kappaUnique.forEach(car => car.style.transform = 'translateX(0px)');\n\
+      \            infoBoxes.forEach(infoBox => infoBox.textContent = '');\n\n   \
+      \         initializeCarData();\n        };\n\n        window.onload = initializeCarData;\n\
+      \    </script>\n\n\n\n\n\n</body>\n\n</html>"}
 components: []
 is_package: true
 custom_component: true

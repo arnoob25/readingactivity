@@ -19,52 +19,52 @@ container:
       >\n        <tr>\n            <th># of experiment</th>\n            <th>Force</th>\n\
       \            <th>Mass</th>\n            <th>Acceleration</th>\n            <th>Time\
       \ to reach the end</th>\n        </tr>\n    </table>\n\n    <script>\n     \
-      \   const car = document.getElementById('car');\n        const container4 =\
-      \ document.getElementById('container');\n        const forceSlider = document.getElementById('forceSlider');\n\
+      \   const carf = document.getElementById('car');\n        const container4 =\
+      \ document.getElementById('container');\n        const forceSlider4 = document.getElementById('forceSlider');\n\
       \        const forceValue = document.getElementById('forceValue');\n       \
-      \ const massSelect = document.getElementById('massSelect');\n        const simulateButton\
-      \ = document.getElementById('simulateButton');\n        const resetButton =\
+      \ const massSelect = document.getElementById('massSelect');\n        const simulateButton4\
+      \ = document.getElementById('simulateButton');\n        const resetButton4 =\
       \ document.getElementById('resetButton');\n        const recordButton = document.getElementById('recordButton');\n\
-      \        const timerElement = document.getElementById('timer');\n        const\
+      \        const timerElement4 = document.getElementById('timer');\n        const\
       \ accelerationElement = document.getElementById('acceleration');\n        const\
-      \ dataTable = document.getElementById('dataTable');\n\n        let startTime\
-      \ = null;\n        let animationFrameId = null;\n        let experimentCount\
-      \ = 0;\n\n        forceSlider.oninput = function () {\n            simulateButton.disabled\
-      \ = this.value == 0 || animationFrameId !== null;\n            if (this.value\
-      \ > 0) {\n                resetButton.disabled = true;\n                recordButton.disabled\
+      \ dataTable = document.getElementById('dataTable');\n\n        let startTime4\
+      \ = null;\n        let animationFrameId4 = null;\n        let experimentCount\
+      \ = 0;\n\n        forceSlider4.oninput = function () {\n            simulateButton4.disabled\
+      \ = this.value == 0 || animationFrameId4 !== null;\n            if (this.value\
+      \ > 0) {\n                resetButton4.disabled = true;\n                recordButton.disabled\
       \ = true;\n            }\n            forceValue.textContent = 'Force: ' + this.value\
-      \ + ' N';\n        };\n\n        simulateButton.onclick = function () {\n  \
-      \          if (animationFrameId !== null) return; // simulation is running\n\
-      \n            this.disabled = true;\n\n            const force = forceSlider.value;\n\
+      \ + ' N';\n        };\n\n        simulateButton4.onclick = function () {\n \
+      \           if (animationFrameId4 !== null) return; // simulation is running\n\
+      \n            this.disabled = true;\n\n            const force = forceSlider4.value;\n\
       \            const mass = massSelect.value; // selected mass\n            const\
-      \ acceleration = force / mass;\n\n            startTime = Date.now();\n    \
-      \        animationFrameId = requestAnimationFrame(function animate() {\n   \
-      \             const timeElapsedInSeconds = (Date.now() - startTime) / 1000;\n\
-      \                timerElement.textContent = 'Time: ' + timeElapsedInSeconds.toFixed(2)\
+      \ acceleration = force / mass;\n\n            startTime4 = Date.now();\n   \
+      \         animationFrameId4 = requestAnimationFrame(function animate() {\n \
+      \               const timeElapsedInSeconds = (Date.now() - startTime4) / 1000;\n\
+      \                timerElement4.textContent = 'Time: ' + timeElapsedInSeconds.toFixed(2)\
       \ + ' s';\n\n                const displacement = 0.5 * acceleration * Math.pow(timeElapsedInSeconds,\
-      \ 2);\n                car.style.left = Math.min(displacement, container4.offsetWidth\
-      \ - car.offsetWidth - 2) + 'px';\n\n                accelerationElement.textContent\
+      \ 2);\n                carf.style.left = Math.min(displacement, container4.offsetWidth\
+      \ - carf.offsetWidth - 2) + 'px';\n\n                accelerationElement.textContent\
       \ = 'Acceleration: ' + acceleration.toFixed(2) + ' m/s\xb2';\n\n           \
-      \     if (displacement < container4.offsetWidth - car.offsetWidth - 2) {\n \
-      \                   animationFrameId = requestAnimationFrame(animate);\n   \
-      \             } else {\n                    resetButton.disabled = false;\n\
-      \                    recordButton.disabled = false;\n                    animationFrameId\
+      \     if (displacement < container4.offsetWidth - carf.offsetWidth - 2) {\n\
+      \                    animationFrameId4 = requestAnimationFrame(animate);\n \
+      \               } else {\n                    resetButton4.disabled = false;\n\
+      \                    recordButton.disabled = false;\n                    animationFrameId4\
       \ = null; // simulation ended\n                }\n            });\n        };\n\
-      \n        resetButton.onclick = function () {\n            this.disabled = true;\n\
-      \            simulateButton.disabled = false;\n            recordButton.disabled\
-      \ = true; // disable record button after reset\n\n            cancelAnimationFrame(animationFrameId);\n\
-      \            animationFrameId = null; // simulation ended\n\n            car.style.left\
-      \ = '0px';\n            timerElement.textContent = 'Time: 0.00 s';\n       \
-      \     accelerationElement.textContent = 'Acceleration: 0 m/s\xb2';\n       \
-      \ };\n\n        recordButton.onclick = function () {\n            this.disabled\
+      \n        resetButton4.onclick = function () {\n            this.disabled =\
+      \ true;\n            simulateButton4.disabled = false;\n            recordButton.disabled\
+      \ = true; // disable record button after reset\n\n            cancelAnimationFrame(animationFrameId4);\n\
+      \            animationFrameId4 = null; // simulation ended\n\n            carf.style.left\
+      \ = '0px';\n            timerElement4.textContent = 'Time: 0.00 s';\n      \
+      \      accelerationElement.textContent = 'Acceleration: 0 m/s\xb2';\n      \
+      \  };\n\n        recordButton.onclick = function () {\n            this.disabled\
       \ = true;\n\n            experimentCount++;\n\n            let row = dataTable.insertRow(-1);\n\
       \n            let cell1 = row.insertCell(0);\n            let cell2 = row.insertCell(1);\n\
       \            let cell3 = row.insertCell(2);\n            let cell4 = row.insertCell(3);\n\
       \            let cell5 = row.insertCell(4);\n\n            cell1.innerHTML =\
-      \ experimentCount;\n            cell2.innerHTML = forceSlider.value + \" N\"\
+      \ experimentCount;\n            cell2.innerHTML = forceSlider4.value + \" N\"\
       ;\n            cell3.innerHTML = massSelect.value + \" kg\";\n            cell4.innerHTML\
-      \ = (forceSlider.value / massSelect.value).toFixed(2) + \" m/s\xb2\";\n    \
-      \        cell5.innerHTML = timerElement.textContent;\n        };\n    </script>\n\
+      \ = (forceSlider4.value / massSelect.value).toFixed(2) + \" m/s\xb2\";\n   \
+      \         cell5.innerHTML = timerElement4.textContent;\n        };\n    </script>\n\
       \n\n\n\n</body>\n\n</html>"}
 components: []
 is_package: true
