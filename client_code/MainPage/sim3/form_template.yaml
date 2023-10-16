@@ -1,0 +1,8 @@
+container:
+  type: HtmlTemplate
+  properties: {tooltip: '', background: '', foreground: '', border: '', visible: true,
+    role: null, html: '<iframe src="https://sensible-mosquito.static.domains/sim3"
+      width="640" height="480"></iframe>'}
+components: []
+is_package: true
+custom_component: true

@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <style>
+        #a {
+            width: 100%;
+            height: 400px;
+            border: 1px solid black;
+            position: relative;
+            margin-top: 10px;
+        }
+
+        .b {
+            width: 50px;
+            height: 50px;
+            position: absolute;
+            left: 0;
+        }
+
+        #b1 {
+            background-color: red;
+            top: 0;
+        }
+
+        #b2 {
+            background-color: blue;
+            top: 100px;
+        }
+
+        #b3 {
+            background-color: green;
+            top: 200px;
+        }
+
+        #b4 {
+            background-color: yellow;
+            top: 300px;
+        }
+
+        #c {
+            width: 100%;
+            height: 100px;
+            border: 0;
+            display: flex;
+            justify-content: space-around;
+        }
+
+        .d {
+            width: 20%;
+            border: 1px solid black;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="c">
+        <div id="d1" class="d"></div>
+        <div id="d2" class="d"></div>
+        <div id="d3" class="d"></div>
+        <div id="d4" class="d"></div>
+    </div>
+
+    <div id="a">
+        <div id="b1" class="b"></div>
+        <div id="b2" class="b"></div>
+        <div id="b3" class="b"></div>
+        <div id="b4" class="b"></div>
+    </div>
+
+    <button id="e">Simulate</button>
+    <button id="f" disabled>Reset</button>
+
+    <script>
+        function g() {
+            Array.from(document.getElementsByClassName('b')).forEach((h, i) => {
+                const j = Math.random() * (75 - 55) + 15;
+                const k = Math.random() * (350 - 200) + 50;
+                document.getElementsByClassName('d')[i].textContent = `Mass: ${j.toFixed(2)}\nForce: ${k.toFixed(2)}`;
+                h.style.transform = 'translateX(0px)';
+                h.dataset.l = k / j;
+            });
+            document.getElementById('f').disabled = true;
+            document.getElementById('e').disabled = false;
+        }
+
+        document.getElementById('e').onclick = function () {
+            this.disabled = true;
+            (function m() {
+                let n = false;
+                Array.from(document.getElementsByClassName('b')).forEach(o => {
+                    if (n) return;
+                    const p = parseFloat(o.style.transform.split('(')[1]);
+                    const q = Math.min(p + parseFloat(o.dataset.l), document.getElementById('a').offsetWidth - o.offsetWidth - 2);
+                    o.style.transform = `translateX(${q}px)`;
+                    if (q >= document.getElementById('a').offsetWidth - o.offsetWidth - 2) {
+                        n = true;
+                        document.getElementById('f').disabled = false;
+                    }
+                });
+                if (!n) requestAnimationFrame(m);
+            })();
+        };
+
+        document.getElementById('f').onclick = g;
+
+        window.onload = g;
+    </script>
+
+</body>
+
+</html>
