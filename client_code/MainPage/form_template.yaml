@@ -682,11 +682,7 @@ components:
         layout_properties:
           col_widths: {}
           grid_position: OAVAWX,AEGOTA
-        components:
-        - type: form:sghi
-          properties: {}
-          name: sghi_1
-          layout_properties: {grid_position: 'APINKD,DUULCL'}
+        components: []
       - type: Spacer
         properties: {height: 35}
         layout_properties:
@@ -863,11 +859,7 @@ components:
         layout_properties:
           col_widths: {}
           grid_position: VPHHSG,MMOELA
-        components:
-        - type: form:sim3
-          properties: {}
-          name: sim3_2
-          layout_properties: {grid_position: 'JCMTIE,XJSDXC'}
+        components: []
       - type: ColumnPanel
         properties: {role: null, tooltip: '', border: '', foreground: '', visible: true,
           wrap_on: mobile, col_spacing: medium, spacing_above: small, col_widths: '{}',
