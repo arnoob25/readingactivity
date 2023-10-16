@@ -1,8 +1,8 @@
 container:
   type: HtmlTemplate
   properties: {tooltip: '', background: '', foreground: '', border: '', visible: true,
-    role: null, html: '<iframe src="https://drive.google.com/file/d/1M-pXBSBzG09D9pBaP8JD_f6aRQdc5Ha0/preview"
-      width="640" height="480"></iframe>'}
+    role: null, html: '<iframe src="https://frightening-wan-skua.anvil.app" width="640"
+      height="480"></iframe>'}
 components: []
 is_package: true
 custom_component: true
