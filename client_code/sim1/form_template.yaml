@@ -1,8 +1,40 @@
 container:
   type: HtmlTemplate
   properties: {tooltip: '', background: '', foreground: '', border: '', visible: true,
-    role: null, html: '<iframe src="https://frightening-wan-skua.anvil.app" width="640"
-      height="480"></iframe>'}
+    role: null, html: "<!DOCTYPE html>\n<html>\n\n<head>\n    <style>\n        #container\
+      \ {\n            width: 100%;\n            height: 200px;\n            border:\
+      \ 1px solid black;\n            position: relative;\n        }\n\n        #car\
+      \ {\n            width: 50px;\n            height: 50px;\n            background-color:\
+      \ red;\n            position: absolute;\n            left: 0;\n        }\n \
+      \   </style>\n</head>\n\n<body>\n    <div id=\"container\">\n        <div id=\"\
+      car\"></div>\n    </div>\n    <input type=\"range\" min=\"0\" max=\"1000\" value=\"\
+      0\" id=\"forceSlider\">\n    <button id=\"simulateButton\" disabled>Simulate</button>\n\
+      \    <button id=\"resetButton\" disabled>Reset</button>\n    <p id=\"timer\"\
+      >0.00</p>\n\n    <script>\n        const car = document.getElementById('car');\n\
+      \        const container = document.getElementById('container');\n        const\
+      \ forceSlider = document.getElementById('forceSlider');\n        const simulateButton\
+      \ = document.getElementById('simulateButton');\n        const resetButton =\
+      \ document.getElementById('resetButton');\n        const timerElement = document.getElementById('timer');\n\
+      \n        let startTime = null;\n        let animationFrameId = null;\n\n  \
+      \      forceSlider.oninput = function () {\n            simulateButton.disabled\
+      \ = this.value == 0;\n            if (this.value > 0) {\n                resetButton.disabled\
+      \ = true;\n            }\n        };\n\n        simulateButton.onclick = function\
+      \ () {\n            this.disabled = true;\n\n            const force = forceSlider.value;\n\
+      \            const mass = 1; // constant mass\n            const acceleration\
+      \ = force / mass;\n\n            startTime = Date.now();\n            animationFrameId\
+      \ = requestAnimationFrame(function animate() {\n                const timeElapsedInSeconds\
+      \ = (Date.now() - startTime) / 1000;\n                timerElement.textContent\
+      \ = timeElapsedInSeconds.toFixed(2);\n\n                const displacement =\
+      \ 0.5 * acceleration * Math.pow(timeElapsedInSeconds, 2);\n                car.style.left\
+      \ = Math.min(displacement, container.offsetWidth - car.offsetWidth - 2) + 'px';\n\
+      \n                if (displacement < container.offsetWidth - car.offsetWidth\
+      \ - 2) {\n                    animationFrameId = requestAnimationFrame(animate);\n\
+      \                } else {\n                    resetButton.disabled = false;\n\
+      \                }\n            });\n        };\n\n        resetButton.onclick\
+      \ = function () {\n            this.disabled = true;\n            simulateButton.disabled\
+      \ = false;\n\n            cancelAnimationFrame(animationFrameId);\n        \
+      \    car.style.left = '0px';\n            timerElement.textContent = '0.00';\n\
+      \        };\n    </script>\n\n\n\n</body>\n\n</html>"}
 components: []
 is_package: true
 custom_component: true
