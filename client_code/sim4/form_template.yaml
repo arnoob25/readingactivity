@@ -19,10 +19,10 @@ container:
       >\n        <tr>\n            <th># of experiment</th>\n            <th>Force</th>\n\
       \            <th>Mass</th>\n            <th>Acceleration</th>\n            <th>Time\
       \ to reach the end</th>\n        </tr>\n    </table>\n\n    <script>\n     \
-      \   const car = document.getElementById('car');\n        const container = document.getElementById('container');\n\
-      \        const forceSlider = document.getElementById('forceSlider');\n     \
-      \   const forceValue = document.getElementById('forceValue');\n        const\
-      \ massSelect = document.getElementById('massSelect');\n        const simulateButton\
+      \   const car = document.getElementById('car');\n        const container4 =\
+      \ document.getElementById('container');\n        const forceSlider = document.getElementById('forceSlider');\n\
+      \        const forceValue = document.getElementById('forceValue');\n       \
+      \ const massSelect = document.getElementById('massSelect');\n        const simulateButton\
       \ = document.getElementById('simulateButton');\n        const resetButton =\
       \ document.getElementById('resetButton');\n        const recordButton = document.getElementById('recordButton');\n\
       \        const timerElement = document.getElementById('timer');\n        const\
@@ -42,13 +42,13 @@ container:
       \             const timeElapsedInSeconds = (Date.now() - startTime) / 1000;\n\
       \                timerElement.textContent = 'Time: ' + timeElapsedInSeconds.toFixed(2)\
       \ + ' s';\n\n                const displacement = 0.5 * acceleration * Math.pow(timeElapsedInSeconds,\
-      \ 2);\n                car.style.left = Math.min(displacement, container.offsetWidth\
+      \ 2);\n                car.style.left = Math.min(displacement, container4.offsetWidth\
       \ - car.offsetWidth - 2) + 'px';\n\n                accelerationElement.textContent\
       \ = 'Acceleration: ' + acceleration.toFixed(2) + ' m/s\xb2';\n\n           \
-      \     if (displacement < container.offsetWidth - car.offsetWidth - 2) {\n  \
-      \                  animationFrameId = requestAnimationFrame(animate);\n    \
-      \            } else {\n                    resetButton.disabled = false;\n \
-      \                   recordButton.disabled = false;\n                    animationFrameId\
+      \     if (displacement < container4.offsetWidth - car.offsetWidth - 2) {\n \
+      \                   animationFrameId = requestAnimationFrame(animate);\n   \
+      \             } else {\n                    resetButton.disabled = false;\n\
+      \                    recordButton.disabled = false;\n                    animationFrameId\
       \ = null; // simulation ended\n                }\n            });\n        };\n\
       \n        resetButton.onclick = function () {\n            this.disabled = true;\n\
       \            simulateButton.disabled = false;\n            recordButton.disabled\

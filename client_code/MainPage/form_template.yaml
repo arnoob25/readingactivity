@@ -27,189 +27,195 @@ components:
     layout_properties:
       col_widths: {}
       grid_position: RLXBAE,JIFTNU
-    name: student_page1
+    name: inquiry
     components:
-    - type: Label
-      properties: {role: null, align: left, tooltip: '', border: '', foreground: 'theme:On
-          Tertiary Container', visible: false, text: 'Inquiry 1: ', font_size: 18,
-        font: '', spacing_above: small, icon_align: left, spacing_below: small, italic: false,
-        background: '', bold: true, underline: false, icon: ''}
-      layout_properties:
-        col_widths: {}
-        grid_position: CYGQFC,KIUHNW
-      name: label_context_copy_3
-    - type: Label
-      properties: {role: null, align: left, tooltip: '', border: '', foreground: 'theme:On
-          Tertiary Container', visible: true, text: 'Context:', font_size: 18, font: '',
-        spacing_above: small, icon_align: left, spacing_below: small, italic: false,
-        background: '', bold: true, underline: false, icon: ''}
-      layout_properties: {grid_position: 'ZQMOTI,HOPURL'}
-      name: label_context_copy
-    - type: ColumnPanel
-      properties: {role: tonal-card, tooltip: '', border: '', foreground: '', visible: true,
-        wrap_on: mobile, col_spacing: medium, spacing_above: small, col_widths: '{}',
-        spacing_below: small, background: ''}
-      layout_properties: {grid_position: 'OSTHTW,YVVACW'}
-      name: ocard_student_context
-      components:
-      - type: RichText
-        properties: {role: null, align: left, tooltip: '', enable_slots: true, border: '',
-          foreground: 'theme:On Background', visible: true, font_size: 16, content: 'At
-            the park, you saw a kids’ cart race. Each team had two kids - one driving
-            and one pushing. The team with the strongest pusher easily outpaced the
-            rest. This made you question: does the strongest always win? ', font: '',
-          spacing_above: small, spacing_below: small, data: null, background: '',
-          format: markdown}
-        layout_properties: {grid_position: 'GIUWKJ,LUTZAB'}
-        name: rtext_student_context
-        data_bindings: []
-    - type: Spacer
-      properties: {height: 18}
-      layout_properties: {grid_position: 'TLAVOA,SZJJKG'}
-      name: spacer_1_copy
-    - type: ColumnPanel
-      properties: {role: outlined-card, tooltip: '', border: '1', foreground: '',
-        visible: true, wrap_on: mobile, col_spacing: medium, spacing_above: small,
-        col_widths: '{}', spacing_below: small, background: ''}
-      name: ocard_student_interact
-      layout_properties: {grid_position: 'BWMGVE,GYEYPU'}
-      components:
-      - type: form:sim1
-        properties: {}
-        name: sim1_1
-        layout_properties: {grid_position: 'IDDGGT,NCOULF'}
-    - type: Spacer
-      properties: {height: 35}
-      layout_properties:
-        col_widths: {}
-        grid_position: JZEETI,LUGKTZ
-      name: spacer_1_copy_11
-    - type: Label
-      properties: {role: null, align: left, tooltip: '', border: '', foreground: 'theme:On
-          Tertiary Container', visible: true, text: 'Prompt: ', font_size: 18, font: '',
-        spacing_above: small, icon_align: left, spacing_below: small, italic: false,
-        background: '', bold: true, underline: false, icon: ''}
-      layout_properties:
-        col_widths: {}
-        grid_position: RDAXOZ,NBOYON
-      name: label_prompt_copy
-    - type: ColumnPanel
-      properties: {role: tonal-card, tooltip: '', border: '', foreground: '', visible: true,
-        wrap_on: mobile, col_spacing: medium, spacing_above: small, col_widths: '{}',
-        spacing_below: small, background: ''}
-      layout_properties:
-        col_widths: {}
-        grid_position: DOWFIW,CYKHNJ
-      name: ocard_prompt_copy
-      components:
-      - type: RichText
-        properties: {role: null, align: left, tooltip: '', enable_slots: true, border: '',
-          foreground: 'theme:On Background', visible: true, font_size: 16, content: 'What
-            do you observe about the connection between the force you apply and how
-            quickly the car picks up speed?', font: '', spacing_above: small, spacing_below: small,
-          data: null, background: '', format: markdown}
-        layout_properties:
-          col_widths: {}
-          grid_position: FWHASY,AHKXMO
-        name: rtext_student_prompt
-        data_bindings: []
-    - type: Spacer
-      properties: {height: 18}
-      layout_properties:
-        col_widths: {}
-        grid_position: TOZNQF,VZAPSS
-      name: spacer_2_copy
-    - type: Label
-      properties: {role: null, align: left, tooltip: '', border: '', foreground: 'theme:On
-          Tertiary Container', visible: true, text: 'Options:', font_size: 18, font: '',
-        spacing_above: small, icon_align: left, spacing_below: small, italic: false,
-        background: '', bold: true, underline: false, icon: ''}
-      layout_properties:
-        col_widths: {}
-        grid_position: SDNVET,WHSXDS
-      name: label_options_copy
-    - type: ColumnPanel
-      properties: {role: tonal-card, tooltip: '', border: '', foreground: '', visible: true,
-        wrap_on: mobile, col_spacing: medium, spacing_above: small, col_widths: '{}',
-        spacing_below: small, background: ''}
-      layout_properties:
-        col_widths: {}
-        grid_position: XKLJFL,IUNIZC
-      name: ocard_options_copy
-      components:
-      - type: ColumnPanel
-        properties: {role: null, tooltip: '', border: '', foreground: '', visible: true,
-          wrap_on: never, col_spacing: none, spacing_above: small, col_widths: '{}',
-          spacing_below: small, background: ''}
-        name: outlined_card_2
-        layout_properties: {grid_position: 'WKOQON,KETAAD'}
-        components:
-        - type: RichText
-          properties: {role: null, align: left, tooltip: '', enable_slots: true, border: '',
-            foreground: 'theme:On Background', visible: true, font_size: 16, content: Pushing harder seems to make the car pick up speed more quickly.,
-            font: '', spacing_above: small, spacing_below: small, data: null, background: '',
-            format: markdown}
-          layout_properties:
-            col_widths: {}
-            grid_position: PHNJFN,JVBBZZ
-          name: rtext_student_prompt_copy
-          data_bindings: []
-      - type: RichText
-        properties: {role: null, align: left, tooltip: '', enable_slots: true, border: '',
-          foreground: 'theme:On Background', visible: true, font_size: 16, content: A harder push doesn’t always mean a faster car.,
-          font: '', spacing_above: small, spacing_below: small, data: null, background: '',
-          format: markdown}
-        layout_properties:
-          col_widths: {}
-          grid_position: IDKZTB,BOJNCJ
-        name: rtext_student_prompt_copy_2
-        data_bindings: []
-      - type: RichText
-        properties: {role: null, align: left, tooltip: '', enable_slots: true, border: '',
-          foreground: 'theme:On Background', visible: true, font_size: 16, content: 'Initially,
-            a hard push doesn’t do much, but over time, even a gentle push gets the
-            car moving quickly.', font: '', spacing_above: small, spacing_below: small,
-          data: null, background: '', format: markdown}
-        layout_properties:
-          col_widths: {}
-          grid_position: ICLOSE,WQLPNY
-        name: rtext_student_prompt_copy_3
-        data_bindings: []
-      - type: RichText
-        properties: {role: null, align: left, tooltip: '', enable_slots: true, border: '',
-          foreground: 'theme:On Background', visible: true, font_size: 16, content: 'Beyond
-            a certain point, no matter how hard you push, the car won’t go any faster.',
-          font: '', spacing_above: small, spacing_below: small, data: null, background: '',
-          format: markdown}
-        layout_properties:
-          col_widths: {}
-          grid_position: AFHKWZ,DRBPTL
-        name: rtext_student_prompt_copy_4
-        data_bindings: []
-    - type: Spacer
-      properties: {height: 18}
-      layout_properties:
-        col_widths: {}
-        grid_position: ZPRGWR,JKVDPZ
-      name: spacer_3_copy_2
-    - type: Button
-      properties: {role: filled-button, align: right, tooltip: '', border: '', enabled: true,
-        foreground: '', visible: true, text: Onward, font_size: null, font: '', spacing_above: small,
-        icon_align: left, spacing_below: small, italic: false, background: '', bold: false,
-        underline: false, icon: ''}
-      layout_properties:
-        col_widths: {}
-        grid_position: ANEMCT,IZMIZX
-      event_bindings: {click: btn_student_next_question_click}
-      name: btn_student_next_question
     - type: ColumnPanel
       properties: {role: null, tooltip: '', border: '', foreground: '', visible: true,
         wrap_on: mobile, col_spacing: medium, spacing_above: small, col_widths: '{}',
         spacing_below: small, background: ''}
-      layout_properties:
-        col_widths: {}
-        grid_position: VSZJWE,YUKMUN
-      name: student_page1_copy
+      name: inquiry10
+      layout_properties: {grid_position: 'MCIAKX,JKPBPO'}
+      components:
+      - type: Label
+        properties: {role: null, align: left, tooltip: '', border: '', foreground: 'theme:On
+            Tertiary Container', visible: false, text: 'Inquiry 1: ', font_size: 18,
+          font: '', spacing_above: small, icon_align: left, spacing_below: small,
+          italic: false, background: '', bold: true, underline: false, icon: ''}
+        layout_properties:
+          col_widths: {}
+          grid_position: AEIUGF,AKBKET
+        name: label_context_copy_3
+      - type: Label
+        properties: {role: null, align: left, tooltip: '', border: '', foreground: 'theme:On
+            Tertiary Container', visible: true, text: 'Context:', font_size: 18, font: '',
+          spacing_above: small, icon_align: left, spacing_below: small, italic: false,
+          background: '', bold: true, underline: false, icon: ''}
+        layout_properties: {grid_position: 'HFZNBZ,SHYRHJ'}
+        name: label_context_copy
+      - type: ColumnPanel
+        properties: {role: tonal-card, tooltip: '', border: '', foreground: '', visible: true,
+          wrap_on: mobile, col_spacing: medium, spacing_above: small, col_widths: '{}',
+          spacing_below: small, background: ''}
+        layout_properties: {grid_position: 'UWXADC,PBHQPA'}
+        name: ocard_student_context
+        components:
+        - type: RichText
+          properties: {role: null, align: left, tooltip: '', enable_slots: true, border: '',
+            foreground: 'theme:On Background', visible: true, font_size: 16, content: 'At
+              the park, you saw a kids’ cart race. Each team had two kids - one driving
+              and one pushing. The team with the strongest pusher easily outpaced
+              the rest. This made you question: does the strongest always win? ',
+            font: '', spacing_above: small, spacing_below: small, data: null, background: '',
+            format: markdown}
+          layout_properties: {grid_position: 'GIUWKJ,LUTZAB'}
+          name: rtext_student_context
+          data_bindings: []
+      - type: Spacer
+        properties: {height: 18}
+        layout_properties: {grid_position: 'ONCVCM,XSSLTF'}
+        name: spacer_1_copy
+      - type: ColumnPanel
+        properties: {role: outlined-card, tooltip: '', border: '1', foreground: '',
+          visible: true, wrap_on: mobile, col_spacing: medium, spacing_above: small,
+          col_widths: '{}', spacing_below: small, background: ''}
+        name: ocard_student_interact
+        layout_properties: {grid_position: 'ZUMSIC,BVVSVY'}
+        components:
+        - type: form:sim1
+          properties: {}
+          name: sim1_1
+          layout_properties: {grid_position: 'IDDGGT,NCOULF'}
+        - type: Spacer
+          properties: {height: 35}
+          layout_properties:
+            col_widths: {}
+            grid_position: LSPELW,XHRMXY
+          name: spacer_1_copy_11
+      - type: Label
+        properties: {role: null, align: left, tooltip: '', border: '', foreground: 'theme:On
+            Tertiary Container', visible: true, text: 'Prompt: ', font_size: 18, font: '',
+          spacing_above: small, icon_align: left, spacing_below: small, italic: false,
+          background: '', bold: true, underline: false, icon: ''}
+        layout_properties:
+          col_widths: {}
+          grid_position: EMPUQJ,NCINWC
+        name: label_prompt_copy
+      - type: ColumnPanel
+        properties: {role: tonal-card, tooltip: '', border: '', foreground: '', visible: true,
+          wrap_on: mobile, col_spacing: medium, spacing_above: small, col_widths: '{}',
+          spacing_below: small, background: ''}
+        layout_properties:
+          col_widths: {}
+          grid_position: XAFNMZ,UJWFUQ
+        name: ocard_prompt_copy
+        components:
+        - type: RichText
+          properties: {role: null, align: left, tooltip: '', enable_slots: true, border: '',
+            foreground: 'theme:On Background', visible: true, font_size: 16, content: 'What
+              do you observe about the connection between the force you apply and
+              how quickly the car picks up speed?', font: '', spacing_above: small,
+            spacing_below: small, data: null, background: '', format: markdown}
+          layout_properties:
+            col_widths: {}
+            grid_position: FWHASY,AHKXMO
+          name: rtext_student_prompt
+          data_bindings: []
+      - type: Spacer
+        properties: {height: 18}
+        layout_properties:
+          col_widths: {}
+          grid_position: IFFEBF,HDBYFF
+        name: spacer_2_copy
+      - type: Label
+        properties: {role: null, align: left, tooltip: '', border: '', foreground: 'theme:On
+            Tertiary Container', visible: true, text: 'Options:', font_size: 18, font: '',
+          spacing_above: small, icon_align: left, spacing_below: small, italic: false,
+          background: '', bold: true, underline: false, icon: ''}
+        layout_properties:
+          col_widths: {}
+          grid_position: HXCIGD,KFRIHH
+        name: label_options_copy
+      - type: ColumnPanel
+        properties: {role: tonal-card, tooltip: '', border: '', foreground: '', visible: true,
+          wrap_on: mobile, col_spacing: medium, spacing_above: small, col_widths: '{}',
+          spacing_below: small, background: ''}
+        layout_properties:
+          col_widths: {}
+          grid_position: HZDETC,VHVZPR
+        name: ocard_options_copy
+        components:
+        - type: ColumnPanel
+          properties: {role: null, tooltip: '', border: '', foreground: '', visible: true,
+            wrap_on: never, col_spacing: none, spacing_above: small, col_widths: '{}',
+            spacing_below: small, background: ''}
+          name: outlined_card_2
+          layout_properties: {grid_position: 'WKOQON,KETAAD'}
+          components:
+          - type: RichText
+            properties: {role: null, align: left, tooltip: '', enable_slots: true,
+              border: '', foreground: 'theme:On Background', visible: true, font_size: 16,
+              content: Pushing harder seems to make the car pick up speed more quickly.,
+              font: '', spacing_above: small, spacing_below: small, data: null, background: '',
+              format: markdown}
+            layout_properties:
+              col_widths: {}
+              grid_position: PHNJFN,JVBBZZ
+            name: rtext_student_prompt_copy
+            data_bindings: []
+        - type: RichText
+          properties: {role: null, align: left, tooltip: '', enable_slots: true, border: '',
+            foreground: 'theme:On Background', visible: true, font_size: 16, content: A harder push doesn’t always mean a faster car.,
+            font: '', spacing_above: small, spacing_below: small, data: null, background: '',
+            format: markdown}
+          layout_properties:
+            col_widths: {}
+            grid_position: IDKZTB,BOJNCJ
+          name: rtext_student_prompt_copy_2
+          data_bindings: []
+        - type: RichText
+          properties: {role: null, align: left, tooltip: '', enable_slots: true, border: '',
+            foreground: 'theme:On Background', visible: true, font_size: 16, content: 'Initially,
+              a hard push doesn’t do much, but over time, even a gentle push gets
+              the car moving quickly.', font: '', spacing_above: small, spacing_below: small,
+            data: null, background: '', format: markdown}
+          layout_properties:
+            col_widths: {}
+            grid_position: ICLOSE,WQLPNY
+          name: rtext_student_prompt_copy_3
+          data_bindings: []
+        - type: RichText
+          properties: {role: null, align: left, tooltip: '', enable_slots: true, border: '',
+            foreground: 'theme:On Background', visible: true, font_size: 16, content: 'Beyond
+              a certain point, no matter how hard you push, the car won’t go any faster.',
+            font: '', spacing_above: small, spacing_below: small, data: null, background: '',
+            format: markdown}
+          layout_properties:
+            col_widths: {}
+            grid_position: AFHKWZ,DRBPTL
+          name: rtext_student_prompt_copy_4
+          data_bindings: []
+      - type: Spacer
+        properties: {height: 18}
+        layout_properties:
+          col_widths: {}
+          grid_position: BIASUK,JMQJBG
+        name: spacer_3_copy_2
+      - type: Button
+        properties: {role: filled-button, align: right, tooltip: '', border: '', enabled: true,
+          foreground: '', visible: true, text: Onward, font_size: null, font: '',
+          spacing_above: small, icon_align: left, spacing_below: small, italic: false,
+          background: '', bold: false, underline: false, icon: ''}
+        layout_properties:
+          col_widths: {}
+          grid_position: ZRXKOA,AGMIPI
+        event_bindings: {click: btn_student_next_question_click}
+        name: btn_student_next_question
+    - type: ColumnPanel
+      properties: {role: null, tooltip: '', border: '', foreground: '', visible: false,
+        wrap_on: mobile, col_spacing: medium, spacing_above: small, col_widths: '{}',
+        spacing_below: small, background: ''}
+      name: inquiry21
+      layout_properties: {grid_position: 'RNWEPN,VKBRWC'}
       components:
       - type: Label
         properties: {role: null, align: left, tooltip: '', border: '', foreground: 'theme:On
@@ -218,20 +224,20 @@ components:
           italic: false, background: '', bold: true, underline: false, icon: ''}
         layout_properties:
           col_widths: {}
-          grid_position: CYGQFC,KIUHNW
+          grid_position: GYIABS,BLCOOX
         name: label_context_copy_5
       - type: Label
         properties: {role: null, align: left, tooltip: '', border: '', foreground: 'theme:On
             Tertiary Container', visible: true, text: 'Context:', font_size: 18, font: '',
           spacing_above: small, icon_align: left, spacing_below: small, italic: false,
           background: '', bold: true, underline: false, icon: ''}
-        layout_properties: {grid_position: 'ZQMOTI,HOPURL'}
+        layout_properties: {grid_position: 'NUTTPF,CZKANT'}
         name: label_context_copy_2
       - type: ColumnPanel
         properties: {role: tonal-card, tooltip: '', border: '', foreground: '', visible: true,
           wrap_on: mobile, col_spacing: medium, spacing_above: small, col_widths: '{}',
           spacing_below: small, background: ''}
-        layout_properties: {grid_position: 'OSTHTW,YVVACW'}
+        layout_properties: {grid_position: 'GCVTJL,ELGAFY'}
         name: ocard_student_context_copy
         components:
         - type: RichText
@@ -256,7 +262,7 @@ components:
           data_bindings: []
       - type: Spacer
         properties: {height: 18}
-        layout_properties: {grid_position: 'TLAVOA,SZJJKG'}
+        layout_properties: {grid_position: 'XQWBCY,FIOCMX'}
         name: spacer_1_copy_2
       - type: Label
         properties: {role: null, align: left, tooltip: '', border: '', foreground: 'theme:On
@@ -265,7 +271,7 @@ components:
           background: '', bold: true, underline: false, icon: ''}
         layout_properties:
           col_widths: {}
-          grid_position: SDNVET,WHSXDS
+          grid_position: MTSURU,MOUDNL
         name: label_options_copy_2
       - type: ColumnPanel
         properties: {role: tonal-card, tooltip: '', border: '', foreground: '', visible: true,
@@ -273,7 +279,7 @@ components:
           spacing_below: small, background: ''}
         layout_properties:
           col_widths: {}
-          grid_position: XKLJFL,IUNIZC
+          grid_position: ISZVAP,BTWGHA
         name: ocard_options_copy_2
         components:
         - type: ColumnPanel
@@ -379,7 +385,7 @@ components:
         properties: {height: 18}
         layout_properties:
           col_widths: {}
-          grid_position: ZPRGWR,JKVDPZ
+          grid_position: VSGKXH,NQMLDC
         name: spacer_3_copy_3
       - type: Button
         properties: {role: filled-button, align: right, tooltip: '', border: '', enabled: true,
@@ -388,1583 +394,1536 @@ components:
           background: '', bold: false, underline: false, icon: ''}
         layout_properties:
           col_widths: {}
-          grid_position: ANEMCT,IZMIZX
+          grid_position: MKEXHU,KJIKNW
         event_bindings: {click: btn_student_next_question_click}
         name: btn_student_next_question_copy
+    - type: ColumnPanel
+      properties: {role: null, tooltip: '', border: '', foreground: '', visible: false,
+        wrap_on: mobile, col_spacing: medium, spacing_above: small, col_widths: '{}',
+        spacing_below: small, background: ''}
+      name: inquiry22
+      layout_properties: {grid_position: 'QVGIAP,DNOAUY'}
+      components:
+      - type: Label
+        properties: {role: null, align: left, tooltip: '', border: '', foreground: 'theme:On
+            Tertiary Container', visible: false, text: 'Inquiry 2.2: ', font_size: 18,
+          font: '', spacing_above: small, icon_align: left, spacing_below: small,
+          italic: false, background: '', bold: true, underline: false, icon: ''}
+        layout_properties:
+          col_widths: {}
+          grid_position: VDTSLK,TGFIDU
+        name: label_context_copy_7
+      - type: Label
+        properties: {role: null, align: left, tooltip: '', border: '', foreground: 'theme:On
+            Tertiary Container', visible: true, text: 'Context:', font_size: 18, font: '',
+          spacing_above: small, icon_align: left, spacing_below: small, italic: false,
+          background: '', bold: true, underline: false, icon: ''}
+        layout_properties: {grid_position: 'RJHNJI,MOOXLL'}
+        name: label_context_copy_8
+      - type: ColumnPanel
+        properties: {role: tonal-card, tooltip: '', border: '', foreground: '', visible: true,
+          wrap_on: mobile, col_spacing: medium, spacing_above: small, col_widths: '{}',
+          spacing_below: small, background: ''}
+        layout_properties: {grid_position: 'AWEEBS,HYIXZN'}
+        name: ocard_student_context_copy_2
+        components:
+        - type: RichText
+          properties: {role: null, align: left, tooltip: '', enable_slots: true, border: '',
+            foreground: 'theme:On Background', visible: true, font_size: 16, content: 'Let''s
+              imagine we held the race in perfect conditions. The racers had plenty
+              of rest, the carts were in top shape, and there was no wind. The only
+              variable would be the partner swap. To determine if this influenced
+              the race outcome, we could simulate the race with the first and second
+              partners and compare the finish times.', font: '', spacing_above: small,
+            spacing_below: large, data: null, background: '', format: markdown}
+          layout_properties: {grid_position: 'GIUWKJ,LUTZAB'}
+          name: rtext_student_context_copy_2
+          data_bindings: []
+      - type: Spacer
+        properties: {height: 18}
+        layout_properties: {grid_position: 'QAZIOY,WUEMHX'}
+        name: spacer_1_copy_3
+      - type: ColumnPanel
+        properties: {role: outlined-card, tooltip: '', border: '1', foreground: '',
+          visible: true, wrap_on: mobile, col_spacing: medium, spacing_above: small,
+          col_widths: '{}', spacing_below: small, background: ''}
+        name: ocard_student_interact_copy
+        layout_properties:
+          col_widths: {}
+          grid_position: TYXQPD,CPXYBU
+        components:
+        - type: form:sim2
+          properties: {}
+          name: sim2_1
+          layout_properties: {grid_position: 'ETKLJJ,SRYVWP'}
+      - type: Spacer
+        properties: {height: 35}
+        layout_properties:
+          col_widths: {}
+          grid_position: GELGCN,DNSDEF
+        name: spacer_1_copy_12
+      - type: Label
+        properties: {role: null, align: left, tooltip: '', border: '', foreground: 'theme:On
+            Tertiary Container', visible: true, text: 'Prompt: ', font_size: 18, font: '',
+          spacing_above: small, icon_align: left, spacing_below: small, italic: false,
+          background: '', bold: true, underline: false, icon: ''}
+        layout_properties:
+          col_widths: {}
+          grid_position: JPADAM,BZMMSP
+        name: label_prompt_copy_2
+      - type: ColumnPanel
+        properties: {role: tonal-card, tooltip: '', border: '', foreground: '', visible: true,
+          wrap_on: mobile, col_spacing: medium, spacing_above: small, col_widths: '{}',
+          spacing_below: small, background: ''}
+        layout_properties:
+          col_widths: {}
+          grid_position: EJVPDA,QDLJON
+        name: ocard_prompt_copy_2
+        components:
+        - type: RichText
+          properties: {role: null, align: left, tooltip: '', enable_slots: true, border: '',
+            foreground: 'theme:On Background', visible: true, font_size: 16, content: 'How
+              does mass affect the force needed to move an object?', font: '', spacing_above: small,
+            spacing_below: small, data: null, background: '', format: markdown}
+          layout_properties:
+            col_widths: {}
+            grid_position: FWHASY,AHKXMO
+          name: rtext_student_prompt_copy_14
+          data_bindings: []
+      - type: Spacer
+        properties: {height: 18}
+        layout_properties:
+          col_widths: {}
+          grid_position: YAZZXF,HSBKWD
+        name: spacer_2_copy_3
+      - type: Label
+        properties: {role: null, align: left, tooltip: '', border: '', foreground: 'theme:On
+            Tertiary Container', visible: true, text: 'Options:', font_size: 18, font: '',
+          spacing_above: small, icon_align: left, spacing_below: small, italic: false,
+          background: '', bold: true, underline: false, icon: ''}
+        layout_properties:
+          col_widths: {}
+          grid_position: DKRIOJ,JMKJKS
+        name: label_options_copy_3
+      - type: ColumnPanel
+        properties: {role: tonal-card, tooltip: '', border: '', foreground: '', visible: true,
+          wrap_on: mobile, col_spacing: medium, spacing_above: small, col_widths: '{"KETAAD":55}',
+          spacing_below: small, background: ''}
+        layout_properties:
+          col_widths: {}
+          grid_position: UEYZWL,PYXDJU
+        name: ocard_options_copy_3
+        components:
+        - type: ColumnPanel
+          properties: {role: null, tooltip: '', border: '', foreground: '', visible: true,
+            wrap_on: never, col_spacing: none, spacing_above: small, col_widths: '{}',
+            spacing_below: small, background: ''}
+          name: outlined_card_2_copy_2
+          layout_properties: {grid_position: 'WKOQON,KETAAD'}
+          components:
+          - type: RichText
+            properties: {role: null, align: left, tooltip: '', enable_slots: true,
+              border: '', foreground: 'theme:On Background', visible: true, font_size: 16,
+              content: The object’s mass doesn’t impact the force needed to move it.,
+              font: '', spacing_above: small, spacing_below: small, data: null, background: '',
+              format: markdown}
+            layout_properties:
+              col_widths: {}
+              grid_position: PHNJFN,JVBBZZ
+            name: rtext_student_prompt_copy_15
+            data_bindings: []
+            components:
+            - type: RichText
+              properties: {role: null, align: left, tooltip: '', enable_slots: true,
+                border: '', foreground: 'theme:On Surface Variant', visible: true,
+                font_size: 14, content: 'It’s quite possible. But given that the rest
+                  of the participants would be tired as well, we could still have
+                  a fair race.', font: '', spacing_above: small, spacing_below: small,
+                data: null, background: '', format: markdown}
+              layout_properties:
+                col_widths: {}
+                grid_position: EBTGVL,ZBGXEN
+              name: rtext_student_prompt_copy_16
+              data_bindings: []
+        - type: RichText
+          properties: {role: null, align: left, tooltip: '', enable_slots: true, border: '',
+            foreground: 'theme:On Background', visible: true, font_size: 16, content: 'The
+              lighter an object is, the more force it requires to move it.', font: '',
+            spacing_above: small, spacing_below: small, data: null, background: '',
+            format: markdown}
+          layout_properties:
+            col_widths: {}
+            grid_position: IDKZTB,BOJNCJ
+          name: rtext_student_prompt_copy_17
+          data_bindings: []
+          components:
+          - type: RichText
+            properties: {role: null, align: left, tooltip: '', enable_slots: true,
+              border: '', foreground: 'theme:On Surface Variant', visible: true, font_size: 14,
+              content: 'A lighter cart does reach the finish line faster. But does
+                this mean we needed more force?', font: '', spacing_above: small,
+              spacing_below: small, data: null, background: '', format: markdown}
+            layout_properties:
+              col_widths: {}
+              grid_position: CKWYAH,HCSVHA
+            name: rtext_student_prompt_copy_18
+            data_bindings: []
+        - type: RichText
+          properties: {role: null, align: left, tooltip: '', enable_slots: true, border: '',
+            foreground: 'theme:On Background', visible: true, font_size: 16, content: 'The
+              heavier an object is, the more force it requires to move it.', font: '',
+            spacing_above: small, spacing_below: small, data: null, background: '',
+            format: markdown}
+          layout_properties:
+            col_widths: {}
+            grid_position: ICLOSE,WQLPNY
+          name: rtext_student_prompt_copy_19
+          data_bindings: []
+          components:
+          - type: RichText
+            properties: {role: null, align: left, tooltip: '', enable_slots: true,
+              border: '', foreground: 'theme:On Surface Variant', visible: true, font_size: 14,
+              content: 'A heavier cart does reach the finish line slower. But does
+                this mean we needed more force?', font: '', spacing_above: small,
+              spacing_below: small, data: null, background: '', format: markdown}
+            layout_properties:
+              col_widths: {}
+              grid_position: OOAZOC,THOLIS
+            name: rtext_student_prompt_copy_20
+            data_bindings: []
+        - type: RichText
+          properties: {role: null, align: left, tooltip: '', enable_slots: true, border: '',
+            foreground: 'theme:On Background', visible: true, font_size: 16, content: The force needed to move an object doesn’t depend on its mass.,
+            font: '', spacing_above: small, spacing_below: small, data: null, background: '',
+            format: markdown}
+          layout_properties:
+            col_widths: {}
+            grid_position: AFHKWZ,DRBPTL
+          name: rtext_student_prompt_copy_21
+          data_bindings: []
+          components:
+          - type: RichText
+            properties: {role: null, align: left, tooltip: '', enable_slots: true,
+              border: '', foreground: 'theme:On Surface Variant', visible: true, font_size: 14,
+              content: 'Do you believe that altering the cart’s mass didn’t affect
+                the force required for its movement?', font: '', spacing_above: small,
+              spacing_below: small, data: null, background: '', format: markdown}
+            layout_properties:
+              col_widths: {}
+              grid_position: NWPKOD,VRQYGN
+            name: rtext_student_prompt_copy_22
+            data_bindings: []
+      - type: Spacer
+        properties: {height: 18}
+        layout_properties:
+          col_widths: {}
+          grid_position: GEWECM,YTGPGH
+        name: spacer_3_copy_4
+      - type: Button
+        properties: {role: filled-button, align: right, tooltip: '', border: '', enabled: true,
+          foreground: '', visible: true, text: Onward, font_size: null, font: '',
+          spacing_above: small, icon_align: left, spacing_below: small, italic: false,
+          background: '', bold: false, underline: false, icon: ''}
+        layout_properties:
+          col_widths: {}
+          grid_position: INDGWP,JLQIYJ
+        event_bindings: {click: btn_student_next_question_click}
+        name: btn_student_next_question_copy_2
+    - type: ColumnPanel
+      properties: {role: null, tooltip: '', border: '', foreground: '', visible: false,
+        wrap_on: mobile, col_spacing: medium, spacing_above: small, col_widths: '{}',
+        spacing_below: small, background: ''}
+      name: inquiry31
+      layout_properties: {grid_position: 'IUIYTB,CFXTVY'}
+      components:
+      - type: Label
+        properties: {role: null, align: left, tooltip: '', border: '', foreground: 'theme:On
+            Tertiary Container', visible: false, text: 'Inquiry 3.1: ', font_size: 18,
+          font: '', spacing_above: small, icon_align: left, spacing_below: small,
+          italic: false, background: '', bold: true, underline: false, icon: ''}
+        layout_properties:
+          col_widths: {}
+          grid_position: TLFFSC,DJDVQA
+        name: label_context_copy_10
+      - type: Label
+        properties: {role: null, align: left, tooltip: '', border: '', foreground: 'theme:On
+            Tertiary Container', visible: true, text: 'Context:', font_size: 18, font: '',
+          spacing_above: small, icon_align: left, spacing_below: small, italic: false,
+          background: '', bold: true, underline: false, icon: ''}
+        layout_properties: {grid_position: 'OCUAWI,QQSJTE'}
+        name: label_context_copy_11
+      - type: ColumnPanel
+        properties: {role: tonal-card, tooltip: '', border: '', foreground: '', visible: true,
+          wrap_on: mobile, col_spacing: medium, spacing_above: small, col_widths: '{}',
+          spacing_below: small, background: ''}
+        layout_properties: {grid_position: 'HMHYWV,CURLAO'}
+        name: ocard_student_context_copy_3
+        components:
+        - type: RichText
+          properties: {role: null, align: left, tooltip: '', enable_slots: true, border: '',
+            foreground: 'theme:On Background', visible: true, font_size: 16, content: 'As
+              the kids gear up for another race and swap partners, you feel confident
+              about predicting the winner. This time, you plan to consider both the
+              weight of the child in the kart and the strength of the pusher.', font: '',
+            spacing_above: small, spacing_below: none, data: null, background: '',
+            format: markdown}
+          layout_properties: {grid_position: 'GIUWKJ,LUTZAB'}
+          name: rtext_student_context_copy_3
+          data_bindings: []
+      - type: Spacer
+        properties: {height: 18}
+        layout_properties: {grid_position: 'QNHYKD,SDLAWX'}
+        name: spacer_1_copy_4
+      - type: ColumnPanel
+        properties: {role: outlined-card, tooltip: '', border: '1', foreground: '',
+          visible: true, wrap_on: mobile, col_spacing: medium, spacing_above: small,
+          col_widths: '{}', spacing_below: small, background: ''}
+        name: ocard_student_interact_copy_2
+        layout_properties:
+          col_widths: {}
+          grid_position: OAVAWX,AEGOTA
+        components:
+        - type: form:sim3
+          properties: {}
+          name: sim3_1
+          layout_properties: {grid_position: 'MEAWZW,TCARBW'}
+      - type: Spacer
+        properties: {height: 35}
+        layout_properties:
+          col_widths: {}
+          grid_position: CQHHIG,DDTDRZ
+        name: spacer_1_copy_13
+      - type: Label
+        properties: {role: null, align: left, tooltip: '', border: '', foreground: 'theme:On
+            Tertiary Container', visible: true, text: 'Prompt: ', font_size: 18, font: '',
+          spacing_above: small, icon_align: left, spacing_below: small, italic: false,
+          background: '', bold: true, underline: false, icon: ''}
+        layout_properties:
+          col_widths: {}
+          grid_position: VRGKNQ,LLIBUC
+        name: label_prompt_copy_3
+      - type: ColumnPanel
+        properties: {role: tonal-card, tooltip: '', border: '', foreground: '', visible: true,
+          wrap_on: mobile, col_spacing: medium, spacing_above: small, col_widths: '{}',
+          spacing_below: small, background: ''}
+        layout_properties:
+          col_widths: {}
+          grid_position: KKQHUI,AYOUPH
+        name: ocard_prompt_copy_3
+        components:
+        - type: RichText
+          properties: {role: null, align: left, tooltip: '', enable_slots: true, border: '',
+            foreground: 'theme:On Background', visible: true, font_size: 16, content: 'Which
+              team do you think will win the race?', font: '', spacing_above: small,
+            spacing_below: small, data: null, background: '', format: markdown}
+          layout_properties:
+            col_widths: {}
+            grid_position: FWHASY,AHKXMO
+          name: rtext_student_prompt_copy_23
+          data_bindings: []
+      - type: Spacer
+        properties: {height: 18}
+        layout_properties:
+          col_widths: {}
+          grid_position: MXANTQ,VRUBUG
+        name: spacer_2_copy_4
+      - type: Label
+        properties: {role: null, align: left, tooltip: '', border: '', foreground: 'theme:On
+            Tertiary Container', visible: true, text: 'Options:', font_size: 18, font: '',
+          spacing_above: small, icon_align: left, spacing_below: small, italic: false,
+          background: '', bold: true, underline: false, icon: ''}
+        layout_properties:
+          col_widths: {}
+          grid_position: GBQIPN,EQYOJB
+        name: label_options_copy_4
+      - type: ColumnPanel
+        properties: {role: tonal-card, tooltip: '', border: '', foreground: '', visible: true,
+          wrap_on: mobile, col_spacing: medium, spacing_above: small, col_widths: '{"KETAAD":55}',
+          spacing_below: small, background: ''}
+        layout_properties:
+          col_widths: {}
+          grid_position: SYUXLP,ABEXIQ
+        name: ocard_options_copy_4
+        components:
+        - type: ColumnPanel
+          properties: {role: null, tooltip: '', border: '', foreground: '', visible: true,
+            wrap_on: never, col_spacing: none, spacing_above: small, col_widths: '{}',
+            spacing_below: small, background: ''}
+          name: outlined_card_2_copy_3
+          layout_properties: {grid_position: 'WKOQON,KETAAD'}
+          components:
+          - type: RichText
+            properties: {role: null, align: left, tooltip: '', enable_slots: true,
+              border: '', foreground: 'theme:On Background', visible: true, font_size: 16,
+              content: Turbo Twisters, font: '', spacing_above: small, spacing_below: small,
+              data: null, background: '', format: markdown}
+            layout_properties:
+              col_widths: {}
+              grid_position: PHNJFN,JVBBZZ
+            name: rtext_student_prompt_copy_24
+            data_bindings: []
+            components: []
+        - type: RichText
+          properties: {role: null, align: left, tooltip: '', enable_slots: true, border: '',
+            foreground: 'theme:On Background', visible: true, font_size: 16, content: Rapid Racers,
+            font: '', spacing_above: small, spacing_below: small, data: null, background: '',
+            format: markdown}
+          layout_properties:
+            col_widths: {}
+            grid_position: IDKZTB,BOJNCJ
+          name: rtext_student_prompt_copy_26
+          data_bindings: []
+          components: []
+        - type: RichText
+          properties: {role: null, align: left, tooltip: '', enable_slots: true, border: '',
+            foreground: 'theme:On Background', visible: true, font_size: 16, content: Speedy Sprinters,
+            font: '', spacing_above: small, spacing_below: small, data: null, background: '',
+            format: markdown}
+          layout_properties:
+            col_widths: {}
+            grid_position: ICLOSE,WQLPNY
+          name: rtext_student_prompt_copy_28
+          data_bindings: []
+          components: []
+        - type: RichText
+          properties: {role: null, align: left, tooltip: '', enable_slots: true, border: '',
+            foreground: 'theme:On Background', visible: true, font_size: 16, content: Flash Force,
+            font: '', spacing_above: small, spacing_below: small, data: null, background: '',
+            format: markdown}
+          layout_properties:
+            col_widths: {}
+            grid_position: AFHKWZ,DRBPTL
+          name: rtext_student_prompt_copy_30
+          data_bindings: []
+          components: []
+      - type: Spacer
+        properties: {height: 18}
+        layout_properties:
+          col_widths: {}
+          grid_position: WZWLSX,OGGFJA
+        name: spacer_3_copy_5
+      - type: Button
+        properties: {role: filled-button, align: right, tooltip: '', border: '', enabled: true,
+          foreground: '', visible: true, text: Onward, font_size: null, font: '',
+          spacing_above: small, icon_align: left, spacing_below: small, italic: false,
+          background: '', bold: false, underline: false, icon: ''}
+        layout_properties:
+          col_widths: {}
+          grid_position: JHYMTR,KWZMVJ
+        event_bindings: {click: btn_student_next_question_click}
+        name: btn_student_next_question_copy_3
+    - type: ColumnPanel
+      properties: {role: null, tooltip: '', border: '', foreground: '', visible: false,
+        wrap_on: mobile, col_spacing: medium, spacing_above: small, col_widths: '{}',
+        spacing_below: small, background: ''}
+      name: inquiry32
+      layout_properties: {grid_position: 'EITRGC,IPSOIW'}
+      components:
+      - type: Label
+        properties: {role: null, align: left, tooltip: '', border: '', foreground: 'theme:On
+            Tertiary Container', visible: false, text: 'Inquiry 3.2: ', font_size: 18,
+          font: '', spacing_above: small, icon_align: left, spacing_below: small,
+          italic: false, background: '', bold: true, underline: false, icon: ''}
+        layout_properties:
+          col_widths: {}
+          grid_position: GDAZJV,ZMETER
+        name: label_context_copy_13
+      - type: Label
+        properties: {role: null, align: left, tooltip: '', border: '', foreground: 'theme:On
+            Tertiary Container', visible: true, text: 'Context:', font_size: 18, font: '',
+          spacing_above: small, icon_align: left, spacing_below: small, italic: false,
+          background: '', bold: true, underline: false, icon: ''}
+        layout_properties: {grid_position: 'SZNENM,DXGOVJ'}
+        name: label_context_copy_14
+      - type: ColumnPanel
+        properties: {role: tonal-card, tooltip: '', border: '', foreground: '', visible: true,
+          wrap_on: mobile, col_spacing: medium, spacing_above: small, col_widths: '{}',
+          spacing_below: small, background: ''}
+        layout_properties: {grid_position: 'UWQFDK,JYACDT'}
+        name: ocard_student_context_copy_4
+        components:
+        - type: RichText
+          properties: {role: null, align: left, tooltip: '', enable_slots: true, border: '',
+            foreground: 'theme:On Background', visible: true, font_size: 16, content: 'Since
+              you can now predict the winner accurately, you decide to reflect on
+              the race to outline the conditions for victory.', font: '', spacing_above: small,
+            spacing_below: none, data: null, background: '', format: markdown}
+          layout_properties: {grid_position: 'GIUWKJ,LUTZAB'}
+          name: rtext_student_context_copy_4
+          data_bindings: []
+      - type: Spacer
+        properties: {height: 18}
+        layout_properties: {grid_position: 'FHBJDD,DFATZO'}
+        name: spacer_1_copy_5
+      - type: ColumnPanel
+        properties: {role: outlined-card, tooltip: '', border: '1', foreground: '',
+          visible: true, wrap_on: mobile, col_spacing: medium, spacing_above: small,
+          col_widths: '{}', spacing_below: small, background: ''}
+        name: ocard_student_interact_copy_3
+        layout_properties:
+          col_widths: {}
+          grid_position: VPHHSG,MMOELA
+        components:
+        - type: form:sim3
+          properties: {}
+          name: sim3_1_copy
+          layout_properties: {grid_position: 'MEAWZW,TCARBW'}
+        - type: Spacer
+          properties: {height: 35}
+          layout_properties:
+            col_widths: {}
+            grid_position: RHIDZY,NQWSGQ
+          name: spacer_1_copy_14
       - type: ColumnPanel
         properties: {role: null, tooltip: '', border: '', foreground: '', visible: true,
           wrap_on: mobile, col_spacing: medium, spacing_above: small, col_widths: '{}',
           spacing_below: small, background: ''}
         layout_properties:
           col_widths: {}
-          grid_position: VFLFNQ,YHTKRL
-        name: student_page1_copy_2
+          grid_position: PSGXTV,ABGUBB
+        name: student_page1_copy_4
+        components: []
+      - type: Label
+        properties: {role: null, align: left, tooltip: '', border: '', foreground: 'theme:On
+            Tertiary Container', visible: true, text: 'Prompt: ', font_size: 18, font: '',
+          spacing_above: small, icon_align: left, spacing_below: small, italic: false,
+          background: '', bold: true, underline: false, icon: ''}
+        layout_properties:
+          col_widths: {}
+          grid_position: HNXQYV,NSVVAZ
+        name: label_prompt_copy_4
+      - type: ColumnPanel
+        properties: {role: tonal-card, tooltip: '', border: '', foreground: '', visible: true,
+          wrap_on: mobile, col_spacing: medium, spacing_above: small, col_widths: '{}',
+          spacing_below: small, background: ''}
+        layout_properties:
+          col_widths: {}
+          grid_position: EPEXIV,DKTUGK
+        name: ocard_prompt_copy_4
         components:
-        - type: Label
-          properties: {role: null, align: left, tooltip: '', border: '', foreground: 'theme:On
-              Tertiary Container', visible: false, text: 'Inquiry 2.2: ', font_size: 18,
-            font: '', spacing_above: small, icon_align: left, spacing_below: small,
-            italic: false, background: '', bold: true, underline: false, icon: ''}
+        - type: RichText
+          properties: {role: null, align: left, tooltip: '', enable_slots: true, border: '',
+            foreground: 'theme:On Background', visible: true, font_size: 16, content: 'Which
+              of the following assumptions is correct?', font: '', spacing_above: small,
+            spacing_below: small, data: null, background: '', format: markdown}
           layout_properties:
             col_widths: {}
-            grid_position: CYGQFC,KIUHNW
-          name: label_context_copy_7
-        - type: Label
-          properties: {role: null, align: left, tooltip: '', border: '', foreground: 'theme:On
-              Tertiary Container', visible: true, text: 'Context:', font_size: 18,
-            font: '', spacing_above: small, icon_align: left, spacing_below: small,
-            italic: false, background: '', bold: true, underline: false, icon: ''}
-          layout_properties: {grid_position: 'ZQMOTI,HOPURL'}
-          name: label_context_copy_8
-        - type: ColumnPanel
-          properties: {role: tonal-card, tooltip: '', border: '', foreground: '',
-            visible: true, wrap_on: mobile, col_spacing: medium, spacing_above: small,
-            col_widths: '{}', spacing_below: small, background: ''}
-          layout_properties: {grid_position: 'OSTHTW,YVVACW'}
-          name: ocard_student_context_copy_2
-          components:
-          - type: RichText
-            properties: {role: null, align: left, tooltip: '', enable_slots: true,
-              border: '', foreground: 'theme:On Background', visible: true, font_size: 16,
-              content: 'Let''s imagine we held the race in perfect conditions. The
-                racers had plenty of rest, the carts were in top shape, and there
-                was no wind. The only variable would be the partner swap. To determine
-                if this influenced the race outcome, we could simulate the race with
-                the first and second partners and compare the finish times.', font: '',
-              spacing_above: small, spacing_below: large, data: null, background: '',
-              format: markdown}
-            layout_properties: {grid_position: 'GIUWKJ,LUTZAB'}
-            name: rtext_student_context_copy_2
-            data_bindings: []
-        - type: Spacer
-          properties: {height: 18}
-          layout_properties: {grid_position: 'TLAVOA,SZJJKG'}
-          name: spacer_1_copy_3
-        - type: ColumnPanel
-          properties: {role: outlined-card, tooltip: '', border: '1', foreground: '',
-            visible: true, wrap_on: mobile, col_spacing: medium, spacing_above: small,
-            col_widths: '{}', spacing_below: small, background: ''}
-          name: ocard_student_interact_copy
-          layout_properties:
-            col_widths: {}
-            grid_position: RHXPCJ,MVAKWY
-          components:
-          - type: form:sim2
-            properties: {}
-            name: sim2_1
-            layout_properties: {grid_position: 'ETKLJJ,SRYVWP'}
-        - type: Spacer
-          properties: {height: 35}
-          layout_properties:
-            col_widths: {}
-            grid_position: JBAEUQ,PKFDRU
-          name: spacer_1_copy_12
-        - type: Label
-          properties: {role: null, align: left, tooltip: '', border: '', foreground: 'theme:On
-              Tertiary Container', visible: true, text: 'Prompt: ', font_size: 18,
-            font: '', spacing_above: small, icon_align: left, spacing_below: small,
-            italic: false, background: '', bold: true, underline: false, icon: ''}
-          layout_properties:
-            col_widths: {}
-            grid_position: PJRSCT,YWPXJE
-          name: label_prompt_copy_2
-        - type: ColumnPanel
-          properties: {role: tonal-card, tooltip: '', border: '', foreground: '',
-            visible: true, wrap_on: mobile, col_spacing: medium, spacing_above: small,
-            col_widths: '{}', spacing_below: small, background: ''}
-          layout_properties:
-            col_widths: {}
-            grid_position: QOGUBQ,MYMCRJ
-          name: ocard_prompt_copy_2
-          components:
-          - type: RichText
-            properties: {role: null, align: left, tooltip: '', enable_slots: true,
-              border: '', foreground: 'theme:On Background', visible: true, font_size: 16,
-              content: 'How does mass affect the force needed to move an object?',
-              font: '', spacing_above: small, spacing_below: small, data: null, background: '',
-              format: markdown}
-            layout_properties:
-              col_widths: {}
-              grid_position: FWHASY,AHKXMO
-            name: rtext_student_prompt_copy_14
-            data_bindings: []
-        - type: Spacer
-          properties: {height: 18}
-          layout_properties:
-            col_widths: {}
-            grid_position: VFLWWJ,OZUMJK
-          name: spacer_2_copy_3
-        - type: Label
-          properties: {role: null, align: left, tooltip: '', border: '', foreground: 'theme:On
-              Tertiary Container', visible: true, text: 'Options:', font_size: 18,
-            font: '', spacing_above: small, icon_align: left, spacing_below: small,
-            italic: false, background: '', bold: true, underline: false, icon: ''}
-          layout_properties:
-            col_widths: {}
-            grid_position: SDNVET,WHSXDS
-          name: label_options_copy_3
-        - type: ColumnPanel
-          properties: {role: tonal-card, tooltip: '', border: '', foreground: '',
-            visible: true, wrap_on: mobile, col_spacing: medium, spacing_above: small,
-            col_widths: '{"KETAAD":55}', spacing_below: small, background: ''}
-          layout_properties:
-            col_widths: {}
-            grid_position: XKLJFL,IUNIZC
-          name: ocard_options_copy_3
-          components:
-          - type: ColumnPanel
-            properties: {role: null, tooltip: '', border: '', foreground: '', visible: true,
-              wrap_on: never, col_spacing: none, spacing_above: small, col_widths: '{}',
-              spacing_below: small, background: ''}
-            name: outlined_card_2_copy_2
-            layout_properties: {grid_position: 'WKOQON,KETAAD'}
-            components:
-            - type: RichText
-              properties: {role: null, align: left, tooltip: '', enable_slots: true,
-                border: '', foreground: 'theme:On Background', visible: true, font_size: 16,
-                content: The object’s mass doesn’t impact the force needed to move it.,
-                font: '', spacing_above: small, spacing_below: small, data: null,
-                background: '', format: markdown}
-              layout_properties:
-                col_widths: {}
-                grid_position: PHNJFN,JVBBZZ
-              name: rtext_student_prompt_copy_15
-              data_bindings: []
-              components:
-              - type: RichText
-                properties: {role: null, align: left, tooltip: '', enable_slots: true,
-                  border: '', foreground: 'theme:On Surface Variant', visible: true,
-                  font_size: 14, content: 'It’s quite possible. But given that the
-                    rest of the participants would be tired as well, we could still
-                    have a fair race.', font: '', spacing_above: small, spacing_below: small,
-                  data: null, background: '', format: markdown}
-                layout_properties:
-                  col_widths: {}
-                  grid_position: EBTGVL,ZBGXEN
-                name: rtext_student_prompt_copy_16
-                data_bindings: []
-          - type: RichText
-            properties: {role: null, align: left, tooltip: '', enable_slots: true,
-              border: '', foreground: 'theme:On Background', visible: true, font_size: 16,
-              content: 'The lighter an object is, the more force it requires to move
-                it.', font: '', spacing_above: small, spacing_below: small, data: null,
-              background: '', format: markdown}
-            layout_properties:
-              col_widths: {}
-              grid_position: IDKZTB,BOJNCJ
-            name: rtext_student_prompt_copy_17
-            data_bindings: []
-            components:
-            - type: RichText
-              properties: {role: null, align: left, tooltip: '', enable_slots: true,
-                border: '', foreground: 'theme:On Surface Variant', visible: true,
-                font_size: 14, content: 'A lighter cart does reach the finish line
-                  faster. But does this mean we needed more force?', font: '', spacing_above: small,
-                spacing_below: small, data: null, background: '', format: markdown}
-              layout_properties:
-                col_widths: {}
-                grid_position: CKWYAH,HCSVHA
-              name: rtext_student_prompt_copy_18
-              data_bindings: []
-          - type: RichText
-            properties: {role: null, align: left, tooltip: '', enable_slots: true,
-              border: '', foreground: 'theme:On Background', visible: true, font_size: 16,
-              content: 'The heavier an object is, the more force it requires to move
-                it.', font: '', spacing_above: small, spacing_below: small, data: null,
-              background: '', format: markdown}
-            layout_properties:
-              col_widths: {}
-              grid_position: ICLOSE,WQLPNY
-            name: rtext_student_prompt_copy_19
-            data_bindings: []
-            components:
-            - type: RichText
-              properties: {role: null, align: left, tooltip: '', enable_slots: true,
-                border: '', foreground: 'theme:On Surface Variant', visible: true,
-                font_size: 14, content: 'A heavier cart does reach the finish line
-                  slower. But does this mean we needed more force?', font: '', spacing_above: small,
-                spacing_below: small, data: null, background: '', format: markdown}
-              layout_properties:
-                col_widths: {}
-                grid_position: OOAZOC,THOLIS
-              name: rtext_student_prompt_copy_20
-              data_bindings: []
-          - type: RichText
-            properties: {role: null, align: left, tooltip: '', enable_slots: true,
-              border: '', foreground: 'theme:On Background', visible: true, font_size: 16,
-              content: The force needed to move an object doesn’t depend on its mass.,
-              font: '', spacing_above: small, spacing_below: small, data: null, background: '',
-              format: markdown}
-            layout_properties:
-              col_widths: {}
-              grid_position: AFHKWZ,DRBPTL
-            name: rtext_student_prompt_copy_21
-            data_bindings: []
-            components:
-            - type: RichText
-              properties: {role: null, align: left, tooltip: '', enable_slots: true,
-                border: '', foreground: 'theme:On Surface Variant', visible: true,
-                font_size: 14, content: 'Do you believe that altering the cart’s mass
-                  didn’t affect the force required for its movement?', font: '', spacing_above: small,
-                spacing_below: small, data: null, background: '', format: markdown}
-              layout_properties:
-                col_widths: {}
-                grid_position: NWPKOD,VRQYGN
-              name: rtext_student_prompt_copy_22
-              data_bindings: []
-        - type: Spacer
-          properties: {height: 18}
-          layout_properties:
-            col_widths: {}
-            grid_position: ZPRGWR,JKVDPZ
-          name: spacer_3_copy_4
-        - type: Button
-          properties: {role: filled-button, align: right, tooltip: '', border: '',
-            enabled: true, foreground: '', visible: true, text: Onward, font_size: null,
-            font: '', spacing_above: small, icon_align: left, spacing_below: small,
-            italic: false, background: '', bold: false, underline: false, icon: ''}
-          layout_properties:
-            col_widths: {}
-            grid_position: ANEMCT,IZMIZX
-          event_bindings: {click: btn_student_next_question_click}
-          name: btn_student_next_question_copy_2
+            grid_position: FWHASY,AHKXMO
+          name: rtext_student_prompt_copy_25
+          data_bindings: []
+      - type: Spacer
+        properties: {height: 18}
+        layout_properties:
+          col_widths: {}
+          grid_position: PBKGDG,HTIXJG
+        name: spacer_2_copy_5
+      - type: Label
+        properties: {role: null, align: left, tooltip: '', border: '', foreground: 'theme:On
+            Tertiary Container', visible: true, text: 'Options:', font_size: 18, font: '',
+          spacing_above: small, icon_align: left, spacing_below: small, italic: false,
+          background: '', bold: true, underline: false, icon: ''}
+        layout_properties:
+          col_widths: {}
+          grid_position: TEAEHG,VMWOZB
+        name: label_options_copy_5
+      - type: ColumnPanel
+        properties: {role: tonal-card, tooltip: '', border: '', foreground: '', visible: true,
+          wrap_on: mobile, col_spacing: medium, spacing_above: small, col_widths: '{"KETAAD":55}',
+          spacing_below: small, background: ''}
+        layout_properties:
+          col_widths: {}
+          grid_position: RKRADU,KOYWDB
+        name: ocard_options_copy_5
+        components:
         - type: ColumnPanel
           properties: {role: null, tooltip: '', border: '', foreground: '', visible: true,
-            wrap_on: mobile, col_spacing: medium, spacing_above: small, col_widths: '{}',
+            wrap_on: never, col_spacing: none, spacing_above: small, col_widths: '{}',
             spacing_below: small, background: ''}
+          name: outlined_card_2_copy_4
+          layout_properties: {grid_position: 'WKOQON,KETAAD'}
+          components:
+          - type: RichText
+            properties: {role: null, align: left, tooltip: '', enable_slots: true,
+              border: '', foreground: 'theme:On Background', visible: true, font_size: 16,
+              content: Regularly alternate between pushing harder and easing off.,
+              font: '', spacing_above: small, spacing_below: small, data: null, background: '',
+              format: markdown}
+            layout_properties:
+              col_widths: {}
+              grid_position: PHNJFN,JVBBZZ
+            name: rtext_student_prompt_copy_27
+            data_bindings: []
+            components:
+            - type: TextBox
+              properties: {role: null, align: left, hide_text: false, tooltip: '',
+                placeholder: provide reasoning, border: '', enabled: true, foreground: 'theme:On
+                  Surface Variant', visible: true, text: '', font_size: null, font: '',
+                spacing_above: small, type: text, spacing_below: small, italic: true,
+                background: '', bold: false, underline: false}
+              name: text_box_1
+              layout_properties: {}
+        - type: RichText
+          properties: {role: null, align: left, tooltip: '', enable_slots: true, border: '',
+            foreground: 'theme:On Background', visible: true, font_size: 16, content: Keep pushing harder to speed up faster.,
+            font: '', spacing_above: small, spacing_below: small, data: null, background: '',
+            format: markdown}
           layout_properties:
             col_widths: {}
-            grid_position: UDWKOG,YULVLW
-          name: student_page1_copy_3
+            grid_position: IDKZTB,BOJNCJ
+          name: rtext_student_prompt_copy_31
+          data_bindings: []
           components:
-          - type: Label
-            properties: {role: null, align: left, tooltip: '', border: '', foreground: 'theme:On
-                Tertiary Container', visible: false, text: 'Inquiry 3.1: ', font_size: 18,
-              font: '', spacing_above: small, icon_align: left, spacing_below: small,
-              italic: false, background: '', bold: true, underline: false, icon: ''}
+          - type: TextBox
+            properties: {role: null, align: left, hide_text: false, tooltip: '', placeholder: provide reasoning,
+              border: '', enabled: true, foreground: 'theme:On Surface Variant', visible: true,
+              text: '', font_size: null, font: '', spacing_above: small, type: text,
+              spacing_below: small, italic: true, background: '', bold: false, underline: false}
+            name: text_box_1_copy
             layout_properties:
               col_widths: {}
-              grid_position: CYGQFC,KIUHNW
-            name: label_context_copy_10
-          - type: Label
-            properties: {role: null, align: left, tooltip: '', border: '', foreground: 'theme:On
-                Tertiary Container', visible: true, text: 'Context:', font_size: 18,
-              font: '', spacing_above: small, icon_align: left, spacing_below: small,
-              italic: false, background: '', bold: true, underline: false, icon: ''}
-            layout_properties: {grid_position: 'ZQMOTI,HOPURL'}
-            name: label_context_copy_11
-          - type: ColumnPanel
-            properties: {role: tonal-card, tooltip: '', border: '', foreground: '',
-              visible: true, wrap_on: mobile, col_spacing: medium, spacing_above: small,
-              col_widths: '{}', spacing_below: small, background: ''}
-            layout_properties: {grid_position: 'OSTHTW,YVVACW'}
-            name: ocard_student_context_copy_3
-            components:
-            - type: RichText
-              properties: {role: null, align: left, tooltip: '', enable_slots: true,
-                border: '', foreground: 'theme:On Background', visible: true, font_size: 16,
-                content: 'As the kids gear up for another race and swap partners,
-                  you feel confident about predicting the winner. This time, you plan
-                  to consider both the weight of the child in the kart and the strength
-                  of the pusher.', font: '', spacing_above: small, spacing_below: none,
-                data: null, background: '', format: markdown}
-              layout_properties: {grid_position: 'GIUWKJ,LUTZAB'}
-              name: rtext_student_context_copy_3
-              data_bindings: []
-          - type: Spacer
-            properties: {height: 18}
-            layout_properties: {grid_position: 'TLAVOA,SZJJKG'}
-            name: spacer_1_copy_4
-          - type: ColumnPanel
-            properties: {role: outlined-card, tooltip: '', border: '1', foreground: '',
-              visible: true, wrap_on: mobile, col_spacing: medium, spacing_above: small,
-              col_widths: '{}', spacing_below: small, background: ''}
-            name: ocard_student_interact_copy_2
+              grid_position: UZTZMR,BYBJZQ
+        - type: RichText
+          properties: {role: null, align: left, tooltip: '', enable_slots: true, border: '',
+            foreground: 'theme:On Background', visible: true, font_size: 16, content: Get to the finish line by pulling the cart from the front instead of pushing from the back.,
+            font: '', spacing_above: small, spacing_below: small, data: null, background: '',
+            format: markdown}
+          layout_properties:
+            col_widths: {}
+            grid_position: ICLOSE,WQLPNY
+          name: rtext_student_prompt_copy_33
+          data_bindings: []
+          components:
+          - type: TextBox
+            properties: {role: null, align: left, hide_text: false, tooltip: '', placeholder: provide reasoning,
+              border: '', enabled: true, foreground: 'theme:On Surface Variant', visible: true,
+              text: '', font_size: null, font: '', spacing_above: small, type: text,
+              spacing_below: small, italic: true, background: '', bold: false, underline: false}
+            name: text_box_1_copy_2
             layout_properties:
               col_widths: {}
-              grid_position: RHXPCJ,MVAKWY
-            components:
-            - type: form:sim3
-              properties: {}
-              name: sim3_1
-              layout_properties: {grid_position: 'MEAWZW,TCARBW'}
-          - type: Spacer
-            properties: {height: 35}
+              grid_position: VBOVMK,RPAWHN
+            event_bindings: {}
+        - type: RichText
+          properties: {role: null, align: left, tooltip: '', enable_slots: true, border: '',
+            foreground: 'theme:On Background', visible: true, font_size: 16, content: Pick the lightest cart and teammate to go faster than equally strong rivals.,
+            font: '', spacing_above: small, spacing_below: small, data: null, background: '',
+            format: markdown}
+          layout_properties:
+            col_widths: {}
+            grid_position: AFHKWZ,DRBPTL
+          name: rtext_student_prompt_copy_35
+          data_bindings: []
+          components:
+          - type: TextBox
+            properties: {role: null, align: left, hide_text: false, tooltip: '', placeholder: provide reasoning,
+              border: '', enabled: true, foreground: 'theme:On Surface Variant', visible: true,
+              text: '', font_size: null, font: '', spacing_above: small, type: text,
+              spacing_below: small, italic: true, background: '', bold: false, underline: false}
+            name: text_box_1_copy_3
             layout_properties:
               col_widths: {}
-              grid_position: JBAEUQ,PKFDRU
-            name: spacer_1_copy_13
-          - type: Label
-            properties: {role: null, align: left, tooltip: '', border: '', foreground: 'theme:On
-                Tertiary Container', visible: true, text: 'Prompt: ', font_size: 18,
-              font: '', spacing_above: small, icon_align: left, spacing_below: small,
-              italic: false, background: '', bold: true, underline: false, icon: ''}
-            layout_properties:
-              col_widths: {}
-              grid_position: PJRSCT,YWPXJE
-            name: label_prompt_copy_3
-          - type: ColumnPanel
-            properties: {role: tonal-card, tooltip: '', border: '', foreground: '',
-              visible: true, wrap_on: mobile, col_spacing: medium, spacing_above: small,
-              col_widths: '{}', spacing_below: small, background: ''}
-            layout_properties:
-              col_widths: {}
-              grid_position: QOGUBQ,MYMCRJ
-            name: ocard_prompt_copy_3
-            components:
-            - type: RichText
-              properties: {role: null, align: left, tooltip: '', enable_slots: true,
-                border: '', foreground: 'theme:On Background', visible: true, font_size: 16,
-                content: 'Which team do you think will win the race?', font: '', spacing_above: small,
-                spacing_below: small, data: null, background: '', format: markdown}
-              layout_properties:
-                col_widths: {}
-                grid_position: FWHASY,AHKXMO
-              name: rtext_student_prompt_copy_23
-              data_bindings: []
-          - type: Spacer
-            properties: {height: 18}
-            layout_properties:
-              col_widths: {}
-              grid_position: VFLWWJ,OZUMJK
-            name: spacer_2_copy_4
-          - type: Label
-            properties: {role: null, align: left, tooltip: '', border: '', foreground: 'theme:On
-                Tertiary Container', visible: true, text: 'Options:', font_size: 18,
-              font: '', spacing_above: small, icon_align: left, spacing_below: small,
-              italic: false, background: '', bold: true, underline: false, icon: ''}
-            layout_properties:
-              col_widths: {}
-              grid_position: SDNVET,WHSXDS
-            name: label_options_copy_4
-          - type: ColumnPanel
-            properties: {role: tonal-card, tooltip: '', border: '', foreground: '',
-              visible: true, wrap_on: mobile, col_spacing: medium, spacing_above: small,
-              col_widths: '{"KETAAD":55}', spacing_below: small, background: ''}
-            layout_properties:
-              col_widths: {}
-              grid_position: XKLJFL,IUNIZC
-            name: ocard_options_copy_4
-            components:
-            - type: ColumnPanel
-              properties: {role: null, tooltip: '', border: '', foreground: '', visible: true,
-                wrap_on: never, col_spacing: none, spacing_above: small, col_widths: '{}',
-                spacing_below: small, background: ''}
-              name: outlined_card_2_copy_3
-              layout_properties: {grid_position: 'WKOQON,KETAAD'}
-              components:
-              - type: RichText
-                properties: {role: null, align: left, tooltip: '', enable_slots: true,
-                  border: '', foreground: 'theme:On Background', visible: true, font_size: 16,
-                  content: Turbo Twisters, font: '', spacing_above: small, spacing_below: small,
-                  data: null, background: '', format: markdown}
-                layout_properties:
-                  col_widths: {}
-                  grid_position: PHNJFN,JVBBZZ
-                name: rtext_student_prompt_copy_24
-                data_bindings: []
-                components: []
-            - type: RichText
-              properties: {role: null, align: left, tooltip: '', enable_slots: true,
-                border: '', foreground: 'theme:On Background', visible: true, font_size: 16,
-                content: Rapid Racers, font: '', spacing_above: small, spacing_below: small,
-                data: null, background: '', format: markdown}
-              layout_properties:
-                col_widths: {}
-                grid_position: IDKZTB,BOJNCJ
-              name: rtext_student_prompt_copy_26
-              data_bindings: []
-              components: []
-            - type: RichText
-              properties: {role: null, align: left, tooltip: '', enable_slots: true,
-                border: '', foreground: 'theme:On Background', visible: true, font_size: 16,
-                content: Speedy Sprinters, font: '', spacing_above: small, spacing_below: small,
-                data: null, background: '', format: markdown}
-              layout_properties:
-                col_widths: {}
-                grid_position: ICLOSE,WQLPNY
-              name: rtext_student_prompt_copy_28
-              data_bindings: []
-              components: []
-            - type: RichText
-              properties: {role: null, align: left, tooltip: '', enable_slots: true,
-                border: '', foreground: 'theme:On Background', visible: true, font_size: 16,
-                content: Flash Force, font: '', spacing_above: small, spacing_below: small,
-                data: null, background: '', format: markdown}
-              layout_properties:
-                col_widths: {}
-                grid_position: AFHKWZ,DRBPTL
-              name: rtext_student_prompt_copy_30
-              data_bindings: []
-              components: []
-          - type: Spacer
-            properties: {height: 18}
-            layout_properties:
-              col_widths: {}
-              grid_position: ZPRGWR,JKVDPZ
-            name: spacer_3_copy_5
-          - type: Button
-            properties: {role: filled-button, align: right, tooltip: '', border: '',
-              enabled: true, foreground: '', visible: true, text: Onward, font_size: null,
-              font: '', spacing_above: small, icon_align: left, spacing_below: small,
-              italic: false, background: '', bold: false, underline: false, icon: ''}
-            layout_properties:
-              col_widths: {}
-              grid_position: ANEMCT,IZMIZX
-            event_bindings: {click: btn_student_next_question_click}
-            name: btn_student_next_question_copy_3
-          - type: ColumnPanel
-            properties: {role: null, tooltip: '', border: '', foreground: '', visible: true,
-              wrap_on: mobile, col_spacing: medium, spacing_above: small, col_widths: '{}',
-              spacing_below: small, background: ''}
-            layout_properties:
-              col_widths: {}
-              grid_position: UXTWQJ,RLKJRL
-            name: student_page1_copy_4
-            components:
-            - type: Label
-              properties: {role: null, align: left, tooltip: '', border: '', foreground: 'theme:On
-                  Tertiary Container', visible: false, text: 'Inquiry 3.2: ', font_size: 18,
-                font: '', spacing_above: small, icon_align: left, spacing_below: small,
-                italic: false, background: '', bold: true, underline: false, icon: ''}
-              layout_properties:
-                col_widths: {}
-                grid_position: CYGQFC,KIUHNW
-              name: label_context_copy_13
-            - type: Label
-              properties: {role: null, align: left, tooltip: '', border: '', foreground: 'theme:On
-                  Tertiary Container', visible: true, text: 'Context:', font_size: 18,
-                font: '', spacing_above: small, icon_align: left, spacing_below: small,
-                italic: false, background: '', bold: true, underline: false, icon: ''}
-              layout_properties: {grid_position: 'ZQMOTI,HOPURL'}
-              name: label_context_copy_14
-            - type: ColumnPanel
-              properties: {role: tonal-card, tooltip: '', border: '', foreground: '',
-                visible: true, wrap_on: mobile, col_spacing: medium, spacing_above: small,
-                col_widths: '{}', spacing_below: small, background: ''}
-              layout_properties: {grid_position: 'OSTHTW,YVVACW'}
-              name: ocard_student_context_copy_4
-              components:
-              - type: RichText
-                properties: {role: null, align: left, tooltip: '', enable_slots: true,
-                  border: '', foreground: 'theme:On Background', visible: true, font_size: 16,
-                  content: 'Since you can now predict the winner accurately, you decide
-                    to reflect on the race to outline the conditions for victory.',
-                  font: '', spacing_above: small, spacing_below: none, data: null,
-                  background: '', format: markdown}
-                layout_properties: {grid_position: 'GIUWKJ,LUTZAB'}
-                name: rtext_student_context_copy_4
-                data_bindings: []
-            - type: Spacer
-              properties: {height: 18}
-              layout_properties: {grid_position: 'TLAVOA,SZJJKG'}
-              name: spacer_1_copy_5
-            - type: ColumnPanel
-              properties: {role: outlined-card, tooltip: '', border: '1', foreground: '',
-                visible: true, wrap_on: mobile, col_spacing: medium, spacing_above: small,
-                col_widths: '{}', spacing_below: small, background: ''}
-              name: ocard_student_interact_copy_3
-              layout_properties:
-                col_widths: {}
-                grid_position: RHXPCJ,MVAKWY
-              components:
-              - type: form:sim3
-                properties: {}
-                name: sim3_1_copy
-                layout_properties: {grid_position: 'MEAWZW,TCARBW'}
-            - type: Spacer
-              properties: {height: 35}
-              layout_properties:
-                col_widths: {}
-                grid_position: JBAEUQ,PKFDRU
-              name: spacer_1_copy_14
-            - type: Label
-              properties: {role: null, align: left, tooltip: '', border: '', foreground: 'theme:On
-                  Tertiary Container', visible: true, text: 'Prompt: ', font_size: 18,
-                font: '', spacing_above: small, icon_align: left, spacing_below: small,
-                italic: false, background: '', bold: true, underline: false, icon: ''}
-              layout_properties:
-                col_widths: {}
-                grid_position: IPVMYD,EBHVRU
-              name: label_prompt_copy_4
-            - type: ColumnPanel
-              properties: {role: tonal-card, tooltip: '', border: '', foreground: '',
-                visible: true, wrap_on: mobile, col_spacing: medium, spacing_above: small,
-                col_widths: '{}', spacing_below: small, background: ''}
-              layout_properties:
-                col_widths: {}
-                grid_position: HPNNLS,XPZZYS
-              name: ocard_prompt_copy_4
-              components:
-              - type: RichText
-                properties: {role: null, align: left, tooltip: '', enable_slots: true,
-                  border: '', foreground: 'theme:On Background', visible: true, font_size: 16,
-                  content: 'Which of the following assumptions is correct?', font: '',
-                  spacing_above: small, spacing_below: small, data: null, background: '',
-                  format: markdown}
-                layout_properties:
-                  col_widths: {}
-                  grid_position: FWHASY,AHKXMO
-                name: rtext_student_prompt_copy_25
-                data_bindings: []
-            - type: Spacer
-              properties: {height: 18}
-              layout_properties:
-                col_widths: {}
-                grid_position: KVBBMU,VYJZGR
-              name: spacer_2_copy_5
-            - type: Label
-              properties: {role: null, align: left, tooltip: '', border: '', foreground: 'theme:On
-                  Tertiary Container', visible: true, text: 'Options:', font_size: 18,
-                font: '', spacing_above: small, icon_align: left, spacing_below: small,
-                italic: false, background: '', bold: true, underline: false, icon: ''}
-              layout_properties:
-                col_widths: {}
-                grid_position: SDNVET,WHSXDS
-              name: label_options_copy_5
-            - type: ColumnPanel
-              properties: {role: tonal-card, tooltip: '', border: '', foreground: '',
-                visible: true, wrap_on: mobile, col_spacing: medium, spacing_above: small,
-                col_widths: '{"KETAAD":55}', spacing_below: small, background: ''}
-              layout_properties:
-                col_widths: {}
-                grid_position: UPKQBY,MDGHSZ
-              name: ocard_options_copy_5
-              components:
-              - type: ColumnPanel
-                properties: {role: null, tooltip: '', border: '', foreground: '',
-                  visible: true, wrap_on: never, col_spacing: none, spacing_above: small,
-                  col_widths: '{}', spacing_below: small, background: ''}
-                name: outlined_card_2_copy_4
-                layout_properties: {grid_position: 'WKOQON,KETAAD'}
-                components:
-                - type: RichText
-                  properties: {role: null, align: left, tooltip: '', enable_slots: true,
-                    border: '', foreground: 'theme:On Background', visible: true,
-                    font_size: 16, content: Regularly alternate between pushing harder and easing off.,
-                    font: '', spacing_above: small, spacing_below: small, data: null,
-                    background: '', format: markdown}
-                  layout_properties:
-                    col_widths: {}
-                    grid_position: PHNJFN,JVBBZZ
-                  name: rtext_student_prompt_copy_27
-                  data_bindings: []
-                  components:
-                  - type: TextBox
-                    properties: {role: null, align: left, hide_text: false, tooltip: '',
-                      placeholder: provide reasoning, border: '', enabled: true, foreground: 'theme:On
-                        Surface Variant', visible: true, text: '', font_size: null,
-                      font: '', spacing_above: small, type: text, spacing_below: small,
-                      italic: true, background: '', bold: false, underline: false}
-                    name: text_box_1
-                    layout_properties: {}
-              - type: RichText
-                properties: {role: null, align: left, tooltip: '', enable_slots: true,
-                  border: '', foreground: 'theme:On Background', visible: true, font_size: 16,
-                  content: Keep pushing harder to speed up faster., font: '', spacing_above: small,
-                  spacing_below: small, data: null, background: '', format: markdown}
-                layout_properties:
-                  col_widths: {}
-                  grid_position: IDKZTB,BOJNCJ
-                name: rtext_student_prompt_copy_31
-                data_bindings: []
-                components:
-                - type: TextBox
-                  properties: {role: null, align: left, hide_text: false, tooltip: '',
-                    placeholder: provide reasoning, border: '', enabled: true, foreground: 'theme:On
-                      Surface Variant', visible: true, text: '', font_size: null,
-                    font: '', spacing_above: small, type: text, spacing_below: small,
-                    italic: true, background: '', bold: false, underline: false}
-                  name: text_box_1_copy
-                  layout_properties:
-                    col_widths: {}
-                    grid_position: UZTZMR,BYBJZQ
-              - type: RichText
-                properties: {role: null, align: left, tooltip: '', enable_slots: true,
-                  border: '', foreground: 'theme:On Background', visible: true, font_size: 16,
-                  content: Get to the finish line by pulling the cart from the front instead of pushing from the back.,
-                  font: '', spacing_above: small, spacing_below: small, data: null,
-                  background: '', format: markdown}
-                layout_properties:
-                  col_widths: {}
-                  grid_position: ICLOSE,WQLPNY
-                name: rtext_student_prompt_copy_33
-                data_bindings: []
-                components:
-                - type: TextBox
-                  properties: {role: null, align: left, hide_text: false, tooltip: '',
-                    placeholder: provide reasoning, border: '', enabled: true, foreground: 'theme:On
-                      Surface Variant', visible: true, text: '', font_size: null,
-                    font: '', spacing_above: small, type: text, spacing_below: small,
-                    italic: true, background: '', bold: false, underline: false}
-                  name: text_box_1_copy_2
-                  layout_properties:
-                    col_widths: {}
-                    grid_position: VBOVMK,RPAWHN
-                  event_bindings: {pressed_enter: text_box_1_copy_2_pressed_enter}
-              - type: RichText
-                properties: {role: null, align: left, tooltip: '', enable_slots: true,
-                  border: '', foreground: 'theme:On Background', visible: true, font_size: 16,
-                  content: Pick the lightest cart and teammate to go faster than equally strong rivals.,
-                  font: '', spacing_above: small, spacing_below: small, data: null,
-                  background: '', format: markdown}
-                layout_properties:
-                  col_widths: {}
-                  grid_position: AFHKWZ,DRBPTL
-                name: rtext_student_prompt_copy_35
-                data_bindings: []
-                components:
-                - type: TextBox
-                  properties: {role: null, align: left, hide_text: false, tooltip: '',
-                    placeholder: provide reasoning, border: '', enabled: true, foreground: 'theme:On
-                      Surface Variant', visible: true, text: '', font_size: null,
-                    font: '', spacing_above: small, type: text, spacing_below: small,
-                    italic: true, background: '', bold: false, underline: false}
-                  name: text_box_1_copy_3
-                  layout_properties:
-                    col_widths: {}
-                    grid_position: HFMCNE,EMCMJF
-            - type: Spacer
-              properties: {height: 18}
-              layout_properties:
-                col_widths: {}
-                grid_position: EKUIYP,WAERKE
-              name: spacer_3_copy_6
-            - type: Button
-              properties: {role: filled-button, align: right, tooltip: '', border: '',
-                enabled: true, foreground: '', visible: true, text: Onward, font_size: null,
-                font: '', spacing_above: small, icon_align: left, spacing_below: small,
-                italic: false, background: '', bold: false, underline: false, icon: ''}
-              layout_properties:
-                col_widths: {}
-                grid_position: ANEMCT,IZMIZX
-              event_bindings: {click: btn_student_next_question_click}
-              name: btn_student_next_question_copy_4
-          - type: ColumnPanel
-            properties: {role: null, tooltip: '', border: '', foreground: '', visible: true,
-              wrap_on: mobile, col_spacing: medium, spacing_above: small, col_widths: '{}',
-              spacing_below: small, background: ''}
-            layout_properties:
-              col_widths: {}
-              grid_position: TQNDZM,OHGRUT
-            name: student_page1_copy_5
-            components:
-            - type: Label
-              properties: {role: null, align: left, tooltip: '', border: '', foreground: 'theme:On
-                  Tertiary Container', visible: false, text: 'Inquiry 4: ', font_size: 18,
-                font: '', spacing_above: small, icon_align: left, spacing_below: small,
-                italic: false, background: '', bold: true, underline: false, icon: ''}
-              layout_properties:
-                col_widths: {}
-                grid_position: CYGQFC,KIUHNW
-              name: label_context_copy_12
-            - type: Label
-              properties: {role: null, align: left, tooltip: '', border: '', foreground: 'theme:On
-                  Tertiary Container', visible: true, text: 'Context:', font_size: 18,
-                font: '', spacing_above: small, icon_align: left, spacing_below: small,
-                italic: false, background: '', bold: true, underline: false, icon: ''}
-              layout_properties: {grid_position: 'ZQMOTI,HOPURL'}
-              name: label_context_copy_16
-            - type: ColumnPanel
-              properties: {role: tonal-card, tooltip: '', border: '', foreground: '',
-                visible: true, wrap_on: mobile, col_spacing: medium, spacing_above: small,
-                col_widths: '{}', spacing_below: small, background: ''}
-              layout_properties: {grid_position: 'OSTHTW,YVVACW'}
-              name: ocard_student_context_copy_5
-              components:
-              - type: RichText
-                properties: {role: null, align: left, tooltip: '', enable_slots: true,
-                  border: '', foreground: 'theme:On Background', visible: true, font_size: 16,
-                  content: 'You’ve made accurate predictions, but you know that data-driven
-                    decisions and precise calculations are more reliable. This motivates
-                    you to formulate a mathematical function to calculate a cart’s
-                    acceleration.
+              grid_position: HFMCNE,EMCMJF
+      - type: Spacer
+        properties: {height: 18}
+        layout_properties:
+          col_widths: {}
+          grid_position: TIKJFF,YBXTOG
+        name: spacer_3_copy_6
+      - type: Button
+        properties: {role: filled-button, align: right, tooltip: '', border: '', enabled: true,
+          foreground: '', visible: true, text: Onward, font_size: null, font: '',
+          spacing_above: small, icon_align: left, spacing_below: small, italic: false,
+          background: '', bold: false, underline: false, icon: ''}
+        layout_properties:
+          col_widths: {}
+          grid_position: MKVVDF,MUHSII
+        event_bindings: {click: btn_student_next_question_click}
+        name: btn_student_next_question_copy_4
+    - type: ColumnPanel
+      properties: {role: null, tooltip: '', border: '', foreground: '', visible: false,
+        wrap_on: mobile, col_spacing: medium, spacing_above: small, col_widths: '{}',
+        spacing_below: small, background: ''}
+      name: inquiry40
+      layout_properties: {grid_position: 'BWFCSE,SSEKVM'}
+      components:
+      - type: Label
+        properties: {role: null, align: left, tooltip: '', border: '', foreground: 'theme:On
+            Tertiary Container', visible: false, text: 'Inquiry 4: ', font_size: 18,
+          font: '', spacing_above: small, icon_align: left, spacing_below: small,
+          italic: false, background: '', bold: true, underline: false, icon: ''}
+        layout_properties:
+          col_widths: {}
+          grid_position: XAZOHL,PLFOKD
+        name: label_context_copy_12
+      - type: Label
+        properties: {role: null, align: left, tooltip: '', border: '', foreground: 'theme:On
+            Tertiary Container', visible: true, text: 'Context:', font_size: 18, font: '',
+          spacing_above: small, icon_align: left, spacing_below: small, italic: false,
+          background: '', bold: true, underline: false, icon: ''}
+        layout_properties: {grid_position: 'SQCGCQ,IZRJLW'}
+        name: label_context_copy_16
+      - type: ColumnPanel
+        properties: {role: tonal-card, tooltip: '', border: '', foreground: '', visible: true,
+          wrap_on: mobile, col_spacing: medium, spacing_above: small, col_widths: '{}',
+          spacing_below: small, background: ''}
+        layout_properties: {grid_position: 'FDGBYH,WIWJNJ'}
+        name: ocard_student_context_copy_5
+        components:
+        - type: RichText
+          properties: {role: null, align: left, tooltip: '', enable_slots: true, border: '',
+            foreground: 'theme:On Background', visible: true, font_size: 16, content: 'You’ve
+              made accurate predictions, but you know that data-driven decisions and
+              precise calculations are more reliable. This motivates you to formulate
+              a mathematical function to calculate a cart’s acceleration.
 
 
-                    Therefore, you replicate the cart race in a controlled setting
-                    to collect and analyze data. You''re hopeful that you''ll find
-                    the accurate expression for the relationship between force, mass
-                    and acceleration.', font: '', spacing_above: small, spacing_below: none,
-                  data: null, background: '', format: markdown}
-                layout_properties: {grid_position: 'GIUWKJ,LUTZAB'}
-                name: rtext_student_context_copy_5
-                data_bindings: []
-            - type: Spacer
-              properties: {height: 18}
-              layout_properties: {grid_position: 'TLAVOA,SZJJKG'}
-              name: spacer_1_copy_6
-            - type: ColumnPanel
-              properties: {role: outlined-card, tooltip: '', border: '1', foreground: '',
-                visible: true, wrap_on: mobile, col_spacing: medium, spacing_above: small,
-                col_widths: '{}', spacing_below: small, background: ''}
-              name: ocard_student_interact_copy_4
+              Therefore, you replicate the cart race in a controlled setting to collect
+              and analyze data. You''re hopeful that you''ll find the accurate expression
+              for the relationship between force, mass and acceleration.', font: '',
+            spacing_above: small, spacing_below: none, data: null, background: '',
+            format: markdown}
+          layout_properties: {grid_position: 'GIUWKJ,LUTZAB'}
+          name: rtext_student_context_copy_5
+          data_bindings: []
+      - type: Spacer
+        properties: {height: 18}
+        layout_properties: {grid_position: 'HMIYVF,GXTULA'}
+        name: spacer_1_copy_6
+      - type: ColumnPanel
+        properties: {role: outlined-card, tooltip: '', border: '1', foreground: '',
+          visible: true, wrap_on: mobile, col_spacing: medium, spacing_above: small,
+          col_widths: '{}', spacing_below: small, background: ''}
+        name: ocard_student_interact_copy_4
+        layout_properties:
+          col_widths: {}
+          grid_position: IORQLX,KJZBAD
+        components:
+        - type: form:sim4
+          properties: {}
+          name: sim4_1
+          layout_properties: {grid_position: 'GMGOPP,LWIIBH'}
+      - type: Spacer
+        properties: {height: 35}
+        layout_properties:
+          col_widths: {}
+          grid_position: SXYHFA,HUQPSL
+        name: spacer_1_copy_15
+      - type: Label
+        properties: {role: null, align: left, tooltip: '', border: '', foreground: 'theme:On
+            Tertiary Container', visible: true, text: 'Prompt: ', font_size: 18, font: '',
+          spacing_above: small, icon_align: left, spacing_below: small, italic: false,
+          background: '', bold: true, underline: false, icon: ''}
+        layout_properties:
+          col_widths: {}
+          grid_position: NROPLU,JCPLLF
+        name: label_prompt_copy_5
+      - type: ColumnPanel
+        properties: {role: tonal-card, tooltip: '', border: '', foreground: '', visible: true,
+          wrap_on: mobile, col_spacing: medium, spacing_above: small, col_widths: '{}',
+          spacing_below: small, background: ''}
+        layout_properties:
+          col_widths: {}
+          grid_position: ULLYSJ,FTIAZZ
+        name: ocard_prompt_copy_5
+        components:
+        - type: RichText
+          properties: {role: null, align: left, tooltip: '', enable_slots: true, border: '',
+            foreground: 'theme:On Background', visible: true, font_size: 16, content: 'Select
+              the assumption that best describes the relationship between an object’s
+              mass Select the assumption that best describes the relationship between
+              an object’s mass (m), the force (f) applied to it, and its acceleration
+              (a)., the force applied to it, and its acceleration.', font: '', spacing_above: small,
+            spacing_below: small, data: null, background: '', format: markdown}
+          layout_properties:
+            col_widths: {}
+            grid_position: FWHASY,AHKXMO
+          name: rtext_student_prompt_copy_29
+          data_bindings: []
+      - type: Spacer
+        properties: {height: 18}
+        layout_properties:
+          col_widths: {}
+          grid_position: RTOTTQ,HXKYXW
+        name: spacer_2_copy_6
+      - type: Label
+        properties: {role: null, align: left, tooltip: '', border: '', foreground: 'theme:On
+            Tertiary Container', visible: true, text: 'Options:', font_size: 18, font: '',
+          spacing_above: small, icon_align: left, spacing_below: small, italic: false,
+          background: '', bold: true, underline: false, icon: ''}
+        layout_properties:
+          col_widths: {}
+          grid_position: WETISV,EUSTAH
+        name: label_options_copy_6
+      - type: ColumnPanel
+        properties: {role: tonal-card, tooltip: '', border: '', foreground: '', visible: true,
+          wrap_on: mobile, col_spacing: medium, spacing_above: small, col_widths: '{"KETAAD":55}',
+          spacing_below: small, background: ''}
+        layout_properties:
+          col_widths: {}
+          grid_position: LMTLLQ,HYMHCF
+        name: ocard_options_copy_6
+        components:
+        - type: ColumnPanel
+          properties: {role: null, tooltip: '', border: '', foreground: '', visible: true,
+            wrap_on: never, col_spacing: none, spacing_above: small, col_widths: '{}',
+            spacing_below: small, background: ''}
+          name: outlined_card_2_copy_5
+          layout_properties: {grid_position: 'WKOQON,KETAAD'}
+          components:
+          - type: RichText
+            properties: {role: null, align: left, tooltip: '', enable_slots: true,
+              border: '', foreground: 'theme:On Background', visible: true, font_size: 16,
+              content: a = f⋅m, font: '', spacing_above: small, spacing_below: small,
+              data: null, background: '', format: markdown}
+            layout_properties:
+              col_widths: {}
+              grid_position: PHNJFN,JVBBZZ
+            name: rtext_student_prompt_copy_32
+            data_bindings: []
+            components: []
+        - type: RichText
+          properties: {role: null, align: left, tooltip: '', enable_slots: true, border: '',
+            foreground: 'theme:On Background', visible: true, font_size: 16, content: 'a
+              = f/m ', font: '', spacing_above: small, spacing_below: small, data: null,
+            background: '', format: markdown}
+          layout_properties:
+            col_widths: {}
+            grid_position: IDKZTB,BOJNCJ
+          name: rtext_student_prompt_copy_34
+          data_bindings: []
+          components: []
+        - type: RichText
+          properties: {role: null, align: left, tooltip: '', enable_slots: true, border: '',
+            foreground: 'theme:On Background', visible: true, font_size: 16, content: a = m/f,
+            font: '', spacing_above: small, spacing_below: small, data: null, background: '',
+            format: markdown}
+          layout_properties:
+            col_widths: {}
+            grid_position: ICLOSE,WQLPNY
+          name: rtext_student_prompt_copy_36
+          data_bindings: []
+          components: []
+        - type: RichText
+          properties: {role: null, align: left, tooltip: '', enable_slots: true, border: '',
+            foreground: 'theme:On Background', visible: true, font_size: 16, content: a = x⋅f⋅m,
+            font: '', spacing_above: small, spacing_below: small, data: null, background: '',
+            format: markdown}
+          layout_properties:
+            col_widths: {}
+            grid_position: AFHKWZ,DRBPTL
+          name: rtext_student_prompt_copy_37
+          data_bindings: []
+          components: []
+        - type: RichText
+          properties: {role: null, align: left, tooltip: '', enable_slots: true, border: '',
+            foreground: 'theme:On Background', visible: true, font_size: 16, content: a = x⋅f/m,
+            font: '', spacing_above: small, spacing_below: small, data: null, background: '',
+            format: markdown}
+          layout_properties:
+            col_widths: {}
+            grid_position: XLZQAV,EYHSAP
+          name: rtext_student_prompt_copy_41
+          data_bindings: []
+          components: []
+        - type: RichText
+          properties: {role: null, align: left, tooltip: '', enable_slots: true, border: '',
+            foreground: 'theme:On Background', visible: true, font_size: 16, content: a = x⋅m/f,
+            font: '', spacing_above: small, spacing_below: small, data: null, background: '',
+            format: markdown}
+          layout_properties:
+            col_widths: {}
+            grid_position: FFMDIU,PCGXNZ
+          name: rtext_student_prompt_copy_40
+          data_bindings: []
+          components: []
+        - type: RichText
+          properties: {role: null, align: left, tooltip: '', enable_slots: true, border: '',
+            foreground: 'theme:On Background', visible: true, font_size: 16, content: a = f^x ⋅ m^y,
+            font: '', spacing_above: small, spacing_below: small, data: null, background: '',
+            format: markdown}
+          layout_properties:
+            col_widths: {}
+            grid_position: ITRCMV,XBBCTK
+          name: rtext_student_prompt_copy_39
+          data_bindings: []
+          components: []
+        - type: RichText
+          properties: {role: null, align: left, tooltip: '', enable_slots: true, border: '',
+            foreground: 'theme:On Background', visible: true, font_size: 16, content: a = x ⋅ f^y⋅ m^z,
+            font: '', spacing_above: small, spacing_below: small, data: null, background: '',
+            format: markdown}
+          layout_properties:
+            col_widths: {}
+            grid_position: YXTHXI,DYYCPI
+          name: rtext_student_prompt_copy_38
+          data_bindings: []
+          components: []
+      - type: Spacer
+        properties: {height: 18}
+        layout_properties:
+          col_widths: {}
+          grid_position: EDTZWM,RRVZTL
+        name: spacer_3_copy_7
+      - type: Button
+        properties: {role: filled-button, align: right, tooltip: '', border: '', enabled: true,
+          foreground: '', visible: true, text: Onward, font_size: null, font: '',
+          spacing_above: small, icon_align: left, spacing_below: small, italic: false,
+          background: '', bold: false, underline: false, icon: ''}
+        layout_properties:
+          col_widths: {}
+          grid_position: JBDEJJ,IIDYWD
+        event_bindings: {click: btn_student_next_question_click}
+        name: btn_student_next_question_copy_5
+    - type: ColumnPanel
+      properties: {role: null, tooltip: '', border: '', foreground: '', visible: false,
+        wrap_on: mobile, col_spacing: medium, spacing_above: small, col_widths: '{}',
+        spacing_below: small, background: ''}
+      name: inquiry51
+      layout_properties: {grid_position: 'RAZZIJ,DTWDVS'}
+      components:
+      - type: Label
+        properties: {role: null, align: left, tooltip: '', border: '', foreground: 'theme:On
+            Tertiary Container', visible: false, text: 'Inquiry 5.1: ', font_size: 18,
+          font: '', spacing_above: small, icon_align: left, spacing_below: small,
+          italic: false, background: '', bold: true, underline: false, icon: ''}
+        layout_properties:
+          col_widths: {}
+          grid_position: CYWOCA,YFJKTA
+        name: label_context_copy_15
+      - type: Label
+        properties: {role: null, align: left, tooltip: '', border: '', foreground: 'theme:On
+            Tertiary Container', visible: true, text: 'Context:', font_size: 18, font: '',
+          spacing_above: small, icon_align: left, spacing_below: small, italic: false,
+          background: '', bold: true, underline: false, icon: ''}
+        layout_properties: {grid_position: 'PQUCIM,TSAWEO'}
+        name: label_context_copy_17
+      - type: ColumnPanel
+        properties: {role: tonal-card, tooltip: '', border: '', foreground: '', visible: true,
+          wrap_on: mobile, col_spacing: medium, spacing_above: small, col_widths: '{}',
+          spacing_below: small, background: ''}
+        layout_properties: {grid_position: 'UAMEJV,UUMWSI'}
+        name: ocard_student_context_copy_6
+        components:
+        - type: RichText
+          properties: {role: null, align: left, tooltip: '', enable_slots: true, border: '',
+            foreground: 'theme:On Background', visible: true, font_size: 16, content: 'To
+              evaluate the accuracy of a=f/m, you plan to conduct an experiment. You’re
+              considering various real-world scenarios, where force, mass and acceleration
+              come into play.', font: '', spacing_above: small, spacing_below: small,
+            data: null, background: '', format: markdown}
+          layout_properties: {grid_position: 'GIUWKJ,LUTZAB'}
+          name: rtext_student_context_copy_6
+          data_bindings: []
+      - type: Spacer
+        properties: {height: 18}
+        layout_properties:
+          col_widths: {}
+          grid_position: VOVHAT,AQIWTU
+        name: spacer_2_copy_7
+      - type: Label
+        properties: {role: null, align: left, tooltip: '', border: '', foreground: 'theme:On
+            Tertiary Container', visible: true, text: 'Options:', font_size: 18, font: '',
+          spacing_above: small, icon_align: left, spacing_below: small, italic: false,
+          background: '', bold: true, underline: false, icon: ''}
+        layout_properties:
+          col_widths: {}
+          grid_position: PCQEEG,DDKEGJ
+        name: label_options_copy_7
+      - type: ColumnPanel
+        properties: {role: tonal-card, tooltip: '', border: '', foreground: '', visible: true,
+          wrap_on: mobile, col_spacing: medium, spacing_above: small, col_widths: '{"KETAAD":55}',
+          spacing_below: small, background: ''}
+        layout_properties:
+          col_widths: {}
+          grid_position: NZBJKK,EKXESD
+        name: ocard_options_copy_7
+        components:
+        - type: ColumnPanel
+          properties: {role: null, tooltip: '', border: '', foreground: '', visible: true,
+            wrap_on: never, col_spacing: none, spacing_above: small, col_widths: '{}',
+            spacing_below: small, background: ''}
+          name: outlined_card_2_copy_6
+          layout_properties: {grid_position: 'WKOQON,KETAAD'}
+          components:
+          - type: RichText
+            properties: {role: null, align: left, tooltip: '', enable_slots: true,
+              border: '', foreground: 'theme:On Background', visible: true, font_size: 16,
+              content: Automobile Brake System, font: '', spacing_above: small, spacing_below: small,
+              data: null, background: '', format: markdown}
+            layout_properties:
+              col_widths: {}
+              grid_position: PHNJFN,JVBBZZ
+            name: rtext_student_prompt_copy_42
+            data_bindings: []
+            components:
+            - type: RichText
+              properties: {role: null, align: left, tooltip: '', enable_slots: true,
+                border: '', foreground: 'theme:On Surface Variant', visible: true,
+                font_size: 14, content: 'Install the appropriate brake considering
+                  the car’s mass and top speed. This will help the car safely decelerate,
+                  preventing accidents.', font: '', spacing_above: small, spacing_below: small,
+                data: null, background: '', format: markdown}
               layout_properties:
                 col_widths: {}
-                grid_position: RHXPCJ,MVAKWY
-              components:
-              - type: form:sim4
-                properties: {}
-                name: sim4_1
-                layout_properties: {grid_position: 'GMGOPP,LWIIBH'}
-            - type: Spacer
-              properties: {height: 35}
+                grid_position: EBTGVL,ZBGXEN
+              name: rtext_student_prompt_copy_43
+              data_bindings: []
+            - type: RichText
+              properties: {role: null, align: left, tooltip: '', enable_slots: true,
+                border: '', foreground: 'theme:On Surface Variant', visible: true,
+                font_size: 14, content: 'This experiment involves a car of a certain
+                  mass and speed decelerating due to the force from the brakes. Since
+                  this deals with deceleration, and breaking force, could this be
+                  relevant to us?', font: '', spacing_above: small, spacing_below: small,
+                data: null, background: '', format: markdown}
               layout_properties:
                 col_widths: {}
-                grid_position: JBAEUQ,PKFDRU
-              name: spacer_1_copy_15
-            - type: Label
-              properties: {role: null, align: left, tooltip: '', border: '', foreground: 'theme:On
-                  Tertiary Container', visible: true, text: 'Prompt: ', font_size: 18,
-                font: '', spacing_above: small, icon_align: left, spacing_below: small,
-                italic: false, background: '', bold: true, underline: false, icon: ''}
-              layout_properties:
-                col_widths: {}
-                grid_position: PJRSCT,YWPXJE
-              name: label_prompt_copy_5
-            - type: ColumnPanel
-              properties: {role: tonal-card, tooltip: '', border: '', foreground: '',
-                visible: true, wrap_on: mobile, col_spacing: medium, spacing_above: small,
-                col_widths: '{}', spacing_below: small, background: ''}
-              layout_properties:
-                col_widths: {}
-                grid_position: QOGUBQ,MYMCRJ
-              name: ocard_prompt_copy_5
-              components:
-              - type: RichText
-                properties: {role: null, align: left, tooltip: '', enable_slots: true,
-                  border: '', foreground: 'theme:On Background', visible: true, font_size: 16,
-                  content: 'Select the assumption that best describes the relationship
-                    between an object’s mass Select the assumption that best describes
-                    the relationship between an object’s mass (m), the force (f) applied
-                    to it, and its acceleration (a)., the force applied to it, and
-                    its acceleration.', font: '', spacing_above: small, spacing_below: small,
-                  data: null, background: '', format: markdown}
-                layout_properties:
-                  col_widths: {}
-                  grid_position: FWHASY,AHKXMO
-                name: rtext_student_prompt_copy_29
-                data_bindings: []
-            - type: Spacer
-              properties: {height: 18}
-              layout_properties:
-                col_widths: {}
-                grid_position: VFLWWJ,OZUMJK
-              name: spacer_2_copy_6
-            - type: Label
-              properties: {role: null, align: left, tooltip: '', border: '', foreground: 'theme:On
-                  Tertiary Container', visible: true, text: 'Options:', font_size: 18,
-                font: '', spacing_above: small, icon_align: left, spacing_below: small,
-                italic: false, background: '', bold: true, underline: false, icon: ''}
-              layout_properties:
-                col_widths: {}
-                grid_position: SDNVET,WHSXDS
-              name: label_options_copy_6
-            - type: ColumnPanel
-              properties: {role: tonal-card, tooltip: '', border: '', foreground: '',
-                visible: true, wrap_on: mobile, col_spacing: medium, spacing_above: small,
-                col_widths: '{"KETAAD":55}', spacing_below: small, background: ''}
-              layout_properties:
-                col_widths: {}
-                grid_position: XKLJFL,IUNIZC
-              name: ocard_options_copy_6
-              components:
-              - type: ColumnPanel
-                properties: {role: null, tooltip: '', border: '', foreground: '',
-                  visible: true, wrap_on: never, col_spacing: none, spacing_above: small,
-                  col_widths: '{}', spacing_below: small, background: ''}
-                name: outlined_card_2_copy_5
-                layout_properties: {grid_position: 'WKOQON,KETAAD'}
-                components:
-                - type: RichText
-                  properties: {role: null, align: left, tooltip: '', enable_slots: true,
-                    border: '', foreground: 'theme:On Background', visible: true,
-                    font_size: 16, content: a = f⋅m, font: '', spacing_above: small,
-                    spacing_below: small, data: null, background: '', format: markdown}
-                  layout_properties:
-                    col_widths: {}
-                    grid_position: PHNJFN,JVBBZZ
-                  name: rtext_student_prompt_copy_32
-                  data_bindings: []
-                  components: []
-              - type: RichText
-                properties: {role: null, align: left, tooltip: '', enable_slots: true,
-                  border: '', foreground: 'theme:On Background', visible: true, font_size: 16,
-                  content: 'a = f/m ', font: '', spacing_above: small, spacing_below: small,
-                  data: null, background: '', format: markdown}
-                layout_properties:
-                  col_widths: {}
-                  grid_position: IDKZTB,BOJNCJ
-                name: rtext_student_prompt_copy_34
-                data_bindings: []
-                components: []
-              - type: RichText
-                properties: {role: null, align: left, tooltip: '', enable_slots: true,
-                  border: '', foreground: 'theme:On Background', visible: true, font_size: 16,
-                  content: a = m/f, font: '', spacing_above: small, spacing_below: small,
-                  data: null, background: '', format: markdown}
-                layout_properties:
-                  col_widths: {}
-                  grid_position: ICLOSE,WQLPNY
-                name: rtext_student_prompt_copy_36
-                data_bindings: []
-                components: []
-              - type: RichText
-                properties: {role: null, align: left, tooltip: '', enable_slots: true,
-                  border: '', foreground: 'theme:On Background', visible: true, font_size: 16,
-                  content: a = x⋅f⋅m, font: '', spacing_above: small, spacing_below: small,
-                  data: null, background: '', format: markdown}
-                layout_properties:
-                  col_widths: {}
-                  grid_position: AFHKWZ,DRBPTL
-                name: rtext_student_prompt_copy_37
-                data_bindings: []
-                components: []
-              - type: RichText
-                properties: {role: null, align: left, tooltip: '', enable_slots: true,
-                  border: '', foreground: 'theme:On Background', visible: true, font_size: 16,
-                  content: a = x⋅f/m, font: '', spacing_above: small, spacing_below: small,
-                  data: null, background: '', format: markdown}
-                layout_properties:
-                  col_widths: {}
-                  grid_position: XLZQAV,EYHSAP
-                name: rtext_student_prompt_copy_41
-                data_bindings: []
-                components: []
-              - type: RichText
-                properties: {role: null, align: left, tooltip: '', enable_slots: true,
-                  border: '', foreground: 'theme:On Background', visible: true, font_size: 16,
-                  content: a = x⋅m/f, font: '', spacing_above: small, spacing_below: small,
-                  data: null, background: '', format: markdown}
-                layout_properties:
-                  col_widths: {}
-                  grid_position: FFMDIU,PCGXNZ
-                name: rtext_student_prompt_copy_40
-                data_bindings: []
-                components: []
-              - type: RichText
-                properties: {role: null, align: left, tooltip: '', enable_slots: true,
-                  border: '', foreground: 'theme:On Background', visible: true, font_size: 16,
-                  content: a = f^x ⋅ m^y, font: '', spacing_above: small, spacing_below: small,
-                  data: null, background: '', format: markdown}
-                layout_properties:
-                  col_widths: {}
-                  grid_position: ITRCMV,XBBCTK
-                name: rtext_student_prompt_copy_39
-                data_bindings: []
-                components: []
-              - type: RichText
-                properties: {role: null, align: left, tooltip: '', enable_slots: true,
-                  border: '', foreground: 'theme:On Background', visible: true, font_size: 16,
-                  content: a = x ⋅ f^y⋅ m^z, font: '', spacing_above: small, spacing_below: small,
-                  data: null, background: '', format: markdown}
-                layout_properties:
-                  col_widths: {}
-                  grid_position: YXTHXI,DYYCPI
-                name: rtext_student_prompt_copy_38
-                data_bindings: []
-                components: []
-            - type: Spacer
-              properties: {height: 18}
-              layout_properties:
-                col_widths: {}
-                grid_position: ZPRGWR,JKVDPZ
-              name: spacer_3_copy_7
-            - type: Button
-              properties: {role: filled-button, align: right, tooltip: '', border: '',
-                enabled: true, foreground: '', visible: true, text: Onward, font_size: null,
-                font: '', spacing_above: small, icon_align: left, spacing_below: small,
-                italic: false, background: '', bold: false, underline: false, icon: ''}
-              layout_properties:
-                col_widths: {}
-                grid_position: ANEMCT,IZMIZX
-              event_bindings: {click: btn_student_next_question_click}
-              name: btn_student_next_question_copy_5
-            - type: ColumnPanel
-              properties: {role: null, tooltip: '', border: '', foreground: '', visible: true,
-                wrap_on: mobile, col_spacing: medium, spacing_above: small, col_widths: '{}',
-                spacing_below: small, background: ''}
-              layout_properties:
-                col_widths: {}
-                grid_position: DQJFUZ,PGJOSB
-              name: student_page1_copy_6
-              components:
-              - type: Label
-                properties: {role: null, align: left, tooltip: '', border: '', foreground: 'theme:On
-                    Tertiary Container', visible: false, text: 'Inquiry 5.1: ', font_size: 18,
-                  font: '', spacing_above: small, icon_align: left, spacing_below: small,
-                  italic: false, background: '', bold: true, underline: false, icon: ''}
-                layout_properties:
-                  col_widths: {}
-                  grid_position: CYGQFC,KIUHNW
-                name: label_context_copy_15
-              - type: Label
-                properties: {role: null, align: left, tooltip: '', border: '', foreground: 'theme:On
-                    Tertiary Container', visible: true, text: 'Context:', font_size: 18,
-                  font: '', spacing_above: small, icon_align: left, spacing_below: small,
-                  italic: false, background: '', bold: true, underline: false, icon: ''}
-                layout_properties: {grid_position: 'ZQMOTI,HOPURL'}
-                name: label_context_copy_17
-              - type: ColumnPanel
-                properties: {role: tonal-card, tooltip: '', border: '', foreground: '',
-                  visible: true, wrap_on: mobile, col_spacing: medium, spacing_above: small,
-                  col_widths: '{}', spacing_below: small, background: ''}
-                layout_properties: {grid_position: 'OSTHTW,YVVACW'}
-                name: ocard_student_context_copy_6
-                components:
-                - type: RichText
-                  properties: {role: null, align: left, tooltip: '', enable_slots: true,
-                    border: '', foreground: 'theme:On Background', visible: true,
-                    font_size: 16, content: 'To evaluate the accuracy of a=f/m, you
-                      plan to conduct an experiment. You’re considering various real-world
-                      scenarios, where force, mass and acceleration come into play.',
-                    font: '', spacing_above: small, spacing_below: small, data: null,
-                    background: '', format: markdown}
-                  layout_properties: {grid_position: 'GIUWKJ,LUTZAB'}
-                  name: rtext_student_context_copy_6
-                  data_bindings: []
-              - type: Spacer
-                properties: {height: 18}
-                layout_properties:
-                  col_widths: {}
-                  grid_position: VFLWWJ,OZUMJK
-                name: spacer_2_copy_7
-              - type: Label
-                properties: {role: null, align: left, tooltip: '', border: '', foreground: 'theme:On
-                    Tertiary Container', visible: true, text: 'Options:', font_size: 18,
-                  font: '', spacing_above: small, icon_align: left, spacing_below: small,
-                  italic: false, background: '', bold: true, underline: false, icon: ''}
-                layout_properties:
-                  col_widths: {}
-                  grid_position: SDNVET,WHSXDS
-                name: label_options_copy_7
-              - type: ColumnPanel
-                properties: {role: tonal-card, tooltip: '', border: '', foreground: '',
-                  visible: true, wrap_on: mobile, col_spacing: medium, spacing_above: small,
-                  col_widths: '{"KETAAD":55}', spacing_below: small, background: ''}
-                layout_properties:
-                  col_widths: {}
-                  grid_position: HNIOIX,XPGGDN
-                name: ocard_options_copy_7
-                components:
-                - type: ColumnPanel
-                  properties: {role: null, tooltip: '', border: '', foreground: '',
-                    visible: true, wrap_on: never, col_spacing: none, spacing_above: small,
-                    col_widths: '{}', spacing_below: small, background: ''}
-                  name: outlined_card_2_copy_6
-                  layout_properties: {grid_position: 'WKOQON,KETAAD'}
-                  components:
-                  - type: RichText
-                    properties: {role: null, align: left, tooltip: '', enable_slots: true,
-                      border: '', foreground: 'theme:On Background', visible: true,
-                      font_size: 16, content: Automobile Brake System, font: '', spacing_above: small,
-                      spacing_below: small, data: null, background: '', format: markdown}
-                    layout_properties:
-                      col_widths: {}
-                      grid_position: PHNJFN,JVBBZZ
-                    name: rtext_student_prompt_copy_42
-                    data_bindings: []
-                    components:
-                    - type: RichText
-                      properties: {role: null, align: left, tooltip: '', enable_slots: true,
-                        border: '', foreground: 'theme:On Surface Variant', visible: true,
-                        font_size: 14, content: 'Install the appropriate brake considering
-                          the car’s mass and top speed. This will help the car safely
-                          decelerate, preventing accidents.', font: '', spacing_above: small,
-                        spacing_below: small, data: null, background: '', format: markdown}
-                      layout_properties:
-                        col_widths: {}
-                        grid_position: EBTGVL,ZBGXEN
-                      name: rtext_student_prompt_copy_43
-                      data_bindings: []
-                    - type: RichText
-                      properties: {role: null, align: left, tooltip: '', enable_slots: true,
-                        border: '', foreground: 'theme:On Surface Variant', visible: true,
-                        font_size: 14, content: 'This experiment involves a car of
-                          a certain mass and speed decelerating due to the force from
-                          the brakes. Since this deals with deceleration, and breaking
-                          force, could this be relevant to us?', font: '', spacing_above: small,
-                        spacing_below: small, data: null, background: '', format: markdown}
-                      layout_properties:
-                        col_widths: {}
-                        grid_position: DSOUIP,PDYWNC
-                      name: rtext_student_prompt_copy_50
-                      data_bindings: []
-                - type: RichText
-                  properties: {role: null, align: left, tooltip: '', enable_slots: true,
-                    border: '', foreground: 'theme:On Background', visible: true,
-                    font_size: 16, content: 'Sound Waves:', font: '', spacing_above: small,
-                    spacing_below: small, data: null, background: '', format: markdown}
-                  layout_properties:
-                    col_widths: {}
-                    grid_position: VBYMZK,QGYMLW
-                  name: rtext_student_prompt_copy_44
-                  data_bindings: []
-                  components:
-                  - type: RichText
-                    properties: {role: null, align: left, tooltip: '', enable_slots: true,
-                      border: '', foreground: 'theme:On Surface Variant', visible: true,
-                      font_size: 14, content: Create sound waves by applying varying forces to a virtual speaker and observe how these sound waves propagate through different materials.,
-                      font: '', spacing_above: small, spacing_below: small, data: null,
-                      background: '', format: markdown}
-                    layout_properties:
-                      col_widths: {}
-                      grid_position: EBTGVL,ZBGXEN
-                    name: rtext_student_prompt_copy_45
-                    data_bindings: []
-                  - type: RichText
-                    properties: {role: null, align: left, tooltip: '', enable_slots: true,
-                      border: '', foreground: 'theme:On Surface Variant', visible: true,
-                      font_size: 14, content: 'Creating sound waves involves applying
-                        a force to a speaker. But is the resulting wave propagation
-                        truly an acceleration? And how might the speaker’s mass come
-                        into play?', font: '', spacing_above: small, spacing_below: small,
-                      data: null, background: '', format: markdown}
-                    layout_properties:
-                      col_widths: {}
-                      grid_position: DSOUIP,PDYWNC
-                    name: rtext_student_prompt_copy_51
-                    data_bindings: []
-                - type: RichText
-                  properties: {role: null, align: left, tooltip: '', enable_slots: true,
-                    border: '', foreground: 'theme:On Background', visible: true,
-                    font_size: 16, content: 'Battery Charging: ', font: '', spacing_above: small,
-                    spacing_below: small, data: null, background: '', format: markdown}
-                  layout_properties:
-                    col_widths: {}
-                    grid_position: OBBOZB,NDCOVW
-                  name: rtext_student_prompt_copy_46
-                  data_bindings: []
-                  components:
-                  - type: RichText
-                    properties: {role: null, align: left, tooltip: '', enable_slots: true,
-                      border: '', foreground: 'theme:On Surface Variant', visible: true,
-                      font_size: 14, content: Attempt to charge virtual batteries by applying varying electric currents and observe how long it takes for different batteries to charge.,
-                      font: '', spacing_above: small, spacing_below: small, data: null,
-                      background: '', format: markdown}
-                    layout_properties:
-                      col_widths: {}
-                      grid_position: EBTGVL,ZBGXEN
-                    name: rtext_student_prompt_copy_47
-                    data_bindings: []
-                  - type: RichText
-                    properties: {role: null, align: left, tooltip: '', enable_slots: true,
-                      border: '', foreground: 'theme:On Surface Variant', visible: true,
-                      font_size: 14, content: 'Charging a battery involves an electric
-                        current, which could be seen as a force. But is there an acceleration
-                        involved? And how might the battery’s mass affect this process?',
-                      font: '', spacing_above: small, spacing_below: small, data: null,
-                      background: '', format: markdown}
-                    layout_properties:
-                      col_widths: {}
-                      grid_position: DSOUIP,PDYWNC
-                    name: rtext_student_prompt_copy_52
-                    data_bindings: []
-              - type: Spacer
-                properties: {height: 18}
-                layout_properties:
-                  col_widths: {}
-                  grid_position: WIWOGE,ZYXRTG
-                name: spacer_3_copy_8
-              - type: Button
-                properties: {role: filled-button, align: right, tooltip: '', border: '',
-                  enabled: true, foreground: '', visible: true, text: Onward, font_size: null,
-                  font: '', spacing_above: small, icon_align: left, spacing_below: small,
-                  italic: false, background: '', bold: false, underline: false, icon: ''}
-                layout_properties:
-                  col_widths: {}
-                  grid_position: ANEMCT,IZMIZX
-                event_bindings: {click: btn_student_next_question_click}
-                name: btn_student_next_question_copy_6
-              - type: ColumnPanel
-                properties: {role: null, tooltip: '', border: '', foreground: '',
-                  visible: true, wrap_on: mobile, col_spacing: medium, spacing_above: small,
-                  col_widths: '{}', spacing_below: small, background: ''}
-                layout_properties:
-                  col_widths: {}
-                  grid_position: HUJRGX,HLWSGL
-                name: student_page1_copy_7
-                components:
-                - type: Label
-                  properties: {role: null, align: left, tooltip: '', border: '', foreground: 'theme:On
-                      Tertiary Container', visible: false, text: 'Inquiry 5.2:', font_size: 18,
-                    font: '', spacing_above: small, icon_align: left, spacing_below: small,
-                    italic: false, background: '', bold: true, underline: false, icon: ''}
-                  layout_properties:
-                    col_widths: {}
-                    grid_position: CYGQFC,KIUHNW
-                  name: label_context_copy_18
-                - type: Label
-                  properties: {role: null, align: left, tooltip: '', border: '', foreground: 'theme:On
-                      Tertiary Container', visible: true, text: 'Context:', font_size: 18,
-                    font: '', spacing_above: small, icon_align: left, spacing_below: small,
-                    italic: false, background: '', bold: true, underline: false, icon: ''}
-                  layout_properties: {grid_position: 'ZQMOTI,HOPURL'}
-                  name: label_context_copy_19
-                - type: ColumnPanel
-                  properties: {role: tonal-card, tooltip: '', border: '', foreground: '',
-                    visible: true, wrap_on: mobile, col_spacing: medium, spacing_above: small,
-                    col_widths: '{}', spacing_below: small, background: ''}
-                  layout_properties: {grid_position: 'OSTHTW,YVVACW'}
-                  name: ocard_student_context_copy_7
-                  components:
-                  - type: RichText
-                    properties: {role: null, align: left, tooltip: '', enable_slots: true,
-                      border: '', foreground: 'theme:On Background', visible: true,
-                      font_size: 16, content: "As a safety engineer for a car company,\
-                        \ your task is to fit brakes that exert enough force to rapidly\
-                        \ slow down the car during emergencies. \n\nWith a set deceleration\
-                        \ benchmark, you aim to choose brakes that provide adequate\
-                        \ braking force for each model when applied at maximum speed.\
-                        \ \n\nYou express a=f/m as f=ma to calculate the required\
-                        \ breaking force (f) using deceleration benchmark (a) and\
-                        \ the mass of a specific model (m). You'll simulate the brakes\u2019\
-                        \ effectiveness before proceeding to production.", font: '',
-                      spacing_above: small, spacing_below: none, data: null, background: '',
-                      format: markdown}
-                    layout_properties: {grid_position: 'GIUWKJ,LUTZAB'}
-                    name: rtext_student_context_copy_7
-                    data_bindings: []
-                - type: Spacer
-                  properties: {height: 18}
-                  layout_properties: {grid_position: 'TLAVOA,SZJJKG'}
-                  name: spacer_1_copy_7
-                - type: ColumnPanel
-                  properties: {role: outlined-card, tooltip: '', border: '1', foreground: '',
-                    visible: true, wrap_on: mobile, col_spacing: medium, spacing_above: small,
-                    col_widths: '{}', spacing_below: small, background: ''}
-                  name: ocard_student_interact_copy_5
-                  layout_properties:
-                    col_widths: {}
-                    grid_position: RHXPCJ,MVAKWY
-                  components:
-                  - type: form:sim5
-                    properties: {}
-                    name: sim5_1
-                    layout_properties: {grid_position: 'RVJPUI,EQHFYP'}
-                - type: Spacer
-                  properties: {height: 35}
-                  layout_properties:
-                    col_widths: {}
-                    grid_position: JBAEUQ,PKFDRU
-                  name: spacer_1_copy_16
-                - type: Label
-                  properties: {role: null, align: left, tooltip: '', border: '', foreground: 'theme:On
-                      Tertiary Container', visible: true, text: 'Prompt: ', font_size: 18,
-                    font: '', spacing_above: small, icon_align: left, spacing_below: small,
-                    italic: false, background: '', bold: true, underline: false, icon: ''}
-                  layout_properties:
-                    col_widths: {}
-                    grid_position: PJRSCT,YWPXJE
-                  name: label_prompt_copy_6
-                - type: ColumnPanel
-                  properties: {role: tonal-card, tooltip: '', border: '', foreground: '',
-                    visible: true, wrap_on: mobile, col_spacing: medium, spacing_above: small,
-                    col_widths: '{}', spacing_below: small, background: ''}
-                  layout_properties:
-                    col_widths: {}
-                    grid_position: QOGUBQ,MYMCRJ
-                  name: ocard_prompt_copy_6
-                  components:
-                  - type: RichText
-                    properties: {role: null, align: left, tooltip: '', enable_slots: true,
-                      border: '', foreground: 'theme:On Background', visible: true,
-                      font_size: 16, content: 'Does f=ma accurately calculate the
-                        breaking force ensuring the cars stopped within a safe distance?',
-                      font: '', spacing_above: small, spacing_below: small, data: null,
-                      background: '', format: markdown}
-                    layout_properties:
-                      col_widths: {}
-                      grid_position: FWHASY,AHKXMO
-                    name: rtext_student_prompt_copy_48
-                    data_bindings: []
-                - type: Spacer
-                  properties: {height: 18}
-                  layout_properties:
-                    col_widths: {}
-                    grid_position: VFLWWJ,OZUMJK
-                  name: spacer_2_copy_8
-                - type: Label
-                  properties: {role: null, align: left, tooltip: '', border: '', foreground: 'theme:On
-                      Tertiary Container', visible: true, text: 'Options:', font_size: 18,
-                    font: '', spacing_above: small, icon_align: left, spacing_below: small,
-                    italic: false, background: '', bold: true, underline: false, icon: ''}
-                  layout_properties:
-                    col_widths: {}
-                    grid_position: SDNVET,WHSXDS
-                  name: label_options_copy_8
-                - type: ColumnPanel
-                  properties: {role: tonal-card, tooltip: '', border: '', foreground: '',
-                    visible: true, wrap_on: mobile, col_spacing: medium, spacing_above: small,
-                    col_widths: '{"KETAAD":55}', spacing_below: small, background: ''}
-                  layout_properties:
-                    col_widths: {}
-                    grid_position: XKLJFL,IUNIZC
-                  name: ocard_options_copy_8
-                  components:
-                  - type: ColumnPanel
-                    properties: {role: null, tooltip: '', border: '', foreground: '',
-                      visible: true, wrap_on: never, col_spacing: none, spacing_above: small,
-                      col_widths: '{}', spacing_below: small, background: ''}
-                    name: outlined_card_2_copy_7
-                    layout_properties: {grid_position: 'WKOQON,KETAAD'}
-                    components:
-                    - type: RichText
-                      properties: {role: null, align: left, tooltip: '', enable_slots: true,
-                        border: '', foreground: 'theme:On Background', visible: true,
-                        font_size: 16, content: 'Yes! And it proves that f=ma accurately
-                          represents the relationship between the acceleration of
-                          an object, its mass and the amount of force acting on it.',
-                        font: '', spacing_above: small, spacing_below: small, data: null,
-                        background: '', format: markdown}
-                      layout_properties:
-                        col_widths: {}
-                        grid_position: PHNJFN,JVBBZZ
-                      name: rtext_student_prompt_copy_49
-                      data_bindings: []
-                      components: []
-                  - type: RichText
-                    properties: {role: null, align: left, tooltip: '', enable_slots: true,
-                      border: '', foreground: 'theme:On Background', visible: true,
-                      font_size: 16, content: No. I’ll have to revisit the earlier experiment to determine an accurate way to model these relationships.,
-                      font: '', spacing_above: small, spacing_below: small, data: null,
-                      background: '', format: markdown}
-                    layout_properties:
-                      col_widths: {}
-                      grid_position: IDKZTB,BOJNCJ
-                    name: rtext_student_prompt_copy_53
-                    data_bindings: []
-                    components: []
-                - type: Spacer
-                  properties: {height: 18}
-                  layout_properties:
-                    col_widths: {}
-                    grid_position: ZPRGWR,JKVDPZ
-                  name: spacer_3_copy_9
-                - type: Button
-                  properties: {role: filled-button, align: right, tooltip: '', border: '',
-                    enabled: true, foreground: '', visible: true, text: Onward, font_size: null,
-                    font: '', spacing_above: small, icon_align: left, spacing_below: small,
-                    italic: false, background: '', bold: false, underline: false,
-                    icon: ''}
-                  layout_properties:
-                    col_widths: {}
-                    grid_position: ANEMCT,IZMIZX
-                  event_bindings: {click: btn_student_next_question_click}
-                  name: btn_student_next_question_copy_7
-                - type: ColumnPanel
-                  properties: {role: null, tooltip: '', border: '', foreground: '',
-                    visible: true, wrap_on: mobile, col_spacing: medium, spacing_above: small,
-                    col_widths: '{}', spacing_below: small, background: ''}
-                  layout_properties:
-                    col_widths: {}
-                    grid_position: YIGZMY,HLPSIH
-                  name: student_page1_copy_8
-                  components:
-                  - type: Label
-                    properties: {role: null, align: left, tooltip: '', border: '',
-                      foreground: 'theme:On Tertiary Container', visible: false, text: 'Inquiry
-                        6.1: ', font_size: 18, font: '', spacing_above: small, icon_align: left,
-                      spacing_below: small, italic: false, background: '', bold: true,
-                      underline: false, icon: ''}
-                    layout_properties:
-                      col_widths: {}
-                      grid_position: CYGQFC,KIUHNW
-                    name: label_context_copy_20
-                  - type: Label
-                    properties: {role: null, align: left, tooltip: '', border: '',
-                      foreground: 'theme:On Tertiary Container', visible: true, text: 'Context:',
-                      font_size: 18, font: '', spacing_above: small, icon_align: left,
-                      spacing_below: small, italic: false, background: '', bold: true,
-                      underline: false, icon: ''}
-                    layout_properties: {grid_position: 'ZQMOTI,HOPURL'}
-                    name: label_context_copy_21
-                  - type: ColumnPanel
-                    properties: {role: tonal-card, tooltip: '', border: '', foreground: '',
-                      visible: true, wrap_on: mobile, col_spacing: medium, spacing_above: small,
-                      col_widths: '{}', spacing_below: small, background: ''}
-                    layout_properties: {grid_position: 'OSTHTW,YVVACW'}
-                    name: ocard_student_context_copy_8
-                    components:
-                    - type: RichText
-                      properties: {role: null, align: left, tooltip: '', enable_slots: true,
-                        border: '', foreground: 'theme:On Background', visible: true,
-                        font_size: 16, content: 'You remember identifying the winning
-                          factors for the cart race, which involved optimizing mass
-                          and force to maximize acceleration. You decide to delve
-                          into this to see if these conclusions align with the mathematical
-                          formula you''ve developed.', font: '', spacing_above: small,
-                        spacing_below: none, data: null, background: '', format: markdown}
-                      layout_properties: {grid_position: 'GIUWKJ,LUTZAB'}
-                      name: rtext_student_context_copy_8
-                      data_bindings: []
-                  - type: Spacer
-                    properties: {height: 18}
-                    layout_properties: {grid_position: 'TLAVOA,SZJJKG'}
-                    name: spacer_1_copy_8
-                  - type: ColumnPanel
-                    properties: {role: outlined-card, tooltip: '', border: '1', foreground: '',
-                      visible: true, wrap_on: mobile, col_spacing: medium, spacing_above: small,
-                      col_widths: '{}', spacing_below: small, background: ''}
-                    name: ocard_student_interact_copy_6
-                    layout_properties:
-                      col_widths: {}
-                      grid_position: RHXPCJ,MVAKWY
-                    components:
-                    - type: form:sim6
-                      properties: {}
-                      name: sim6_1
-                      layout_properties: {grid_position: 'KXDYNS,SDYVXF'}
-                  - type: Spacer
-                    properties: {height: 35}
-                    layout_properties:
-                      col_widths: {}
-                      grid_position: JBAEUQ,PKFDRU
-                    name: spacer_1_copy_17
-                  - type: Label
-                    properties: {role: null, align: left, tooltip: '', border: '',
-                      foreground: 'theme:On Tertiary Container', visible: true, text: 'Prompt: ',
-                      font_size: 18, font: '', spacing_above: small, icon_align: left,
-                      spacing_below: small, italic: false, background: '', bold: true,
-                      underline: false, icon: ''}
-                    layout_properties:
-                      col_widths: {}
-                      grid_position: PJRSCT,YWPXJE
-                    name: label_prompt_copy_7
-                  - type: ColumnPanel
-                    properties: {role: tonal-card, tooltip: '', border: '', foreground: '',
-                      visible: true, wrap_on: mobile, col_spacing: medium, spacing_above: small,
-                      col_widths: '{}', spacing_below: small, background: ''}
-                    layout_properties:
-                      col_widths: {}
-                      grid_position: QOGUBQ,MYMCRJ
-                    name: ocard_prompt_copy_7
-                    components:
-                    - type: RichText
-                      properties: {role: null, align: left, tooltip: '', enable_slots: true,
-                        border: '', foreground: 'theme:On Background', visible: true,
-                        font_size: 16, content: 'Does F=ma correspond with your conclusions
-                          about the relationship between force, acceleration, and
-                          mass?', font: '', spacing_above: small, spacing_below: small,
-                        data: null, background: '', format: markdown}
-                      layout_properties:
-                        col_widths: {}
-                        grid_position: FWHASY,AHKXMO
-                      name: rtext_student_prompt_copy_54
-                      data_bindings: []
-                  - type: Spacer
-                    properties: {height: 18}
-                    layout_properties:
-                      col_widths: {}
-                      grid_position: VFLWWJ,OZUMJK
-                    name: spacer_2_copy_9
-                  - type: Label
-                    properties: {role: null, align: left, tooltip: '', border: '',
-                      foreground: 'theme:On Tertiary Container', visible: true, text: 'Options:',
-                      font_size: 18, font: '', spacing_above: small, icon_align: left,
-                      spacing_below: small, italic: false, background: '', bold: true,
-                      underline: false, icon: ''}
-                    layout_properties:
-                      col_widths: {}
-                      grid_position: SDNVET,WHSXDS
-                    name: label_options_copy_9
-                  - type: ColumnPanel
-                    properties: {role: tonal-card, tooltip: '', border: '', foreground: '',
-                      visible: true, wrap_on: mobile, col_spacing: medium, spacing_above: small,
-                      col_widths: '{"KETAAD":55}', spacing_below: small, background: ''}
-                    layout_properties:
-                      col_widths: {}
-                      grid_position: XKLJFL,IUNIZC
-                    name: ocard_options_copy_9
-                    components:
-                    - type: RichText
-                      properties: {role: null, align: left, tooltip: '', enable_slots: true,
-                        border: '', foreground: 'theme:On Background', visible: true,
-                        font_size: 16, content: 'No, they seem to contradict each
-                          other. I’ll need to revisit the cart racing scenario to
-                          determine if f=ma can accurately predict the winner. This
-                          could lead to new insights.', font: '', spacing_above: small,
-                        spacing_below: small, data: null, background: '', format: markdown}
-                      layout_properties:
-                        col_widths: {}
-                        grid_position: AXNSVQ,VLFFHF
-                      name: rtext_student_prompt_copy_56
-                      data_bindings: []
-                      components: []
-                    - type: ColumnPanel
-                      properties: {role: null, tooltip: '', border: '', foreground: '',
-                        visible: true, wrap_on: never, col_spacing: none, spacing_above: small,
-                        col_widths: '{}', spacing_below: small, background: ''}
-                      name: outlined_card_2_copy_8
-                      layout_properties: {grid_position: 'WKOQON,KETAAD'}
-                      components:
-                      - type: RichText
-                        properties: {role: null, align: left, tooltip: '', enable_slots: true,
-                          border: '', foreground: 'theme:On Background', visible: true,
-                          font_size: 16, content: 'Yes, they are indeed conveying
-                            the same idea. This further strengthens my understanding
-                            of how the force applied to an object and its mass influence
-                            its motion.', font: '', spacing_above: small, spacing_below: small,
-                          data: null, background: '', format: markdown}
-                        layout_properties:
-                          col_widths: {}
-                          grid_position: PHNJFN,JVBBZZ
-                        name: rtext_student_prompt_copy_55
-                        data_bindings: []
-                        components: []
-                  - type: Spacer
-                    properties: {height: 18}
-                    layout_properties:
-                      col_widths: {}
-                      grid_position: ZPRGWR,JKVDPZ
-                    name: spacer_3_copy_10
-                  - type: Button
-                    properties: {role: filled-button, align: right, tooltip: '', border: '',
-                      enabled: true, foreground: '', visible: true, text: Onward,
-                      font_size: null, font: '', spacing_above: small, icon_align: left,
-                      spacing_below: small, italic: false, background: '', bold: false,
-                      underline: false, icon: ''}
-                    layout_properties:
-                      col_widths: {}
-                      grid_position: ANEMCT,IZMIZX
-                    event_bindings: {click: btn_student_next_question_click}
-                    name: btn_student_next_question_copy_8
-                  - type: Label
-                    properties: {role: null, align: left, tooltip: '', border: '',
-                      foreground: 'theme:On Tertiary Container', visible: false, text: 'Inquiry
-                        6.2: ', font_size: 18, font: '', spacing_above: small, icon_align: left,
-                      spacing_below: small, italic: false, background: '', bold: true,
-                      underline: false, icon: ''}
-                    layout_properties:
-                      col_widths: {}
-                      grid_position: TZGCMO,TPOZTZ
-                    name: label_context_copy_22
-                  - type: ColumnPanel
-                    properties: {role: null, tooltip: '', border: '', foreground: '',
-                      visible: true, wrap_on: mobile, col_spacing: medium, spacing_above: small,
-                      col_widths: '{}', spacing_below: small, background: ''}
-                    layout_properties:
-                      col_widths: {}
-                      grid_position: QKRSFU,RVYJUN
-                    name: student_page1_copy_9
-                    components:
-                    - type: Label
-                      properties: {role: null, align: left, tooltip: '', border: '',
-                        foreground: 'theme:On Tertiary Container', visible: true,
-                        text: 'Context:', font_size: 18, font: '', spacing_above: small,
-                        icon_align: left, spacing_below: small, italic: false, background: '',
-                        bold: true, underline: false, icon: ''}
-                      layout_properties: {grid_position: 'ZQMOTI,HOPURL'}
-                      name: label_context_copy_23
-                    - type: ColumnPanel
-                      properties: {role: tonal-card, tooltip: '', border: '', foreground: '',
-                        visible: true, wrap_on: mobile, col_spacing: medium, spacing_above: small,
-                        col_widths: '{}', spacing_below: small, background: ''}
-                      layout_properties: {grid_position: 'OSTHTW,YVVACW'}
-                      name: ocard_student_context_copy_9
-                      components:
-                      - type: RichText
-                        properties: {role: null, align: left, tooltip: '', enable_slots: true,
-                          border: '', foreground: 'theme:On Background', visible: true,
-                          font_size: 16, content: 'With a deeper understanding of
-                            how objects interact with their environment, does it occur
-                            to you why they behave this way? Lets revisit your thoughts
-                            one last time before concluding your exploration.', font: '',
-                          spacing_above: small, spacing_below: none, data: null, background: '',
-                          format: markdown}
-                        layout_properties: {grid_position: 'GIUWKJ,LUTZAB'}
-                        name: rtext_student_context_copy_9
-                        data_bindings: []
-                    - type: Spacer
-                      properties: {height: 18}
-                      layout_properties: {grid_position: 'TLAVOA,SZJJKG'}
-                      name: spacer_1_copy_9
-                    - type: Label
-                      properties: {role: null, align: left, tooltip: '', border: '',
-                        foreground: 'theme:On Tertiary Container', visible: true,
-                        text: 'Your hypotheses:', font_size: 18, font: '', spacing_above: small,
-                        icon_align: left, spacing_below: small, italic: false, background: '',
-                        bold: true, underline: false, icon: ''}
-                      layout_properties:
-                        col_widths: {}
-                        grid_position: EMGOQK,LQIDOB
-                      name: label_options_copy_10
-                    - type: ColumnPanel
-                      properties: {role: tonal-card, tooltip: '', border: '', foreground: '',
-                        visible: true, wrap_on: mobile, col_spacing: medium, spacing_above: small,
-                        col_widths: '{"KETAAD":55}', spacing_below: small, background: ''}
-                      layout_properties:
-                        col_widths: {}
-                        grid_position: WZQJOE,BHKDMN
-                      name: ocard_options_copy_11
-                      components:
-                      - type: ColumnPanel
-                        properties: {role: null, tooltip: '', border: '', foreground: '',
-                          visible: true, wrap_on: never, col_spacing: none, spacing_above: small,
-                          col_widths: '{}', spacing_below: small, background: ''}
-                        name: outlined_card_2_copy_10
-                        layout_properties: {grid_position: 'WKOQON,KETAAD'}
-                        components:
-                        - type: RichText
-                          properties: {role: null, align: left, tooltip: '', enable_slots: true,
-                            border: '', foreground: 'theme:On Background', visible: true,
-                            font_size: 16, content: 'Why does pushing with more strength
-                              make things move faster?', font: '', spacing_above: small,
-                            spacing_below: small, data: null, background: '', format: markdown}
-                          layout_properties:
-                            col_widths: {}
-                            grid_position: PHNJFN,JVBBZZ
-                          name: rtext_student_prompt_copy_57
-                          data_bindings: []
-                          components:
-                          - type: TextBox
-                            properties: {role: null, align: left, hide_text: false,
-                              tooltip: '', placeholder: your reasoning, border: '',
-                              enabled: true, foreground: 'theme:On Surface Variant',
-                              visible: true, text: '', font_size: null, font: '',
-                              spacing_above: small, type: text, spacing_below: small,
-                              italic: true, background: '', bold: false, underline: false}
-                            name: text_box_1_copy_4
-                            layout_properties: {}
-                      - type: RichText
-                        properties: {role: null, align: left, tooltip: '', enable_slots: true,
-                          border: '', foreground: 'theme:On Background', visible: true,
-                          font_size: 16, content: 'Why do we need more force to move
-                            heavier objects?', font: '', spacing_above: small, spacing_below: small,
-                          data: null, background: '', format: markdown}
-                        layout_properties:
-                          col_widths: {}
-                          grid_position: IDKZTB,BOJNCJ
-                        name: rtext_student_prompt_copy_60
-                        data_bindings: []
-                        components:
-                        - type: TextBox
-                          properties: {role: null, align: left, hide_text: false,
-                            tooltip: '', placeholder: your reasoning, border: '',
-                            enabled: true, foreground: 'theme:On Surface Variant',
-                            visible: true, text: '', font_size: null, font: '', spacing_above: small,
-                            type: text, spacing_below: small, italic: true, background: '',
-                            bold: false, underline: false}
-                          name: text_box_1_copy_5
-                          layout_properties:
-                            col_widths: {}
-                            grid_position: UZTZMR,BYBJZQ
-                    - type: Spacer
-                      properties: {height: 18}
-                      layout_properties:
-                        col_widths: {}
-                        grid_position: ZPRGWR,JKVDPZ
-                      name: spacer_3_copy_11
-                    - type: Button
-                      properties: {role: filled-button, align: right, tooltip: '',
-                        border: '', enabled: true, foreground: '', visible: true,
-                        text: Onward, font_size: null, font: '', spacing_above: small,
-                        icon_align: left, spacing_below: small, italic: false, background: '',
-                        bold: false, underline: false, icon: ''}
-                      layout_properties:
-                        col_widths: {}
-                        grid_position: ANEMCT,IZMIZX
-                      event_bindings: {click: btn_student_next_question_click}
-                      name: btn_student_next_question_copy_9
+                grid_position: DSOUIP,PDYWNC
+              name: rtext_student_prompt_copy_50
+              data_bindings: []
+        - type: RichText
+          properties: {role: null, align: left, tooltip: '', enable_slots: true, border: '',
+            foreground: 'theme:On Background', visible: true, font_size: 16, content: 'Sound
+              Waves:', font: '', spacing_above: small, spacing_below: small, data: null,
+            background: '', format: markdown}
+          layout_properties:
+            col_widths: {}
+            grid_position: VBYMZK,QGYMLW
+          name: rtext_student_prompt_copy_44
+          data_bindings: []
+          components:
+          - type: RichText
+            properties: {role: null, align: left, tooltip: '', enable_slots: true,
+              border: '', foreground: 'theme:On Surface Variant', visible: true, font_size: 14,
+              content: Create sound waves by applying varying forces to a virtual speaker and observe how these sound waves propagate through different materials.,
+              font: '', spacing_above: small, spacing_below: small, data: null, background: '',
+              format: markdown}
+            layout_properties:
+              col_widths: {}
+              grid_position: EBTGVL,ZBGXEN
+            name: rtext_student_prompt_copy_45
+            data_bindings: []
+          - type: RichText
+            properties: {role: null, align: left, tooltip: '', enable_slots: true,
+              border: '', foreground: 'theme:On Surface Variant', visible: true, font_size: 14,
+              content: 'Creating sound waves involves applying a force to a speaker.
+                But is the resulting wave propagation truly an acceleration? And how
+                might the speaker’s mass come into play?', font: '', spacing_above: small,
+              spacing_below: small, data: null, background: '', format: markdown}
+            layout_properties:
+              col_widths: {}
+              grid_position: DSOUIP,PDYWNC
+            name: rtext_student_prompt_copy_51
+            data_bindings: []
+        - type: RichText
+          properties: {role: null, align: left, tooltip: '', enable_slots: true, border: '',
+            foreground: 'theme:On Background', visible: true, font_size: 16, content: 'Battery
+              Charging: ', font: '', spacing_above: small, spacing_below: small, data: null,
+            background: '', format: markdown}
+          layout_properties:
+            col_widths: {}
+            grid_position: OBBOZB,NDCOVW
+          name: rtext_student_prompt_copy_46
+          data_bindings: []
+          components:
+          - type: RichText
+            properties: {role: null, align: left, tooltip: '', enable_slots: true,
+              border: '', foreground: 'theme:On Surface Variant', visible: true, font_size: 14,
+              content: Attempt to charge virtual batteries by applying varying electric currents and observe how long it takes for different batteries to charge.,
+              font: '', spacing_above: small, spacing_below: small, data: null, background: '',
+              format: markdown}
+            layout_properties:
+              col_widths: {}
+              grid_position: EBTGVL,ZBGXEN
+            name: rtext_student_prompt_copy_47
+            data_bindings: []
+          - type: RichText
+            properties: {role: null, align: left, tooltip: '', enable_slots: true,
+              border: '', foreground: 'theme:On Surface Variant', visible: true, font_size: 14,
+              content: 'Charging a battery involves an electric current, which could
+                be seen as a force. But is there an acceleration involved? And how
+                might the battery’s mass affect this process?', font: '', spacing_above: small,
+              spacing_below: small, data: null, background: '', format: markdown}
+            layout_properties:
+              col_widths: {}
+              grid_position: DSOUIP,PDYWNC
+            name: rtext_student_prompt_copy_52
+            data_bindings: []
+      - type: Spacer
+        properties: {height: 18}
+        layout_properties:
+          col_widths: {}
+          grid_position: LFRKUR,AZTTDT
+        name: spacer_3_copy_8
+      - type: Button
+        properties: {role: filled-button, align: right, tooltip: '', border: '', enabled: true,
+          foreground: '', visible: true, text: Onward, font_size: null, font: '',
+          spacing_above: small, icon_align: left, spacing_below: small, italic: false,
+          background: '', bold: false, underline: false, icon: ''}
+        layout_properties:
+          col_widths: {}
+          grid_position: ZUESEL,SHPCZI
+        event_bindings: {click: btn_student_next_question_click}
+        name: btn_student_next_question_copy_6
+    - type: ColumnPanel
+      properties: {role: null, tooltip: '', border: '', foreground: '', visible: false,
+        wrap_on: mobile, col_spacing: medium, spacing_above: small, col_widths: '{}',
+        spacing_below: small, background: ''}
+      name: inquiry52
+      layout_properties: {grid_position: 'XJTNZD,APCZMH'}
+      components:
+      - type: Label
+        properties: {role: null, align: left, tooltip: '', border: '', foreground: 'theme:On
+            Tertiary Container', visible: false, text: 'Inquiry 5.2:', font_size: 18,
+          font: '', spacing_above: small, icon_align: left, spacing_below: small,
+          italic: false, background: '', bold: true, underline: false, icon: ''}
+        layout_properties:
+          col_widths: {}
+          grid_position: WZRCYR,FCSCOT
+        name: label_context_copy_18
+      - type: Label
+        properties: {role: null, align: left, tooltip: '', border: '', foreground: 'theme:On
+            Tertiary Container', visible: true, text: 'Context:', font_size: 18, font: '',
+          spacing_above: small, icon_align: left, spacing_below: small, italic: false,
+          background: '', bold: true, underline: false, icon: ''}
+        layout_properties: {grid_position: 'NKESMA,LZYLHS'}
+        name: label_context_copy_19
+      - type: ColumnPanel
+        properties: {role: tonal-card, tooltip: '', border: '', foreground: '', visible: true,
+          wrap_on: mobile, col_spacing: medium, spacing_above: small, col_widths: '{}',
+          spacing_below: small, background: ''}
+        layout_properties: {grid_position: 'TTDJDA,KNTCQY'}
+        name: ocard_student_context_copy_7
+        components:
+        - type: RichText
+          properties: {role: null, align: left, tooltip: '', enable_slots: true, border: '',
+            foreground: 'theme:On Background', visible: true, font_size: 16, content: "As\
+              \ a safety engineer for a car company, your task is to fit brakes that\
+              \ exert enough force to rapidly slow down the car during emergencies.\
+              \ \n\nWith a set deceleration benchmark, you aim to choose brakes that\
+              \ provide adequate braking force for each model when applied at maximum\
+              \ speed. \n\nYou express a=f/m as f=ma to calculate the required breaking\
+              \ force (f) using deceleration benchmark (a) and the mass of a specific\
+              \ model (m). You'll simulate the brakes\u2019 effectiveness before proceeding\
+              \ to production.", font: '', spacing_above: small, spacing_below: none,
+            data: null, background: '', format: markdown}
+          layout_properties: {grid_position: 'GIUWKJ,LUTZAB'}
+          name: rtext_student_context_copy_7
+          data_bindings: []
+      - type: Spacer
+        properties: {height: 18}
+        layout_properties: {grid_position: 'VIGGNR,AMQIMQ'}
+        name: spacer_1_copy_7
+      - type: ColumnPanel
+        properties: {role: outlined-card, tooltip: '', border: '1', foreground: '',
+          visible: true, wrap_on: mobile, col_spacing: medium, spacing_above: small,
+          col_widths: '{}', spacing_below: small, background: ''}
+        name: ocard_student_interact_copy_5
+        layout_properties:
+          col_widths: {}
+          grid_position: HCDLLG,USBBXH
+        components:
+        - type: form:sim5
+          properties: {}
+          name: sim5_1
+          layout_properties: {grid_position: 'RVJPUI,EQHFYP'}
+      - type: Spacer
+        properties: {height: 35}
+        layout_properties:
+          col_widths: {}
+          grid_position: FAGERN,ZNBJMS
+        name: spacer_1_copy_16
+      - type: Label
+        properties: {role: null, align: left, tooltip: '', border: '', foreground: 'theme:On
+            Tertiary Container', visible: true, text: 'Prompt: ', font_size: 18, font: '',
+          spacing_above: small, icon_align: left, spacing_below: small, italic: false,
+          background: '', bold: true, underline: false, icon: ''}
+        layout_properties:
+          col_widths: {}
+          grid_position: RGJWRO,MLFHXJ
+        name: label_prompt_copy_6
+      - type: ColumnPanel
+        properties: {role: tonal-card, tooltip: '', border: '', foreground: '', visible: true,
+          wrap_on: mobile, col_spacing: medium, spacing_above: small, col_widths: '{}',
+          spacing_below: small, background: ''}
+        layout_properties:
+          col_widths: {}
+          grid_position: GGXXAL,THDOYM
+        name: ocard_prompt_copy_6
+        components:
+        - type: RichText
+          properties: {role: null, align: left, tooltip: '', enable_slots: true, border: '',
+            foreground: 'theme:On Background', visible: true, font_size: 16, content: 'Does
+              f=ma accurately calculate the breaking force ensuring the cars stopped
+              within a safe distance?', font: '', spacing_above: small, spacing_below: small,
+            data: null, background: '', format: markdown}
+          layout_properties:
+            col_widths: {}
+            grid_position: FWHASY,AHKXMO
+          name: rtext_student_prompt_copy_48
+          data_bindings: []
+        - type: Spacer
+          properties: {height: 18}
+          layout_properties:
+            col_widths: {}
+            grid_position: FFYQFP,VKFERG
+          name: spacer_2_copy_8
+      - type: Label
+        properties: {role: null, align: left, tooltip: '', border: '', foreground: 'theme:On
+            Tertiary Container', visible: true, text: 'Options:', font_size: 18, font: '',
+          spacing_above: small, icon_align: left, spacing_below: small, italic: false,
+          background: '', bold: true, underline: false, icon: ''}
+        layout_properties:
+          col_widths: {}
+          grid_position: GPRCWH,PKFKSQ
+        name: label_options_copy_8
+      - type: ColumnPanel
+        properties: {role: tonal-card, tooltip: '', border: '', foreground: '', visible: true,
+          wrap_on: mobile, col_spacing: medium, spacing_above: small, col_widths: '{"KETAAD":55}',
+          spacing_below: small, background: ''}
+        layout_properties:
+          col_widths: {}
+          grid_position: LXJTEX,FMPZLC
+        name: ocard_options_copy_8
+        components:
+        - type: ColumnPanel
+          properties: {role: null, tooltip: '', border: '', foreground: '', visible: true,
+            wrap_on: never, col_spacing: none, spacing_above: small, col_widths: '{}',
+            spacing_below: small, background: ''}
+          name: outlined_card_2_copy_7
+          layout_properties: {grid_position: 'WKOQON,KETAAD'}
+          components:
+          - type: RichText
+            properties: {role: null, align: left, tooltip: '', enable_slots: true,
+              border: '', foreground: 'theme:On Background', visible: true, font_size: 16,
+              content: 'Yes! And it proves that f=ma accurately represents the relationship
+                between the acceleration of an object, its mass and the amount of
+                force acting on it.', font: '', spacing_above: small, spacing_below: small,
+              data: null, background: '', format: markdown}
+            layout_properties:
+              col_widths: {}
+              grid_position: PHNJFN,JVBBZZ
+            name: rtext_student_prompt_copy_49
+            data_bindings: []
+            components: []
+        - type: RichText
+          properties: {role: null, align: left, tooltip: '', enable_slots: true, border: '',
+            foreground: 'theme:On Background', visible: true, font_size: 16, content: No. I’ll have to revisit the earlier experiment to determine an accurate way to model these relationships.,
+            font: '', spacing_above: small, spacing_below: small, data: null, background: '',
+            format: markdown}
+          layout_properties:
+            col_widths: {}
+            grid_position: IDKZTB,BOJNCJ
+          name: rtext_student_prompt_copy_53
+          data_bindings: []
+          components: []
+      - type: Spacer
+        properties: {height: 18}
+        layout_properties:
+          col_widths: {}
+          grid_position: WLGCWN,SMLJIE
+        name: spacer_3_copy_9
+      - type: Button
+        properties: {role: filled-button, align: right, tooltip: '', border: '', enabled: true,
+          foreground: '', visible: true, text: Onward, font_size: null, font: '',
+          spacing_above: small, icon_align: left, spacing_below: small, italic: false,
+          background: '', bold: false, underline: false, icon: ''}
+        layout_properties:
+          col_widths: {}
+          grid_position: BZMAFN,HVQRNW
+        event_bindings: {click: btn_student_next_question_click}
+        name: btn_student_next_question_copy_7
+    - type: ColumnPanel
+      properties: {role: null, tooltip: '', border: '', foreground: '', visible: false,
+        wrap_on: mobile, col_spacing: medium, spacing_above: small, col_widths: '{}',
+        spacing_below: small, background: ''}
+      name: inquiry61
+      layout_properties: {grid_position: 'KUWQMD,TNWUUL'}
+      components:
+      - type: Label
+        properties: {role: null, align: left, tooltip: '', border: '', foreground: 'theme:On
+            Tertiary Container', visible: false, text: 'Inquiry 6.1: ', font_size: 18,
+          font: '', spacing_above: small, icon_align: left, spacing_below: small,
+          italic: false, background: '', bold: true, underline: false, icon: ''}
+        layout_properties:
+          col_widths: {}
+          grid_position: ISNYSZ,OOULQL
+        name: label_context_copy_20
+      - type: Label
+        properties: {role: null, align: left, tooltip: '', border: '', foreground: 'theme:On
+            Tertiary Container', visible: true, text: 'Context:', font_size: 18, font: '',
+          spacing_above: small, icon_align: left, spacing_below: small, italic: false,
+          background: '', bold: true, underline: false, icon: ''}
+        layout_properties: {grid_position: 'WHKOFF,EYIJYQ'}
+        name: label_context_copy_21
+      - type: ColumnPanel
+        properties: {role: tonal-card, tooltip: '', border: '', foreground: '', visible: true,
+          wrap_on: mobile, col_spacing: medium, spacing_above: small, col_widths: '{}',
+          spacing_below: small, background: ''}
+        layout_properties: {grid_position: 'FTSNQA,GTHSFC'}
+        name: ocard_student_context_copy_8
+        components:
+        - type: RichText
+          properties: {role: null, align: left, tooltip: '', enable_slots: true, border: '',
+            foreground: 'theme:On Background', visible: true, font_size: 16, content: 'You
+              remember identifying the winning factors for the cart race, which involved
+              optimizing mass and force to maximize acceleration. You decide to delve
+              into this to see if these conclusions align with the mathematical formula
+              you''ve developed.', font: '', spacing_above: small, spacing_below: none,
+            data: null, background: '', format: markdown}
+          layout_properties: {grid_position: 'GIUWKJ,LUTZAB'}
+          name: rtext_student_context_copy_8
+          data_bindings: []
+      - type: Spacer
+        properties: {height: 18}
+        layout_properties: {grid_position: 'UYRFZR,YIBMWN'}
+        name: spacer_1_copy_8
+      - type: ColumnPanel
+        properties: {role: outlined-card, tooltip: '', border: '1', foreground: '',
+          visible: true, wrap_on: mobile, col_spacing: medium, spacing_above: small,
+          col_widths: '{}', spacing_below: small, background: ''}
+        name: ocard_student_interact_copy_6
+        layout_properties:
+          col_widths: {}
+          grid_position: CDWLPA,UPKTHJ
+        components:
+        - type: form:sim6
+          properties: {}
+          name: sim6_1
+          layout_properties: {grid_position: 'KXDYNS,SDYVXF'}
+      - type: Spacer
+        properties: {height: 35}
+        layout_properties:
+          col_widths: {}
+          grid_position: BMUFFF,YZYZZP
+        name: spacer_1_copy_17
+      - type: Label
+        properties: {role: null, align: left, tooltip: '', border: '', foreground: 'theme:On
+            Tertiary Container', visible: true, text: 'Prompt: ', font_size: 18, font: '',
+          spacing_above: small, icon_align: left, spacing_below: small, italic: false,
+          background: '', bold: true, underline: false, icon: ''}
+        layout_properties:
+          col_widths: {}
+          grid_position: HENQJV,EBBXFP
+        name: label_prompt_copy_7
+      - type: ColumnPanel
+        properties: {role: tonal-card, tooltip: '', border: '', foreground: '', visible: true,
+          wrap_on: mobile, col_spacing: medium, spacing_above: small, col_widths: '{}',
+          spacing_below: small, background: ''}
+        layout_properties:
+          col_widths: {}
+          grid_position: ANFZFT,SRNWDZ
+        name: ocard_prompt_copy_7
+        components:
+        - type: RichText
+          properties: {role: null, align: left, tooltip: '', enable_slots: true, border: '',
+            foreground: 'theme:On Background', visible: true, font_size: 16, content: 'Does
+              F=ma correspond with your conclusions about the relationship between
+              force, acceleration, and mass?', font: '', spacing_above: small, spacing_below: small,
+            data: null, background: '', format: markdown}
+          layout_properties:
+            col_widths: {}
+            grid_position: FWHASY,AHKXMO
+          name: rtext_student_prompt_copy_54
+          data_bindings: []
+      - type: Spacer
+        properties: {height: 18}
+        layout_properties:
+          col_widths: {}
+          grid_position: IWNZBL,QCJYLT
+        name: spacer_2_copy_9
+      - type: Label
+        properties: {role: null, align: left, tooltip: '', border: '', foreground: 'theme:On
+            Tertiary Container', visible: true, text: 'Options:', font_size: 18, font: '',
+          spacing_above: small, icon_align: left, spacing_below: small, italic: false,
+          background: '', bold: true, underline: false, icon: ''}
+        layout_properties:
+          col_widths: {}
+          grid_position: TUUYJD,MOFILP
+        name: label_options_copy_9
+      - type: ColumnPanel
+        properties: {role: tonal-card, tooltip: '', border: '', foreground: '', visible: true,
+          wrap_on: mobile, col_spacing: medium, spacing_above: small, col_widths: '{"KETAAD":55}',
+          spacing_below: small, background: ''}
+        layout_properties:
+          col_widths: {}
+          grid_position: IJNHDI,TFOKYA
+        name: ocard_options_copy_9
+        components:
+        - type: RichText
+          properties: {role: null, align: left, tooltip: '', enable_slots: true, border: '',
+            foreground: 'theme:On Background', visible: true, font_size: 16, content: 'No,
+              they seem to contradict each other. I’ll need to revisit the cart racing
+              scenario to determine if f=ma can accurately predict the winner. This
+              could lead to new insights.', font: '', spacing_above: small, spacing_below: small,
+            data: null, background: '', format: markdown}
+          layout_properties:
+            col_widths: {}
+            grid_position: AXNSVQ,VLFFHF
+          name: rtext_student_prompt_copy_56
+          data_bindings: []
+          components: []
+        - type: ColumnPanel
+          properties: {role: null, tooltip: '', border: '', foreground: '', visible: true,
+            wrap_on: never, col_spacing: none, spacing_above: small, col_widths: '{}',
+            spacing_below: small, background: ''}
+          name: outlined_card_2_copy_8
+          layout_properties: {grid_position: 'WKOQON,KETAAD'}
+          components:
+          - type: RichText
+            properties: {role: null, align: left, tooltip: '', enable_slots: true,
+              border: '', foreground: 'theme:On Background', visible: true, font_size: 16,
+              content: 'Yes, they are indeed conveying the same idea. This further
+                strengthens my understanding of how the force applied to an object
+                and its mass influence its motion.', font: '', spacing_above: small,
+              spacing_below: small, data: null, background: '', format: markdown}
+            layout_properties:
+              col_widths: {}
+              grid_position: PHNJFN,JVBBZZ
+            name: rtext_student_prompt_copy_55
+            data_bindings: []
+            components: []
+      - type: Spacer
+        properties: {height: 18}
+        layout_properties:
+          col_widths: {}
+          grid_position: UQOAZG,FUXDWD
+        name: spacer_3_copy_10
+      - type: Button
+        properties: {role: filled-button, align: right, tooltip: '', border: '', enabled: true,
+          foreground: '', visible: true, text: Onward, font_size: null, font: '',
+          spacing_above: small, icon_align: left, spacing_below: small, italic: false,
+          background: '', bold: false, underline: false, icon: ''}
+        layout_properties:
+          col_widths: {}
+          grid_position: TOZTGE,QUATKW
+        event_bindings: {click: btn_student_next_question_click}
+        name: btn_student_next_question_copy_8
+    - type: ColumnPanel
+      properties: {role: null, tooltip: '', border: '', foreground: '', visible: false,
+        wrap_on: mobile, col_spacing: medium, spacing_above: small, col_widths: '{}',
+        spacing_below: small, background: ''}
+      name: inquiry62
+      layout_properties: {grid_position: 'FVWWRP,ZEKPIJ'}
+      components:
+      - type: Label
+        properties: {role: null, align: left, tooltip: '', border: '', foreground: 'theme:On
+            Tertiary Container', visible: false, text: 'Inquiry 6.2: ', font_size: 18,
+          font: '', spacing_above: small, icon_align: left, spacing_below: small,
+          italic: false, background: '', bold: true, underline: false, icon: ''}
+        layout_properties:
+          col_widths: {}
+          grid_position: IWIOBU,EAUBKX
+        name: label_context_copy_22
+      - type: Label
+        properties: {role: null, align: left, tooltip: '', border: '', foreground: 'theme:On
+            Tertiary Container', visible: true, text: 'Context:', font_size: 18, font: '',
+          spacing_above: small, icon_align: left, spacing_below: small, italic: false,
+          background: '', bold: true, underline: false, icon: ''}
+        layout_properties: {grid_position: 'SEFTIK,WGRDSE'}
+        name: label_context_copy_23
+      - type: ColumnPanel
+        properties: {role: tonal-card, tooltip: '', border: '', foreground: '', visible: true,
+          wrap_on: mobile, col_spacing: medium, spacing_above: small, col_widths: '{}',
+          spacing_below: small, background: ''}
+        layout_properties: {grid_position: 'TMSOZJ,XTAPGG'}
+        name: ocard_student_context_copy_9
+        components:
+        - type: RichText
+          properties: {role: null, align: left, tooltip: '', enable_slots: true, border: '',
+            foreground: 'theme:On Background', visible: true, font_size: 16, content: 'With
+              a deeper understanding of how objects interact with their environment,
+              does it occur to you why they behave this way? Lets revisit your thoughts
+              one last time before concluding your exploration.', font: '', spacing_above: small,
+            spacing_below: none, data: null, background: '', format: markdown}
+          layout_properties: {grid_position: 'GIUWKJ,LUTZAB'}
+          name: rtext_student_context_copy_9
+          data_bindings: []
+      - type: Spacer
+        properties: {height: 18}
+        layout_properties: {grid_position: 'PGCQDS,WBLIZA'}
+        name: spacer_1_copy_9
+      - type: Label
+        properties: {role: null, align: left, tooltip: '', border: '', foreground: 'theme:On
+            Tertiary Container', visible: true, text: 'Your hypotheses:', font_size: 18,
+          font: '', spacing_above: small, icon_align: left, spacing_below: small,
+          italic: false, background: '', bold: true, underline: false, icon: ''}
+        layout_properties:
+          col_widths: {}
+          grid_position: JSLCLJ,BBOUPF
+        name: label_options_copy_10
+      - type: ColumnPanel
+        properties: {role: tonal-card, tooltip: '', border: '', foreground: '', visible: true,
+          wrap_on: mobile, col_spacing: medium, spacing_above: small, col_widths: '{"KETAAD":55}',
+          spacing_below: small, background: ''}
+        layout_properties:
+          col_widths: {}
+          grid_position: QCIOVO,LOFTBA
+        name: ocard_options_copy_11
+        components:
+        - type: ColumnPanel
+          properties: {role: null, tooltip: '', border: '', foreground: '', visible: true,
+            wrap_on: never, col_spacing: none, spacing_above: small, col_widths: '{}',
+            spacing_below: small, background: ''}
+          name: outlined_card_2_copy_10
+          layout_properties: {grid_position: 'WKOQON,KETAAD'}
+          components:
+          - type: RichText
+            properties: {role: null, align: left, tooltip: '', enable_slots: true,
+              border: '', foreground: 'theme:On Background', visible: true, font_size: 16,
+              content: 'Why does pushing with more strength make things move faster?',
+              font: '', spacing_above: small, spacing_below: small, data: null, background: '',
+              format: markdown}
+            layout_properties:
+              col_widths: {}
+              grid_position: PHNJFN,JVBBZZ
+            name: rtext_student_prompt_copy_57
+            data_bindings: []
+            components:
+            - type: TextBox
+              properties: {role: null, align: left, hide_text: false, tooltip: '',
+                placeholder: your reasoning, border: '', enabled: true, foreground: 'theme:On
+                  Surface Variant', visible: true, text: '', font_size: null, font: '',
+                spacing_above: small, type: text, spacing_below: small, italic: true,
+                background: '', bold: false, underline: false}
+              name: text_box_1_copy_4
+              layout_properties: {}
+        - type: RichText
+          properties: {role: null, align: left, tooltip: '', enable_slots: true, border: '',
+            foreground: 'theme:On Background', visible: true, font_size: 16, content: 'Why
+              do we need more force to move heavier objects?', font: '', spacing_above: small,
+            spacing_below: small, data: null, background: '', format: markdown}
+          layout_properties:
+            col_widths: {}
+            grid_position: IDKZTB,BOJNCJ
+          name: rtext_student_prompt_copy_60
+          data_bindings: []
+          components:
+          - type: TextBox
+            properties: {role: null, align: left, hide_text: false, tooltip: '', placeholder: your reasoning,
+              border: '', enabled: true, foreground: 'theme:On Surface Variant', visible: true,
+              text: '', font_size: null, font: '', spacing_above: small, type: text,
+              spacing_below: small, italic: true, background: '', bold: false, underline: false}
+            name: text_box_1_copy_5
+            layout_properties:
+              col_widths: {}
+              grid_position: UZTZMR,BYBJZQ
+      - type: Spacer
+        properties: {height: 18}
+        layout_properties:
+          col_widths: {}
+          grid_position: HJFGDD,WDLXKY
+        name: spacer_3_copy_11
+      - type: Button
+        properties: {role: filled-button, align: right, tooltip: '', border: '', enabled: true,
+          foreground: '', visible: true, text: Onward, font_size: null, font: '',
+          spacing_above: small, icon_align: left, spacing_below: small, italic: false,
+          background: '', bold: false, underline: false, icon: ''}
+        layout_properties:
+          col_widths: {}
+          grid_position: YKPPSN,KTVRGJ
+        event_bindings: {click: btn_student_next_question_click}
+        name: btn_student_next_question_copy_9
   - type: ColumnPanel
     properties: {role: tonal-card, tooltip: '', border: '', foreground: '', visible: false,
       wrap_on: mobile, col_spacing: medium, spacing_above: small, col_widths: '{}',
