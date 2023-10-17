@@ -1,9 +1,9 @@
 container:
   type: HtmlTemplate
   properties: {tooltip: '', background: '', foreground: '', border: '', visible: true,
-    role: null, html: "<iframe src=\"_/theme/sim5.html\">\n    <!-- Alternative content\
-      \ for browsers that do not support iframes -->\n    <p>Your browser does not\
-      \ support iframes.</p>\n</iframe>"}
+    role: null, html: "<iframe src=\"_/theme/sim5.html\" width=\"100%\" height=\"\
+      450\">\n    <!-- Alternative content for browsers that do not support iframes\
+      \ -->\n    <p>Your browser does not support iframes.</p>\n</iframe>"}
 components: []
 is_package: true
 custom_component: true

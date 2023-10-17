@@ -14,19 +14,20 @@ container:
       \ {\n            background-color: #777;\n        }\n\n        .tabcontent {\n\
       \            color: black;\n            display: none;\n            padding:\
       \ 50px 20px;\n            height: 250px;\n        }\n    </style>\n</head>\n\
-      \n<body>\n    <button class=\"tablink\" onclick=\"openTab('Person1', this, 5)\"\
-      \ id=\"defaultOpen\">Person 1 (Mass = 5 units)</button>\n    <button class=\"\
-      tablink\" onclick=\"openTab('Person2', this, 20)\">Person 2 (Mass = 20 units)</button>\n\
-      \    <button class=\"tablink\" onclick=\"openTab('Person3', this, 50)\">Person\
-      \ 3 (Mass = 50 units)</button>\n\n    <div id=\"Person1\" class=\"tabcontent\"\
-      >\n        <div class=\"container2\">\n            <div class=\"car2\"></div>\n\
-      \        </div>\n        <p class=\"timer\">0.00</p>\n        <button class=\"\
-      simulateButton\">Simulate</button>\n        <button class=\"resetButton\" disabled>Reset</button>\n\
-      \    </div>\n\n    <div id=\"Person2\" class=\"tabcontent\">\n        <div class=\"\
-      container2\">\n            <div class=\"car2\"></div>\n        </div>\n    \
-      \    <p class=\"timer\">0.00</p>\n        <button class=\"simulateButton\">Simulate</button>\n\
-      \        <button class=\"resetButton\" disabled>Reset</button>\n    </div>\n\
-      \n    <div id=\"Person3\" class=\"tabcontent\">\n        <div class=\"container2\"\
+      \n<body style=\"height: 300px\">\n    <button class=\"tablink\" onclick=\"openTab('Person1',\
+      \ this, 5)\" id=\"defaultOpen\">Person 1 (Mass = 5 units)</button>\n    <button\
+      \ class=\"tablink\" onclick=\"openTab('Person2', this, 20)\">Person 2 (Mass\
+      \ = 20 units)</button>\n    <button class=\"tablink\" onclick=\"openTab('Person3',\
+      \ this, 50)\">Person 3 (Mass = 50 units)</button>\n\n    <div id=\"Person1\"\
+      \ class=\"tabcontent\">\n        <div class=\"container2\">\n            <div\
+      \ class=\"car2\"></div>\n        </div>\n        <p class=\"timer\">0.00</p>\n\
+      \        <button class=\"simulateButton\">Simulate</button>\n        <button\
+      \ class=\"resetButton\" disabled>Reset</button>\n    </div>\n\n    <div id=\"\
+      Person2\" class=\"tabcontent\">\n        <div class=\"container2\">\n      \
+      \      <div class=\"car2\"></div>\n        </div>\n        <p class=\"timer\"\
+      >0.00</p>\n        <button class=\"simulateButton\">Simulate</button>\n    \
+      \    <button class=\"resetButton\" disabled>Reset</button>\n    </div>\n\n \
+      \   <div id=\"Person3\" class=\"tabcontent\">\n        <div class=\"container2\"\
       >\n            <div class=\"car2\"></div>\n        </div>\n        <p class=\"\
       timer\">0.00</p>\n        <button class=\"simulateButton\">Simulate</button>\n\
       \        <button class=\"resetButton\" disabled>Reset</button>\n    </div>\n\
