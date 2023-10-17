@@ -15,12 +15,14 @@ class MainPage(MainPageTemplate):
     # Set Form properties and Data Bindings.
     self.init_components(**properties)
     
+    self.con_1 = ''
+    self.con_2 = ''
+    
 
     if self.radio_button_1_copy_31.selected is True:
       self.btn_student_next_question_copy_8.enabled = True
       
-    self.condition_1 = ''
-    self.condition_2 = ''
+    
     '''# Declare instance variables
     self.curr_file = None
     self.curr_ra_step = 0
@@ -173,18 +175,18 @@ class MainPage(MainPageTemplate):
 
   def button_7_click(self, **event_args):
     """This method is called when the button is clicked"""
-    if self.text_box_1.visible is True:
-      self.text_box_1.visible = False
+    if self.text_box_3.visible is True:
+      self.text_box_3.visible = False
     else:
-      self.text_box_1.visible = True
+      self.text_box_3.visible = True
     pass
 
   def button_8_click(self, **event_args):
     """This method is called when the button is clicked"""
-    if self.text_box_1_copy_2.visible is True:
-      self.text_box_1_copy_2.visible = False
+    if self.text_box_4.visible is True:
+      self.text_box_4.visible = False
     else:
-      self.text_box_1_copy_2.visible = True
+      self.text_box_4.visible = True
     pass
 
   def button_9_click(self, **event_args):
@@ -213,13 +215,56 @@ class MainPage(MainPageTemplate):
 
   def text_box_1_pressed_enter(self, **event_args):
     """This method is called when the user presses Enter in this text box"""
-    self.condition_1 = self.text_box_1.text
-    alert(self.condition_1)
+    self.con_1 = self.text_box_1.text
     pass
 
-  def text_box_1_copy_2_pressed_enter(self, **event_args):
+  def text_box_2_pressed_enter(self, **event_args):
     """This method is called when the user presses Enter in this text box"""
-    self.condition_2 = self.text_box_1_copy_2.text
-    alert(self.condition_2)
+    self.con_2 = self.text_box_2.text
     pass
+
+  def radio_button_1_copy_31_clicked(self, **event_args):
+    """This method is called when this radio button is selected"""
+    self.btn_student_next_question_copy_8.enabled = True
+
+  def radio_button_1_copy_32_clicked(self, **event_args):
+    """This method is called when this radio button is selected"""
+    pass
+
+  def radio_button_1_copy_29_clicked(self, **event_args):
+    """This method is called when this radio button is selected"""
+    self.btn_student_next_question_copy_7.enabled = True
+
+  def radio_button_1_copy_26_clicked(self, **event_args):
+    """This method is called when this radio button is selected"""
+    self.btn_student_next_question_copy_6.enabled = True
+
+  def radio_button_1_copy_18_clicked(self, **event_args):
+    """This method is called when this radio button is selected"""
+    self.btn_student_next_question_copy_5.enabled = True
+
+  def radio_button_1_copy_9_clicked(self, **event_args):
+    """This method is called when this radio button is selected"""
+    self.btn_student_next_question_copy_2.enabled = True
+
+  def radio_button_1_copy_4_clicked(self, **event_args):
+    """This method is called when this radio button is selected"""
+    self.btn_student_next_question_copy.enabled = True
+
+  def radio_button_1_clicked(self, **event_args):
+    """This method is called when this radio button is selected"""
+    self.btn_student_next_question.enabled = True
+
+
+
+
+
+
+
+
+
+
+
+
+
 

@@ -32,7 +32,7 @@ components:
     name: inquiry
     components:
     - type: ColumnPanel
-      properties: {role: null, tooltip: '', border: '', foreground: '', visible: false,
+      properties: {role: null, tooltip: '', border: '', foreground: '', visible: true,
         wrap_on: mobile, col_spacing: medium, spacing_above: small, col_widths: '{}',
         spacing_below: small, background: ''}
       name: inquiry10
@@ -145,9 +145,9 @@ components:
           grid_position: HXCIGD,KFRIHH
         name: label_options_copy
       - type: ColumnPanel
-        properties: {role: tonal-card, tooltip: '', border: '', foreground: '', visible: true,
+        properties: {role: null, tooltip: '', border: '', foreground: '', visible: true,
           wrap_on: mobile, col_spacing: medium, spacing_above: small, col_widths: '{}',
-          spacing_below: small, background: 'theme:Background'}
+          spacing_below: small, background: ''}
         layout_properties:
           col_widths: {}
           grid_position: HZDETC,VHVZPR
@@ -168,7 +168,7 @@ components:
               underline: false}
             name: radio_button_1
             layout_properties: {grid_position: 'SXCDOY,LGFAQP', full_width_row: true}
-            event_bindings: {clicked: right}
+            event_bindings: {clicked: radio_button_1_clicked}
         - type: ColumnPanel
           properties: {role: tonal-card, tooltip: '', border: '', foreground: '',
             visible: true, wrap_on: mobile, col_spacing: medium, spacing_above: small,
@@ -239,7 +239,7 @@ components:
           grid_position: BIASUK,JMQJBG
         name: spacer_3_copy_2
       - type: Button
-        properties: {role: filled-button, align: right, tooltip: '', border: '', enabled: true,
+        properties: {role: filled-button, align: right, tooltip: '', border: '', enabled: false,
           foreground: '', visible: true, text: Onward, font_size: null, font: '',
           spacing_above: small, icon_align: left, spacing_below: small, italic: false,
           background: '', bold: false, underline: false, icon: ''}
@@ -303,9 +303,9 @@ components:
           grid_position: MTSURU,MOUDNL
         name: label_options_copy_2
       - type: ColumnPanel
-        properties: {role: tonal-card, tooltip: '', border: '', foreground: '', visible: true,
+        properties: {role: null, tooltip: '', border: '', foreground: '', visible: true,
           wrap_on: mobile, col_spacing: medium, spacing_above: small, col_widths: '{}',
-          spacing_below: small, background: 'theme:Background'}
+          spacing_below: small, background: ''}
         layout_properties:
           col_widths: {}
           grid_position: ISZVAP,BTWGHA
@@ -366,7 +366,7 @@ components:
               underline: false}
             name: radio_button_1_copy_4
             layout_properties: {grid_position: 'XPVOOS,MFOLHS', full_width_row: true}
-            event_bindings: {clicked: right}
+            event_bindings: {clicked: radio_button_1_copy_4_clicked}
           - type: Button
             properties: {role: null, align: center, tooltip: '', border: '', enabled: true,
               foreground: '', visible: true, text: '', font_size: null, font: '',
@@ -395,7 +395,7 @@ components:
           grid_position: VSGKXH,NQMLDC
         name: spacer_3_copy_3
       - type: Button
-        properties: {role: filled-button, align: right, tooltip: '', border: '', enabled: true,
+        properties: {role: filled-button, align: right, tooltip: '', border: '', enabled: false,
           foreground: '', visible: true, text: Onward, font_size: null, font: '',
           spacing_above: small, icon_align: left, spacing_below: small, italic: false,
           background: '', bold: false, underline: false, icon: ''}
@@ -513,9 +513,9 @@ components:
           grid_position: DKRIOJ,JMKJKS
         name: label_options_copy_3
       - type: ColumnPanel
-        properties: {role: tonal-card, tooltip: '', border: '', foreground: '', visible: true,
+        properties: {role: null, tooltip: '', border: '', foreground: '', visible: true,
           wrap_on: mobile, col_spacing: medium, spacing_above: small, col_widths: '{}',
-          spacing_below: small, background: 'theme:Background'}
+          spacing_below: small, background: ''}
         layout_properties:
           col_widths: {}
           grid_position: ZGLXON,SKSTDI
@@ -653,7 +653,7 @@ components:
               underline: false}
             name: radio_button_1_copy_9
             layout_properties: {grid_position: 'XPVOOS,MFOLHS', full_width_row: true}
-            event_bindings: {clicked: right}
+            event_bindings: {clicked: radio_button_1_copy_9_clicked}
           - type: Button
             properties: {role: null, align: center, tooltip: '', border: '', enabled: true,
               foreground: '', visible: true, text: '', font_size: null, font: '',
@@ -681,7 +681,7 @@ components:
           grid_position: GEWECM,YTGPGH
         name: spacer_3_copy_4
       - type: Button
-        properties: {role: filled-button, align: right, tooltip: '', border: '', enabled: true,
+        properties: {role: filled-button, align: right, tooltip: '', border: '', enabled: false,
           foreground: '', visible: true, text: Onward, font_size: null, font: '',
           spacing_above: small, icon_align: left, spacing_below: small, italic: false,
           background: '', bold: false, underline: false, icon: ''}
@@ -798,9 +798,9 @@ components:
           grid_position: GBQIPN,EQYOJB
         name: label_options_copy_4
       - type: ColumnPanel
-        properties: {role: tonal-card, tooltip: '', border: '', foreground: '', visible: true,
+        properties: {role: null, tooltip: '', border: '', foreground: '', visible: true,
           wrap_on: mobile, col_spacing: medium, spacing_above: small, col_widths: '{}',
-          spacing_below: small, background: 'theme:Background'}
+          spacing_below: small, background: ''}
         layout_properties:
           col_widths: {}
           grid_position: ZPQWUG,STNPNY
@@ -1008,9 +1008,9 @@ components:
           grid_position: TEAEHG,VMWOZB
         name: label_options_copy_5
       - type: ColumnPanel
-        properties: {role: tonal-card, tooltip: '', border: '', foreground: '', visible: true,
+        properties: {role: null, tooltip: '', border: '', foreground: '', visible: true,
           wrap_on: mobile, col_spacing: medium, spacing_above: small, col_widths: '{}',
-          spacing_below: small, background: 'theme:Background'}
+          spacing_below: small, background: ''}
         layout_properties:
           col_widths: {}
           grid_position: ONLNEU,MKORRP
@@ -1042,17 +1042,6 @@ components:
             name: button_1_copy_6
             layout_properties: {grid_position: 'XPVOOS,ZXBWHU'}
             event_bindings: {}
-          - type: TextBox
-            properties: {role: null, align: left, hide_text: false, tooltip: '', placeholder: provide reasoning,
-              border: '', enabled: true, foreground: 'theme:On Surface Variant', visible: false,
-              text: '', font_size: null, font: '', spacing_above: small, type: text,
-              spacing_below: small, italic: true, background: 'theme:Dark Overlay
-                1', bold: false, underline: false}
-            name: text_box_1_copy_3
-            layout_properties:
-              col_widths: {}
-              grid_position: HEMTKY,ENVQKI
-            event_bindings: {pressed_enter: text_box_1_copy_3_pressed_enter}
         - type: ColumnPanel
           properties: {role: tonal-card, tooltip: '', border: '', foreground: '',
             visible: true, wrap_on: never, col_spacing: none, spacing_above: small,
@@ -1068,7 +1057,7 @@ components:
               underline: false}
             name: radio_button_1_copy_15
             layout_properties: {grid_position: 'XPVOOS,MFOLHS', full_width_row: true}
-            event_bindings: {clicked: right}
+            event_bindings: {}
           - type: Button
             properties: {role: null, align: center, tooltip: '', border: '', enabled: true,
               foreground: '', visible: true, text: '', font_size: null, font: '',
@@ -1078,15 +1067,13 @@ components:
             layout_properties: {grid_position: 'XPVOOS,ZXBWHU'}
             event_bindings: {click: button_7_click}
           - type: TextBox
-            properties: {role: null, align: left, hide_text: false, tooltip: '', placeholder: provide reasoning,
-              border: '', enabled: true, foreground: 'theme:On Surface Variant', visible: false,
-              text: '', font_size: null, font: '', spacing_above: small, type: text,
-              spacing_below: small, italic: true, background: 'theme:Dark Overlay
-                1', bold: false, underline: false}
-            name: text_box_1
-            layout_properties: {grid_position: 'OJZJUO,OODQKP'}
+            properties: {role: null, align: left, hide_text: false, tooltip: '', placeholder: Provide reasoning,
+              border: '', enabled: true, foreground: '', visible: false, text: '',
+              font_size: null, font: '', spacing_above: small, type: text, spacing_below: small,
+              italic: false, background: 'theme:Dark Overlay 1', bold: false, underline: false}
+            name: text_box_3
+            layout_properties: {grid_position: 'ZYZPWT,ZMGMSQ'}
             event_bindings: {pressed_enter: text_box_1_pressed_enter}
-            data_bindings: []
         - type: ColumnPanel
           properties: {role: tonal-card, tooltip: '', border: '', foreground: '',
             visible: true, wrap_on: never, col_spacing: none, spacing_above: small,
@@ -1113,17 +1100,6 @@ components:
             name: button_1_copy_8
             layout_properties: {grid_position: 'XPVOOS,ZXBWHU'}
             event_bindings: {}
-          - type: TextBox
-            properties: {role: null, align: left, hide_text: false, tooltip: '', placeholder: provide reasoning,
-              border: '', enabled: true, foreground: 'theme:On Surface Variant', visible: false,
-              text: '', font_size: null, font: '', spacing_above: small, type: text,
-              spacing_below: small, italic: true, background: 'theme:Dark Overlay
-                1', bold: false, underline: false}
-            name: text_box_1_copy
-            layout_properties:
-              col_widths: {}
-              grid_position: SLGNFJ,LAVFCF
-            event_bindings: {pressed_enter: text_box_1_copy_pressed_enter}
         - type: ColumnPanel
           properties: {role: tonal-card, tooltip: '', border: '', foreground: '',
             visible: true, wrap_on: never, col_spacing: none, spacing_above: small,
@@ -1141,7 +1117,7 @@ components:
               underline: false}
             name: radio_button_1_copy_17
             layout_properties: {grid_position: 'XPVOOS,MFOLHS', full_width_row: true}
-            event_bindings: {clicked: right}
+            event_bindings: {}
           - type: Button
             properties: {role: null, align: center, tooltip: '', border: '', enabled: true,
               foreground: '', visible: true, text: '', font_size: null, font: '',
@@ -1151,17 +1127,13 @@ components:
             layout_properties: {grid_position: 'XPVOOS,ZXBWHU'}
             event_bindings: {click: button_8_click}
           - type: TextBox
-            properties: {role: null, align: left, hide_text: false, tooltip: '', placeholder: provide reasoning,
-              border: '', enabled: true, foreground: 'theme:On Surface Variant', visible: false,
-              text: '', font_size: null, font: '', spacing_above: small, type: text,
-              spacing_below: small, italic: true, background: 'theme:Dark Overlay
-                1', bold: false, underline: false}
-            name: text_box_1_copy_2
-            layout_properties:
-              col_widths: {}
-              grid_position: HCUNIJ,YFQKWR
-            event_bindings: {pressed_enter: text_box_1_copy_2_pressed_enter}
-            data_bindings: []
+            properties: {role: null, align: left, hide_text: false, tooltip: '', placeholder: Provide reasoning,
+              border: '', enabled: true, foreground: '', visible: false, text: '',
+              font_size: null, font: '', spacing_above: small, type: text, spacing_below: small,
+              italic: false, background: 'theme:Dark Overlay 1', bold: false, underline: false}
+            name: text_box_4
+            layout_properties: {grid_position: 'RRNQNJ,LNUTFB'}
+            event_bindings: {pressed_enter: text_box_2_pressed_enter}
       - type: Spacer
         properties: {height: 18}
         layout_properties:
@@ -1317,7 +1289,7 @@ components:
               underline: false}
             name: radio_button_1_copy_18
             layout_properties: {grid_position: 'SXCDOY,LGFAQP', full_width_row: true}
-            event_bindings: {clicked: right}
+            event_bindings: {}
         - type: ColumnPanel
           properties: {role: tonal-card, tooltip: '', border: '', foreground: '',
             visible: true, wrap_on: mobile, col_spacing: medium, spacing_above: small,
@@ -1336,7 +1308,7 @@ components:
               col_widths: {}
               grid_position: MNXLEM,PNYLJU
               full_width_row: true
-            event_bindings: {clicked: wrong}
+            event_bindings: {clicked: radio_button_1_copy_18_clicked}
         - type: ColumnPanel
           properties: {role: tonal-card, tooltip: '', border: '', foreground: '',
             visible: true, wrap_on: mobile, col_spacing: medium, spacing_above: small,
@@ -1470,7 +1442,7 @@ components:
           grid_position: EDTZWM,RRVZTL
         name: spacer_3_copy_7
       - type: Button
-        properties: {role: filled-button, align: right, tooltip: '', border: '', enabled: true,
+        properties: {role: filled-button, align: right, tooltip: '', border: '', enabled: false,
           foreground: '', visible: true, text: Onward, font_size: null, font: '',
           spacing_above: small, icon_align: left, spacing_below: small, italic: false,
           background: '', bold: false, underline: false, icon: ''}
@@ -1561,7 +1533,7 @@ components:
               underline: false}
             name: radio_button_1_copy_26
             layout_properties: {grid_position: 'GORHSG,BSZOMV XPVOOS,MFOLHS', full_width_row: true}
-            event_bindings: {clicked: right}
+            event_bindings: {clicked: radio_button_1_copy_26_clicked}
           - type: RichText
             properties: {role: null, align: left, tooltip: '', enable_slots: true,
               border: '', foreground: 'theme:On Surface Variant', visible: true, font_size: 16,
@@ -1584,12 +1556,11 @@ components:
             event_bindings: {click: button_9_click}
           - type: RichText
             properties: {role: null, align: left, tooltip: '', enable_slots: true,
-              border: '', foreground: 'theme:On Surface Variant', visible: false,
-              font_size: 14, content: 'This experiment involves a car of a certain
-                mass and speed decelerating due to the force from the brakes. Since
-                this deals with deceleration, and breaking force, could this be relevant
-                to us?', font: '', spacing_above: small, spacing_below: small, data: null,
-              background: '', format: markdown}
+              border: '', foreground: '#5e5e5e', visible: false, font_size: 16, content: 'This
+                experiment involves a car of a certain mass and speed decelerating
+                due to the force from the brakes. Since this deals with deceleration,
+                and breaking force, could this be relevant to us?', font: '', spacing_above: small,
+              spacing_below: small, data: null, background: '', format: markdown}
             layout_properties:
               col_widths: {}
               grid_position: GBHDPU,VLJBFZ
@@ -1636,11 +1607,11 @@ components:
             event_bindings: {click: button_10_click}
           - type: RichText
             properties: {role: null, align: left, tooltip: '', enable_slots: true,
-              border: '', foreground: 'theme:On Surface Variant', visible: false,
-              font_size: 14, content: 'Creating sound waves involves applying a force
-                to a speaker. But is the resulting wave propagation truly an acceleration?
-                And how might the speaker’s mass come into play?', font: '', spacing_above: small,
-              spacing_below: small, data: null, background: '', format: markdown}
+              border: '', foreground: '#5e5e5e', visible: false, font_size: 16, content: 'Creating
+                sound waves involves applying a force to a speaker. But is the resulting
+                wave propagation truly an acceleration? And how might the speaker’s
+                mass come into play?', font: '', spacing_above: small, spacing_below: small,
+              data: null, background: '', format: markdown}
             layout_properties:
               col_widths: {}
               grid_position: GBHDPU,VLJBFZ
@@ -1687,12 +1658,11 @@ components:
             event_bindings: {click: button_11_click}
           - type: RichText
             properties: {role: null, align: left, tooltip: '', enable_slots: true,
-              border: '', foreground: 'theme:On Surface Variant', visible: false,
-              font_size: 14, content: 'Charging a battery involves an electric current,
-                which could be seen as a force. But is there an acceleration involved?
-                And how might the battery’s mass affect this process?', font: '',
-              spacing_above: small, spacing_below: small, data: null, background: '',
-              format: markdown}
+              border: '', foreground: '#5e5e5e', visible: false, font_size: 16, content: 'Charging
+                a battery involves an electric current, which could be seen as a force.
+                But is there an acceleration involved? And how might the battery’s
+                mass affect this process?', font: '', spacing_above: small, spacing_below: small,
+              data: null, background: '', format: markdown}
             layout_properties:
               col_widths: {}
               grid_position: GBHDPU,VLJBFZ
@@ -1706,7 +1676,7 @@ components:
           grid_position: LFRKUR,AZTTDT
         name: spacer_3_copy_8
       - type: Button
-        properties: {role: filled-button, align: right, tooltip: '', border: '', enabled: true,
+        properties: {role: filled-button, align: right, tooltip: '', border: '', enabled: false,
           foreground: '', visible: true, text: Onward, font_size: null, font: '',
           spacing_above: small, icon_align: left, spacing_below: small, italic: false,
           background: '', bold: false, underline: false, icon: ''}
@@ -1716,7 +1686,7 @@ components:
         event_bindings: {click: btn_student_next_question_click}
         name: btn_student_next_question_copy_6
     - type: ColumnPanel
-      properties: {role: null, tooltip: '', border: '', foreground: '', visible: true,
+      properties: {role: null, tooltip: '', border: '', foreground: '', visible: false,
         wrap_on: mobile, col_spacing: medium, spacing_above: small, col_widths: '{}',
         spacing_below: small, background: ''}
       name: inquiry52
@@ -1851,7 +1821,7 @@ components:
               underline: false}
             name: radio_button_1_copy_29
             layout_properties: {grid_position: 'MTPOZC,TUFVKN', full_width_row: true}
-            event_bindings: {clicked: right}
+            event_bindings: {clicked: radio_button_1_copy_29_clicked}
           - type: Spacer
             properties: {height: 32}
             name: spacer_1
@@ -1910,7 +1880,7 @@ components:
           grid_position: WLGCWN,SMLJIE
         name: spacer_3_copy_9
       - type: Button
-        properties: {role: filled-button, align: right, tooltip: '', border: '', enabled: true,
+        properties: {role: filled-button, align: right, tooltip: '', border: '', enabled: false,
           foreground: '', visible: true, text: Onward, font_size: null, font: '',
           spacing_above: small, icon_align: left, spacing_below: small, italic: false,
           background: '', bold: false, underline: false, icon: ''}
@@ -1920,7 +1890,7 @@ components:
         event_bindings: {click: btn_student_next_question_click}
         name: btn_student_next_question_copy_7
     - type: ColumnPanel
-      properties: {role: null, tooltip: '', border: '', foreground: '', visible: true,
+      properties: {role: null, tooltip: '', border: '', foreground: '', visible: false,
         wrap_on: mobile, col_spacing: medium, spacing_above: small, col_widths: '{}',
         spacing_below: small, background: ''}
       name: inquiry61
@@ -2051,7 +2021,7 @@ components:
               underline: false}
             name: radio_button_1_copy_31
             layout_properties: {grid_position: 'MTPOZC,TUFVKN', full_width_row: true}
-            event_bindings: {clicked: right}
+            event_bindings: {clicked: radio_button_1_copy_31_clicked}
           - type: Spacer
             properties: {height: 32}
             name: spacer_1_copy_14
@@ -2086,7 +2056,7 @@ components:
               underline: false}
             name: radio_button_1_copy_32
             layout_properties: {grid_position: 'MTPOZC,TUFVKN', full_width_row: true}
-            event_bindings: {clicked: right}
+            event_bindings: {clicked: radio_button_1_copy_32_clicked}
           - type: Spacer
             properties: {height: 32}
             name: spacer_1_copy_18
@@ -2199,42 +2169,55 @@ components:
               grid_position: PHNJFN,JVBBZZ
             name: rtext_student_prompt_copy_57
             data_bindings: []
-            components:
-            - type: TextBox
-              properties: {role: null, align: left, hide_text: false, tooltip: '',
-                placeholder: your reasoning, border: '', enabled: true, foreground: 'theme:On
-                  Surface Variant', visible: true, text: '', font_size: null, font: '',
-                spacing_above: small, type: text, spacing_below: small, italic: true,
-                background: 'theme:Dark Overlay 1', bold: false, underline: false}
-              name: text_box_1_copy_4
-              layout_properties: {}
-              data_bindings:
-              - {property: text, code: self.text_box_1.text, writeback: true}
-              event_bindings: {}
-        - type: RichText
-          properties: {role: null, align: left, tooltip: '', enable_slots: true, border: '',
-            foreground: 'theme:On Background', visible: true, font_size: 16, content: 'Why
-              do we need more force to move heavier objects?', font: '', spacing_above: small,
-            spacing_below: small, data: null, background: '', format: markdown}
-          layout_properties:
-            col_widths: {}
-            grid_position: IDKZTB,BOJNCJ
-          name: rtext_student_prompt_copy_60
-          data_bindings: []
+            components: []
+        - type: TextBox
+          properties: {role: null, align: left, hide_text: false, tooltip: '', placeholder: '',
+            border: '', enabled: true, foreground: '', visible: true, text: '', font_size: null,
+            font: '', spacing_above: small, type: text, spacing_below: small, italic: false,
+            background: 'theme:Dark Overlay 1', bold: false, underline: false}
+          name: text_box_1
+          layout_properties: {grid_position: 'DJSXPS,QTOSKG'}
+          event_bindings: {pressed_enter: text_box_1_pressed_enter}
+          data_bindings:
+          - {property: text, code: self.text_box_3.text, writeback: true}
+      - type: ColumnPanel
+        properties: {role: tonal-card, tooltip: '', border: '', foreground: '', visible: true,
+          wrap_on: mobile, col_spacing: medium, spacing_above: small, col_widths: '{"KETAAD":55}',
+          spacing_below: small, background: 'theme:Background'}
+        layout_properties:
+          col_widths: {}
+          grid_position: CJDWAN,GUZQEP
+        name: ocard_options_copy_13
+        components:
+        - type: ColumnPanel
+          properties: {role: null, tooltip: '', border: '', foreground: '', visible: true,
+            wrap_on: never, col_spacing: none, spacing_above: small, col_widths: '{}',
+            spacing_below: small, background: ''}
+          name: outlined_card_2_copy_23
+          layout_properties: {grid_position: 'WKOQON,KETAAD'}
           components:
-          - type: TextBox
-            properties: {role: null, align: left, hide_text: false, tooltip: '', placeholder: your reasoning,
-              border: '', enabled: true, foreground: 'theme:On Surface Variant', visible: true,
-              text: '', font_size: null, font: '', spacing_above: small, type: text,
-              spacing_below: small, italic: true, background: 'theme:Dark Overlay
-                1', bold: false, underline: false}
-            name: text_box_1_copy_5
+          - type: RichText
+            properties: {role: null, align: left, tooltip: '', enable_slots: true,
+              border: '', foreground: 'theme:On Background', visible: true, font_size: 16,
+              content: 'Why do we need more force to move heavier objects?', font: '',
+              spacing_above: small, spacing_below: small, data: null, background: '',
+              format: markdown}
             layout_properties:
               col_widths: {}
-              grid_position: UZTZMR,BYBJZQ
-            data_bindings:
-            - {property: text, code: self.text_box_1_copy_2.text, writeback: true}
-            event_bindings: {}
+              grid_position: PHNJFN,JVBBZZ
+            name: rtext_student_prompt_copy_60
+            data_bindings: []
+            components: []
+        - type: TextBox
+          properties: {role: null, align: left, hide_text: false, tooltip: '', placeholder: '',
+            border: '', enabled: true, foreground: '', visible: true, text: '', font_size: null,
+            font: '', spacing_above: small, type: text, spacing_below: small, italic: false,
+            background: 'theme:Dark Overlay 1', bold: false, underline: false}
+          name: text_box_2
+          layout_properties: {grid_position: 'PFSOGN,FCVSEW'}
+          event_bindings: {pressed_enter: text_box_2_pressed_enter}
+          data_bindings:
+          - {property: text, code: self.text_box_4.text, writeback: true}
       - type: Spacer
         properties: {height: 18}
         layout_properties:
@@ -2254,7 +2237,7 @@ components:
   - type: ColumnPanel
     properties: {role: tonal-card, tooltip: '', border: '', foreground: '', visible: false,
       wrap_on: mobile, col_spacing: medium, spacing_above: small, col_widths: '{}',
-      spacing_below: small, background: ''}
+      spacing_below: small, background: 'theme:Background'}
     layout_properties:
       col_widths: {}
       grid_position: LLBKZY,IRVKSM
@@ -2268,7 +2251,7 @@ components:
       layout_properties: {grid_position: 'WIJBJJ,QXSHJH'}
       name: label_student_filename
     - type: Button
-      properties: {role: filled-button, align: right, tooltip: '', border: '', enabled: true,
+      properties: {role: filled-button, align: right, tooltip: '', border: '', enabled: false,
         foreground: '', visible: true, text: Refresh page, font_size: null, font: '',
         spacing_above: small, icon_align: left, spacing_below: small, italic: false,
         background: '', bold: false, underline: false, icon: ''}
