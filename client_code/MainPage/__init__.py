@@ -105,6 +105,94 @@ class MainPage(MainPageTemplate):
       self.inquiry62.visible = True
       pass
 
-  def radio_button_3_clicked(self, **event_args):
+  def wrong(self, **event_args):
     """This method is called when this radio button is selected"""
     pass
+    
+
+  def right(self, **event_args):
+    """This method is called when this radio button is selected"""
+    pass
+
+  def button_1_click(self, **event_args):
+    """This method is called when the button is clicked"""
+    if self.rtext_student_prompt_copy_11.visible is True:
+      self.rtext_student_prompt_copy_11.visible = False
+    else:
+      self.rtext_student_prompt_copy_11.visible = True
+    pass
+
+  def button_2_click(self, **event_args):
+    """This method is called when the button is clicked"""
+    if self.rtext_student_prompt_copy_10.visible is True:
+      self.rtext_student_prompt_copy_10.visible = False
+    else:
+      self.rtext_student_prompt_copy_10.visible = True
+    pass
+
+  def button_3_click(self, **event_args):
+    """This method is called when the button is clicked"""
+    if self.rtext_student_prompt_copy_12.visible is True:
+      self.rtext_student_prompt_copy_12.visible = False
+    else:
+      self.rtext_student_prompt_copy_12.visible = True
+    pass
+
+  def button_4_click(self, **event_args):
+    """This method is called when the button is clicked"""
+    if self.rtext_student_prompt_copy_13.visible is True:
+      self.rtext_student_prompt_copy_13.visible = False
+    else:
+      self.rtext_student_prompt_copy_13.visible = True
+    pass
+    
+  def button_5_click(self, **event_args):
+    if self.rtext_student_prompt_copy_15.visible is True:
+      self.rtext_student_prompt_copy_15.visible = False
+    else:
+      self.rtext_student_prompt_copy_15.visible = True
+    pass
+    
+  def button_6_click(self, **event_args):
+    """This method is called when the button is clicked"""
+    if self.rtext_student_prompt_copy_16.visible is True:
+      self.rtext_student_prompt_copy_16.visible = False
+    else:
+      self.rtext_student_prompt_copy_16.visible = True
+    pass
+
+  def button_7_click(self, **event_args):
+    """This method is called when the button is clicked"""
+    if self.text_box_1.visible is True:
+      self.text_box_1.visible = False
+    else:
+      self.text_box_1.visible = True
+    pass
+
+  def button_8_click(self, **event_args):
+    """This method is called when the button is clicked"""
+    if self.text_box_1_copy_2.visible is True:
+      self.text_box_1_copy_2.visible = False
+    else:
+      self.text_box_1_copy_2.visible = True
+    pass
+
+  def text_box_1_pressed_enter(self, **event_args):
+    """This method is called when the user presses Enter in this text box"""
+    self.condition_1 = self.text_box_1.text
+    alert(self.condition_1)
+    pass
+
+  def text_box_1_copy_2_pressed_enter(self, **event_args):
+    """This method is called when the user presses Enter in this text box"""
+    self.condition_2 = self.text_box_1_copy_2.text
+    alert(self.condition_2)
+    pass
+
+
+
+
+
+
+
+
