@@ -104,3 +104,7 @@ class MainPage(MainPageTemplate):
       self.inquiry61.visible = False
       self.inquiry62.visible = True
       pass
+
+  def radio_button_3_clicked(self, **event_args):
+    """This method is called when this radio button is selected"""
+    pass
