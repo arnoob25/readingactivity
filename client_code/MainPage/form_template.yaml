@@ -74,17 +74,24 @@ components:
         properties: {height: 18}
         layout_properties: {grid_position: 'ONCVCM,XSSLTF'}
         name: spacer_1_copy
+      - type: FlowPanel
+        properties: {role: null, vertical_align: full, spacing: medium, align: left,
+          tooltip: '', border: '', foreground: '', visible: true, spacing_above: small,
+          spacing_below: small, background: ''}
+        name: flow_panel_1
+        layout_properties: {grid_position: 'CDHDXL,ZRIVGY', full_width_row: true}
+        components: []
       - type: ColumnPanel
-        properties: {role: tonal-card, tooltip: '', border: '0', foreground: '', visible: true,
+        properties: {role: tonal-card, tooltip: '', border: '', foreground: '', visible: true,
           wrap_on: mobile, col_spacing: medium, spacing_above: small, col_widths: '{}',
           spacing_below: small, background: ''}
-        name: ocard_student_interact
-        layout_properties: {grid_position: 'ZUMSIC,BVVSVY'}
+        name: column_panel_1
+        layout_properties: {grid_position: 'RMRJRU,ATOFHV', full_width_row: true}
         components:
         - type: form:MainPage.sim1
           properties: {}
           name: sim1_1
-          layout_properties: {grid_position: 'WYHASS,RNGSCE'}
+          layout_properties: {grid_position: 'JHIWBP,DPVITD', expand: true, width: null}
       - type: Spacer
         properties: {height: 35}
         layout_properties:

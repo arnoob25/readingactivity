@@ -22,7 +22,8 @@ runtime_options: {version: 2, client_version: '3', server_version: python3-sandb
   server_spec: null}
 metadata: {logo_img: 'asset:screenshot.png', title: Guided Learning Experience}
 startup_form: null
-native_deps: {head_html: ''}
+native_deps: {head_html: "<style>\n  iframe {\n    border: none;\n    width: 100%;\n\
+    }\n</style>"}
 db_schema:
   files:
     client: full

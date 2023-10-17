@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <style>
+        .container2 {
+            width: 100%;
+            height: 200px;
+            border: 1px solid black;
+            position: relative;
+        }
+
+        .car2 {
+            width: 50px;
+            height: 50px;
+            background-color: red;
+            position: absolute;
+            left: 0;
+        }
+
+        .tabcontent {
+            display: none;
+        }
+
+        .tablink {
+            background-color: #555;
+            color: white;
+            float: left;
+            border: none;
+            outline: none;
+            cursor: pointer;
+            padding: 14px 16px;
+            font-size: 17px;
+            width: 33.3%;
+        }
+
+        .tablink:hover {
+            background-color: #777;
+        }
+
+        .tabcontent {
+            color: black;
+            display: none;
+            padding: 50px 20px;
+            height: 250px;
+        }
+    </style>
+</head>
+
+<body style="height: 300px">
+    <button class="tablink" onclick="openTab('Person1', this, 5)" id="defaultOpen">Person 1 (Mass = 5 units)</button>
+    <button class="tablink" onclick="openTab('Person2', this, 20)">Person 2 (Mass = 20 units)</button>
+    <button class="tablink" onclick="openTab('Person3', this, 50)">Person 3 (Mass = 50 units)</button>
+
+    <div id="Person1" class="tabcontent">
+        <div class="container2">
+            <div class="car2"></div>
+        </div>
+        <p class="timer">0.00</p>
+        <button class="simulateButton">Simulate</button>
+        <button class="resetButton" disabled>Reset</button>
+    </div>
+
+    <div id="Person2" class="tabcontent">
+        <div class="container2">
+            <div class="car2"></div>
+        </div>
+        <p class="timer">0.00</p>
+        <button class="simulateButton">Simulate</button>
+        <button class="resetButton" disabled>Reset</button>
+    </div>
+
+    <div id="Person3" class="tabcontent">
+        <div class="container2">
+            <div class="car2"></div>
+        </div>
+        <p class="timer">0.00</p>
+        <button class="simulateButton">Simulate</button>
+        <button class="resetButton" disabled>Reset</button>
+    </div>
+
+    <script>
+        const force = 550; // constant force
+
+        function openTab(tabId, elmnt, mass) {
+            var i, tabcontent, tablinks;
+
+            tablinks = document.getElementsByClassName("tablink");
+            for (i = 0; i < tablinks.length; i++) {
+                tablinks[i].style.backgroundColor = "#555"; // not selected tabs
+            }
+            elmnt.style.backgroundColor = "#777"; // selected tab
+            elmnt.disabled = false;
+
+
+            tabcontent = document.getElementsByClassName("tabcontent");
+
+            for (i = 0; i < tabcontent.length; i++) {
+                tabcontent[i].style.display = "none";
+                tabcontent[i].querySelector('.car2').style.left = '0px';
+                tabcontent[i].querySelector('.timer').textContent = '0.00';
+                tabcontent[i].querySelector('.simulateButton').disabled = false;
+                tabcontent[i].querySelector('.resetButton').disabled = true;
+
+                if (tabcontent[i].animationFrameId2) {
+                    cancelAnimationFrame(tabcontent[i].animationFrameId2);
+                    tabcontent[i].animationFrameId2 = null;
+                }
+
+                if (tabId === tabcontent[i].id) {
+                    const car2 = tabcontent[i].querySelector('.car2');
+                    const container2 = tabcontent[i].querySelector('.container2');
+                    const timerElement2 = tabcontent[i].querySelector('.timer');
+                    const simulateButton2 = tabcontent[i].querySelector('.simulateButton');
+                    const resetButton2 = tabcontent[i].querySelector('.resetButton');
+
+                    simulateButton2.onclick = function () {
+                        this.disabled = true;
+
+                        const acceleration = force / mass;
+
+                        let startTime2 = Date.now();
+                        let animationFrameId2 = requestAnimationFrame(function animate() {
+                            const timeElapsedInSeconds = (Date.now() - startTime2) / 1000;
+                            timerElement2.textContent = timeElapsedInSeconds.toFixed(2);
+
+                            const displacement = 0.5 * acceleration * Math.pow(timeElapsedInSeconds, 2);
+                            car2.style.left = Math.min(displacement, container2.offsetWidth - car2.offsetWidth - 2) + 'px';
+
+                            if (displacement < container2.offsetWidth - car2.offsetWidth - 2) {
+                                animationFrameId2 = requestAnimationFrame(animate);
+                            } else {
+                                resetButton2.disabled = false;
+                            }
+                        });
+
+                        resetButton2.onclick = function () {
+                            this.disabled = true;
+
+                            cancelAnimationFrame(animationFrameId2);
+                            car2.style.left = '0px';
+                            timerElement2.textContent = '0.00';
+                            
+                        };
+                    };
+                }
+
+                document.getElementById(tabId).style.display = "block";
+            }
+        }
+
+        document.getElementById("defaultOpen").click();
+    </script>
+</body>
+
+</html>
