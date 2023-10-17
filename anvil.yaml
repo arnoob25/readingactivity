@@ -22,23 +22,22 @@ runtime_options: {version: 2, client_version: '3', server_version: python3-sandb
   server_spec: null}
 metadata: {logo_img: 'asset:screenshot.png', title: Guided Learning Experience}
 startup_form: null
-native_deps: {head_html: "\n    <script>\n        function g() {\n            Array.from(document.getElementsByClassName('b')).forEach((h,\
-    \ i) => {\n                const j = Math.random() * (75 - 55) + 15;\n       \
-    \         const k = Math.random() * (350 - 200) + 50;\n                document.getElementsByClassName('d')[i].textContent\
-    \ = `Mass: ${j.toFixed(2)}\\nForce: ${k.toFixed(2)}`;\n                h.style.transform\
-    \ = 'translateX(0px)';\n                h.dataset.l = k / j;\n            });\n\
-    \            document.getElementById('f').disabled = true;\n            document.getElementById('e').disabled\
-    \ = false;\n        }\n\n        document.getElementById('e').onclick = function\
-    \ () {\n            this.disabled = true;\n            (function m() {\n     \
-    \           let n = false;\n                Array.from(document.getElementsByClassName('b')).forEach(o\
-    \ => {\n                    if (n) return;\n                    const p = parseFloat(o.style.transform.split('(')[1]);\n\
-    \                    const q = Math.min(p + parseFloat(o.dataset.l), document.getElementById('a').offsetWidth\
-    \ - o.offsetWidth - 2);\n                    o.style.transform = `translateX(${q}px)`;\n\
-    \                    if (q >= document.getElementById('a').offsetWidth - o.offsetWidth\
-    \ - 2) {\n                        n = true;\n                        document.getElementById('f').disabled\
-    \ = false;\n                    }\n                });\n                if (!n)\
-    \ requestAnimationFrame(m);\n            })();\n        };\n\n        document.getElementById('f').onclick\
-    \ = g;\n\n        window.onload = g;\n    </script>\n"}
+native_deps: {head_html: "<script>\n  window.g = function() {\n    Array.from(document.getElementsByClassName('b')).forEach((h,\
+    \ i) => {\n        const j = Math.random() * (75 - 55) + 15;\n        const k\
+    \ = Math.random() * (350 - 200) + 50;\n        document.getElementsByClassName('d')[i].textContent\
+    \ = `Mass: ${j.toFixed(2)}\\nForce: ${k.toFixed(2)}`;\n        h.style.transform\
+    \ = 'translateX(0px)';\n        h.dataset.l = k / j;\n    });\n    document.getElementById('f').disabled\
+    \ = true;\n    document.getElementById('e').disabled = false;\n};\n\nwindow.eClick\
+    \ = function() {\n    document.getElementById('e').disabled = true;\n    (function\
+    \ m() {\n        let n = false;\n        Array.from(document.getElementsByClassName('b')).forEach(o\
+    \ => {\n            if (n) return;\n            const p = parseFloat(o.style.transform.split('(')[1]);\n\
+    \            const q = Math.min(p + parseFloat(o.dataset.l), document.getElementById('a').offsetWidth\
+    \ - o.offsetWidth - 2);\n            o.style.transform = `translateX(${q}px)`;\n\
+    \            if (q >= document.getElementById('a').offsetWidth - o.offsetWidth\
+    \ - 2) {\n                n = true;\n                document.getElementById('f').disabled\
+    \ = false;\n            }\n        });\n        if (!n) requestAnimationFrame(m);\n\
+    \    })();\n};\n\nwindow.fClick = function() {\n    window.g();\n};\n\nwindow.onload\
+    \ = window.g;\n\n</script>"}
 db_schema:
   files:
     client: full

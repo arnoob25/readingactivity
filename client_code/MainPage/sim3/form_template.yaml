@@ -21,25 +21,9 @@ container:
       ></div>\n        <div id=\"d4\" class=\"d\"></div>\n    </div>\n\n    <div id=\"\
       a\">\n        <div id=\"b1\" class=\"b\"></div>\n        <div id=\"b2\" class=\"\
       b\"></div>\n        <div id=\"b3\" class=\"b\"></div>\n        <div id=\"b4\"\
-      \ class=\"b\"></div>\n    </div>\n\n    <button id=\"e\">Simulate</button>\n\
-      \    <button id=\"f\" disabled>Reset</button>\n\n    <script>\n        function\
-      \ g() {\n            Array.from(document.getElementsByClassName('b')).forEach((h,\
-      \ i) => {\n                const j = Math.random() * (75 - 55) + 15;\n     \
-      \           const k = Math.random() * (350 - 200) + 50;\n                document.getElementsByClassName('d')[i].textContent\
-      \ = `Mass: ${j.toFixed(2)}\\nForce: ${k.toFixed(2)}`;\n                h.style.transform\
-      \ = 'translateX(0px)';\n                h.dataset.l = k / j;\n            });\n\
-      \            document.getElementById('f').disabled = true;\n            document.getElementById('e').disabled\
-      \ = false;\n        }\n\n        document.getElementById('e').onclick = function\
-      \ () {\n            this.disabled = true;\n            (function m() {\n   \
-      \             let n = false;\n                Array.from(document.getElementsByClassName('b')).forEach(o\
-      \ => {\n                    if (n) return;\n                    const p = parseFloat(o.style.transform.split('(')[1]);\n\
-      \                    const q = Math.min(p + parseFloat(o.dataset.l), document.getElementById('a').offsetWidth\
-      \ - o.offsetWidth - 2);\n                    o.style.transform = `translateX(${q}px)`;\n\
-      \                    if (q >= document.getElementById('a').offsetWidth - o.offsetWidth\
-      \ - 2) {\n                        n = true;\n                        document.getElementById('f').disabled\
-      \ = false;\n                    }\n                });\n                if (!n)\
-      \ requestAnimationFrame(m);\n            })();\n        };\n\n        document.getElementById('f').onclick\
-      \ = g;\n\n        window.onload = g;\n    </script>\n\n</body>\n\n</html>"}
+      \ class=\"b\"></div>\n    </div>\n\n    <button id=\"e\" onclick=\"window.eClick()\"\
+      >Simulate</button>\n    <button id=\"f\" onclick=\"window.fClick()\" disabled>Reset</button>\n\
+      \n</body>\n\n</html>\n"}
 components: []
 is_package: true
 custom_component: true
