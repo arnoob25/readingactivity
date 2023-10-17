@@ -85,10 +85,6 @@ components:
           properties: {}
           name: sim3_2
           layout_properties: {grid_position: 'BNOKRN,JORQMI'}
-        - type: form:MainPage.sim1
-          properties: {}
-          name: sim1_1
-          layout_properties: {grid_position: 'LATFKM,RQRQCX'}
       - type: Spacer
         properties: {height: 35}
         layout_properties:
