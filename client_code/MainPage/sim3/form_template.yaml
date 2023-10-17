@@ -1,29 +1,9 @@
 container:
   type: HtmlTemplate
   properties: {tooltip: '', background: '', foreground: '', border: '', visible: true,
-    role: null, html: "<!DOCTYPE html>\n<html>\n\n<head>\n    <style>\n        #a\
-      \ {\n            width: 100%;\n            height: 400px;\n            border:\
-      \ 1px solid black;\n            position: relative;\n            margin-top:\
-      \ 10px;\n        }\n\n        .b {\n            width: 50px;\n            height:\
-      \ 50px;\n            position: absolute;\n            left: 0;\n        }\n\n\
-      \        #b1 {\n            background-color: red;\n            top: 0;\n  \
-      \      }\n\n        #b2 {\n            background-color: blue;\n           \
-      \ top: 100px;\n        }\n\n        #b3 {\n            background-color: green;\n\
-      \            top: 200px;\n        }\n\n        #b4 {\n            background-color:\
-      \ yellow;\n            top: 300px;\n        }\n\n        #c {\n            width:\
-      \ 100%;\n            height: 100px;\n            border: 0;\n            display:\
-      \ flex;\n            justify-content: space-around;\n        }\n\n        .d\
-      \ {\n            width: 20%;\n            border: 1px solid black;\n       \
-      \     display: flex;\n            flex-direction: column;\n            align-items:\
-      \ center;\n            justify-content: center;\n        }\n    </style>\n</head>\n\
-      \n<body>\n    <div id=\"c\">\n        <div id=\"d1\" class=\"d\"></div>\n  \
-      \      <div id=\"d2\" class=\"d\"></div>\n        <div id=\"d3\" class=\"d\"\
-      ></div>\n        <div id=\"d4\" class=\"d\"></div>\n    </div>\n\n    <div id=\"\
-      a\">\n        <div id=\"b1\" class=\"b\"></div>\n        <div id=\"b2\" class=\"\
-      b\"></div>\n        <div id=\"b3\" class=\"b\"></div>\n        <div id=\"b4\"\
-      \ class=\"b\"></div>\n    </div>\n\n    <button id=\"e\" onclick=\"window.eClick()\"\
-      >Simulate</button>\n    <button id=\"f\" onclick=\"window.fClick()\" disabled>Reset</button>\n\
-      \n</body>\n\n</html>\n"}
+    role: null, html: "<iframe src=\"_/theme/sim3.html\" width=\"800\" height=\"600\"\
+      >\n    <!-- Alternative content for browsers that do not support iframes -->\n\
+      \    <p>Your browser does not support iframes.</p>\n</iframe>"}
 components: []
 is_package: true
 custom_component: true

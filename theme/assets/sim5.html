@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <style>
+        #container {
+            width: 100%;
+            height: 200px;
+            border: 1px solid black;
+            position: relative;
+        }
+
+        #car {
+            width: 50px;
+            height: 50px;
+            position: absolute;
+            left: 0;
+            top: 75px;
+            background-color: red;
+        }
+
+        #threshold {
+            width: 20px;
+            height: 200px;
+            position: absolute;
+            right: 50px;
+            top: 0;
+            background-color: green;
+        }
+
+        #tabs {
+            display: flex;
+        }
+
+        .tab {
+            float: left;
+            padding: 10px;
+            cursor: pointer;
+        }
+
+        .tab.active {
+            background-color: #ddd;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="tabs">
+        <div class="tab active" onclick="selectTab(1)">Tab 1</div>
+        <div class="tab" onclick="selectTab(2)">Tab 2</div>
+        <div class="tab" onclick="selectTab(3)">Tab 3</div>
+    </div>
+
+    <div id="container">
+        <div id="car"></div>
+        <div id="threshold"></div>
+    </div>
+
+    <button id="simulateButton" onclick="simulate()">Simulate</button>
+    <button id="resetButton" onclick="reset()" disabled>Reset</button>
+
+    <select id="brake" onchange="applyBrake(this.value)">
+        <option value="0">No Brake</option>
+        <option value="1">Small Brake</option>
+        <option value="2">Large Brake</option>
+    </select>
+
+    <p id="message"></p>
+    <p id="carSpecs"></p>
+    <p id="benchmarkDeceleration"></p>
+
+    <script>
+        var cary = document.getElementById('car');
+        var container5 = document.getElementById('container');
+        var brake = document.getElementById('brake');
+        var threshold = document.getElementById('threshold');
+        var message = document.getElementById('message');
+        var carySpecs = document.getElementById('carSpecs');
+        var benchmarkDeceleration = document.getElementById('benchmarkDeceleration');
+        var simulateButton5 = document.getElementById('simulateButton');
+        var resetButton5 = document.getElementById('resetButton');
+
+        var topSpeed = 17;
+        var speed = topSpeed;
+        var brakeForce = 0;
+        var mass = 1;
+        var requestId;
+
+        carySpecs.innerHTML = 'Car Mass: ' + mass + ', Top Speed: ' + topSpeed;
+
+        function calculateBenchmarkDeceleration() {
+            var d = container5.offsetWidth - threshold.offsetWidth - cary.offsetWidth - 2;
+            var a_benchmark = -(topSpeed * topSpeed) / (2 * d);
+            benchmarkDeceleration.innerHTML = 'Benchmark Deceleration: ' + a_benchmark.toFixed(2);
+        }
+
+        calculateBenchmarkDeceleration();
+
+        function simulate() {
+            cancelAnimationFrame(requestId);
+            cary.style.left = '0px';
+            speed = topSpeed;
+            message.innerHTML = '';
+            simulateButton5.disabled = true;
+            resetButton5.disabled = true;
+
+
+            var d = container5.offsetWidth - threshold.offsetWidth - cary.offsetWidth - 2;
+            var a_benchmark = -(topSpeed * topSpeed) / (2 * d);
+            benchmarkDeceleration.innerHTML = 'Benchmark Deceleration: ' + a_benchmark.toFixed(2);
+
+            move();
+        }
+
+        function move() {
+            var maxPos = container5.offsetWidth - cary.offsetWidth - 2;
+            var pos = parseInt(cary.style.left);
+            if (pos < maxPos) {
+                speed -= brakeForce / mass;
+                if (speed < 0) speed = 0;
+
+                var newPos = pos + speed;
+                if (newPos > maxPos) newPos = maxPos;
+
+                cary.style.left = newPos + 'px';
+
+                if (newPos >= threshold.offsetLeft) {
+                    message.innerHTML = 'Failure';
+                    endSimulation();
+                } else if (speed === 0 && newPos < threshold.offsetLeft) {
+                    message.innerHTML = 'Success';
+                    endSimulation();
+                }
+
+                requestId = requestAnimationFrame(move);
+            }
+        }
+
+        function applyBrake(value) {
+            switch (value) {
+                case '1':
+                    brakeForce = 0.1;
+                    break;
+                case '2':
+                    brakeForce = 0.2;
+                    break;
+                default:
+                    brakeForce = 0;
+                    break;
+            }
+        }
+
+        function endSimulation() {
+            cancelAnimationFrame(requestId);
+            resetButton5.disabled = false;
+        }
+
+        function reset() {
+            cancelAnimationFrame(requestId);
+            cary.style.left = '0px';
+            speed = topSpeed;
+            message.innerHTML = '';
+            simulateButton5.disabled = false;
+            resetButton5.disabled = true;
+        }
+
+        function selectTab(tabNumber) {
+            var tabs = document.getElementsByClassName('tab');
+            for (var i = 0; i < tabs.length; i++) {
+                tabs[i].classList.remove('active');
+            }
+            tabs[tabNumber - 1].classList.add('active');
+
+            switch (tabNumber) {
+                case 1:
+                    mass = 1;
+                    topSpeed = 17;
+                    break;
+                case 2:
+                    mass = 2;
+                    topSpeed = 15;
+                    break;
+                case 3:
+                    mass = 3;
+                    topSpeed = 13;
+                    break;
+            }
+
+            carySpecs.innerHTML = 'Car Mass: ' + mass + ', Top Speed: ' + topSpeed;
+            calculateBenchmarkDeceleration();
+        }
+    </script>
+</body>
+
+</html>
+

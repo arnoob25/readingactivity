@@ -14,7 +14,7 @@ services:
 - source: /runtime/services/google.yml
   client_config: {}
   server_config: {}
-startup: {type: form, module: sim}
+startup: {type: form, module: MainPage}
 package_name: GLEAT_sims
 allow_embedding: false
 name: 'GLEAT '
@@ -22,61 +22,7 @@ runtime_options: {version: 2, client_version: '3', server_version: python3-sandb
   server_spec: null}
 metadata: {logo_img: 'asset:screenshot.png', title: Guided Learning Experience}
 startup_form: null
-native_deps: {head_html: "<script>\n  window.g = function() {\n    Array.from(document.getElementsByClassName('b')).forEach((h,\
-    \ i) => {\n        const j = Math.random() * (75 - 55) + 15;\n        const k\
-    \ = Math.random() * (350 - 200) + 50;\n        document.getElementsByClassName('d')[i].textContent\
-    \ = `Mass: ${j.toFixed(2)}\\nForce: ${k.toFixed(2)}`;\n        h.style.transform\
-    \ = 'translateX(0px)';\n        h.dataset.l = k / j;\n    });\n    document.getElementById('f').disabled\
-    \ = true;\n    document.getElementById('e').disabled = false;\n};\n\nwindow.eClick\
-    \ = function() {\n    document.getElementById('e').disabled = true;\n    (function\
-    \ m() {\n        let n = false;\n        Array.from(document.getElementsByClassName('b')).forEach(o\
-    \ => {\n            if (n) return;\n            const p = parseFloat(o.style.transform.split('(')[1]);\n\
-    \            const q = Math.min(p + parseFloat(o.dataset.l), document.getElementById('a').offsetWidth\
-    \ - o.offsetWidth - 2);\n            o.style.transform = `translateX(${q}px)`;\n\
-    \            if (q >= document.getElementById('a').offsetWidth - o.offsetWidth\
-    \ - 2) {\n                n = true;\n                document.getElementById('f').disabled\
-    \ = false;\n            }\n        });\n        if (!n) requestAnimationFrame(m);\n\
-    \    })();\n};\n\nwindow.fClick = function() {\n    window.g();\n};\n\nwindow.onload\
-    \ = window.g;\n\nwindow.cary = document.getElementById('car');\nwindow.container5\
-    \ = document.getElementById('container');\nwindow.brake = document.getElementById('brake');\n\
-    window.threshold = document.getElementById('threshold');\nwindow.message = document.getElementById('message');\n\
-    window.carySpecs = document.getElementById('carSpecs');\nwindow.benchmarkDeceleration\
-    \ = document.getElementById('benchmarkDeceleration');\nwindow.simulateButton5\
-    \ = document.getElementById('simulateButton');\nwindow.resetButton5 = document.getElementById('resetButton');\n\
-    window.topSpeed = 17;\nwindow.speed = window.topSpeed;\nwindow.brakeForce = 0;\n\
-    window.mass = 1;\nwindow.requestId;\n\nwindow.calculateBenchmarkDeceleration =\
-    \ function() {\n    var d = window.container5.offsetWidth - window.threshold.offsetWidth\
-    \ - window.cary.offsetWidth - 2;\n    var a_benchmark = -(window.topSpeed * window.topSpeed)\
-    \ / (2 * d);\n    window.benchmarkDeceleration.innerHTML = 'Benchmark Deceleration:\
-    \ ' + a_benchmark.toFixed(2);\n};\n\nwindow.simulate = function() {\n    cancelAnimationFrame(window.requestId);\n\
-    \    window.cary.style.left = '0px';\n    window.speed = window.topSpeed;\n  \
-    \  window.message.innerHTML = '';\n    window.simulateButton5.disabled = true;\n\
-    \    window.resetButton5.disabled = true;\n    move();\n};\n\nwindow.move = function()\
-    \ {\n    var maxPos = window.container5.offsetWidth - window.cary.offsetWidth\
-    \ - 2;\n    var pos = parseInt(window.cary.style.left);\n    if (pos < maxPos)\
-    \ {\n        window.speed -= window.brakeForce / window.mass; \n        if (window.speed\
-    \ < 0) window.speed = 0;\n\n        var newPos = pos + window.speed;\n       \
-    \ if (newPos > maxPos) newPos = maxPos;\n\n        window.cary.style.left = newPos\
-    \ + 'px';\n\n        if (newPos >= threshold.offsetLeft) {\n            message.innerHTML\
-    \ = 'Failure';\n            endSimulation();\n        } else if (speed === 0 &&\
-    \ newPos < threshold.offsetLeft) {\n            message.innerHTML = 'Success';\n\
-    \            endSimulation();\n        }\n        requestId = requestAnimationFrame(move);\n\
-    \    }\n};\n\nwindow.applyBrake = function(value) {\n    switch (value) {\n  \
-    \      case '1':\n            brakeForce = 0.1;\n            break;\n        case\
-    \ '2':\n            brakeForce = 0.2;\n            break;\n        default:\n\
-    \            brakeForce = 0;\n            break;\n    }\n};\n\nwindow.endSimulation\
-    \ = function() {\n    cancelAnimationFrame(requestId);\n    resetButton5.disabled\
-    \ = false;\n};\n\nwindow.resetSimulation= function() {\n    cancelAnimationFrame(requestId);\n\
-    \    cary.style.left = '0px';\n    speed = topSpeed;\n    message.innerHTML =\
-    \ '';\n    simulateButton5.disabled = false;\n    resetButton5.disabled = true;\n\
-    };\n\nwindow.selectTab= function(tabNumber) {\n    var tabs = document.getElementsByClassName('tab');\n\
-    \    for (var i=0; i<tabs.length; i++) {\n        tabs[i].classList.remove('active');\n\
-    \    }\n    tabs[tabNumber-1].classList.add('active');\n\n    switch(tabNumber)\
-    \ {\n        case 1:\n            mass=1; topSpeed=17; break;\n        case 2:\n\
-    \            mass=2; topSpeed=15; break;\n        case 3:\n            mass=3;\
-    \ topSpeed=13; break;\n        default:\n            mass=1; topSpeed=17; break;\n\
-    \    }\n\n    carySpecs.innerHTML='Car Mass: '+mass+', Top Speed: '+topSpeed;\n\
-    \    calculateBenchmarkDeceleration();\n};\n\n  \n</script>"}
+native_deps: {head_html: ''}
 db_schema:
   files:
     client: full
