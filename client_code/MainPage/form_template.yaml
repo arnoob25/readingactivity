@@ -981,12 +981,12 @@ components:
           properties: {}
           name: sim3_1_copy
           layout_properties: {grid_position: 'MEAWZW,TCARBW'}
-        - type: Spacer
-          properties: {height: 35}
-          layout_properties:
-            col_widths: {}
-            grid_position: VYTDMA,XDUHZP
-          name: spacer_1_copy_19
+      - type: Spacer
+        properties: {height: 35}
+        layout_properties:
+          col_widths: {}
+          grid_position: ZYSSKW,OQFONX
+        name: spacer_1_copy_19
       - type: Label
         properties: {role: null, align: left, tooltip: '', border: '', foreground: 'theme:On
             Tertiary Container', visible: true, text: 'Assumptions:', font_size: 18,
