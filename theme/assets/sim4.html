@@ -6,22 +6,117 @@
         #container {
             width: 100%;
             height: 200px;
-            border: 1px solid black;
             position: relative;
         }
 
         #car {
-            width: 50px;
-            height: 50px;
-            background-color: red;
+            width: 7vw;
+            height: 10vh;
+            background-image: url('https://drive.google.com/uc?export=view&id=1rpamvNmu29c9LUhsUvi_nj10iwmq9C4z');
+            background-size: contain;
+            background-repeat: no-repeat;
             position: absolute;
+            top: 50%;
+            transform: translateY(-40%);
             left: 0;
+            border-radius: 10px;
         }
 
-        table,
+        table {
+            border-collapse: collapse;
+            width: 100%;
+        }
+
         th,
         td {
-            border: 1px solid black;
+            padding: 15px;
+            text-align: left;
+        }
+
+        th {
+            background-color: #f2f2f2;
+            border-radius: 10px;
+        }
+
+        button {
+            border-radius: 25px;
+            border: none;
+            color: white;
+            padding: 15px 32px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin: 4px 2px;
+            cursor: pointer;
+        }
+
+        #simulateButton {
+            background-color: #3f51b5;
+            /* Indigo */
+            opacity: 0.9;
+            /* Primary button */
+        }
+
+        #simulateButton:hover {
+            opacity: 1;
+            /* Hover effect */
+        }
+
+        #simulateButton[disabled] {
+            background-color: #E8EAF6;
+            /* Light Indigo */
+            color: black;
+            /* Text color when disabled */
+            opacity: 1;
+            /* No transparency when disabled */
+            cursor: default;
+        }
+
+        #resetButton,
+        #recordButton {
+            background-color: #697ade;
+            /* Grey */
+            opacity: 0.9;
+            /* Secondary buttons */
+        }
+
+        #resetButton:hover,
+        #recordButton:hover {
+            opacity: 1;
+            /* Hover effect */
+        }
+
+        #resetButton[disabled],
+        #recordButton[disabled] {
+            background-color: #E8EAF6;
+            /* Light Grey */
+            color: black;
+            /* Text color when disabled */
+            opacity: 0.8;
+            /* No transparency when disabled */
+            cursor: default;
+        }
+
+        select {
+            border: none;
+            /* Remove default border */
+            outline: none;
+            /* Remove focus outline */
+            background-color: #E8EAF6;
+            /* Light Indigo */
+            padding: 15px 32px;
+            /* Add padding */
+            font-size: 16px;
+            border-radius: 25px;
+            cursor: pointer;
+            /* Change cursor style */
+        }
+
+        input[type=range] {
+            width: 100%;
+            color: #3f51b5;
+            /* Specific width is required for Firefox. */
         }
     </style>
 </head>
@@ -30,8 +125,9 @@
     <div id="container">
         <div id="car"></div>
     </div>
+    <label for="forceSlider">Force:</label>
     <input type="range" min="0" max="1000" value="0" id="forceSlider">
-    <p id="forceValue">Force: 0 N</p>
+    <p id="forceValue">Force Value : 0 N</p>
     <select id="massSelect">
         <option value="1">1 kg</option>
         <option value="2">2 kg</option>
@@ -40,18 +136,19 @@
     <button id="simulateButton" disabled>Simulate</button>
     <button id="resetButton" disabled>Reset</button>
     <button id="recordButton" disabled>Record data</button>
-    <p id="timer">Time: 0.00 s</p>
-    <p id="acceleration">Acceleration: 0 m/s²</p>
+    <p id="timer">Time : 0.00 s</p>
+    <p id="acceleration">Acceleration : 0 m/s²</p>
 
     <table id="dataTable">
         <tr>
-            <th># of experiment</th>
-            <th>Force</th>
-            <th>Mass</th>
-            <th>Acceleration</th>
-            <th>Time to reach the end</th>
+            <th> no. </th>
+            <th> Force </th>
+            <th> Mass </th>
+            <th> Acceleration </th>
+            <th> Time </th>
         </tr>
     </table>
+
 
     <script>
         const carf = document.getElementById('car');
