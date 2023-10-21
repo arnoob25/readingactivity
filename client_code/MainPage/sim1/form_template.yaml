@@ -1,25 +1,53 @@
 container:
   type: HtmlTemplate
   properties: {tooltip: '', background: '', foreground: '', border: '', visible: true,
-    role: null, html: "<!DOCTYPE html>\n<html>\n\n<head>\n    <style>\n        #container\
-      \ {\n            width: 100%;\n            height: 200px;\n            border:\
-      \ 1px solid black;\n            position: relative;\n        }\n\n        #car\
-      \ {\n            width: 50px;\n            height: 50px;\n            background-color:\
-      \ red;\n            position: absolute;\n            left: 0;\n        }\n \
-      \   </style>\n</head>\n\n<body>\n    <div id=\"container\">\n        <div id=\"\
-      car\"></div>\n    </div>\n    <input type=\"range\" min=\"0\" max=\"1000\" value=\"\
-      0\" id=\"forceSlider\">\n    <button id=\"simulateButton\" disabled>Simulate</button>\n\
-      \    <button id=\"resetButton\" disabled>Reset</button>\n    <p id=\"timer\"\
-      >0.00</p>\n\n    <script>\n        const car = document.getElementById('car');\n\
-      \        const container = document.getElementById('container');\n        const\
-      \ forceSlider = document.getElementById('forceSlider');\n        const simulateButton\
-      \ = document.getElementById('simulateButton');\n        const resetButton =\
-      \ document.getElementById('resetButton');\n        const timerElement = document.getElementById('timer');\n\
-      \n        let startTime = null;\n        let animationFrameId = null;\n\n  \
-      \      forceSlider.oninput = function () {\n            simulateButton.disabled\
-      \ = this.value == 0;\n            if (this.value > 0) {\n                resetButton.disabled\
-      \ = true;\n            }\n        };\n\n        simulateButton.onclick = function\
-      \ () {\n            this.disabled = true;\n\n            const force = forceSlider.value;\n\
+    role: null, html: "<!DOCTYPE html>\n<html>\n\n<head>\n    <style>\n        body\
+      \ {\n            font-family: Arial, sans-serif;\n            padding: 20px;\n\
+      \            background-color: #f6f8fc;\n            font-size: 14px;\n    \
+      \    }\n\n        #container {\n            width: 100%;\n            height:\
+      \ 200px;\n            position: relative;\n            background-color: #FFFFFF;\n\
+      \            border-radius: 8px;\n            margin-bottom: 20px;\n       \
+      \ }\n\n        #car {\n            width: 8.5vw;\n            height: 8.5vh;\n\
+      \            background-image: url('https://drive.google.com/uc?export=view&id=1rpamvNmu29c9LUhsUvi_nj10iwmq9C4z');\n\
+      \            background-size: cover;\n            position: absolute;\n    \
+      \        left: 0;\n            top: 50%;\n            transform: translateY(-50%);\n\
+      \        }\n\n        .button {\n            display: inline-block;\n      \
+      \      padding: 10px 20px;\n            margin-right: 10px;\n            border-radius:\
+      \ 50px;\n            border-width: 0;\n\n        }\n\n        #simulateButton\
+      \ {\n            background-color: #6750A4;\n            /* Primary color for\
+      \ enabled state */\n            color: #FFFFFF;\n            /* On-primary color\
+      \ for enabled state */\n            cursor: pointer;\n        }\n\n        #simulateButton[disabled]\
+      \ {\n            background-color: #E0E0E0;\n            /* Surface color for\
+      \ disabled state */\n            color: #9E9E9E;\n            /* On-surface\
+      \ color for disabled state */\n            cursor: auto;\n        }\n\n    \
+      \    #resetButton {\n            border: 1px solid #79747E;\n            /*\
+      \ Primary color for enabled state */\n            color: #black;\n         \
+      \   /* Primary color for enabled state */\n            cursor: pointer;\n  \
+      \      }\n\n        #resetButton[disabled] {\n            border-color: #E0E0E0;\n\
+      \            /* Surface color for disabled state */\n            cursor: auto;\n\
+      \        }\n\n        #forceSlider {\n            width: 100%;\n           \
+      \ margin-bottom: 20px;\n        }\n\n        .timer-container {\n          \
+      \  display: flex;\n            align-items: center;\n            font-size:\
+      \ 24px;\n            font-weight: bold;\n            margin-bottom: 20px\n \
+      \       }\n\n        .timer-container p {\n            margin-right: 10px\n\
+      \        }\n    </style>\n</head>\n\n<body>\n    <div class=\"timer-container\"\
+      >\n        <p>Time Elapsed:</p>\n        <span id=\"timer\">0.00</span>\n  \
+      \  </div>\n    <div id=\"container\">\n        <div id=\"car\"></div>\n    </div>\n\
+      \    <label style=\"display:block; margin-bottom :10px\" for=\"forceSlider\"\
+      >Force (Slide to increase/decrease):</label>\n    <input type=\"range\" min=\"\
+      0\" max=\"1000\" value=\"0\" id=\"forceSlider\">\n    <button class=\"button\"\
+      \ id=\"simulateButton\" disabled>Simulate</button>\n    <button class=\"button\"\
+      \ id=\"resetButton\" disabled>Reset</button>\n\n\n    <script>\n        const\
+      \ car = document.getElementById('car');\n        const container = document.getElementById('container');\n\
+      \        const forceSlider = document.getElementById('forceSlider');\n     \
+      \   const simulateButton = document.getElementById('simulateButton');\n    \
+      \    const resetButton = document.getElementById('resetButton');\n        const\
+      \ timerElement = document.getElementById('timer');\n\n        let startTime\
+      \ = null;\n        let animationFrameId = null;\n\n        forceSlider.oninput\
+      \ = function () {\n            simulateButton.disabled = this.value == 0;\n\
+      \            if (this.value > 0) {\n                resetButton.disabled = true;\n\
+      \            }\n        };\n\n        simulateButton.onclick = function () {\n\
+      \            this.disabled = true;\n\n            const force = forceSlider.value;\n\
       \            const mass = 1; // constant mass\n            const acceleration\
       \ = force / mass;\n\n            startTime = Date.now();\n            animationFrameId\
       \ = requestAnimationFrame(function animate() {\n                const timeElapsedInSeconds\
