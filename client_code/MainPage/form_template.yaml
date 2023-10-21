@@ -87,7 +87,7 @@ components:
       - type: ColumnPanel
         properties: {role: tonal-card, tooltip: '', border: '', foreground: '', visible: true,
           wrap_on: mobile, col_spacing: medium, spacing_above: small, col_widths: '{}',
-          spacing_below: small, background: 'theme:Background'}
+          spacing_below: small, background: '#ffffff'}
         layout_properties:
           col_widths: {}
           grid_position: XAFNMZ,UJWFUQ
@@ -113,7 +113,7 @@ components:
       - type: ColumnPanel
         properties: {role: tonal-card, tooltip: '', border: '', foreground: '', visible: true,
           wrap_on: mobile, col_spacing: medium, spacing_above: small, col_widths: '{}',
-          spacing_below: small, background: 'theme:Background'}
+          spacing_below: small, background: '#ffffff'}
         name: column_panel_1
         layout_properties: {grid_position: 'MZEWVQ,XQHAPU', full_width_row: true}
         components:
@@ -148,7 +148,7 @@ components:
         - type: ColumnPanel
           properties: {role: tonal-card, tooltip: '', border: '', foreground: '',
             visible: true, wrap_on: never, col_spacing: none, spacing_above: small,
-            col_widths: '{}', spacing_below: small, background: 'theme:Background'}
+            col_widths: '{}', spacing_below: small, background: '#ffffff'}
           name: outlined_card_2
           layout_properties: {grid_position: 'WKOQON,KETAAD'}
           components:
@@ -164,7 +164,7 @@ components:
         - type: ColumnPanel
           properties: {role: tonal-card, tooltip: '', border: '', foreground: '',
             visible: true, wrap_on: mobile, col_spacing: medium, spacing_above: small,
-            col_widths: '{}', spacing_below: small, background: 'theme:Background'}
+            col_widths: '{}', spacing_below: small, background: '#ffffff'}
           name: outlined_card_3
           layout_properties: {grid_position: 'PEDXSQ,CRBNHS'}
           components:
@@ -183,7 +183,7 @@ components:
         - type: ColumnPanel
           properties: {role: tonal-card, tooltip: '', border: '', foreground: '',
             visible: true, wrap_on: mobile, col_spacing: medium, spacing_above: small,
-            col_widths: '{}', spacing_below: small, background: 'theme:Background'}
+            col_widths: '{}', spacing_below: small, background: '#ffffff'}
           name: outlined_card_3_copy
           layout_properties:
             col_widths: {}
@@ -205,7 +205,7 @@ components:
         - type: ColumnPanel
           properties: {role: tonal-card, tooltip: '', border: '', foreground: '',
             visible: true, wrap_on: mobile, col_spacing: medium, spacing_above: small,
-            col_widths: '{}', spacing_below: small, background: 'theme:Background'}
+            col_widths: '{}', spacing_below: small, background: '#ffffff'}
           name: outlined_card_3_copy_2
           layout_properties:
             col_widths: {}
@@ -266,7 +266,7 @@ components:
       - type: ColumnPanel
         properties: {role: tonal-card, tooltip: '', border: '', foreground: '', visible: true,
           wrap_on: mobile, col_spacing: medium, spacing_above: small, col_widths: '{}',
-          spacing_below: small, background: 'theme:Background'}
+          spacing_below: small, background: '#ffffff'}
         layout_properties: {grid_position: 'GCVTJL,ELGAFY'}
         name: ocard_student_context_copy
         components:
@@ -306,7 +306,7 @@ components:
         - type: ColumnPanel
           properties: {role: tonal-card, tooltip: '', border: '', foreground: '',
             visible: true, wrap_on: never, col_spacing: none, spacing_above: small,
-            col_widths: '{"MFOLHS":50,"ZXBWHU":10}', spacing_below: small, background: 'theme:Background'}
+            col_widths: '{"MFOLHS":50,"ZXBWHU":10}', spacing_below: small, background: '#ffffff'}
           name: outlined_card_2_copy_11
           layout_properties:
             col_widths: {}
@@ -345,7 +345,7 @@ components:
         - type: ColumnPanel
           properties: {role: tonal-card, tooltip: '', border: '', foreground: '',
             visible: true, wrap_on: never, col_spacing: none, spacing_above: small,
-            col_widths: '{"MFOLHS":50,"ZXBWHU":10}', spacing_below: small, background: 'theme:Background'}
+            col_widths: '{"MFOLHS":50,"ZXBWHU":10}', spacing_below: small, background: '#ffffff'}
           name: outlined_card_2_copy_9
           layout_properties: {grid_position: 'IVFNJC,SHXQJP'}
           components:
@@ -422,7 +422,7 @@ components:
       - type: ColumnPanel
         properties: {role: tonal-card, tooltip: '', border: '', foreground: '', visible: true,
           wrap_on: mobile, col_spacing: medium, spacing_above: small, col_widths: '{}',
-          spacing_below: small, background: 'theme:Background'}
+          spacing_below: small, background: '#ffffff'}
         layout_properties: {grid_position: 'AWEEBS,HYIXZN'}
         name: ocard_student_context_copy_2
         components:
@@ -454,7 +454,7 @@ components:
       - type: ColumnPanel
         properties: {role: tonal-card, tooltip: '', border: '', foreground: '', visible: true,
           wrap_on: mobile, col_spacing: medium, spacing_above: small, col_widths: '{}',
-          spacing_below: small, background: 'theme:Background'}
+          spacing_below: small, background: '#ffffff'}
         layout_properties:
           col_widths: {}
           grid_position: EJVPDA,QDLJON
@@ -479,7 +479,7 @@ components:
       - type: ColumnPanel
         properties: {role: tonal-card, tooltip: '', border: '', foreground: '', visible: true,
           wrap_on: mobile, col_spacing: medium, spacing_above: small, col_widths: '{}',
-          spacing_below: small, background: 'theme:Background'}
+          spacing_below: small, background: '#ffffff'}
         name: ocard_student_interact_copy
         layout_properties:
           col_widths: {}
@@ -516,7 +516,7 @@ components:
         - type: ColumnPanel
           properties: {role: tonal-card, tooltip: '', border: '', foreground: '',
             visible: true, wrap_on: never, col_spacing: none, spacing_above: small,
-            col_widths: '{"MFOLHS":50,"ZXBWHU":10}', spacing_below: small, background: 'theme:Background'}
+            col_widths: '{"MFOLHS":50,"ZXBWHU":10}', spacing_below: small, background: '#ffffff'}
           name: outlined_card_2_copy_12
           layout_properties:
             col_widths: {}
@@ -555,7 +555,7 @@ components:
         - type: ColumnPanel
           properties: {role: tonal-card, tooltip: '', border: '', foreground: '',
             visible: true, wrap_on: never, col_spacing: none, spacing_above: small,
-            col_widths: '{"MFOLHS":50,"ZXBWHU":10}', spacing_below: small, background: 'theme:Background'}
+            col_widths: '{"MFOLHS":50,"ZXBWHU":10}', spacing_below: small, background: '#ffffff'}
           name: outlined_card_2_copy_13
           layout_properties: {grid_position: 'IVFNJC,SHXQJP'}
           components:
@@ -592,7 +592,7 @@ components:
         - type: ColumnPanel
           properties: {role: tonal-card, tooltip: '', border: '', foreground: '',
             visible: true, wrap_on: never, col_spacing: none, spacing_above: small,
-            col_widths: '{"MFOLHS":50,"ZXBWHU":10}', spacing_below: small, background: 'theme:Background'}
+            col_widths: '{"MFOLHS":50,"ZXBWHU":10}', spacing_below: small, background: '#ffffff'}
           name: outlined_card_2_copy_14
           layout_properties:
             col_widths: {}
@@ -630,7 +630,7 @@ components:
         - type: ColumnPanel
           properties: {role: tonal-card, tooltip: '', border: '', foreground: '',
             visible: true, wrap_on: never, col_spacing: none, spacing_above: small,
-            col_widths: '{"MFOLHS":50,"ZXBWHU":10}', spacing_below: small, background: 'theme:Background'}
+            col_widths: '{"MFOLHS":50,"ZXBWHU":10}', spacing_below: small, background: '#ffffff'}
           name: outlined_card_2_copy_15
           layout_properties:
             col_widths: {}
@@ -708,7 +708,7 @@ components:
       - type: ColumnPanel
         properties: {role: tonal-card, tooltip: '', border: '', foreground: '', visible: true,
           wrap_on: mobile, col_spacing: medium, spacing_above: small, col_widths: '{}',
-          spacing_below: small, background: 'theme:Background'}
+          spacing_below: small, background: '#ffffff'}
         layout_properties: {grid_position: 'HMHYWV,CURLAO'}
         name: ocard_student_context_copy_3
         components:
@@ -739,7 +739,7 @@ components:
       - type: ColumnPanel
         properties: {role: tonal-card, tooltip: '', border: '', foreground: '', visible: true,
           wrap_on: mobile, col_spacing: medium, spacing_above: small, col_widths: '{}',
-          spacing_below: small, background: 'theme:Background'}
+          spacing_below: small, background: '#ffffff'}
         layout_properties:
           col_widths: {}
           grid_position: KKQHUI,AYOUPH
@@ -764,7 +764,7 @@ components:
       - type: ColumnPanel
         properties: {role: tonal-card, tooltip: '', border: '', foreground: '', visible: true,
           wrap_on: mobile, col_spacing: medium, spacing_above: small, col_widths: '{}',
-          spacing_below: small, background: 'theme:Background'}
+          spacing_below: small, background: '#ffffff'}
         name: ocard_student_interact_copy_2
         layout_properties:
           col_widths: {}
@@ -801,7 +801,7 @@ components:
         - type: ColumnPanel
           properties: {role: tonal-card, tooltip: '', border: '', foreground: '',
             visible: true, wrap_on: never, col_spacing: none, spacing_above: small,
-            col_widths: '{}', spacing_below: small, background: 'theme:Background'}
+            col_widths: '{}', spacing_below: small, background: '#ffffff'}
           name: outlined_card_2_copy
           layout_properties: {grid_position: 'WKOQON,KETAAD'}
           components:
@@ -817,7 +817,7 @@ components:
         - type: ColumnPanel
           properties: {role: tonal-card, tooltip: '', border: '', foreground: '',
             visible: true, wrap_on: mobile, col_spacing: medium, spacing_above: small,
-            col_widths: '{}', spacing_below: small, background: 'theme:Background'}
+            col_widths: '{}', spacing_below: small, background: '#ffffff'}
           name: outlined_card_3_copy_3
           layout_properties: {grid_position: 'PEDXSQ,CRBNHS'}
           components:
@@ -836,7 +836,7 @@ components:
         - type: ColumnPanel
           properties: {role: tonal-card, tooltip: '', border: '', foreground: '',
             visible: true, wrap_on: mobile, col_spacing: medium, spacing_above: small,
-            col_widths: '{}', spacing_below: small, background: 'theme:Background'}
+            col_widths: '{}', spacing_below: small, background: '#ffffff'}
           name: outlined_card_3_copy_4
           layout_properties:
             col_widths: {}
@@ -857,7 +857,7 @@ components:
         - type: ColumnPanel
           properties: {role: tonal-card, tooltip: '', border: '', foreground: '',
             visible: true, wrap_on: mobile, col_spacing: medium, spacing_above: small,
-            col_widths: '{}', spacing_below: small, background: 'theme:Background'}
+            col_widths: '{}', spacing_below: small, background: '#ffffff'}
           name: outlined_card_3_copy_5
           layout_properties:
             col_widths: {}
@@ -917,7 +917,7 @@ components:
       - type: ColumnPanel
         properties: {role: tonal-card, tooltip: '', border: '', foreground: '', visible: true,
           wrap_on: mobile, col_spacing: medium, spacing_above: small, col_widths: '{}',
-          spacing_below: small, background: 'theme:Background'}
+          spacing_below: small, background: '#ffffff'}
         layout_properties: {grid_position: 'UWQFDK,JYACDT'}
         name: ocard_student_context_copy_4
         components:
@@ -946,7 +946,7 @@ components:
       - type: ColumnPanel
         properties: {role: tonal-card, tooltip: '', border: '', foreground: '', visible: true,
           wrap_on: mobile, col_spacing: medium, spacing_above: small, col_widths: '{}',
-          spacing_below: small, background: 'theme:Background'}
+          spacing_below: small, background: '#ffffff'}
         layout_properties:
           col_widths: {}
           grid_position: EPEXIV,DKTUGK
@@ -971,7 +971,7 @@ components:
       - type: ColumnPanel
         properties: {role: tonal-card, tooltip: '', border: '', foreground: '', visible: true,
           wrap_on: mobile, col_spacing: medium, spacing_above: small, col_widths: '{}',
-          spacing_below: small, background: 'theme:Background'}
+          spacing_below: small, background: '#ffffff'}
         name: ocard_student_interact_copy_3
         layout_properties:
           col_widths: {}
@@ -1008,7 +1008,7 @@ components:
         - type: ColumnPanel
           properties: {role: tonal-card, tooltip: '', border: '', foreground: '',
             visible: true, wrap_on: never, col_spacing: none, spacing_above: small,
-            col_widths: '{"MFOLHS":50,"ZXBWHU":10}', spacing_below: small, background: 'theme:Background'}
+            col_widths: '{"MFOLHS":50,"ZXBWHU":10}', spacing_below: small, background: '#ffffff'}
           name: outlined_card_2_copy_16
           layout_properties:
             col_widths: {}
@@ -1034,7 +1034,7 @@ components:
         - type: ColumnPanel
           properties: {role: tonal-card, tooltip: '', border: '', foreground: '',
             visible: true, wrap_on: never, col_spacing: none, spacing_above: small,
-            col_widths: '{"MFOLHS":50,"ZXBWHU":10}', spacing_below: small, background: 'theme:Background'}
+            col_widths: '{"MFOLHS":50,"ZXBWHU":10}', spacing_below: small, background: '#ffffff'}
           name: outlined_card_2_copy_17
           layout_properties: {grid_position: 'IVFNJC,SHXQJP'}
           components:
@@ -1066,7 +1066,7 @@ components:
         - type: ColumnPanel
           properties: {role: tonal-card, tooltip: '', border: '', foreground: '',
             visible: true, wrap_on: never, col_spacing: none, spacing_above: small,
-            col_widths: '{"MFOLHS":50,"ZXBWHU":10}', spacing_below: small, background: 'theme:Background'}
+            col_widths: '{"MFOLHS":50,"ZXBWHU":10}', spacing_below: small, background: '#ffffff'}
           name: outlined_card_2_copy_18
           layout_properties:
             col_widths: {}
@@ -1092,7 +1092,7 @@ components:
         - type: ColumnPanel
           properties: {role: tonal-card, tooltip: '', border: '', foreground: '',
             visible: true, wrap_on: never, col_spacing: none, spacing_above: small,
-            col_widths: '{"ZXBWHU":5}', spacing_below: small, background: 'theme:Background'}
+            col_widths: '{"ZXBWHU":5}', spacing_below: small, background: '#ffffff'}
           name: outlined_card_2_copy_19
           layout_properties:
             col_widths: {}
@@ -1165,7 +1165,7 @@ components:
       - type: ColumnPanel
         properties: {role: tonal-card, tooltip: '', border: '', foreground: '', visible: true,
           wrap_on: mobile, col_spacing: medium, spacing_above: small, col_widths: '{}',
-          spacing_below: small, background: 'theme:Background'}
+          spacing_below: small, background: '#ffffff'}
         layout_properties: {grid_position: 'FDGBYH,WIWJNJ'}
         name: ocard_student_context_copy_5
         components:
@@ -1209,7 +1209,7 @@ components:
       - type: ColumnPanel
         properties: {role: tonal-card, tooltip: '', border: '', foreground: '', visible: true,
           wrap_on: mobile, col_spacing: medium, spacing_above: small, col_widths: '{}',
-          spacing_below: small, background: 'theme:Background'}
+          spacing_below: small, background: '#ffffff'}
         layout_properties:
           col_widths: {}
           grid_position: ULLYSJ,FTIAZZ
@@ -1264,7 +1264,7 @@ components:
       - type: ColumnPanel
         properties: {role: tonal-card, tooltip: '', border: '', foreground: '', visible: true,
           wrap_on: never, col_spacing: none, spacing_above: small, col_widths: '{}',
-          spacing_below: small, background: 'theme:Background'}
+          spacing_below: small, background: '#ffffff'}
         name: outlined_card_2_copy_7
         layout_properties:
           col_widths: {}
@@ -1281,7 +1281,7 @@ components:
       - type: ColumnPanel
         properties: {role: tonal-card, tooltip: '', border: '', foreground: '', visible: true,
           wrap_on: never, col_spacing: none, spacing_above: small, col_widths: '{}',
-          spacing_below: small, background: 'theme:Background'}
+          spacing_below: small, background: '#ffffff'}
         name: outlined_card_2_copy_8
         layout_properties:
           col_widths: {}
@@ -1298,7 +1298,7 @@ components:
       - type: ColumnPanel
         properties: {role: tonal-card, tooltip: '', border: '', foreground: '', visible: true,
           wrap_on: never, col_spacing: none, spacing_above: small, col_widths: '{}',
-          spacing_below: small, background: 'theme:Background'}
+          spacing_below: small, background: '#ffffff'}
         name: outlined_card_2_copy_24
         layout_properties:
           col_widths: {}
@@ -1324,7 +1324,7 @@ components:
         - type: ColumnPanel
           properties: {role: tonal-card, tooltip: '', border: '', foreground: '',
             visible: true, wrap_on: never, col_spacing: none, spacing_above: small,
-            col_widths: '{}', spacing_below: small, background: 'theme:Background'}
+            col_widths: '{}', spacing_below: small, background: '#ffffff'}
           name: outlined_card_2_copy_2
           layout_properties: {grid_position: 'WKOQON,KETAAD'}
           components:
@@ -1340,7 +1340,7 @@ components:
         - type: ColumnPanel
           properties: {role: tonal-card, tooltip: '', border: '', foreground: '',
             visible: true, wrap_on: mobile, col_spacing: medium, spacing_above: small,
-            col_widths: '{}', spacing_below: small, background: 'theme:Background'}
+            col_widths: '{}', spacing_below: small, background: '#ffffff'}
           name: outlined_card_3_copy_6
           layout_properties: {grid_position: 'PEDXSQ,CRBNHS'}
           components:
@@ -1359,7 +1359,7 @@ components:
         - type: ColumnPanel
           properties: {role: tonal-card, tooltip: '', border: '', foreground: '',
             visible: true, wrap_on: mobile, col_spacing: medium, spacing_above: small,
-            col_widths: '{}', spacing_below: small, background: 'theme:Background'}
+            col_widths: '{}', spacing_below: small, background: '#ffffff'}
           name: outlined_card_3_copy_7
           layout_properties:
             col_widths: {}
@@ -1380,7 +1380,7 @@ components:
         - type: ColumnPanel
           properties: {role: tonal-card, tooltip: '', border: '', foreground: '',
             visible: true, wrap_on: mobile, col_spacing: medium, spacing_above: small,
-            col_widths: '{}', spacing_below: small, background: 'theme:Background'}
+            col_widths: '{}', spacing_below: small, background: '#ffffff'}
           name: outlined_card_3_copy_8
           layout_properties:
             col_widths: {}
@@ -1401,7 +1401,7 @@ components:
         - type: ColumnPanel
           properties: {role: tonal-card, tooltip: '', border: '', foreground: '',
             visible: true, wrap_on: mobile, col_spacing: medium, spacing_above: small,
-            col_widths: '{}', spacing_below: small, background: 'theme:Background'}
+            col_widths: '{}', spacing_below: small, background: '#ffffff'}
           name: outlined_card_3_copy_9
           layout_properties:
             col_widths: {}
@@ -1422,7 +1422,7 @@ components:
         - type: ColumnPanel
           properties: {role: tonal-card, tooltip: '', border: '', foreground: '',
             visible: true, wrap_on: mobile, col_spacing: medium, spacing_above: small,
-            col_widths: '{}', spacing_below: small, background: 'theme:Background'}
+            col_widths: '{}', spacing_below: small, background: '#ffffff'}
           name: outlined_card_3_copy_10
           layout_properties:
             col_widths: {}
@@ -1443,7 +1443,7 @@ components:
         - type: ColumnPanel
           properties: {role: tonal-card, tooltip: '', border: '', foreground: '',
             visible: true, wrap_on: mobile, col_spacing: medium, spacing_above: small,
-            col_widths: '{}', spacing_below: small, background: 'theme:Background'}
+            col_widths: '{}', spacing_below: small, background: '#ffffff'}
           name: outlined_card_3_copy_11
           layout_properties:
             col_widths: {}
@@ -1464,7 +1464,7 @@ components:
         - type: ColumnPanel
           properties: {role: tonal-card, tooltip: '', border: '', foreground: '',
             visible: true, wrap_on: mobile, col_spacing: medium, spacing_above: small,
-            col_widths: '{}', spacing_below: small, background: 'theme:Background'}
+            col_widths: '{}', spacing_below: small, background: '#ffffff'}
           name: outlined_card_3_copy_12
           layout_properties:
             col_widths: {}
@@ -1524,7 +1524,7 @@ components:
       - type: ColumnPanel
         properties: {role: tonal-card, tooltip: '', border: '', foreground: '', visible: true,
           wrap_on: mobile, col_spacing: medium, spacing_above: small, col_widths: '{}',
-          spacing_below: small, background: 'theme:Background'}
+          spacing_below: small, background: '#ffffff'}
         layout_properties: {grid_position: 'UAMEJV,UUMWSI'}
         name: ocard_student_context_copy_6
         components:
@@ -1566,7 +1566,7 @@ components:
           properties: {role: tonal-card, tooltip: '', border: '', foreground: '',
             visible: true, wrap_on: never, col_spacing: none, spacing_above: small,
             col_widths: '{"MFOLHS":55,"BSZOMV":50,"DEVTRQ":10}', spacing_below: small,
-            background: 'theme:Background'}
+            background: '#ffffff'}
           name: outlined_card_2_copy_20
           layout_properties:
             col_widths: {}
@@ -1618,7 +1618,7 @@ components:
           properties: {role: tonal-card, tooltip: '', border: '', foreground: '',
             visible: true, wrap_on: never, col_spacing: none, spacing_above: small,
             col_widths: '{"MFOLHS":55,"BSZOMV":50,"DEVTRQ":10}', spacing_below: small,
-            background: 'theme:Background'}
+            background: '#ffffff'}
           name: outlined_card_2_copy_21
           layout_properties:
             col_widths: {}
@@ -1669,7 +1669,7 @@ components:
           properties: {role: tonal-card, tooltip: '', border: '', foreground: '',
             visible: true, wrap_on: never, col_spacing: none, spacing_above: small,
             col_widths: '{"MFOLHS":55,"BSZOMV":50,"DEVTRQ":10}', spacing_below: small,
-            background: 'theme:Background'}
+            background: '#ffffff'}
           name: outlined_card_2_copy_22
           layout_properties:
             col_widths: {}
@@ -1758,7 +1758,7 @@ components:
       - type: ColumnPanel
         properties: {role: tonal-card, tooltip: '', border: '', foreground: '', visible: true,
           wrap_on: mobile, col_spacing: medium, spacing_above: small, col_widths: '{}',
-          spacing_below: small, background: 'theme:Background'}
+          spacing_below: small, background: '#ffffff'}
         layout_properties: {grid_position: 'TTDJDA,KNTCQY'}
         name: ocard_student_context_copy_7
         components:
@@ -1793,7 +1793,7 @@ components:
       - type: ColumnPanel
         properties: {role: tonal-card, tooltip: '', border: '', foreground: '', visible: true,
           wrap_on: mobile, col_spacing: medium, spacing_above: small, col_widths: '{}',
-          spacing_below: small, background: 'theme:Background'}
+          spacing_below: small, background: '#ffffff'}
         layout_properties:
           col_widths: {}
           grid_position: GGXXAL,THDOYM
@@ -1856,7 +1856,7 @@ components:
         - type: ColumnPanel
           properties: {role: tonal-card, tooltip: '', border: '', foreground: '',
             visible: true, wrap_on: never, col_spacing: none, spacing_above: small,
-            col_widths: '{"NNMPCI":3,"TKPWRV":57}', spacing_below: small, background: 'theme:Background'}
+            col_widths: '{"NNMPCI":3,"TKPWRV":57}', spacing_below: small, background: '#ffffff'}
           name: outlined_card_2_copy_3
           layout_properties: {grid_position: 'WKOQON,KETAAD'}
           components:
@@ -1889,7 +1889,7 @@ components:
         - type: ColumnPanel
           properties: {role: tonal-card, tooltip: '', border: '', foreground: '',
             visible: true, wrap_on: never, col_spacing: none, spacing_above: small,
-            col_widths: '{"NNMPCI":3,"TKPWRV":57}', spacing_below: small, background: 'theme:Background'}
+            col_widths: '{"NNMPCI":3,"TKPWRV":57}', spacing_below: small, background: '#ffffff'}
           name: outlined_card_2_copy_4
           layout_properties:
             col_widths: {}
@@ -1962,7 +1962,7 @@ components:
       - type: ColumnPanel
         properties: {role: tonal-card, tooltip: '', border: '', foreground: '', visible: true,
           wrap_on: mobile, col_spacing: medium, spacing_above: small, col_widths: '{}',
-          spacing_below: small, background: 'theme:Background'}
+          spacing_below: small, background: '#ffffff'}
         layout_properties: {grid_position: 'FTSNQA,GTHSFC'}
         name: ocard_student_context_copy_8
         components:
@@ -1993,7 +1993,7 @@ components:
       - type: ColumnPanel
         properties: {role: tonal-card, tooltip: '', border: '', foreground: '', visible: true,
           wrap_on: mobile, col_spacing: medium, spacing_above: small, col_widths: '{}',
-          spacing_below: small, background: 'theme:Background'}
+          spacing_below: small, background: '#ffffff'}
         layout_properties:
           col_widths: {}
           grid_position: ANFZFT,SRNWDZ
@@ -2019,7 +2019,7 @@ components:
       - type: ColumnPanel
         properties: {role: tonal-card, tooltip: '', border: '', foreground: '', visible: true,
           wrap_on: mobile, col_spacing: medium, spacing_above: small, col_widths: '{}',
-          spacing_below: small, background: 'theme:Background'}
+          spacing_below: small, background: '#ffffff'}
         name: ocard_student_interact_copy_6
         layout_properties:
           col_widths: {}
@@ -2056,7 +2056,7 @@ components:
         - type: ColumnPanel
           properties: {role: tonal-card, tooltip: '', border: '', foreground: '',
             visible: true, wrap_on: never, col_spacing: none, spacing_above: small,
-            col_widths: '{"NNMPCI":3,"TKPWRV":57}', spacing_below: small, background: 'theme:Background'}
+            col_widths: '{"NNMPCI":3,"TKPWRV":57}', spacing_below: small, background: '#ffffff'}
           name: outlined_card_2_copy_5
           layout_properties: {grid_position: 'WKOQON,HMRCVL'}
           components:
@@ -2089,7 +2089,7 @@ components:
         - type: ColumnPanel
           properties: {role: tonal-card, tooltip: '', border: '', foreground: '',
             visible: true, wrap_on: never, col_spacing: none, spacing_above: small,
-            col_widths: '{"NNMPCI":3,"TKPWRV":57}', spacing_below: small, background: 'theme:Background'}
+            col_widths: '{"NNMPCI":3,"TKPWRV":57}', spacing_below: small, background: '#ffffff'}
           name: outlined_card_2_copy_6
           layout_properties:
             col_widths: {}
@@ -2162,7 +2162,7 @@ components:
       - type: ColumnPanel
         properties: {role: tonal-card, tooltip: '', border: '', foreground: '', visible: true,
           wrap_on: mobile, col_spacing: medium, spacing_above: small, col_widths: '{}',
-          spacing_below: small, background: 'theme:Background'}
+          spacing_below: small, background: '#ffffff'}
         layout_properties: {grid_position: 'TMSOZJ,XTAPGG'}
         name: ocard_student_context_copy_9
         components:
@@ -2192,7 +2192,7 @@ components:
       - type: ColumnPanel
         properties: {role: tonal-card, tooltip: '', border: '', foreground: '', visible: true,
           wrap_on: mobile, col_spacing: medium, spacing_above: small, col_widths: '{"KETAAD":55}',
-          spacing_below: small, background: 'theme:Background'}
+          spacing_below: small, background: '#ffffff'}
         layout_properties:
           col_widths: {}
           grid_position: QCIOVO,LOFTBA
@@ -2230,7 +2230,7 @@ components:
       - type: ColumnPanel
         properties: {role: tonal-card, tooltip: '', border: '', foreground: '', visible: true,
           wrap_on: mobile, col_spacing: medium, spacing_above: small, col_widths: '{"KETAAD":55}',
-          spacing_below: small, background: 'theme:Background'}
+          spacing_below: small, background: '#ffffff'}
         layout_properties:
           col_widths: {}
           grid_position: CJDWAN,GUZQEP
@@ -2284,7 +2284,7 @@ components:
   - type: ColumnPanel
     properties: {role: tonal-card, tooltip: '', border: '', foreground: '', visible: false,
       wrap_on: mobile, col_spacing: medium, spacing_above: small, col_widths: '{}',
-      spacing_below: small, background: 'theme:Background'}
+      spacing_below: small, background: '#ffffff'}
     layout_properties:
       col_widths: {}
       grid_position: LLBKZY,IRVKSM

@@ -2,16 +2,17 @@ container:
   type: HtmlTemplate
   properties: {tooltip: '', background: '', foreground: '', border: '', visible: true,
     role: null, html: "<!DOCTYPE html>\n<html>\n<head>\n    <style>\n        body\
-      \ {\n            font-family: Arial, sans-serif;\n        }\n        .condition\
-      \ {\n            margin: 20px 0;\n            padding: 10px;\n            border:\
-      \ 1px solid #ddd;\n            border-radius: 5px;\n            background-color:\
-      \ #f9f9f9;\n        }\n        .condition h2 {\n            color: #333;\n \
-      \       }\n        .condition p {\n            color: #666;\n        }\n   \
-      \ </style>\n</head>\n<body>\n    <div class=\"condition\">\n        <h2>First\
-      \ condition:</h2>\n        <p>Keep pushing harder to speed up faster.</p>\n\
-      \    </div>\n    <div class=\"condition\">\n        <h2>Second condition:</h2>\n\
-      \        <p>Pick the lightest cart and teammate to go faster than equally strong\
-      \ rivals.</p>\n    </div>\n</body>\n</html>\n"}
+      \ {\n            font-family: Arial, sans-serif;\n            background-color:\
+      \ #ffffff;\n        }\n        .condition {\n            margin: 20px 10px;\n\
+      \            padding: 0px 20px 10px 20px;\n            border: 1px solid #f9f9f9;\n\
+      \            border-radius: 5px;\n            background-color: #f9f9f9;\n \
+      \       }\n        .condition h2 {\n            color: #333;\n        }\n  \
+      \      .condition p {\n            color: #666;\n        }\n    </style>\n</head>\n\
+      <body>\n    <div class=\"condition\">\n        <h2>First condition:</h2>\n \
+      \       <p>Keep pushing harder to speed up faster.</p>\n    </div>\n    <div\
+      \ class=\"condition\">\n        <h2>Second condition:</h2>\n        <p>Pick\
+      \ the lightest cart and teammate to go faster than equally strong rivals.</p>\n\
+      \    </div>\n</body>\n</html>\n"}
 components: []
 is_package: true
 custom_component: true
