@@ -8,7 +8,7 @@ container:
       \ 200px;\n            position: relative;\n            background-color: #FFFFFF;\n\
       \            border-radius: 8px;\n            margin-bottom: 20px;\n       \
       \ }\n\n        #car {\n            width: 7vw;\n            height: 10vh;\n\
-      \            background-image: url('https://drive.google.com/uc?export=view&id=1rpamvNmu29c9LUhsUvi_nj10iwmq9C4z');\n\
+      \            background-image: url('_/theme/OIG.VsgKJHgG878-removebg-preview.png');\n\
       \            background-size: contain;\n            background-repeat: no-repeat;\n\
       \            position: absolute;\n            top: 50%;\n            transform:\
       \ translateY(-40%);\n            left: 0;\n            border-radius: 10px;\n\
